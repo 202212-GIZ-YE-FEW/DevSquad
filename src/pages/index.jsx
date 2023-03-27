@@ -3,6 +3,8 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 
+import Navbar from "@/components/Navbar/Index";
+
 import Layout from "@/layout/Layout";
 
 export default function HomePage() {
@@ -10,6 +12,7 @@ export default function HomePage() {
 
     return (
         <Layout>
+            <Navbar />
             <p>{t("test")}</p>
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
                 <Link href='/' locale='en'>
