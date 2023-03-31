@@ -1,5 +1,5 @@
+import Getstartedbtn from "@/components/Getstartedbtn";
 import Image from "next/image";
-import Link from "next/link";
 
 const Hirosection = () => {
     return (
@@ -14,12 +14,7 @@ const Hirosection = () => {
                     </p>
                 </div>
                 <div className='pt-10	'>
-                    <Link
-                        href='/blogs'
-                        className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl'
-                    >
-                        Get Started
-                    </Link>
+                    <Getstartedbtn />
                 </div>
             </div>
             <div className='relative h-96 overflow-hidden'>

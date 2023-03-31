@@ -1,8 +1,7 @@
 import renderer from "react-test-renderer";
-
-import Hirosection from "../Index";
+import Getstartedbtn from "../Index";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Hirosection />).toJSON();
+    const tree = renderer.create(<Getstartedbtn />).toJSON();
     expect(tree).toMatchSnapshot();
 });

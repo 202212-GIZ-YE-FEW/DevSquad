@@ -4,6 +4,7 @@ import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
 import Image from "next/image";
 import Link from "next/link";
+import Getstartedbtn from "../Getstartedbtn";
 
 const Homepage = () => {
     const arrImage = [
@@ -70,7 +71,7 @@ const Homepage = () => {
             <div className='container mx-auto md:px-32 px-20 pt-12	pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik'>
                 <Goalimage arrImage={arrImage} />
             </div>
-            {/* volunteer */}
+            {/* volunteer section */}
             <p className='text-4xl text-center pt-20 font-Rubik font-medium'>
                 Hear it from volunteers
             </p>
@@ -146,12 +147,7 @@ const Homepage = () => {
 
             <div className='flex justify-center items-center pb-28 pt-10 font-Rubik'>
                 <div className='	'>
-                    <Link
-                        href='/blogs'
-                        className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl font-medium'
-                    >
-                        Get Started
-                    </Link>
+                    <Getstartedbtn />
                 </div>
                 <Link href='#' className='flex justify-center items-center'>
                     <p className=' text-xl p-2 font-medium'>Who are you ? </p>

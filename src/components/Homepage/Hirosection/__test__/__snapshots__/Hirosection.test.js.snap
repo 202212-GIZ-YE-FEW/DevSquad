@@ -24,15 +24,17 @@ exports[`renders correctly 1`] = `
     <div
       className="pt-10 "
     >
-      <a
-        className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl"
-        href="/blogs"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Get Started
-      </a>
+      <div>
+        <a
+          className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl font-medium"
+          href="/blogs"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Get Started
+        </a>
+      </div>
     </div>
   </div>
   <div
