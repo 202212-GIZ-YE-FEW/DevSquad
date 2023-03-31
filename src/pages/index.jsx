@@ -9,7 +9,6 @@ export default function HomePage() {
 
     return (
         <Layout>
-            {/* <Navbar />
             <h1 className='text-3xl font-bold underline'>Hello world!</h1>
             <p>{t("test")}</p>
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
