@@ -1,9 +1,9 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const Hirosection = () => {
     return (
-        <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid md:grid-cols-2 gap-10  sm:grid-cols-1 font-Rubik'>
+        <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid md:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
             <div className='flex flex-col align-content-center justify-center align-items-start text-center md:text-left'>
                 <div className='flex flex-col '>
                     <p className='text-5xl font-medium'>title</p>
@@ -26,7 +26,7 @@ const Hirosection = () => {
                 <Image
                     src='/images/Image.png'
                     alt='profile'
-                    layout='fill'
+                    fill
                     className='object-cover rounded-xl'
                 />
             </div>
