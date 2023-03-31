@@ -4,6 +4,7 @@ import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
 import Image from "next/image";
 import Link from "next/link";
+
 const Homepage = () => {
     const arrImage = [
         "/images/1.png",

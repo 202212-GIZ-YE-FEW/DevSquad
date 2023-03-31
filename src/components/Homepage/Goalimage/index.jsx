@@ -1,19 +1,21 @@
 import Image from "next/image";
-const Goalimage = ({ arrImage }) => {
+const Goalimage = ({ props }) => {
+    const arrImage = props;
     return (
         <>
-            {arrImage.map((title) => {
-                return (
-                    <div key={title} className='relative w-32 h-32'>
-                        <Image
-                            src={title}
-                            alt='profile'
-                            fill
-                            className='object-contain rounded-xl'
-                        />
-                    </div>
-                );
-            })}
+            {arrImage &&
+                arrImage.map((title) => {
+                    return (
+                        <div key={title} className='relative w-32 h-32'>
+                            <Image
+                                src={title}
+                                alt='profile'
+                                fill
+                                className='object-contain rounded-xl'
+                            />
+                        </div>
+                    );
+                })}
         </>
     );
 };
