@@ -6,14 +6,18 @@ import SignIn from "@/components/SignIn";
 
 import Layout from "@/layout/Layout";
 
+import Homepage from "@/components/Homepage";
+
 export default function HomePage() {
     const { t } = useTranslation("common");
 
     return (
         <Layout>
-            <SignIn />
-            {/* <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-            <p>{t("test")}</p>
+
+            <Homepage />
+
+            {/* <p>{t("test")}</p>
+
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
                 <Link href='/' locale='en'>
                     English
@@ -21,7 +25,8 @@ export default function HomePage() {
                 <Link href='/' locale='ar'>
                     العربية
                 </Link>
-            </div> */}
+
+            </div>   */}
         </Layout>
     );
 }
