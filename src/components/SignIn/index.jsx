@@ -7,6 +7,7 @@ import twitter from "./Images/twitter.png";
 
 export default function SignIn() {
     return (
+        // using grid layout to divide the page
         <div className='grid grid-cols-1 place-items-center md:grid-cols-2'>
             {/* sitting image part */}
             <div className='grid justify-items-center'>
