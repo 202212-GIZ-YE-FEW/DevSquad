@@ -1,7 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  index
+<div
+  className="grid grid-cols-1 place-items-center md:grid-cols-2"
+>
+  <div
+    className="grid justify-items-center"
+  >
+    <img
+      alt="sitting"
+      className="p-6"
+      data-nimg="1"
+      decoding="async"
+      height={40}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style={
+        Object {
+          "color": "transparent",
+        }
+      }
+      width={40}
+    />
+  </div>
+  <div
+    className="grid grid-cols-1 gap-y-2 m-3 md:m-0"
+  >
+    <div
+      className="my-2 md:my-8 flex justify-center md:justify-start"
+    >
+      <h1
+        className="font-bold text-xl tracking-wide"
+      >
+        Sign In
+      </h1>
+    </div>
+    <div
+      className="flex flex-col-reverse md:flex-col"
+    >
+      <div
+        className="grid grid-cols-1 gap-y-3"
+      >
+        <button
+          className="border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1"
+        >
+          <img
+            alt="Twitter"
+            className="w-5 pt-1"
+            data-nimg="1"
+            decoding="async"
+            height={40}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={40}
+          />
+          <span
+            className="pl-2"
+          >
+            Continue with Twitter
+          </span>
+        </button>
+        <button
+          className="border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1"
+        >
+          <img
+            alt="Google"
+            className="w-5 pt-1"
+            data-nimg="1"
+            decoding="async"
+            height={40}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={40}
+          />
+          <span
+            className="pl-2"
+          >
+            Continue with Google
+          </span>
+        </button>
+      </div>
+      <div
+        className="items-center hidden sm:inline-flex"
+      >
+        <hr
+          className="w-48 h-px my-8 bg-gray-300 border-0"
+        />
+        <span
+          className="px-3 text-gray-500 bg-white"
+        >
+          OR
+        </span>
+        <hr
+          className="w-48 h-px my-8 bg-gray-300 border-0"
+        />
+      </div>
+      <form
+        action="#"
+        className="grid grid-cols-1 gap-y-4"
+      >
+        <input
+          className="border  rounded-md border-black py-1 pl-2"
+          placeholder="Email address"
+          type="email"
+        />
+        <input
+          className="border  rounded-md border-black py-1 pl-2"
+          placeholder="Password"
+          type="password"
+        />
+        <p
+          className="text-sm hidden sm:block"
+        >
+          Do not have an account?
+          <a
+            className="md:underline text-orange-400 md:text-black"
+            href="#"
+          >
+            Sign Up
+          </a>
+        </p>
+        <button
+          className="rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 sm:mb-0"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
 `;
