@@ -14,7 +14,11 @@ module.exports = {
                 primary: {
                     orange: "#FDA855",
                     blue: "#0180AB",
+                    gray: "#878787",
                 },
+            },
+            fontFamily: {
+                Rubik: ["Rubik", "sans-serif"],
             },
         },
     },

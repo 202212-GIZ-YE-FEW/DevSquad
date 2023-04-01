@@ -1,0 +1,656 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid md:grid-cols-2 gap-10  grid-cols-1 font-Rubik"
+  >
+    <div
+      className="flex flex-col align-content-center justify-center align-items-start text-center md:text-left"
+    >
+      <div
+        className="flex flex-col "
+      >
+        <p
+          className="text-5xl font-medium"
+        >
+          title
+        </p>
+        <p
+          className="text-2xl text-primary-gray px-2 font-normal"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis minima iusto reiciendis ipsum veniam optio perspiciatis.
+        </p>
+      </div>
+      <div
+        className="pt-10 "
+      >
+        <div>
+          <a
+            className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl font-medium"
+            href="/blogs"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="relative h-96 overflow-hidden"
+    >
+      <img
+        alt="profile"
+        className="object-cover rounded-xl"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        sizes="100vw"
+        src="/_next/image?url=%2Fimages%2FImage.png&w=3840&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FImage.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2FImage.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2FImage.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2FImage.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2FImage.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2FImage.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2FImage.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2FImage.png&w=3840&q=75 3840w"
+        style={
+          Object {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>,
+  <p
+    className="text-4xl text-center py-16 font-Rubik font-medium"
+  >
+    How it work
+  </p>,
+  <div
+    className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
+  >
+    <div
+      className="flex flex-col items-center font-Rubik "
+    >
+      <div
+        className="relative w-52 h-52"
+      >
+        <img
+          alt="profile"
+          className="object-contain rounded-xl"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2FManTop.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FManTop.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2FManTop.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2FManTop.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2FManTop.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2FManTop.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2FManTop.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2FManTop.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2FManTop.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="flex flex-col gap-2 "
+      >
+        <p
+          className="text-3xl text-center font-medium"
+        >
+          Register
+        </p>
+        <p
+          className="text-lg text-primary-gray text-center font-normal  "
+        >
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+        </p>
+        <a
+          className="flex justify-center items-center"
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          <p
+            className=" text-xl p-2 font-medium"
+          >
+            Sign up
+             
+          </p>
+          <svg
+            className="w-6 h-4 "
+            fill="none"
+            viewBox="0 0 12 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.331044 18.2567C-0.0794662 18.6262 -0.112745 19.2585 0.256714 19.669C0.626173 20.0795 1.25846 20.1128 1.66897 19.7433L11.669 10.7433C12.1104 10.3461 12.1104 9.65396 11.669 9.25671L1.66897 0.256714C1.25846 -0.112745 0.626173 -0.0794662 0.256714 0.331044C-0.112745 0.741554 -0.0794662 1.37384 0.331044 1.7433L9.50516 10L0.331044 18.2567Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      className="flex flex-col items-center font-Rubik "
+    >
+      <div
+        className="relative w-52 h-52"
+      >
+        <img
+          alt="profile"
+          className="object-contain rounded-xl"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fattend.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fattend.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fattend.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fattend.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fattend.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fattend.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fattend.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fattend.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fattend.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="flex flex-col gap-2 "
+      >
+        <p
+          className="text-3xl text-center font-medium"
+        >
+          Attend evevts
+        </p>
+        <p
+          className="text-lg text-primary-gray text-center font-normal  "
+        >
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+        </p>
+        <a
+          className="flex justify-center items-center"
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          <p
+            className=" text-xl p-2 font-medium"
+          >
+            View events
+             
+          </p>
+          <svg
+            className="w-6 h-4 "
+            fill="none"
+            viewBox="0 0 12 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.331044 18.2567C-0.0794662 18.6262 -0.112745 19.2585 0.256714 19.669C0.626173 20.0795 1.25846 20.1128 1.66897 19.7433L11.669 10.7433C12.1104 10.3461 12.1104 9.65396 11.669 9.25671L1.66897 0.256714C1.25846 -0.112745 0.626173 -0.0794662 0.256714 0.331044C-0.112745 0.741554 -0.0794662 1.37384 0.331044 1.7433L9.50516 10L0.331044 18.2567Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      className="flex flex-col items-center font-Rubik "
+    >
+      <div
+        className="relative w-52 h-52"
+      >
+        <img
+          alt="profile"
+          className="object-contain rounded-xl"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2FGirl.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FGirl.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2FGirl.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2FGirl.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2FGirl.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2FGirl.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2FGirl.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2FGirl.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2FGirl.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="flex flex-col gap-2 "
+      >
+        <p
+          className="text-3xl text-center font-medium"
+        >
+          Organize your own!
+        </p>
+        <p
+          className="text-lg text-primary-gray text-center font-normal  "
+        >
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+        </p>
+        <a
+          className="flex justify-center items-center"
+          href="#"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          <p
+            className=" text-xl p-2 font-medium"
+          >
+            Get started
+             
+          </p>
+          <svg
+            className="w-6 h-4 "
+            fill="none"
+            viewBox="0 0 12 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.331044 18.2567C-0.0794662 18.6262 -0.112745 19.2585 0.256714 19.669C0.626173 20.0795 1.25846 20.1128 1.66897 19.7433L11.669 10.7433C12.1104 10.3461 12.1104 9.65396 11.669 9.25671L1.66897 0.256714C1.25846 -0.112745 0.626173 -0.0794662 0.256714 0.331044C-0.112745 0.741554 -0.0794662 1.37384 0.331044 1.7433L9.50516 10L0.331044 18.2567Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>,
+  <p
+    className="text-4xl text-center pt-28 pb-5 font-Rubik font-medium"
+  >
+    Sustainable Devlopment Goals
+  </p>,
+  <p
+    className="md:px-40 px-10  text-xl text-primary-gray text-center font-Rubik font-normal"
+  >
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores aliquam unde voluptatem accusantium, obcaecati tenetur magnam aliquid. Dignissimos soluta quia ea consequuntur molestias ut
+  </p>,
+  <div
+    className="container mx-auto md:px-32 px-20 pt-12 pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik"
+  />,
+  <p
+    className="text-4xl text-center pt-20 font-Rubik font-medium"
+  >
+    Hear it from volunteers
+  </p>,
+  <div
+    className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
+  >
+    <div>
+      <div
+        className="flex flex-col items-center font-Rubik "
+      >
+        <div
+          className="relative w-20 h-20"
+        >
+          <img
+            alt="profile"
+            className="object-contain rounded-xl"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            sizes="100vw"
+            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            style={
+              Object {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="flex flex-col gap-2  pt-6"
+        >
+          <p
+            className="text-xl text-center font-medium"
+          >
+            Name, Occupation
+          </p>
+          <p
+            className="text-lg text-primary-gray text-center font-normal "
+          >
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at ."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="flex flex-col items-center font-Rubik "
+      >
+        <div
+          className="relative w-20 h-20"
+        >
+          <img
+            alt="profile"
+            className="object-contain rounded-xl"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            sizes="100vw"
+            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            style={
+              Object {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="flex flex-col gap-2  pt-6"
+        >
+          <p
+            className="text-xl text-center font-medium"
+          >
+            Name, Occupation
+          </p>
+          <p
+            className="text-lg text-primary-gray text-center font-normal "
+          >
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at ."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="flex flex-col items-center font-Rubik "
+      >
+        <div
+          className="relative w-20 h-20"
+        >
+          <img
+            alt="profile"
+            className="object-contain rounded-xl"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            sizes="100vw"
+            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            style={
+              Object {
+                "bottom": 0,
+                "color": "transparent",
+                "height": "100%",
+                "left": 0,
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="flex flex-col gap-2  pt-6"
+        >
+          <p
+            className="text-xl text-center font-medium"
+          >
+            Name, Occupation
+          </p>
+          <p
+            className="text-lg text-primary-gray text-center font-normal "
+          >
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at".
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container mx-auto md:px-32 px-10 pt-28 pb-10 grid grid-cols-2 text-center  "
+  >
+    <div
+      className=""
+    >
+      <div
+        className="relative h-60 overflow-hidden "
+      >
+        <img
+          alt="profile"
+          className="object-cover rounded-3xl p-3"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fhome4.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhome4.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhome4.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhome4.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhome4.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhome4.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhome4.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhome4.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhome4.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="relative h-80 overflow-hidden "
+      >
+        <img
+          alt="profile"
+          className="object-cover rounded-3xl p-3"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fhome1.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhome1.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhome1.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhome1.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhome1.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhome1.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhome1.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhome1.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhome1.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        className="relative h-80 overflow-hidden "
+      >
+        <img
+          alt="profile"
+          className="object-cover rounded-3xl p-3"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fhome2.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhome2.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhome2.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhome2.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhome2.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhome2.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhome2.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhome2.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhome2.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="relative h-60 overflow-hidden"
+      >
+        <img
+          alt="profile"
+          className="object-cover rounded-3xl p-3"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fhome3.png&w=3840&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fhome3.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhome3.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhome3.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fhome3.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fhome3.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fhome3.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fhome3.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fhome3.png&w=3840&q=75 3840w"
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": undefined,
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>,
+  <p
+    className="text-4xl text-center pt-24 pb-5 font-Rubik lg:px-96 md:px-52 px-10 font-medium"
+  >
+    Become the change you wish to see in the world
+  </p>,
+  <p
+    className="md:px-40 px-10 text-xl text-primary-gray text-center font-Rubik font-normal"
+  >
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores aliquam unde voluptatem accusantium, obcaecati tenetur magnam aliquid. Dignissimos soluta quia ea consequuntur molestias ut
+  </p>,
+  <div
+    className="flex justify-center items-center pb-28 pt-10 font-Rubik"
+  >
+    <div
+      className=" "
+    >
+      <div>
+        <a
+          className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl font-medium"
+          href="/blogs"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+    <a
+      className="flex justify-center items-center"
+      href="#"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      <p
+        className=" text-xl p-2 font-medium"
+      >
+        Who are you ? 
+      </p>
+      <svg
+        className="w-6 h-4 "
+        fill="none"
+        viewBox="0 0 12 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.331044 18.2567C-0.0794662 18.6262 -0.112745 19.2585 0.256714 19.669C0.626173 20.0795 1.25846 20.1128 1.66897 19.7433L11.669 10.7433C12.1104 10.3461 12.1104 9.65396 11.669 9.25671L1.66897 0.256714C1.25846 -0.112745 0.626173 -0.0794662 0.256714 0.331044C-0.112745 0.741554 -0.0794662 1.37384 0.331044 1.7433L9.50516 10L0.331044 18.2567Z"
+          fill="#1A1A1A"
+        />
+      </svg>
+    </a>
+  </div>,
+]
+`;
