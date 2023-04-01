@@ -3,6 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 import { Link } from "react-router-dom";
 
+import SignIn from "@/components/SignIn";
+
 import Layout from "@/layout/Layout";
 
 import Homepage from "@/components/Homepage";
@@ -15,6 +17,7 @@ export default function HomePage() {
             <Homepage />
 
             {/* <p>{t("test")}</p>
+
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
                 <Link href='/' locale='en'>
                     English
@@ -22,6 +25,7 @@ export default function HomePage() {
                 <Link href='/' locale='ar'>
                     العربية
                 </Link>
+
             </div>   */}
         </Layout>
     );
