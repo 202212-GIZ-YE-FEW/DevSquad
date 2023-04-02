@@ -23,6 +23,7 @@ export default function HomePage() {
                     العربية
                 </Link>
             </div>
+            {/* <Footer/> */}
         </Layout>
     );
 }
