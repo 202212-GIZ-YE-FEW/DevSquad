@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 
-import Navbar from "@/components/Navbar/Index";
+import Homepage from "@/components/Homepage";
 
 import Layout from "@/layout/Layout";
 
@@ -12,9 +11,10 @@ export default function HomePage() {
 
     return (
         <Layout>
-            <Navbar />
-            <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-            <p>{t("test")}</p>
+            <Homepage />
+
+            {/* <p>{t("test")}</p>
+
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
                 <Link href='/' locale='en'>
                     English

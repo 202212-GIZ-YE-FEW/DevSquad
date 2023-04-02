@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 function Footer() {
     return (
-        <div className='mx-auto flex w-full flex-col justify-center bg-blue-200 p-6'>
+        <div className='mx-auto flex w-full flex-col justify-center bg-primary-orange p-6'>
             <div className='flex flex-col items-center space-y-6  p-6 md:flex-row md:items-center md:justify-evenly md:p-6 md:px-4'>
                 <div className='basis-1/4'>
                     <svg
@@ -54,14 +54,14 @@ function Footer() {
                         />
                     </svg>
                 </div>
-                <div className='flex basis-1/2 flex-col justify-center space-y-6'>
+                <div className='flex basis-1/2 flex-col justify-center space-y-6 font-Rubik'>
                     <ul className='flex justify-center space-x-4 mx-2'>
                         <li className='cursor-pointer p-2 '>
                             <Link href="'/events'>">
                                 <b>Events</b>
                             </Link>
                         </li>
-                        <li className='cursor-pointer p-2'>
+                        <li className='cursor-pointer p-2 '>
                             <Link href='/about'>
                                 <b>About</b>
                             </Link>
