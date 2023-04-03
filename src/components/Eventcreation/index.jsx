@@ -125,7 +125,7 @@ const Eventcreation = () => {
                     id='eventImage'
                     name='eventImage'
                     value='eventImage'
-                    className='w-96	 h-12 border border-black rounded file:h-12'
+                    className='md:w-96 w-60	 h-12 border border-black rounded file:h-12'
                     placeholder=''
                 />
             </div>
@@ -162,7 +162,7 @@ const Eventcreation = () => {
                         id='done'
                         name='done'
                         value='Agree with tearms and create Event!'
-                        className='w-96	h-12 border border-black rounded'
+                        className='md:w-96 h-12 border border-black rounded'
                     />
                 </div>
             </div>
