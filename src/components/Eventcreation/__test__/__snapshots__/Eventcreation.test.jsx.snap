@@ -22,6 +22,7 @@ exports[`renders correctly 1`] = `
         className="w-80 h-12 border border-black rounded"
         id="eventLocation"
         name="eventLocation"
+        placeholder="Izmer"
         type="text"
       />
     </div>
@@ -329,8 +330,9 @@ exports[`renders correctly 1`] = `
     </p>
     <input
       className="w-full h-12 border border-black rounded"
-      id="eventLocation"
-      name="eventLocation"
+      id="eventTitle"
+      name="eventTitle"
+      placeholder=""
       type="text"
     />
   </div>
@@ -346,9 +348,10 @@ exports[`renders correctly 1`] = `
       Choose a Event date
     </p>
     <input
-      className="w-full h-12 border border-black rounded"
-      id="dateLocation"
-      name="dateLocation"
+      className="w-80 h-12 border border-black rounded"
+      id="eventDate"
+      name="eventDate"
+      placeholder=""
       type="date"
     />
   </div>
@@ -383,8 +386,9 @@ exports[`renders correctly 1`] = `
     </p>
     <input
       className="w-96 h-12 border border-black rounded file:h-12"
-      id="eventLocation"
-      name="eventLocation"
+      id="eventImage"
+      name="eventImage"
+      placeholder=""
       type="file"
     />
   </div>

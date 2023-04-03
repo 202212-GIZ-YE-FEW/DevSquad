@@ -120,11 +120,15 @@ exports[`renders correctly 1`] = `
       >
         <input
           className="border  rounded-md border-black py-1 pl-2"
+          id="email"
+          name="email"
           placeholder="Email address"
           type="email"
         />
         <input
           className="border  rounded-md border-black py-1 pl-2"
+          id="password"
+          name="password"
           placeholder="Password"
           type="password"
         />

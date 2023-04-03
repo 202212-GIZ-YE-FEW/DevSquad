@@ -4,6 +4,7 @@ import React from "react";
 import google from "./Images/google.png";
 import sitting from "./Images/Sitting.png";
 import twitter from "./Images/twitter.png";
+import Inputcomponent from "../Inputcomponent";
 
 export default function SignIn() {
     return (
@@ -51,16 +52,21 @@ export default function SignIn() {
 
                     {/* component three */}
                     <form action='#' className='grid grid-cols-1 gap-y-4'>
-                        <input
+                        <Inputcomponent
                             type='email'
+                            id='email'
+                            name='email'
                             className='border  rounded-md border-black py-1 pl-2'
                             placeholder='Email address'
                         />
-                        <input
+                        <Inputcomponent
                             type='password'
+                            id='password'
+                            name='password'
                             className='border  rounded-md border-black py-1 pl-2'
                             placeholder='Password'
                         />
+
                         <p className='text-sm hidden sm:block'>
                             Do not have an account?
                             <a

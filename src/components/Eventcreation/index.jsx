@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import Checkboxcomponent from "../Checkboxcomponent";
+import Inputcomponent from "../Inputcomponent";
 
 const Eventcreation = () => {
     const titles = [
@@ -31,11 +32,13 @@ const Eventcreation = () => {
                         Pebble Events can be both local or online Choose where
                         you want to host your event.
                     </p>
-                    <input
+                    <Inputcomponent
                         type='text'
                         id='eventLocation'
                         name='eventLocation'
+                        value='eventLocation'
                         className='w-80	 h-12 border border-black rounded'
+                        placeholder='Izmer'
                     />
                 </div>
                 <div className='pt-11	'>
@@ -74,22 +77,26 @@ const Eventcreation = () => {
                     the event is about. Feel free to be creative! You can edit
                     this later if you change your mind.
                 </p>
-                <input
+                <Inputcomponent
                     type='text'
-                    id='eventLocation'
-                    name='eventLocation'
+                    id='eventTitle'
+                    name='eventTitle'
+                    value='eventTitle'
                     className='w-full	 h-12 border border-black rounded'
+                    placeholder=''
                 />
             </div>
             {/* Event date section */}
             <div>
                 <p className='font-medium py-5 text-3xl'>Event Date:</p>
                 <p className='text-primary-gray pb-7'>Choose a Event date</p>
-                <input
+                <Inputcomponent
                     type='date'
-                    id='dateLocation'
-                    name='dateLocation'
-                    className='w-full	 h-12 border border-black rounded'
+                    id='eventDate'
+                    name='eventDate'
+                    value='eventDate'
+                    className='w-80	 h-12 border border-black rounded'
+                    placeholder=''
                 />
             </div>
             {/* Event describtion section */}
@@ -113,11 +120,13 @@ const Eventcreation = () => {
                     We have found that listings with a photo attract more
                     interest.
                 </p>
-                <input
+                <Inputcomponent
                     type='file'
-                    id='eventLocation'
-                    name='eventLocation'
+                    id='eventImage'
+                    name='eventImage'
+                    value='eventImage'
                     className='w-96	 h-12 border border-black rounded file:h-12'
+                    placeholder=''
                 />
             </div>
             {/* done section */}

@@ -99,7 +99,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="w-20 h-7 border py-2.5 px-4 border-black rounded-lg text-black bg-white text-xl"
-                href="/"
+                href="/signup"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
@@ -112,7 +112,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl"
-                href="/blogs"
+                href="/signin"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}

@@ -161,7 +161,7 @@ const Navbar = () => {
                             <ul className='items-center justify-center md:flex  border border-1 border-black md:border-none'>
                                 <li className='p-4 md:border-none border border-b-1 border-black '>
                                     <Link
-                                        href='/'
+                                        href='/signup'
                                         className='w-20 h-7 border py-2.5 px-4 border-black rounded-lg text-black bg-white text-xl'
                                     >
                                         Sign Up
@@ -169,7 +169,7 @@ const Navbar = () => {
                                 </li>
                                 <li className='p-4 md:border-none border border-b-1 border-black'>
                                     <Link
-                                        href='/blogs'
+                                        href='/signin'
                                         className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl'
                                     >
                                         Sign In
