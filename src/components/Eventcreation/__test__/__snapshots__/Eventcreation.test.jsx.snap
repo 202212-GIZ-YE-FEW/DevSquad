@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             No Poverty
           </span>
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Zero Hunger
           </span>
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Good Health And Well-Being
           </span>
@@ -117,7 +117,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Quality Education
           </span>
@@ -133,7 +133,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Gender Equality
           </span>
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Clean Water And Sanitation
           </span>
@@ -165,7 +165,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Affordable And Clean Energy
           </span>
@@ -181,7 +181,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Decent Work And Economic Growth
           </span>
@@ -197,7 +197,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Reduced Inequalities
           </span>
@@ -229,7 +229,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Sustainable Cities And Communities
           </span>
@@ -245,7 +245,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Responsible Consumption And Production
           </span>
@@ -261,7 +261,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Climate Action
           </span>
@@ -277,7 +277,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Life Below Water
           </span>
@@ -293,7 +293,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Life On Land
           </span>
@@ -309,7 +309,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 w-64"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
           >
             Peace And Justice And Strong Institutions
           </span>
@@ -385,7 +385,7 @@ exports[`renders correctly 1`] = `
       We have found that listings with a photo attract more interest.
     </p>
     <input
-      className="w-96 h-12 border border-black rounded file:h-12"
+      className="md:w-96 w-60 h-12 border border-black rounded file:h-12"
       id="eventImage"
       name="eventImage"
       placeholder=""
@@ -440,7 +440,7 @@ exports[`renders correctly 1`] = `
       className="py-20 flex flex-col items-center justify-center text-center"
     >
       <input
-        className="w-96 h-12 border border-black rounded"
+        className="md:w-96 h-12 border border-black rounded"
         id="done"
         name="done"
         type="button"
