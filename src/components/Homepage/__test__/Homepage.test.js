@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 
-import Homepage from "../index";
+import Homepage from "..";
 
 it("renders correctly", () => {
     const tree = renderer.create(<Homepage />).toJSON();

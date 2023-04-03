@@ -1,9 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import Goalimage from "./Goalimage";
 import Hirosection from "./Hirosection";
 import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
-import Image from "next/image";
-import Link from "next/link";
 import Getstartedbtn from "../Getstartedbtn";
 
 const Homepage = () => {
