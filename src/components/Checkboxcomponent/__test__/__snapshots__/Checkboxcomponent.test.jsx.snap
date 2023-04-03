@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <label>
+    <input
+      checked={false}
+      className=""
+      hidden={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="flex items-center justify-center text-white text-center border bg-primary-orange p-5 rounded h-20 w-64"
+    />
+  </label>
+</div>
+`;

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
-    // const [profilenav, setProfilenav] = useState(false);
+    const [profilenav, setProfilenav] = useState(false);
     return (
         <div>
             <nav className='w-full bg-primary-orange shadow font-Rubik'>
@@ -154,12 +154,12 @@ const Navbar = () => {
                     <div>
                         {/* unsigned user */}
                         <div
-                            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 menue ${
+                            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 absolute top-14 md:static w-44 md:w-full md:bg-primary-orange bg-white ${
                                 navbar ? "block" : "hidden"
                             }`}
                         >
-                            <ul className='items-center justify-center md:flex'>
-                                <li className='p-4 '>
+                            <ul className='items-center justify-center md:flex  border border-1 border-black md:border-none'>
+                                <li className='p-4 md:border-none border border-b-1 border-black '>
                                     <Link
                                         href='/'
                                         className='w-20 h-7 border py-2.5 px-4 border-black rounded-lg text-black bg-white text-xl'
@@ -167,7 +167,7 @@ const Navbar = () => {
                                         Sign Up
                                     </Link>
                                 </li>
-                                <li className='p-4'>
+                                <li className='p-4 md:border-none border border-b-1 border-black'>
                                     <Link
                                         href='/blogs'
                                         className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl'
@@ -197,20 +197,20 @@ const Navbar = () => {
 
                         {/* signed  drop down user */}
                         {/* <div
-                            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 menue2 ${
+                            className={`md:flex-1 md:static md:bg-primary-orange justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 absolute top-10 bg-white w-32 md:w-full ${
                                 navbar ? "block" : "hidden"
                             }`}
                         >
-                            <ul className='items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10'>
-                                <li className=' px-4 py-2'>
+                            <ul className='items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10 border border-1 border-black md:border-none'>
+                                <li className=' md:border-none px-4 py-2 border border-b-1 border-black'>
                                     <Link
                                         href='/'
-                                        className=' text-lg md:text-white text-black'
+                                        className=' text-lg md:text-white text-black '
                                     >
                                         Events
                                     </Link>
                                 </li>
-                                <li className='px-4 py-2'>
+                                <li className='md:border-none px-4 py-2 border border-b-1 border-black'>
                                     <Link
                                         href='/blogs'
                                         className=' text-lg md:text-white text-black '
@@ -272,19 +272,19 @@ const Navbar = () => {
                             >
                                 <Link
                                     href='#'
-                                    class='block px-4 py-2 text-lg text-gray-700 border-b-2 border-black'
+                                    class='block px-4 py-2 text-lg text-gray-700 border-b-1 border-black'
                                 >
                                     Your Events
                                 </Link>
                                 <Link
                                     href='#'
-                                    class='block px-4 py-2 text-lg text-gray-700 border-b-2 border-black'
+                                    class='block px-4 py-2 text-lg text-gray-700 border-b-1 border-black'
                                 >
                                     View Profile
                                 </Link>
                                 <Link
                                     href='#'
-                                    class='block px-4 py-2 text-lg text-gray-700 border-b-2 border-black'
+                                    class='block px-4 py-2 text-lg text-gray-700 border-b-1 border-black'
                                 >
                                     Setting
                                 </Link>
