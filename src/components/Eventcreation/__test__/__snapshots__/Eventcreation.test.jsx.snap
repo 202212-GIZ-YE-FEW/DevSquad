@@ -19,10 +19,10 @@ exports[`renders correctly 1`] = `
         Pebble Events can be both local or online Choose where you want to host your event.
       </p>
       <input
-        className="w-80 h-12 border border-black rounded"
+        className="w-80 h-12 border border-black rounded placeholder:p-3"
         id="eventLocation"
         name="eventLocation"
-        placeholder="Izmer"
+        placeholder="city"
         type="text"
       />
     </div>
@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             No Poverty
           </span>
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Zero Hunger
           </span>
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Good Health And Well-Being
           </span>
@@ -117,7 +117,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Quality Education
           </span>
@@ -133,7 +133,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Gender Equality
           </span>
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Clean Water And Sanitation
           </span>
@@ -165,7 +165,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Affordable And Clean Energy
           </span>
@@ -181,7 +181,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Decent Work And Economic Growth
           </span>
@@ -197,7 +197,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Industry Innovation And Infrastructure
           </span>
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Reduced Inequalities
           </span>
@@ -229,7 +229,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Sustainable Cities And Communities
           </span>
@@ -245,7 +245,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Responsible Consumption And Production
           </span>
@@ -261,7 +261,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Climate Action
           </span>
@@ -277,7 +277,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Life Below Water
           </span>
@@ -293,7 +293,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Life On Land
           </span>
@@ -309,7 +309,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
           >
             Peace And Justice And Strong Institutions
           </span>

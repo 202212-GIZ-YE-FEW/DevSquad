@@ -16,8 +16,8 @@ const Inputcomponent = ({ title, checked, ...props }) => {
                 <span
                     className={
                         isChecked
-                            ? "checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
-                            : "flex items-center justify-center text-white text-center border bg-primary-orange p-5 rounded h-20 md:w-48 lg:w-64 w-40"
+                            ? "checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+                            : "flex items-center justify-center text-white text-center border bg-primary-orange p-5 rounded h-32"
                     }
                 >
                     {title}

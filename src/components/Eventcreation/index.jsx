@@ -37,8 +37,8 @@ const Eventcreation = () => {
                         id='eventLocation'
                         name='eventLocation'
                         value='eventLocation'
-                        className='w-80	 h-12 border border-black rounded'
-                        placeholder='Izmer'
+                        className='w-80	 h-12 border border-black rounded placeholder:p-3'
+                        placeholder='city'
                     />
                 </div>
                 <div className='pt-11	'>
