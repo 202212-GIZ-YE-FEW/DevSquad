@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-import google from "./Images/google.png";
-import sitting from "./Images/Sitting.png";
-import twitter from "./Images/twitter.png";
+import Inputcomponent from "../Inputcomponent";
+import google from "../../../public/images/google.png";
+import sitting from "../../../public/images/Sitting.png";
+import twitter from "../../../public/images/twitter.png";
 
 export default function SignUp() {
     return (
@@ -51,28 +52,43 @@ export default function SignUp() {
                     {/* component three */}
                     <form action='#' className='grid grid-cols-1 gap-y-4'>
                         <div className='grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-2'>
-                            <input
+                            <Inputcomponent
                                 type='text'
-                                placeholder='Name'
+                                id='name'
+                                name='name'
                                 className='border  rounded-md border-black py-1 pl-2 mb-2 sm:mb-0'
+                                placeholder='Name'
                             />
-                            <input
+                            <Inputcomponent
                                 type='text'
-                                placeholder='Surname'
+                                id='Surname'
+                                name='Surname'
                                 className='border  rounded-md border-black py-1 pl-2'
+                                placeholder='Surname'
                             />
                         </div>
-
-                        <input
+                        <Inputcomponent
                             type='email'
+                            id='email'
+                            name='email'
+                            className='border  rounded-md border-black py-1 pl-2'
                             placeholder='Email address'
-                            className='border  rounded-md border-black py-1 pl-2'
                         />
-                        <input
+                        <Inputcomponent
                             type='password'
-                            placeholder='Password'
+                            id='password'
+                            name='password'
                             className='border  rounded-md border-black py-1 pl-2'
+                            placeholder='Password'
                         />
+                        <Inputcomponent
+                            type='password'
+                            id='confirmpassword'
+                            name='confirmpassword'
+                            className='border  rounded-md border-black py-1 pl-2'
+                            placeholder='Confirm Password'
+                        />
+
                         <p className='text-sm hidden sm:block'>
                             Already have an account?
                             <a
@@ -82,8 +98,7 @@ export default function SignUp() {
                                 Sign in
                             </a>
                         </p>
-
-                        <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 sm:mb-0'>
+                        <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4'>
                             Sign Up
                         </button>
                     </form>
