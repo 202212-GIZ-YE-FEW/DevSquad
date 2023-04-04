@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
       Every Pebble events should serve at least one of th sustainable devlopment goals of United Nations. whitch goal do you want to help in ? Sellect all thet apply
     </p>
     <div
-      className=" grid md:grid-cols-4 gap-x-10 gap-y-4  grid-cols-2 mb-4 "
+      className=" grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 "
     >
       <div>
         <label>
@@ -353,6 +353,25 @@ exports[`renders correctly 1`] = `
       name="eventDate"
       placeholder=""
       type="date"
+    />
+  </div>
+  <div>
+    <p
+      className="font-medium py-5 text-3xl"
+    >
+      Event Time:
+    </p>
+    <p
+      className="text-primary-gray pb-7"
+    >
+      Choose a Event Time
+    </p>
+    <input
+      className="w-80 h-12 border border-black rounded"
+      id="eventtime"
+      name="eventtime"
+      placeholder=""
+      type="time"
     />
   </div>
   <div>
