@@ -5,6 +5,7 @@ import { ImLocation } from "react-icons/im";
 
 import chart from "./Images/chart.png";
 export default function EventView() {
+    // I used flex box and grid layout for responsive
     return (
         <div className='md:grid grid-rows-2 gap-2 justify-center mt-8 md:gap-14 flex flex-col'>
             {/* for image and some information about the event */}
