@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-import google from "./Images/google.png";
-import sitting from "./Images/Sitting.png";
-import twitter from "./Images/twitter.png";
 import Inputcomponent from "../Inputcomponent";
+import google from "../../../public/images/google.png";
+import sitting from "../../../public/images/Sitting.png";
+import twitter from "../../../public/images/twitter.png";
 
 export default function SignUp() {
     return (
@@ -98,7 +98,7 @@ export default function SignUp() {
                                 Sign in
                             </a>
                         </p>
-                        <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 sm:mb-0'>
+                        <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4'>
                             Sign Up
                         </button>
                     </form>

@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
           </a>
         </p>
         <button
-          className="rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 sm:mb-0"
+          className="rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4"
         >
           Sign Up
         </button>
