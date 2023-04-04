@@ -89,17 +89,17 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 menue hidden"
+          className="flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 absolute top-14 md:static w-44 md:w-full md:bg-primary-orange bg-white hidden"
         >
           <ul
-            className="items-center justify-center md:flex"
+            className="items-center justify-center md:flex  border border-1 border-black md:border-none"
           >
             <li
-              className="p-4 "
+              className="p-4 md:border-none border border-b-1 border-black "
             >
               <a
                 className="w-20 h-7 border py-2.5 px-4 border-black rounded-lg text-black bg-white text-xl"
-                href="/"
+                href="/signup"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
@@ -108,11 +108,11 @@ exports[`renders correctly 1`] = `
               </a>
             </li>
             <li
-              className="p-4"
+              className="p-4 md:border-none border border-b-1 border-black"
             >
               <a
                 className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl"
-                href="/blogs"
+                href="/signin"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}

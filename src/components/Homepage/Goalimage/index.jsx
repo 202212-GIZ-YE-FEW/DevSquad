@@ -1,6 +1,5 @@
 import Image from "next/image";
-const Goalimage = ({ props }) => {
-    const arrImage = props;
+const Goalimage = ({ arrImage }) => {
     return (
         <>
             {arrImage &&

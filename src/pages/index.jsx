@@ -22,8 +22,8 @@ export default function HomePage() {
                 <Link href='/' locale='ar'>
                     العربية
                 </Link>
-
-            </div>   */}
+            </div>
+            {/* <Footer/> */}
         </Layout>
     );
 }
