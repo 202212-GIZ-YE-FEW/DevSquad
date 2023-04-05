@@ -6,7 +6,7 @@ import Homepage from "@/components/Homepage";
 
 import Layout from "@/layout/Layout";
 
-export default function HomePage() {
+export default function Home() {
     // const { t } = useTranslation("common");
 
     return (
