@@ -9,19 +9,37 @@ const Eventcard = () => {
                 </div>
                 <div className=' pt-2'>
                     {/* attendance */}
-                    <div className='flex flex-row items-center'>
+                    <div className='flex flex-row items-center justify-between'>
                         <div>
-                            <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
-                            </div>
-                            <div class='-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
-                            </div>
-                            <div class='-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
+                            <div class='relative inline-flex items-center justify-center w-8 h-8 rounded-full'>
+                                <Image
+                                    src='/images/Name.png'
+                                    alt='eventCardImage'
+                                    width={650}
+                                    height={380}
+                                    responsive
+                                    className='absolute top-0 right-8 z-10 w-full h-full object-cover '
+                                />
+                                <Image
+                                    src='/images/Name.png'
+                                    alt='eventCardImage'
+                                    width={650}
+                                    height={380}
+                                    responsive
+                                    className='absolute top-0 right-4 z-20 w-full h-full object-cover '
+                                />
+
+                                <Image
+                                    src='/images/Name.png'
+                                    alt='eventCardImage'
+                                    width={650}
+                                    height={380}
+                                    responsive
+                                    className='absolute top-0 right-0 z-30 w-full h-full object-cover '
+                                />
                             </div>
                         </div>
-                        <p className='font-Rubik'>+12 Attendance</p>
+                        <p className='font-Rubik p-2'>+12 Attendance</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +65,7 @@ const Eventcard = () => {
                         vel cupiditate, ipsa adipisci excepturi animi magnam
                         facere culpa aliquam asperiores!
                     </p>
-                    <div className='flex justify-end pt-10'>
+                    <div className='flex justify-end py-10'>
                         <button className='bg-primary-orange text-white rounded px-8 py-1 '>
                             Join
                         </button>
