@@ -78,7 +78,7 @@ Array [
     className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
   >
     <div
-      className="flex flex-col items-center font-Rubik "
+      className="flex flex-col items-center font-Rubik"
     >
       <div
         className="relative w-52 h-52"
@@ -151,7 +151,7 @@ Array [
       </div>
     </div>
     <div
-      className="flex flex-col items-center font-Rubik "
+      className="flex flex-col items-center font-Rubik"
     >
       <div
         className="relative w-52 h-52"
@@ -224,7 +224,7 @@ Array [
       </div>
     </div>
     <div
-      className="flex flex-col items-center font-Rubik "
+      className="flex flex-col items-center font-Rubik"
     >
       <div
         className="relative w-52 h-52"
