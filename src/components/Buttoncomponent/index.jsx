@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function Buttoncomponent({
-    name = " ",
+    label = " ",
     bgColor = "slate-300",
-    textColor = "text-white",
+    textColor = "text-black",
     width,
     height,
     font = "font-Rubik",
@@ -11,14 +11,14 @@ export default function Buttoncomponent({
     borderColor = "",
     borderRaduis = "",
     border,
-    margin,
-    padding,
+    margin = "m-2",
+    padding = "p-2",
 }) {
     return (
         <button
             className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding}`}
         >
-            {name}
+            {`${label}`}
         </button>
     );
 }

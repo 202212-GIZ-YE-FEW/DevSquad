@@ -3,6 +3,8 @@ import React from "react";
 import { AiFillClockCircle } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
 
+import Buttoncomponent from "../Buttoncomponent";
+
 export default function EventView() {
     return (
         <div className='md:grid grid-rows-2 gap-2 justify-center mt-8 md:gap-14 flex flex-col'>
@@ -72,9 +74,17 @@ export default function EventView() {
                     </div>
 
                     <div className='col-span-2 grid justify-items-center md:flex md:px-3'>
-                        <button className='font-Rubik bg-orange-400 text-sm h-7 w-44 sm:w-52 rounded-md text-white mt-5'>
-                            JOIN
-                        </button>
+                        <Buttoncomponent
+                            font='font-Rubik'
+                            bgColor='bg-orange-400'
+                            fontSize='text-sm'
+                            height='h-7'
+                            width='w-44 sm:w-52'
+                            borderRaduis='rounded-md'
+                            textColor='text-white'
+                            margin='mt-5'
+                            label='JOIN'
+                        />
                     </div>
                 </div>
             </div>
