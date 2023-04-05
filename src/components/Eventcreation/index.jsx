@@ -170,6 +170,7 @@ const Eventcreation = () => {
                     </Link>
                 </p>
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
+                    {/* ------------------------------------------------------------------------------ */}
                     <input
                         type='button'
                         id='done'

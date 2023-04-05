@@ -1,14 +1,14 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Eventcreation from "@/components/Eventcreation";
+import EventView from "@/components/EventView";
 
 import Layout from "@/layout/Layout";
 
-const eventcreation = () => {
+const eventview = () => {
     return (
         <div>
             <Layout>
-                <Eventcreation />
+                <EventView />
             </Layout>
         </div>
     );
@@ -23,4 +23,4 @@ export async function getStaticProps({ locale }) {
     };
 }
 
-export default eventcreation;
+export default eventview;

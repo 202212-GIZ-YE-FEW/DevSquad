@@ -1,5 +1,6 @@
-import Getstartedbtn from "@/components/Getstartedbtn";
 import Image from "next/image";
+
+import Getstartedbtn from "@/components/Getstartedbtn";
 
 const Hirosection = () => {
     return (

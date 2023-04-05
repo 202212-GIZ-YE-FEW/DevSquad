@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="flex flex-col items-center font-Rubik "
+  className="flex flex-col items-center font-Rubik"
 >
   <div
     className="relative w-52 h-52"

@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import Homepage from "../index";
+import Buttoncomponent from "../index";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Homepage />).toJSON();
+    const tree = renderer.create(<Buttoncomponent />).toJSON();
     expect(tree).toMatchSnapshot();
 });
