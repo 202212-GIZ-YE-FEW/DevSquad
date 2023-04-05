@@ -439,13 +439,11 @@ exports[`renders correctly 1`] = `
     <div
       className="py-20 flex flex-col items-center justify-center text-center"
     >
-      <input
-        className="md:w-96 h-12 border border-black rounded"
-        id="done"
-        name="done"
-        type="button"
-        value="Agree with tearms and create Event!"
-      />
+      <button
+        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2"
+      >
+        Agree with tearms and create Event!
+      </button>
     </div>
   </div>
 </div>
