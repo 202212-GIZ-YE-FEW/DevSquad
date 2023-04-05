@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
 
@@ -157,13 +158,14 @@ const Eventcreation = () => {
                     </Link>
                 </p>
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
-                    {/* ------------------------------------------------------------------------------ */}
-                    <input
-                        type='button'
+                    <Buttoncomponent
+                        label='Agree with tearms and create Event!'
+                        width='md:w-96'
+                        height='h-12'
+                        border='border'
+                        borderColor='border-black'
+                        borderRaduis='rounded'
                         id='done'
-                        name='done'
-                        value='Agree with tearms and create Event!'
-                        className='md:w-96 h-12 border border-black rounded'
                     />
                 </div>
             </div>

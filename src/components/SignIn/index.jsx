@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
+import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
 import google from "../../../public/images/google.png";
 import sitting from "../../../public/images/Sitting.png";
@@ -76,10 +77,15 @@ export default function SignIn() {
                                 Sign Up
                             </a>
                         </p>
-                        {/* --------------------------------------------------------------------------------------------------------------- */}
-                        <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 '>
-                            Sign In
-                        </button>
+                        <Buttoncomponent
+                            borderRaduis='rounded-md'
+                            bgColor='bg-orange-400'
+                            textColor='text-white'
+                            width='md:w-24'
+                            padding='py-1'
+                            margin='mb-4'
+                            label='Sign In'
+                        />
                     </form>
                 </div>
             </div>
