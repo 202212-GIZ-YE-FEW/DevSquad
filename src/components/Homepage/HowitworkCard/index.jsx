@@ -3,7 +3,7 @@ import Link from "next/link";
 const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
     return (
         <>
-            <div className='flex flex-col items-center font-Rubik	'>
+            <div className='flex flex-col items-center font-Rubik'>
                 <div className='relative w-52 h-52'>
                     <Image
                         src={imageSrc}

@@ -76,7 +76,7 @@ export default function SignIn() {
                                 Sign Up
                             </a>
                         </p>
-
+                        {/* --------------------------------------------------------------------------------------------------------------- */}
                         <button className='rounded-md bg-orange-400 text-white md:w-24 py-1 mb-4 '>
                             Sign In
                         </button>
