@@ -3,7 +3,6 @@ import React from "react";
 import { AiFillClockCircle } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
 
-import chart from "./Images/chart.png";
 export default function EventView() {
     return (
         <div className='md:grid grid-rows-2 gap-2 justify-center mt-8 md:gap-14 flex flex-col'>
@@ -15,7 +14,13 @@ export default function EventView() {
                 </div>
 
                 <div className='grid justify-items-center md:flex md:items-center sm:order-2'>
-                    <Image src={chart} alt='chart' className='w-5/6' />
+                    <Image
+                        src='/images/chart.png'
+                        alt='chart'
+                        width={500}
+                        height={500}
+                        className='w-5/6'
+                    />
                 </div>
 
                 {/* event info */}
