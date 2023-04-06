@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             No Poverty
           </span>
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Zero Hunger
           </span>
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Good Health And Well-Being
           </span>
@@ -117,7 +117,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Quality Education
           </span>
@@ -133,7 +133,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Gender Equality
           </span>
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Clean Water And Sanitation
           </span>
@@ -165,7 +165,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Affordable And Clean Energy
           </span>
@@ -181,7 +181,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Decent Work And Economic Growth
           </span>
@@ -197,7 +197,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -213,7 +213,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Reduced Inequalities
           </span>
@@ -229,7 +229,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Sustainable Cities And Communities
           </span>
@@ -245,7 +245,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Responsible Consumption And Production
           </span>
@@ -261,7 +261,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Climate Action
           </span>
@@ -277,7 +277,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Life Below Water
           </span>
@@ -293,7 +293,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Life On Land
           </span>
@@ -309,7 +309,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-sm"
           >
             Peace And Justice And Strong Institutions
           </span>

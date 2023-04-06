@@ -1,5 +1,15 @@
 import { useState } from "react";
-const Inputcomponent = ({ title, checked, ...props }) => {
+const Inputcomponent = ({
+    textColor = "text-white",
+    textColorChecked = "text-primary-orange",
+    borderColor = "border-primary-orange",
+    borderRightAndDown = " ",
+    font = "font-Rubik",
+    height = "h-32",
+    title,
+    checked,
+    ...props
+}) => {
     const defaultChecked = checked ? checked : false;
     const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
@@ -16,8 +26,8 @@ const Inputcomponent = ({ title, checked, ...props }) => {
                 <span
                     className={
                         isChecked
-                            ? "checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
-                            : "flex items-center justify-center text-white text-center border bg-primary-orange p-5 rounded h-32"
+                            ? `checked flex items-center justify-center text-center ${textColorChecked} border ${borderColor} ${borderRightAndDown} p-3 rounded ${height}  ${font} font-medium sm:text-base text-sm`
+                            : `flex items-center justify-center ${textColor} text-center border ${borderColor} ${borderRightAndDown} bg-primary-orange p-3 rounded ${height} ${font} font-medium sm:text-base text-sm`
                     }
                 >
                     {title}
