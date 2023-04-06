@@ -4,6 +4,7 @@ const Inputcomponent = ({ title, checked, ...props }) => {
     const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
         <div>
+            {/* comment form test */}
             <label>
                 <input
                     type='checkbox'
