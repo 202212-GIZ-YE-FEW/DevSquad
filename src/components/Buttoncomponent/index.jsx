@@ -8,6 +8,7 @@ export default function Buttoncomponent({
     height,
     font = "font-Rubik",
     fontSize = "",
+    fontWeight = "",
     borderColor = "",
     borderRaduis = "",
     border,
@@ -16,7 +17,7 @@ export default function Buttoncomponent({
 }) {
     return (
         <button
-            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding}`}
+            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding} ${fontWeight}`}
         >
             {`${label}`}
         </button>
