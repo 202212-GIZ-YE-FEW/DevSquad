@@ -29,7 +29,7 @@ export default function ProfilePage() {
                         Edit Profile
                     </h1>
                 </div>
-                <div className='mt-2 mb-2 sm:space-x-3 space-y-3 flex sm:flex-row flex-col sm:justify-start justify-center'>
+                <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
                     <div class=' inline-flex items-center justify-center w-36 h-36 bg-black rounded-full'>
                         <span class='text-4xl text-white'>R</span>
                     </div>
