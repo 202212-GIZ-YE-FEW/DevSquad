@@ -60,5 +60,8 @@ jobs:
             - name: 📥 Download deps
               uses: bahmutov/npm-install@v1
 
+            - name: update snapshot
+              run: yarn test -- -u
+
             - name: 🃏 Run jest
               run: yarn test

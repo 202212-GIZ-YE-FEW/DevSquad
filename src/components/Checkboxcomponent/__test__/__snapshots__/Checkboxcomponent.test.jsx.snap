@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       type="checkbox"
     />
     <span
-      className="flex items-center justify-center text-white text-center border border-primary-orange   bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-sm"
+      className="flex items-center justify-center text-white text-center border border-primary-orange   bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
     />
   </label>
 </div>

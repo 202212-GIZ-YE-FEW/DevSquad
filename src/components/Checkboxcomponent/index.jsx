@@ -26,8 +26,8 @@ const Inputcomponent = ({
                 <span
                     className={
                         isChecked
-                            ? `checked flex items-center justify-center text-center ${textColorChecked} border ${borderColor} ${borderRightAndDown} p-3 rounded ${height}  ${font} font-medium sm:text-base text-sm`
-                            : `flex items-center justify-center ${textColor} text-center border ${borderColor} ${borderRightAndDown} bg-primary-orange p-3 rounded ${height} ${font} font-medium sm:text-base text-sm`
+                            ? `checked flex items-center justify-center text-center ${textColorChecked} border ${borderColor} ${borderRightAndDown} p-3 rounded ${height}  ${font} font-medium sm:text-base text-xs`
+                            : `flex items-center justify-center ${textColor} text-center border ${borderColor} ${borderRightAndDown} bg-primary-orange p-3 rounded ${height} ${font} font-medium sm:text-base text-xs`
                     }
                 >
                     {title}
