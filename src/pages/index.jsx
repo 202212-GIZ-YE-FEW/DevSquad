@@ -2,7 +2,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 
-import Eventcard from "@/components/Eventcard";
+import Homepage from "@/components/Homepage";
 
 // import Homepage from "@/components/Homepage";
 import Layout from "@/layout/Layout";
@@ -12,8 +12,8 @@ export default function HomePage() {
 
     return (
         <Layout>
-            {/* <Homepage /> */}
-            <Eventcard />
+            <Homepage />
+
             {/* <p>{t("test")}</p>
 
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
