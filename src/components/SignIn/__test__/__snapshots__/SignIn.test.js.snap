@@ -46,6 +46,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           className="border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1"
+          onClick={[Function]}
         >
           <img
             alt="Twitter"
@@ -73,6 +74,7 @@ exports[`renders correctly 1`] = `
         </button>
         <button
           className="border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1"
+          onClick={[Function]}
         >
           <img
             alt="Google"
@@ -115,22 +117,25 @@ exports[`renders correctly 1`] = `
         />
       </div>
       <form
-        action="#"
         className="grid grid-cols-1 gap-y-4"
       >
         <input
           className="border  rounded-md border-black py-1 pl-2"
           id="email"
           name="email"
+          onChange={[Function]}
           placeholder="Email address"
           type="email"
+          value=""
         />
         <input
           className="border  rounded-md border-black py-1 pl-2"
           id="password"
           name="password"
+          onChange={[Function]}
           placeholder="Password"
           type="password"
+          value=""
         />
         <p
           className="text-sm hidden sm:block"
@@ -138,13 +143,17 @@ exports[`renders correctly 1`] = `
           Do not have an account?
           <a
             className="md:underline text-orange-400 md:text-black"
-            href="#"
+            href="/signup"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
           >
             Sign Up
           </a>
         </p>
         <button
           className="bg-orange-400 text-white md:w-24 undefined font-Rubik   rounded-md undefined mb-4 py-1"
+          onClick={[Function]}
         >
           Sign In
         </button>
