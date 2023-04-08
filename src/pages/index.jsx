@@ -2,18 +2,19 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
 
-import Homepage from "@/components/Homepage";
+// import Homepage from "@/components/Homepage";
 
 // import Homepage from "@/components/Homepage";
 import Layout from "@/layout/Layout";
+import PaginationComponent from "@/components/PaginationComponent";
 
 export default function HomePage() {
     // const { t } = useTranslation("common");
 
     return (
         <Layout>
-            <Homepage />
-
+            {/* <Homepage /> */}
+            <PaginationComponent />
             {/* <p>{t("test")}</p>
 
             <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
