@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 const eventsCollectionRef = collection(db, "events");
 export default function EventPage(props) {
-    const { entry } = props;
+    const { entry, id } = props;
     const router = useRouter();
 
     if (router.isFallback) {
@@ -23,7 +23,7 @@ export default function EventPage(props) {
         if (entry) {
             return (
                 <Layout>
-                    <EventView entry={props.entry} />
+                    <EventView entry={props.entry} id={props.id} />
                 </Layout>
             );
         } else {

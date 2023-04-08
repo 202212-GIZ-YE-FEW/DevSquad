@@ -135,9 +135,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               class="s text-white font-Rubik"
-            >
-               
-            </span>
+            />
           </div>
           <p
             className="font-Rubik ml-2"

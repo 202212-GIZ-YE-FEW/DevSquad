@@ -7,14 +7,16 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs, query, addDoc, where } from "firebase/firestore";
 import { db, auth } from "../../../config/firebase";
+// import { useRouter } from "next/navigation";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
-
+    // const router = useRouter();
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
     const usersCollectionRef = collection(db, "users");
+
     const getUserInfo = async (id) => {
         const q = query(usersCollectionRef, where("uid", "==", id));
         try {
@@ -40,13 +42,17 @@ export default function EventView(props) {
     // const joinEvent = async (id) => {
     //     try {
     //         const attendEventRef = collection(db, `events/${id}/attendEvent`);
-    //         isAuth
-    //             ? await addDoc(attendEventRef, {
-    //                   userId: auth.currentUser.uid,
-    //               })
-    //             : router.push("/signIn");
+    //         // isAuth
+    //         //     ? await addDoc(attendEventRef, {
+    //         //         userId: auth.currentUser.uid,
+    //         //     })
+    //         //     : router.push("/SignIn");
 
-    //         //alert("you are joined to the event");
+    //         await addDoc(attendEventRef, {
+    //             userId: auth.currentUser.uid,
+    //         })
+
+    //         alert("you are joined to the event");
     //     } catch (err) {
     //         console.error(err);
     //     }
@@ -123,7 +129,6 @@ export default function EventView(props) {
                         <div className='flex flex-row items-center'>
                             <div class='relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-black rounded-full'>
                                 <span class='s text-white font-Rubik'>
-                                    {" "}
                                     {userName ? userName[0] : ""}
                                 </span>
                             </div>
@@ -144,6 +149,7 @@ export default function EventView(props) {
                             textColor='text-white'
                             margin='mt-5'
                             label='JOIN'
+                            // onClick={() => { joinEvent(props.id) }}
                         />
                     </div>
                 </div>
