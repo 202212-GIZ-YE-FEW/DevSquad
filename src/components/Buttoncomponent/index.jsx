@@ -14,10 +14,12 @@ export default function Buttoncomponent({
     border,
     margin = "m-2",
     padding = "p-2",
+    onClick,
 }) {
     return (
         <button
-            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding} ${fontWeight}`}
+            onClick={onClick}
+            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding}`}
         >
             {`${label}`}
         </button>

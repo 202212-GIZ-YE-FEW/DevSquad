@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <button
-  className="slate-300 text-black undefined undefined font-Rubik    undefined m-2 p-2 "
+  className="slate-300 text-black undefined undefined font-Rubik    undefined m-2 p-2"
 >
    
 </button>

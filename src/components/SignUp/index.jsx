@@ -1,13 +1,88 @@
-import Image from "next/image";
-import React from "react";
+import {
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    signInWithPopup,
+} from "firebase/auth"; // Importing necessary functions from firebase/auth
+import { addDoc, collection } from "firebase/firestore"; // Importing necessary functions from firebase/firestore
+import Image from "next/image"; // Importing Image component from next
+import Link from "next/link";
+import { useRouter } from "next/router"; // Importing useRouter hook from next
+import React, { useState } from "react"; // Importing React and useState
 
 import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
+import {
+    auth,
+    db,
+    googleProvider,
+    twitterProvider,
+} from "../../../config/firebase"; // Importing Firebase configurations and providers
 import google from "../../../public/images/google.png";
 import sitting from "../../../public/images/Sitting.png";
 import twitter from "../../../public/images/twitter.png";
-
 export default function SignUp() {
+    const router = useRouter(); // Getting the router instance
+    // Setting up form states
+    const [email, setEmail] = useState("");
+    const [passwordOne, setPasswordOne] = useState("");
+    const [passwordTwo, setPasswordTwo] = useState("");
+    const [name, setName] = useState("");
+    const [surname, setSurname] = useState("");
+    const [error, setError] = useState(null);
+
+    // Listening to authentication state changes
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // If the user is authenticated
+            router.push("/"); // Redirect to homepage
+        }
+    });
+
+    // Handling sign up form submission
+    const signUp = async (event) => {
+        setError(null); // Resetting the error state
+        if (passwordOne === passwordTwo)
+            // If both password fields are the same
+            // Create a new user with the email and password  and Add user data to users collection in Firestore
+            createUserWithEmailAndPassword(auth, email, passwordOne)
+                .then(async (registeredUser) => {
+                    await addDoc(collection(db, "users"), {
+                        uid: registeredUser.user.uid,
+                        name: name,
+                        surname: surname,
+                    });
+                    router.push("/"); // Redirect to homepage after Create a new user
+                })
+                .catch((error) => {
+                    // If an error occurred
+                    setError(error.message); // Set the error state with the error message
+                });
+        else setError("Password is not match"); // If passwords don't match, set the error state with a message
+        event.preventDefault();
+    };
+
+    // Handling sign in with Twitter
+    const signInWithTwitter = async () => {
+        try {
+            setError(null);
+            await signInWithPopup(auth, twitterProvider);
+            router.push("/");
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
+    // Handling sign in with Google
+    const signInWithGoogle = async () => {
+        try {
+            setError(null);
+            await signInWithPopup(auth, googleProvider);
+            router.push("/");
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
     return (
         <div className='grid grid-cols-1 place-items-center md:grid-cols-2'>
             {/* sitting image part */}
@@ -25,7 +100,10 @@ export default function SignUp() {
                 <div className='flex flex-col-reverse md:flex-col'>
                     {/* component one */}
                     <div className='grid grid-cols-1 gap-y-3'>
-                        <button className='border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1'>
+                        <button
+                            onClick={signInWithTwitter}
+                            className='border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1'
+                        >
                             <Image
                                 src={twitter}
                                 alt='Twitter'
@@ -33,7 +111,10 @@ export default function SignUp() {
                             />
                             <span className='pl-2'>Continue with Twitter</span>
                         </button>
-                        <button className='border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1'>
+                        <button
+                            onClick={signInWithGoogle}
+                            className='border border-r-2 border-b-2 rounded-md border-black flex justify-center py-1'
+                        >
                             <Image
                                 src={google}
                                 alt='Google'
@@ -51,9 +132,13 @@ export default function SignUp() {
                     </div>
 
                     {/* component three */}
-                    <form action='#' className='grid grid-cols-1 gap-y-4'>
+                    <form className='grid grid-cols-1 gap-y-4'>
                         <div className='grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-2'>
                             <Inputcomponent
+                                onChange={(event) =>
+                                    setName(event.target.value)
+                                }
+                                value={name}
                                 type='text'
                                 id='name'
                                 name='name'
@@ -61,6 +146,10 @@ export default function SignUp() {
                                 placeholder='Name'
                             />
                             <Inputcomponent
+                                onChange={(event) =>
+                                    setSurname(event.target.value)
+                                }
+                                value={surname}
                                 type='text'
                                 id='Surname'
                                 name='Surname'
@@ -69,6 +158,8 @@ export default function SignUp() {
                             />
                         </div>
                         <Inputcomponent
+                            onChange={(event) => setEmail(event.target.value)}
+                            value={email}
                             type='email'
                             id='email'
                             name='email'
@@ -76,6 +167,10 @@ export default function SignUp() {
                             placeholder='Email address'
                         />
                         <Inputcomponent
+                            onChange={(event) =>
+                                setPasswordOne(event.target.value)
+                            }
+                            value={passwordOne}
                             type='password'
                             id='password'
                             name='password'
@@ -83,21 +178,29 @@ export default function SignUp() {
                             placeholder='Password'
                         />
                         <Inputcomponent
+                            onChange={(event) =>
+                                setPasswordTwo(event.target.value)
+                            }
+                            value={passwordTwo}
                             type='password'
                             id='confirmpassword'
                             name='confirmpassword'
                             className='border  rounded-md border-black py-1 pl-2'
                             placeholder='Confirm Password'
                         />
-
+                        {error && (
+                            <div className='text-red-500 text-center'>
+                                {error}
+                            </div>
+                        )}
                         <p className='text-sm hidden sm:block'>
                             Already have an account?
-                            <a
-                                href='#'
+                            <Link
+                                href='/signin'
                                 className='md:underline text-orange-400 md:text-black '
                             >
                                 Sign in
-                            </a>
+                            </Link>
                         </p>
                         <Buttoncomponent
                             borderRaduis='rounded-md'
@@ -107,6 +210,7 @@ export default function SignUp() {
                             padding='py-1'
                             margin='mb-4'
                             label='Sign Up'
+                            onClick={signUp}
                         />
                     </form>
                 </div>

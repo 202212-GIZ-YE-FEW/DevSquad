@@ -29,12 +29,12 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
       >
         Uplaod New
       </button>
       <button
-        className="slate-300 text-black sm:w-64 w-52 h-14 font-Rubik sm:text-xl text-lg border-black rounded border border-r-2 border-b-2 m-2 p-2 font-medium"
+        className="slate-300 text-black sm:w-64 w-52 h-14 font-Rubik sm:text-xl text-lg border-black rounded border border-r-2 border-b-2 m-2 p-2"
       >
         Choose from Library
       </button>
@@ -316,7 +316,7 @@ exports[`renders correctly 1`] = `
       className="flex flex-row sm:justify-end justify-center sm:m-6 m-2"
     >
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
       >
         Save Changes
       </button>
@@ -352,12 +352,12 @@ exports[`renders correctly 1`] = `
       className="flex flex-col sm:flex-row sm:justify-end justify-center sm:m-6 m-2 sm:w-full"
     >
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
       >
         Submit
       </button>
       <button
-        className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2 "
+        className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2"
       >
         Cancel
       </button>

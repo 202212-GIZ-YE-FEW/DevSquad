@@ -24,6 +24,7 @@ exports[`renders correctly 1`] = `
         name="eventLocation"
         placeholder="city"
         type="text"
+        value="eventLocation"
       />
     </div>
     <div
@@ -334,6 +335,7 @@ exports[`renders correctly 1`] = `
       name="eventTitle"
       placeholder=""
       type="text"
+      value="eventTitle"
     />
   </div>
   <div>
@@ -353,6 +355,7 @@ exports[`renders correctly 1`] = `
       name="eventDate"
       placeholder=""
       type="date"
+      value="eventDate"
     />
   </div>
   <div>
@@ -372,6 +375,7 @@ exports[`renders correctly 1`] = `
       name="eventtime"
       placeholder=""
       type="time"
+      value="eventtime"
     />
   </div>
   <div>
@@ -409,6 +413,7 @@ exports[`renders correctly 1`] = `
       name="eventImage"
       placeholder=""
       type="file"
+      value="eventImage"
     />
   </div>
   <div>
@@ -459,7 +464,7 @@ exports[`renders correctly 1`] = `
       className="py-20 flex flex-col items-center justify-center text-center"
     >
       <button
-        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2 "
+        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2"
       >
         Agree with tearms and create Event!
       </button>
