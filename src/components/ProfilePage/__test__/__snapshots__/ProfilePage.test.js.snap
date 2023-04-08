@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex flex-col justify-center items-center space-y-10 mt-8 mb-8"
+>
+  <div
+    className="flex flex-col sm:m-0 m-2 md:w-5/6"
+  >
+    <div
+      className="flex flex-row sm:justify-start justify-center"
+    >
+      <h1
+        className="text-2xl font-Rubik font-medium tracking-wide"
+      >
+        Edit Profile
+      </h1>
+    </div>
+    <div
+      className="mt-2 mb-2 sm:space-x-3 space-y-3"
+    >
+      <div
+        class=" inline-flex items-center justify-center w-36 h-36 bg-black rounded-full"
+      >
+        <span
+          class="text-4xl text-white"
+        >
+          R
+        </span>
+      </div>
+      <button
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+      >
+        Uplaod New
+      </button>
+      <button
+        className="slate-300 text-black sm:w-64 w-52 h-14 font-Rubik sm:text-xl text-lg border-black rounded border border-r-2 border-b-2 m-2 p-2"
+      >
+        Choose from Library
+      </button>
+    </div>
+  </div>
+  <div
+    className="flex flex-col w-5/6 space-y-4"
+  >
+    <div
+      className="flex flex-col"
+    >
+      <label
+        className="text-xl font-Rubik font-medium tracking-wide"
+      >
+        Name (Required)
+      </label>
+      <input
+        className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
+        placeholder="Name"
+        type="text"
+      />
+    </div>
+    <div
+      className="flex flex-col"
+    >
+      <label
+        className="text-xl font-Rubik font-medium tracking-wide"
+      >
+        Your Location
+      </label>
+      <input
+        className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
+        placeholder="Location"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="sm:m-6 m-2"
+  >
+    <div
+      className="flex flex-row sm:justify-start justify-center mb-3"
+    >
+      <h1
+        className="text-2xl font-Rubik font-medium"
+      >
+        Your Interests
+      </h1>
+    </div>
+    <div
+      className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-x-8"
+    >
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            No Poverty
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Good Health And Well-Being
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Quality Education
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Gender Equality
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Clean Water And Sanitation
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Affordable And Clean Energy
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Decent Work And Economic Growth
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Industry Innovation And Infrastructure
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Reduced Inequalities
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Sustainable Cities And Communities
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Responsible Consumption And Production
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Life Below Water
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Life On Land
+          </span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            checked={true}
+            className="checked"
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+          >
+            Peace And Justice And Strong Institutions
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      className="flex flex-row sm:justify-end justify-center sm:m-6 m-2"
+    >
+      <button
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+      >
+        Save Changes
+      </button>
+    </div>
+  </div>
+  <div
+    className="flex flex-col items-center bg-slate-300 rounded-lg sm:p-7 p-1"
+  >
+    <div
+      className="flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full"
+    >
+      <h1
+        className="text-2xl font-Rubik font-medium"
+      >
+        Change Password
+      </h1>
+    </div>
+    <div
+      className="flex justify-center flex-col sm:flex-row"
+    >
+      <input
+        className="border border-black rounded p-3 w-48 m-4"
+        placeholder="Password"
+        type="password"
+      />
+      <input
+        className="border border-black rounded p-3 w-48 m-4"
+        placeholder="Retype Password"
+        type="password"
+      />
+    </div>
+    <div
+      className="flex flex-col sm:flex-row sm:justify-end justify-center sm:m-6 m-2 sm:w-full"
+    >
+      <button
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+      >
+        Submit
+      </button>
+      <button
+        className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+`;

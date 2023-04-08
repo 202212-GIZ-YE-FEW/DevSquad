@@ -8,6 +8,7 @@ export default function Buttoncomponent({
     height,
     font = "font-Rubik",
     fontSize = "",
+    fontWeight = "",
     borderColor = "",
     borderRaduis = "",
     border,

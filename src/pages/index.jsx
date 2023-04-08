@@ -4,6 +4,7 @@ import * as React from "react";
 
 import Homepage from "@/components/Homepage";
 
+// import Homepage from "@/components/Homepage";
 import Layout from "@/layout/Layout";
 
 export default function HomePage() {
