@@ -12,31 +12,19 @@ exports[`renders correctly 1`] = `
     >
       <h1
         className="text-2xl font-medium font-Rubik"
-      >
-        The oragnization event name
-      </h1>
+      />
     </div>
     <div
       className="grid justify-items-center md:flex md:items-center sm:order-2"
     >
-      <img
-        alt="chart"
-        className="w-5/6"
-        data-nimg="1"
-        decoding="async"
-        height={500}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2Fchart.png&w=1080&q=75"
-        srcSet="/_next/image?url=%2Fimages%2Fchart.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fchart.png&w=1080&q=75 2x"
-        style={
-          Object {
-            "color": "transparent",
-          }
-        }
-        width={500}
-      />
+      <div>
+        <img
+          className="max-w-sm max-h-22"
+          height="500px"
+          src=""
+          width="500px"
+        />
+      </div>
     </div>
     <div
       className="sm:grid sm:grid-cols-2 sm:justify-items-center md:flex md:flex-col order-last sm:order-3"
@@ -69,9 +57,7 @@ exports[`renders correctly 1`] = `
           </svg>
           <p
             className="font-medium font-Rubik"
-          >
-            City, Country
-          </p>
+          />
         </div>
         <div
           className="flex flex-row items-center ml-8 md:ml-0"
@@ -97,9 +83,7 @@ exports[`renders correctly 1`] = `
           </svg>
           <p
             className="text-gray-500 font-Rubik "
-          >
-            place of event and date
-          </p>
+          />
         </div>
       </div>
       <div
@@ -150,15 +134,13 @@ exports[`renders correctly 1`] = `
             class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-black rounded-full"
           >
             <span
-              class=" text-white font-Rubik"
-            >
-              J
-            </span>
+              class="s text-white font-Rubik"
+            />
           </div>
           <p
             className="font-Rubik ml-2"
           >
-            Organized by the name
+            Organized by 
           </p>
         </div>
       </div>
@@ -184,9 +166,7 @@ exports[`renders correctly 1`] = `
       </h1>
       <p
         className="font-Rubik text-gray-500 sm:max-w-md"
-      >
-        The oldest classical British and Latin writing had little or no space between words and could be written in boustrophedon alternating directions. Over time, text direction left to right became standardized. dividers and terminal punctuation became common. The first way to divide sentences into groups wa original paragraphos, similar to an underscore at the beginning of the new group. The Greek parágr evolved into the pilcrow, which in English manuscripts in the Middle Ages can be seen inserted inline between sentences.
-      </p>
+      />
     </div>
     <div>
       <p
