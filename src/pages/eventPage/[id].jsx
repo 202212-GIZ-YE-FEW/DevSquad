@@ -1,43 +1,35 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-import EventView from "@/components/EventView";
-
-import Layout from "@/layout/Layout";
-import { useRouter } from "next/router";
-import { db, auth } from "../../../config/firebase";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { db } from "../../../config/firebase";
 import {
     collection,
     getDocs,
     query,
-    addDoc,
     where,
     documentId,
 } from "firebase/firestore";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import React from "react";
+import Layout from "@/layout/Layout";
+import EventView from "@/components/EventView";
+import { useRouter } from "next/navigation";
 
 const eventsCollectionRef = collection(db, "events");
-const eventview = (props) => {
-    {
-        console.log(props);
-    }
-    const { entry, id } = props;
-    return (
-        <div>
-            <Layout>
-                <EventView />
-            </Layout>
-        </div>
-    );
-};
+export default function EventPage(props) {
+    const { entry } = props;
+    const router = useRouter();
 
-export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-            // Will be passed to the page component as props
-        },
-    };
+    if (router.isFallback) {
+        return <div>loading</div>;
+    } else {
+        if (entry) {
+            return (
+                <Layout>
+                    <EventView entry={props.entry} />
+                </Layout>
+            );
+        } else {
+            return <div>not found</div>;
+        }
+    }
 }
 
 export const getStaticPaths = async () => {
@@ -54,7 +46,7 @@ export const getStaticPaths = async () => {
     };
 };
 
-export const getStaticPropsEvent = async (context) => {
+export const getStaticProps = async (context) => {
     const { id } = context.params;
     const q = query(eventsCollectionRef, where(documentId(), "==", id));
     const res = await getDocs(q);
@@ -64,6 +56,7 @@ export const getStaticPropsEvent = async (context) => {
             props: {
                 entry: entry[0],
                 id: id,
+                ...(await serverSideTranslations(context.locale, ["common"])),
             },
         };
     } else {
@@ -72,5 +65,3 @@ export const getStaticPropsEvent = async (context) => {
         };
     }
 };
-
-export default eventview;
