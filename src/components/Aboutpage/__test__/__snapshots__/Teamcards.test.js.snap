@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+  >
+    <div
+      className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+    >
+      <div
+        className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+      >
+        <img
+          alt="User"
+          className="w-full w-100% h-100"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src=""
+          style={
+            Object {
+              "bottom": 0,
+              "color": "transparent",
+              "height": "100%",
+              "left": 0,
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <h4
+      className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+    />
+    <div
+      className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+    >
+      <div
+        className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+      >
+        <a
+          target="_blank"
+        >
+          <img
+            alt="User"
+            data-nimg="1"
+            decoding="async"
+            height={100}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={100}
+          />
+        </a>
+      </div>
+      <div
+        className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+      >
+        <a
+          target="_blank"
+        >
+          <img
+            alt="User"
+            data-nimg="1"
+            decoding="async"
+            height={100}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={100}
+          />
+        </a>
+      </div>
+      <div
+        className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+      >
+        <a
+          target="_blank"
+        >
+          <img
+            alt="User"
+            data-nimg="1"
+            decoding="async"
+            height={100}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={100}
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,713 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=""
+>
+  <div
+    className="relative"
+  >
+    <img
+      alt="About Page Image"
+      className="w-full "
+      data-nimg="1"
+      decoding="async"
+      height={500}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2FaboutPage.png&w=3840&q=75"
+      srcSet="/_next/image?url=%2Fimages%2FaboutPage.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2FaboutPage.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2FaboutPage.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2FaboutPage.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2FaboutPage.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2FaboutPage.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2FaboutPage.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2FaboutPage.png&w=3840&q=75 3840w"
+      style={
+        Object {
+          "color": "transparent",
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+      width={100}
+    />
+    <div
+      className="absolute top-0 left-0 right-0 bottom-0"
+    >
+      <div
+        className="flex h-full w-full flex-col items-center justify-center"
+      >
+        <h3
+          className="m-1 text-center text-3xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold"
+        >
+          About Pebble Work
+        </h3>
+        <p
+          className="text-md mr-12 ml-12 font-Rubik text-center md:ml-24 md:mr-24 md:text-2xl lg:ml-32 lg:mr-32 lg:text-2xl"
+        >
+          Pebble is a place where you can find and start local movements and gatherings to support one or more of the 17 Sustainable Development Goals. We bring determined people together to make the world a better place. Our growing community makes us more passionate about what we do.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-10 min-h-[320px] overflow-hidden rounded-3xl bg-[#fef1e6] md:m-30 md:min-h-[900px] lg:m-44"
+  >
+    <h2
+      className="p-4 text-center font-Rubik text-2xl font-medium md:p-8 md:text-4xl md:font-bold lg:p-12 lg:text-5xl lg:font-bold"
+    >
+      Our Team
+    </h2>
+    <div
+      className="flex flex-row flex-wrap justify-center"
+    >
+      <div>
+        <div
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+        >
+          <div
+            className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+          >
+            <div
+              className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+            >
+              <img
+                alt="User"
+                className="w-full w-100% h-100"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Ficon.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ficon.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ficon.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ficon.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ficon.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ficon.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75 3840w"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <h4
+            className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+          >
+            Ramiz Ali
+          </h4>
+          <div
+            className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+          >
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://github.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+        >
+          <div
+            className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+          >
+            <div
+              className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+            >
+              <img
+                alt="User"
+                className="w-full w-100% h-100"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Ficon.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ficon.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ficon.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ficon.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ficon.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ficon.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75 3840w"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <h4
+            className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+          >
+            Ruqaiah Saif
+          </h4>
+          <div
+            className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+          >
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.linkedin.com/in/ruqaiah-saif-086b8a24b/"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://github.com/RuqaiahSaif"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+        >
+          <div
+            className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+          >
+            <div
+              className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+            >
+              <img
+                alt="User"
+                className="w-full w-100% h-100"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Ficon.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ficon.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ficon.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ficon.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ficon.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ficon.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75 3840w"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <h4
+            className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+          >
+             Rawan Salem Bamhdi
+          </h4>
+          <div
+            className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+          >
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.linkedin.com/in/rawan-salem-b-02570521b"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://github.com/rrawann"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://instagram.com/rrawnq"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+        >
+          <div
+            className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+          >
+            <div
+              className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+            >
+              <img
+                alt="User"
+                className="w-full w-100% h-100"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Ficon.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ficon.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ficon.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ficon.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ficon.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ficon.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75 3840w"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <h4
+            className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+          >
+            Fatima Jubary
+          </h4>
+          <div
+            className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+          >
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://github.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+        >
+          <div
+            className="mt-2 flex justify-center md:mt-3 lg:mt-3"
+          >
+            <div
+              className="relative h-12 w-12 overflow-hidden rounded-full pt-2 text-center md:mt-4 md:h-28 md:w-28 md:pt-4 lg:h-36 lg:w-36"
+            >
+              <img
+                alt="User"
+                className="w-full w-100% h-100"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Ficon.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ficon.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ficon.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ficon.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ficon.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ficon.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ficon.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ficon.png&w=3840&q=75 3840w"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <h4
+            className="pt-2 pb-2 text-center text-[10px] font-medium md:pb-2 md:pt-2 md:text-[24px]"
+          >
+            Hekmat Mohammed Ali
+          </h4>
+          <div
+            className="align-start content-bottom flex flex-row justify-center pb-2 md:ml-1 md:mt-2 md:content-end lg:mt-8"
+          >
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Flinkedin.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flinkedin.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://github.com/"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Fgithub.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fgithub.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+            <div
+              className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
+            >
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <img
+                  alt="User"
+                  data-nimg="1"
+                  decoding="async"
+                  height={100}
+                  loading="lazy"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75"
+                  srcSet="/_next/image?url=%2Fimages%2Finstagram.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Finstagram.png&w=256&q=75 2x"
+                  style={
+                    Object {
+                      "color": "transparent",
+                    }
+                  }
+                  width={100}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-16 md:m-36"
+  >
+    <h2
+      className="mb-2 text-center text-2xl font-bold md:mb-4 md:text-4xl lg:mb-4 lg:text-4xl"
+    >
+      Technologies Used and Project Structure
+    </h2>
+    <p
+      className="text-center text-sm md:text-2xl"
+    >
+      HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling: TailwindCSS - Translation: i18next - Version control: git, GitHub
+    </p>
+  </div>
+</div>
+`;
