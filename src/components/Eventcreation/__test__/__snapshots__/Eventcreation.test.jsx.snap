@@ -24,6 +24,7 @@ exports[`renders correctly 1`] = `
         name="eventLocation"
         placeholder="city"
         type="text"
+        value="eventLocation"
       />
     </div>
     <div
@@ -57,7 +58,7 @@ exports[`renders correctly 1`] = `
       Every Pebble events should serve at least one of th sustainable devlopment goals of United Nations. whitch goal do you want to help in ? Sellect all thet apply
     </p>
     <div
-      className=" grid md:grid-cols-4 gap-x-10 gap-y-4  grid-cols-2 mb-4 "
+      className=" grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 "
     >
       <div>
         <label>
@@ -69,7 +70,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             No Poverty
           </span>
@@ -85,7 +86,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Zero Hunger
           </span>
@@ -101,7 +102,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Good Health And Well-Being
           </span>
@@ -117,7 +118,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Quality Education
           </span>
@@ -133,7 +134,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Gender Equality
           </span>
@@ -149,7 +150,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Clean Water And Sanitation
           </span>
@@ -165,7 +166,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Affordable And Clean Energy
           </span>
@@ -181,7 +182,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Decent Work And Economic Growth
           </span>
@@ -197,7 +198,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -213,7 +214,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Reduced Inequalities
           </span>
@@ -229,7 +230,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Sustainable Cities And Communities
           </span>
@@ -245,7 +246,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Responsible Consumption And Production
           </span>
@@ -261,7 +262,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Climate Action
           </span>
@@ -277,7 +278,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Life Below Water
           </span>
@@ -293,7 +294,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Life On Land
           </span>
@@ -309,7 +310,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-5 rounded h-32 "
+            className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange   p-3 rounded h-32  font-Rubik font-medium sm:text-base text-xs"
           >
             Peace And Justice And Strong Institutions
           </span>
@@ -334,6 +335,7 @@ exports[`renders correctly 1`] = `
       name="eventTitle"
       placeholder=""
       type="text"
+      value="eventTitle"
     />
   </div>
   <div>
@@ -353,6 +355,27 @@ exports[`renders correctly 1`] = `
       name="eventDate"
       placeholder=""
       type="date"
+      value="eventDate"
+    />
+  </div>
+  <div>
+    <p
+      className="font-medium py-5 text-3xl"
+    >
+      Event Time:
+    </p>
+    <p
+      className="text-primary-gray pb-7"
+    >
+      Choose a Event Time
+    </p>
+    <input
+      className="w-80 h-12 border border-black rounded"
+      id="eventtime"
+      name="eventtime"
+      placeholder=""
+      type="time"
+      value="eventtime"
     />
   </div>
   <div>
@@ -390,6 +413,7 @@ exports[`renders correctly 1`] = `
       name="eventImage"
       placeholder=""
       type="file"
+      value="eventImage"
     />
   </div>
   <div>
@@ -439,13 +463,11 @@ exports[`renders correctly 1`] = `
     <div
       className="py-20 flex flex-col items-center justify-center text-center"
     >
-      <input
-        className="md:w-96 h-12 border border-black rounded"
-        id="done"
-        name="done"
-        type="button"
-        value="Agree with tearms and create Event!"
-      />
+      <button
+        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2"
+      >
+        Agree with tearms and create Event!
+      </button>
     </div>
   </div>
 </div>

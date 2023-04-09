@@ -1,6 +1,7 @@
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import Eventcreation from "@/components/Eventcreation";
+
 import Layout from "@/layout/Layout";
 
 const eventcreation = () => {

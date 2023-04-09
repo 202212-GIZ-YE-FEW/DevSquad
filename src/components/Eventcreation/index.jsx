@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
 
@@ -56,7 +57,7 @@ const Eventcreation = () => {
                     sustainable devlopment goals of United Nations. whitch goal
                     do you want to help in ? Sellect all thet apply
                 </p>
-                <div className=' grid md:grid-cols-4 gap-x-10 gap-y-4  grid-cols-2 mb-4 '>
+                <div className=' grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 '>
                     {titles &&
                         titles.map((title) => {
                             return (
@@ -95,6 +96,19 @@ const Eventcreation = () => {
                     id='eventDate'
                     name='eventDate'
                     value='eventDate'
+                    className='w-80	 h-12 border border-black rounded'
+                    placeholder=''
+                />
+            </div>
+            {/* Event time section */}
+            <div>
+                <p className='font-medium py-5 text-3xl'>Event Time:</p>
+                <p className='text-primary-gray pb-7'>Choose a Event Time</p>
+                <Inputcomponent
+                    type='time'
+                    id='eventtime'
+                    name='eventtime'
+                    value='eventtime'
                     className='w-80	 h-12 border border-black rounded'
                     placeholder=''
                 />
@@ -157,12 +171,14 @@ const Eventcreation = () => {
                     </Link>
                 </p>
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
-                    <input
-                        type='button'
+                    <Buttoncomponent
+                        label='Agree with tearms and create Event!'
+                        width='md:w-96'
+                        height='h-12'
+                        border='border'
+                        borderColor='border-black'
+                        borderRaduis='rounded'
                         id='done'
-                        name='done'
-                        value='Agree with tearms and create Event!'
-                        className='md:w-96 h-12 border border-black rounded'
                     />
                 </div>
             </div>
