@@ -706,7 +706,7 @@ exports[`renders correctly 1`] = `
     <p
       className="text-center text-sm md:text-2xl"
     >
-      HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling: TailwindCSS - Translation: i18next - Version control: git, GitHub
+      HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest - Formatting: Prettier, ESLint - Styling: TailwindCSS - Translation: i18next - Version control: git, GitHub
     </p>
   </div>
 </div>
