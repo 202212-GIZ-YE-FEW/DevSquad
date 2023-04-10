@@ -1,33 +1,27 @@
 import { useState } from "react";
 const Inputcomponent = ({
-    textColor = "text-white",
-    textColorChecked = "text-primary-orange",
-    borderColor = "border-primary-orange",
-    borderRightAndDown = " ",
-    font = "font-Rubik",
-    height = "h-32",
+    afterChecked,
+    beforeChecked,
+    view,
     title,
     checked,
     ...props
 }) => {
-    const defaultChecked = checked ? checked : false;
+    const defaultChecked = checked ? false : checked;
     const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
         <div>
-            <label>
+            <label className='flex md:block'>
                 <input
                     type='checkbox'
                     checked={isChecked}
                     onChange={() => setIsChecked((prev) => !prev)}
-                    className={isChecked ? "checked" : ""}
+                    className={isChecked ? `checked ${view}` : `${view}`}
                     {...props}
-                    hidden
                 />
                 <span
                     className={
-                        isChecked
-                            ? `checked flex items-center justify-center text-center ${textColorChecked} border ${borderColor} ${borderRightAndDown} p-3 rounded ${height}  ${font} font-medium sm:text-base text-xs`
-                            : `flex items-center justify-center ${textColor} text-center border ${borderColor} ${borderRightAndDown} bg-primary-orange p-3 rounded ${height} ${font} font-medium sm:text-base text-xs`
+                        isChecked ? `${afterChecked}` : `${beforeChecked}`
                     }
                 >
                     {title}
