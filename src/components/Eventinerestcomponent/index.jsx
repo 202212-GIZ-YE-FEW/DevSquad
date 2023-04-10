@@ -26,35 +26,16 @@ const Eventinerestcomponent = () => {
     return (
         <>
             {/* disktop design */}
-            <div className=' md:mx-32 mx-10 w-80 p-5 md:block hidden'>
-                <div className='grid grid-cols-1 gap-2 '>
-                    <p className='font-medium font-Rubik underline text-center'>
-                        Pick Your Interest
-                    </p>
-                    {titles &&
-                        titles.map((title) => {
-                            return (
-                                <Checkboxcomponent
-                                    key={title}
-                                    title={title}
-                                    checked={true}
-                                    afterChecked='flex items-center justify-center text-center border-2 border-black bg-secondry-orange p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
-                                    beforeChecked='flex items-center justify-center text-center  border-2 border-black  p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
-                                    view='md:hidden'
-                                />
-                            );
-                        })}
-                </div>
-            </div>
-
-            {/* mobaile design */}
             <div
-                className={`fixed z-50 top-0 left-0  h-96 bg-opacity-50 transition-opacity md:hidden block ${
+                className={`md:mx-32 mx-10 md:w-80 md:p-5 md:block md:static md:z-0	fixed z-50 top-0 left-0 md:h-full h-96 bg-opacity-50 md:opacity-100 transition-opacity  ${
                     isOpen ? "" : "opacity-0 pointer-events-none"
                 }`}
             >
-                <div className='fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full h-80 overflow-y-scroll scrollbar'>
+                <div className='fixed md:static md:z-0 z-50 top-1/2 left-1/2 md:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full md:w-80 h-80 md:h-full overflow-y-scroll md:overflow-auto scrollbar '>
                     <div className='grid grid-cols-1 gap-2 '>
+                        <p className='font-medium font-Rubik underline text-center md:block hidden'>
+                            Pick Your Interest
+                        </p>
                         {titles &&
                             titles.map((title) => {
                                 return (
@@ -62,9 +43,9 @@ const Eventinerestcomponent = () => {
                                         key={title}
                                         title={title}
                                         checked={true}
-                                        afterChecked='flex items-center  justify-center text-center   rounded h-10  font-Rubik font-normal sm:text-base text-xs p-2'
-                                        beforeChecked='flex items-center justify-center text-center  rounded h-10  font-Rubik font-normal sm:text-base text-xs p-2'
-                                        view='md:hidden '
+                                        afterChecked='flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
+                                        beforeChecked='flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
+                                        view='md:hidden'
                                     />
                                 );
                             })}
