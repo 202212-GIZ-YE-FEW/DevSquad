@@ -4,10 +4,8 @@ exports[`renders correctly 1`] = `
 <div>
   <label>
     <input
-      checked={false}
       className=""
       hidden={true}
-      onChange={[Function]}
       type="checkbox"
     />
     <span

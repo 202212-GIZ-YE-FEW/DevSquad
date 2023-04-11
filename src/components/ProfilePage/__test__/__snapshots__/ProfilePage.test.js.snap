@@ -30,14 +30,15 @@ exports[`renders correctly 1`] = `
       </div>
       <button
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+        onClick={[Function]}
       >
         Uplaod New
       </button>
-      <button
-        className="slate-300 text-black sm:w-64 w-52 h-14 font-Rubik sm:text-xl text-lg border-black rounded border border-r-2 border-b-2 m-2 p-2"
-      >
-        Choose from Library
-      </button>
+      <input
+        accept="image/x-png,image/gif,image/jpeg"
+        onChange={[Function]}
+        type="file"
+      />
     </div>
   </div>
   <div
@@ -53,6 +54,7 @@ exports[`renders correctly 1`] = `
       </label>
       <input
         className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
+        onChange={[Function]}
         placeholder="Name"
         type="text"
       />
@@ -67,6 +69,7 @@ exports[`renders correctly 1`] = `
       </label>
       <input
         className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
+        onChange={[Function]}
         placeholder="Location"
         type="text"
       />
@@ -90,14 +93,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             No Poverty
           </span>
@@ -106,14 +109,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Good Health And Well-Being
           </span>
@@ -122,14 +125,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Quality Education
           </span>
@@ -138,14 +141,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Gender Equality
           </span>
@@ -154,14 +157,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Clean Water And Sanitation
           </span>
@@ -170,14 +173,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Affordable And Clean Energy
           </span>
@@ -186,14 +189,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Decent Work And Economic Growth
           </span>
@@ -202,14 +205,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -218,14 +221,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Reduced Inequalities
           </span>
@@ -234,14 +237,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Sustainable Cities And Communities
           </span>
@@ -250,14 +253,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Responsible Consumption And Production
           </span>
@@ -266,14 +269,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Life Below Water
           </span>
@@ -282,14 +285,14 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Life On Land
           </span>
@@ -298,25 +301,27 @@ exports[`renders correctly 1`] = `
       <div>
         <label>
           <input
-            checked={true}
-            className="checked"
+            checked={false}
+            className=""
             hidden={true}
             onChange={[Function]}
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-black text-center border border-black border-r-2 border-b-2 bg-primary-orange p-3 rounded h-20 font-Rubik font-medium sm:text-base text-xs"
           >
             Peace And Justice And Strong Institutions
           </span>
         </label>
       </div>
     </div>
+    <div />
     <div
       className="flex flex-row sm:justify-end justify-center sm:m-6 m-2"
     >
       <button
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+        onClick={[Function]}
       >
         Save Changes
       </button>
@@ -331,7 +336,7 @@ exports[`renders correctly 1`] = `
       <h1
         className="text-2xl font-Rubik font-medium"
       >
-        Change Password
+        Change Password 
       </h1>
     </div>
     <div
@@ -339,11 +344,13 @@ exports[`renders correctly 1`] = `
     >
       <input
         className="border border-black rounded p-3 w-48 m-4"
+        onChange={[Function]}
         placeholder="Password"
         type="password"
       />
       <input
         className="border border-black rounded p-3 w-48 m-4"
+        onChange={[Function]}
         placeholder="Retype Password"
         type="password"
       />
@@ -353,6 +360,7 @@ exports[`renders correctly 1`] = `
     >
       <button
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
+        onClick={[Function]}
       >
         Submit
       </button>

@@ -8,6 +8,7 @@ const Inputcomponent = ({
     height = "h-32",
     title,
     checked,
+    onChange,
     ...props
 }) => {
     const defaultChecked = checked ? checked : false;
@@ -17,8 +18,10 @@ const Inputcomponent = ({
             <label>
                 <input
                     type='checkbox'
-                    checked={isChecked}
-                    onChange={() => setIsChecked((prev) => !prev)}
+                    checked={checked}
+                    // checked={isChecked}
+                    // onChange={() => setIsChecked((prev) => !prev)}
+                    onChange={onChange}
                     className={isChecked ? "checked" : ""}
                     {...props}
                     hidden
