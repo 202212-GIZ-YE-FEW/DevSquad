@@ -16,6 +16,9 @@ module.exports = {
                     blue: "#0180AB",
                     gray: "#878787",
                 },
+                secondry: {
+                    orange: "#FBC495",
+                },
             },
             fontFamily: {
                 Rubik: ["Rubik", "sans-serif"],

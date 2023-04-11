@@ -2,16 +2,16 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <label>
+  <label
+    className="flex md:block"
+  >
     <input
-      checked={false}
-      className=""
-      hidden={true}
+      className="undefined"
       onChange={[Function]}
       type="checkbox"
     />
     <span
-      className="flex items-center justify-center text-white text-center border border-primary-orange   bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+      className="undefined"
     />
   </label>
 </div>
