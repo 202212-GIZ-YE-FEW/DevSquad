@@ -88,224 +88,308 @@ exports[`renders correctly 1`] = `
       className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-x-8"
     >
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             No Poverty
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Good Health And Well-Being
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Quality Education
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Gender Equality
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Clean Water And Sanitation
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Affordable And Clean Energy
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Decent Work And Economic Growth
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Industry Innovation And Infrastructure
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Reduced Inequalities
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Sustainable Cities And Communities
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Responsible Consumption And Production
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Life Below Water
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Life On Land
           </span>
         </label>
       </div>
       <div>
-        <label>
+        <label
+          className="flex md:block"
+        >
           <input
-            checked={true}
-            className="checked"
-            hidden={true}
+            borderColor="border-black"
+            borderRightAndDown="border-r-2 border-b-2"
+            checked={false}
+            className="undefined"
+            height="h-20"
             onChange={[Function]}
+            textColor="text-black"
+            textColorChecked="text-black"
             type="checkbox"
           />
           <span
-            className="checked flex items-center justify-center text-center text-black border border-black border-r-2 border-b-2 p-3 rounded h-20  font-Rubik font-medium sm:text-base text-xs"
+            className="undefined"
           >
             Peace And Justice And Strong Institutions
           </span>

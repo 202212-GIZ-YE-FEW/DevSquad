@@ -65,6 +65,9 @@ const Eventcreation = () => {
                                     key={title}
                                     title={title}
                                     checked={true}
+                                    afterChecked='flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
+                                    beforeChecked='flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
+                                    view='hidden'
                                 />
                             );
                         })}
