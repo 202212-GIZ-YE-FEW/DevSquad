@@ -2,10 +2,11 @@ import React from "react";
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
-import { updatePassword, updateProfile } from "firebase/auth";
+import { updatePassword, updateProfile, getAuth } from "firebase/auth";
 import { auth, storage, db } from "../../../config/firebase";
 import { useEffect, useState } from "react";
 import { ref, uploadBytes } from "firebase/storage";
+import { onAuthStateChanged } from "firebase/auth";
 import {
     getDocs,
     collection,
@@ -34,11 +35,16 @@ export default function ProfilePage() {
         "Life On Land",
         "Peace And Justice And Strong Institutions",
     ];
+    const [isAuth, setIsAuth] = useState(null);
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+        user ? setIsAuth(auth?.currentUser?.uid) : setIsAuth(null);
+    });
     const [img, setImg] = useState("");
     const [newName, setNewName] = useState("");
     const [newLocation, setNewLocation] = useState("");
     const [checkedState, setCheckedState] = useState(
-        new Array(titles.length).fill(false)
+        new Array(titles.length).fill(true)
     );
     const [intersetList, setIntersetList] = useState([]);
     const [fileUpload, setFileUpload] = useState(null);
@@ -70,29 +76,35 @@ export default function ProfilePage() {
             intersets: intersetList,
             image: fileUpload.name,
         });
-        // uploadFile()
-        alert("done");
+        uploadFile();
+        alert("update profile successsfully");
     };
 
-    console.log("===================", img);
     const updateUserInfo = async () => {
         const usersCollectionRef = collection(db, "users");
-        const q = query(
-            usersCollectionRef,
-            where("uid", "==", auth.currentUser.uid)
-        );
+        const q = query(usersCollectionRef, where("uid", "==", isAuth));
         const data = await getDocs(q);
         const filteredData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        setImg(filteredData[0].image);
         updateUser(filteredData[0].id);
-        console.log("=========+=+++==========", filteredData[0]);
     };
 
+    const showImg = async () => {
+        const usersCollectionRef = collection(db, "users");
+        const q = query(usersCollectionRef, where("uid", "==", isAuth));
+        const data = await getDocs(q);
+        const filteredData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }));
+        setImg(filteredData[0]?.image);
+        console.log(isAuth);
+    };
     useEffect(() => {
-        updateUserInfo;
+        setIsAuth(auth?.currentUser?.uid);
+        showImg();
     }, []);
 
     const handleOnChange = (position) => {
@@ -136,14 +148,12 @@ export default function ProfilePage() {
                         {img ? (
                             <EventImage
                                 pic={img}
-                                // src='/images/chart.png'
-                                // alt='chart'
-                                width='500px'
-                                height='500px'
-                                className='max-w-sm max-h-10'
+                                className='inline-flex  w-36 h-36 bg-black rounded-full'
                             />
                         ) : (
-                            <span class='text-4xl text-white'>R</span>
+                            <span class='text-4xl text-white'>
+                                {auth.currentUser?.email[0]}{" "}
+                            </span>
                         )}
                     </div>
                     <Buttoncomponent
@@ -155,7 +165,8 @@ export default function ProfilePage() {
                         label='Uplaod New'
                         fontSize='text-xl'
                         onClick={() => {
-                            uploadFile();
+                            // uploadFile();
+                            showImg();
                         }}
                     />
 

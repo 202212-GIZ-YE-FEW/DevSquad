@@ -15,6 +15,10 @@ module.exports = {
                     orange: "#FDA855",
                     blue: "#0180AB",
                     gray: "#878787",
+                    lightblue: "#BDD6D0",
+                },
+                secondry: {
+                    orange: "#FBC495",
                 },
             },
             fontFamily: {
