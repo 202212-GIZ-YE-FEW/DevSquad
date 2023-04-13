@@ -148,7 +148,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className=" text-lg md:text-white text-black "
-                href="/blogs"
+                href="/aboutpage"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}

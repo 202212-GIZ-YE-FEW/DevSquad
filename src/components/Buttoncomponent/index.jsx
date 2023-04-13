@@ -15,9 +15,11 @@ export default function Buttoncomponent({
     margin = "m-2",
     padding = "p-2",
     onClick,
+    type,
 }) {
     return (
         <button
+            type={type}
             onClick={onClick}
             className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding}`}
         >
