@@ -45,6 +45,8 @@ const Eventinerestcomponent = () => {
                                         afterChecked='flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                         beforeChecked='checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                         view='md:hidden'
+                                        block='block'
+                                        flex='flex'
                                     />
                                 );
                             })}

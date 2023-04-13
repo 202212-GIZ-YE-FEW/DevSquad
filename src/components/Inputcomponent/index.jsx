@@ -6,6 +6,7 @@ const Inputcomponent = ({
     type,
     placeholder,
     className,
+    accept,
 }) => {
     return (
         <input
@@ -16,6 +17,7 @@ const Inputcomponent = ({
             name={name}
             placeholder={placeholder}
             className={className}
+            accept={accept}
         />
     );
 };

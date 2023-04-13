@@ -1,23 +1,21 @@
+import { updatePassword } from "firebase/auth";
+import {
+    collection,
+    doc,
+    getDocs,
+    query,
+    updateDoc,
+    where,
+} from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
 import React from "react";
+import { useState } from "react";
+
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
-import { updatePassword } from "firebase/auth";
-import { useRouter } from "next/router";
-import { auth, storage, db } from "../../../config/firebase";
-import { useEffect, useState } from "react";
-import { ref, uploadBytes } from "firebase/storage";
-import { onAuthStateChanged } from "firebase/auth";
-import {
-    getDocs,
-    collection,
-    updateDoc,
-    doc,
-    query,
-    where,
-} from "firebase/firestore";
-
 import EventImage from "../../components/EventImage/index";
+import { auth, db, storage } from "../../../config/firebase";
 
 export default function ProfilePage() {
     const titles = [
@@ -195,6 +193,7 @@ export default function ProfilePage() {
                     {/* <Buttoncomponent
                         type="file"
                         borderRaduis='rounded'
+
                         width='sm:w-64 w-52'
                         height='h-14'
                         label='Choose from Library'
@@ -204,11 +203,12 @@ export default function ProfilePage() {
                         fontWeight='font-medium'
                     /> */}
 
-                    <input
+                    <Inputcomponent
                         type='file'
                         onChange={(e) => setFileUpload(e.target.files[0])}
                         //value={fileUpload}
                         accept='image/x-png,image/gif,image/jpeg'
+                        className='rounded sm:w-64 w-52 font-Rubik sm:text-xl border border-r-2 border-b-2 border-black font-medium'
                     />
                 </div>
             </div>
@@ -267,7 +267,7 @@ export default function ProfilePage() {
                             );
                         })}
                 </div>
-                <div>{intersetList}</div>
+                {/* <div>{intersetList}</div> */}
                 <div className='flex flex-row sm:justify-end justify-center sm:m-6 m-2'>
                     <Buttoncomponent
                         bgColor='bg-orange-400'
