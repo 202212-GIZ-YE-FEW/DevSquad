@@ -75,13 +75,22 @@ export default function ProfilePage() {
         }
     };
 
+    //Cancel Button
+    const clear = async () => {
+        setPasswordOne(null);
+        setPasswordTwo(null);
+
+        console.log("done");
+        alert("cancel update password");
+    };
+
     const updateUserInfo = async (id) => {
         const userDoc = doc(db, "users", id);
         await updateDoc(userDoc, {
             name: newName,
             location: newLocation,
             intersets: intersetList,
-            image: fileUpload.name,
+            image: fileUpload?.name,
         });
         uploadFile();
         alert("update profile successsfully");
@@ -318,6 +327,9 @@ export default function ProfilePage() {
                         fontSize='text-xl'
                         border='border border-r-2 border-b-2'
                         borderColor='border-black'
+                        onClick={() => {
+                            clear();
+                        }}
                     />
                 </div>
             </div>

@@ -420,7 +420,8 @@ exports[`renders correctly 1`] = `
       <h1
         className="text-2xl font-Rubik font-medium"
       >
-        Change Password 
+        Change Password
+         
         <div
           className="text-red-500 text-center"
         />
@@ -455,6 +456,7 @@ exports[`renders correctly 1`] = `
       </button>
       <button
         className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2"
+        onClick={[Function]}
       >
         Cancel
       </button>
