@@ -5,24 +5,24 @@ const Inputcomponent = ({
     view,
     title,
     checked,
+    onChange,
     ...props
 }) => {
-    const defaultChecked = checked ? false : checked;
-    const [isChecked, setIsChecked] = useState(defaultChecked);
+    // const defaultChecked = checked ? false : checked;
+    // const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
         <div>
             <label className='flex md:block'>
                 <input
                     type='checkbox'
-                    checked={isChecked}
-                    onChange={() => setIsChecked((prev) => !prev)}
-                    className={isChecked ? `checked ${view}` : `${view}`}
+                    checked={checked}
+                    // onChange={() => setIsChecked((prev) => !prev)}
+                    onChange={onChange}
+                    className={checked ? `checked ${view}` : `${view}`}
                     {...props}
                 />
                 <span
-                    className={
-                        isChecked ? `${afterChecked}` : `${beforeChecked}`
-                    }
+                    className={checked ? `${afterChecked}` : `${beforeChecked}`}
                 >
                     {title}
                 </span>

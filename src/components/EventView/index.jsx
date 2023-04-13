@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs, query, addDoc, where } from "firebase/firestore";
 import { db, auth } from "../../../config/firebase";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
-    // const router = useRouter();
+    const router = useRouter();
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
@@ -39,24 +39,24 @@ export default function EventView(props) {
         getUserInfo(props.entry.userId);
     }, []);
 
-    // const joinEvent = async (id) => {
-    //     try {
-    //         const attendEventRef = collection(db, `events/${id}/attendEvent`);
-    //         // isAuth
-    //         //     ? await addDoc(attendEventRef, {
-    //         //         userId: auth.currentUser.uid,
-    //         //     })
-    //         //     : router.push("/SignIn");
+    const joinEvent = async (id) => {
+        try {
+            const attendEventRef = collection(db, `events/${id}/attendEvent`);
+            isAuth
+                ? await addDoc(attendEventRef, {
+                      userId: auth.currentUser.uid,
+                  })
+                : router.push("/signin");
 
-    //         await addDoc(attendEventRef, {
-    //             userId: auth.currentUser.uid,
-    //         })
+            await addDoc(attendEventRef, {
+                userId: auth.currentUser.uid,
+            });
 
-    //         alert("you are joined to the event");
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    // };
+            alert("you are joined to the event");
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     return (
         <div className='md:grid grid-rows-2 gap-2 justify-center mt-8 md:gap-14 flex flex-col'>
@@ -149,7 +149,9 @@ export default function EventView(props) {
                             textColor='text-white'
                             margin='mt-5'
                             label='JOIN'
-                            // onClick={() => { joinEvent(props.id) }}
+                            onClick={() => {
+                                joinEvent(props.id);
+                            }}
                         />
                     </div>
                 </div>

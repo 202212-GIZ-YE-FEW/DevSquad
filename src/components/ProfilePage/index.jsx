@@ -1,8 +1,23 @@
 import React from "react";
-
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
+import { updatePassword } from "firebase/auth";
+import { useRouter } from "next/router";
+import { auth, storage, db } from "../../../config/firebase";
+import { useEffect, useState } from "react";
+import { ref, uploadBytes } from "firebase/storage";
+import { onAuthStateChanged } from "firebase/auth";
+import {
+    getDocs,
+    collection,
+    updateDoc,
+    doc,
+    query,
+    where,
+} from "firebase/firestore";
+
+import EventImage from "../../components/EventImage/index";
 
 export default function ProfilePage() {
     const titles = [
@@ -21,6 +36,127 @@ export default function ProfilePage() {
         "Life On Land",
         "Peace And Justice And Strong Institutions",
     ];
+
+    //##
+    // const router = useRouter(); // Getting the router instance
+    // onAuthStateChanged(auth, (user) => {
+    //     if (!user) {
+    //         // If the user is authenticated
+    //         router.push("/"); // Redirect to homepage
+    //     }
+
+    // });
+    const [img, setImg] = useState("");
+    const [error, setError] = useState(null);
+    const [newName, setNewName] = useState("");
+    const [newLocation, setNewLocation] = useState("");
+    const [checkedState, setCheckedState] = useState(
+        new Array(titles.length).fill(false)
+    );
+    const [intersetList, setIntersetList] = useState([]);
+    const [fileUpload, setFileUpload] = useState(null);
+    const [passwordOne, setPasswordOne] = useState("");
+    const [passwordTwo, setPasswordTwo] = useState("");
+
+    //rest password
+    const restPassword = async () => {
+        if (passwordOne === passwordTwo) {
+            updatePassword(auth.currentUser, passwordTwo).then(
+                () => {
+                    console.log("done");
+                    alert("update password successfully");
+                },
+                (error) => {
+                    setError(error);
+                }
+            );
+        } else {
+            setError("password is not match");
+        }
+    };
+
+    //Cancel Button
+    const clear = async () => {
+        setPasswordOne(null);
+        setPasswordTwo(null);
+
+        console.log("done");
+        alert("cancel update password");
+    };
+
+    const updateUserInfo = async (id) => {
+        const userDoc = doc(db, "users", id);
+        await updateDoc(userDoc, {
+            name: newName,
+            location: newLocation,
+            intersets: intersetList,
+            image: fileUpload?.name,
+        });
+        uploadFile();
+        alert("update profile successsfully");
+    };
+
+    const updateuser = async () => {
+        const usersCollectionRef = collection(db, "users");
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth.currentUser.uid)
+        );
+        const data = await getDocs(q);
+        const filteredData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }));
+        updateUserInfo(filteredData[0]?.id);
+    };
+
+    const showImg = async () => {
+        const usersCollectionRef = collection(db, "users");
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth?.currentUser?.uid)
+        );
+        const data = await getDocs(q);
+        const filteredData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }));
+        setImg(filteredData[0]?.image);
+        console.log(img);
+    };
+
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+        let x = [];
+
+        const interstList = updatedCheckedState.map((item, index) => {
+            if (item === true) {
+                x.push(titles[index]);
+            }
+        });
+
+        setIntersetList(x);
+    };
+
+    const uploadFile = async () => {
+        if (!fileUpload) return;
+
+        const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
+        try {
+            await uploadBytes(filesFolderRef, fileUpload);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    //##
+    // useEffect(() => {
+    //     showImg()
+    // }, [])
+
     return (
         <div className='flex flex-col justify-center items-center space-y-10 mt-8 mb-8'>
             <div className='flex flex-col sm:m-0 m-2 md:w-5/6'>
@@ -31,7 +167,16 @@ export default function ProfilePage() {
                 </div>
                 <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
                     <div class=' inline-flex items-center justify-center w-36 h-36 bg-black rounded-full'>
-                        <span class='text-4xl text-white'>R</span>
+                        {img ? (
+                            <EventImage
+                                pic={img}
+                                className='inline-flex  w-36 h-36 bg-black rounded-full'
+                            />
+                        ) : (
+                            <span class='text-4xl text-white'>
+                                {auth.currentUser?.email[0]}
+                            </span>
+                        )}
                     </div>
                     <Buttoncomponent
                         bgColor='bg-orange-400'
@@ -41,8 +186,14 @@ export default function ProfilePage() {
                         textColor='text-white'
                         label='Uplaod New'
                         fontSize='text-xl'
+                        onClick={() => {
+                            //  uploadFile();
+                            showImg();
+                        }}
                     />
-                    <Buttoncomponent
+
+                    {/* <Buttoncomponent
+                        type="file"
                         borderRaduis='rounded'
                         width='sm:w-64 w-52'
                         height='h-14'
@@ -51,6 +202,13 @@ export default function ProfilePage() {
                         border='border border-r-2 border-b-2'
                         borderColor='border-black'
                         fontWeight='font-medium'
+                    /> */}
+
+                    <input
+                        type='file'
+                        onChange={(e) => setFileUpload(e.target.files[0])}
+                        //value={fileUpload}
+                        accept='image/x-png,image/gif,image/jpeg'
                     />
                 </div>
             </div>
@@ -61,6 +219,8 @@ export default function ProfilePage() {
                         Name (Required)
                     </label>
                     <Inputcomponent
+                        onChange={(event) => setNewName(event.target.value)}
+                        value={newName}
                         type='text'
                         placeholder='Name'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
@@ -71,6 +231,8 @@ export default function ProfilePage() {
                         Your Location
                     </label>
                     <Inputcomponent
+                        onChange={(e) => setNewLocation(e.target.value)}
+                        value={newLocation}
                         type='text'
                         placeholder='Location'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
@@ -86,21 +248,26 @@ export default function ProfilePage() {
 
                 <div className='grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-x-8'>
                     {titles &&
-                        titles.map((title) => {
+                        titles.map((title, index) => {
                             return (
                                 <Checkboxcomponent
                                     key={title}
                                     title={title}
-                                    checked={true}
+                                    onChange={() => handleOnChange(index)}
+                                    checked={checkedState[index]}
                                     textColor='text-black'
                                     textColorChecked='text-black'
                                     borderColor='border-black'
                                     borderRightAndDown='border-r-2 border-b-2'
                                     height='h-20'
+                                    view='hidden'
+                                    afterChecked='flex items-center justify-center text-center border bg-primary-orange p-3 rounded font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
+                                    beforeChecked='checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
                                 />
                             );
                         })}
                 </div>
+                <div>{intersetList}</div>
                 <div className='flex flex-row sm:justify-end justify-center sm:m-6 m-2'>
                     <Buttoncomponent
                         bgColor='bg-orange-400'
@@ -110,14 +277,15 @@ export default function ProfilePage() {
                         textColor='text-white'
                         label='Save Changes'
                         fontSize='text-xl'
+                        onClick={updateuser}
                     />
                 </div>
             </div>
-
             <div className='flex flex-col items-center bg-slate-300 rounded-lg sm:p-7 p-1'>
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
-                        Change Password
+                        Change Password{" "}
+                        <div className='text-red-500 text-center'>{error}</div>
                     </h1>
                 </div>
 
@@ -126,11 +294,15 @@ export default function ProfilePage() {
                         type='password'
                         placeholder='Password'
                         className='border border-black rounded p-3 w-48 m-4'
+                        onChange={(e) => setPasswordOne(e.target.value)}
+                        value={passwordOne}
                     />
                     <Inputcomponent
                         type='password'
                         placeholder='Retype Password'
                         className='border border-black rounded p-3 w-48 m-4'
+                        onChange={(e) => setPasswordTwo(e.target.value)}
+                        value={passwordTwo}
                     />
                 </div>
                 <div className='flex flex-col sm:flex-row sm:justify-end justify-center sm:m-6 m-2 sm:w-full'>
@@ -142,6 +314,9 @@ export default function ProfilePage() {
                         textColor='text-white'
                         label='Submit'
                         fontSize='text-xl'
+                        onClick={() => {
+                            restPassword();
+                        }}
                     />
                     <Buttoncomponent
                         bgColor='bg-white'
@@ -152,6 +327,9 @@ export default function ProfilePage() {
                         fontSize='text-xl'
                         border='border border-r-2 border-b-2'
                         borderColor='border-black'
+                        onClick={() => {
+                            clear();
+                        }}
                     />
                 </div>
             </div>

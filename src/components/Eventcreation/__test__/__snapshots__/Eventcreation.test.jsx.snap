@@ -65,13 +65,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             No Poverty
           </span>
@@ -82,13 +81,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Zero Hunger
           </span>
@@ -99,13 +97,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Good Health And Well-Being
           </span>
@@ -116,13 +113,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Quality Education
           </span>
@@ -133,13 +129,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Gender Equality
           </span>
@@ -150,13 +145,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Clean Water And Sanitation
           </span>
@@ -167,13 +161,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Affordable And Clean Energy
           </span>
@@ -184,13 +177,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Decent Work And Economic Growth
           </span>
@@ -201,13 +193,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -218,13 +209,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Reduced Inequalities
           </span>
@@ -235,13 +225,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Sustainable Cities And Communities
           </span>
@@ -252,13 +241,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Responsible Consumption And Production
           </span>
@@ -269,13 +257,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Climate Action
           </span>
@@ -286,13 +273,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Life Below Water
           </span>
@@ -303,13 +289,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Life On Land
           </span>
@@ -320,13 +305,12 @@ exports[`renders correctly 1`] = `
           className="flex md:block"
         >
           <input
-            checked={false}
-            className="hidden"
-            onChange={[Function]}
+            checked={true}
+            className="checked hidden"
             type="checkbox"
           />
           <span
-            className="flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
+            className="flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs"
           >
             Peace And Justice And Strong Institutions
           </span>

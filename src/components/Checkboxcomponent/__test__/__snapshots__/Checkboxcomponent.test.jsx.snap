@@ -7,7 +7,6 @@ exports[`renders correctly 1`] = `
   >
     <input
       className="undefined"
-      onChange={[Function]}
       type="checkbox"
     />
     <span
