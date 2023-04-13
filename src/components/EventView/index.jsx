@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs, query, addDoc, where } from "firebase/firestore";
 import { db, auth } from "../../../config/firebase";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
-    // const [isAuth, setIsAuth] = useState(null);
-    // const router = useRouter();
-    // onAuthStateChanged(auth, (user) => {
-    //     user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
-    // });
+    const [isAuth, setIsAuth] = useState(null);
+    const router = useRouter();
+    onAuthStateChanged(auth, (user) => {
+        user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
+    });
     const usersCollectionRef = collection(db, "users");
 
     const getUserInfo = async (id) => {
@@ -42,11 +42,11 @@ export default function EventView(props) {
     const joinEvent = async (id) => {
         try {
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
-            // isAuth
-            //     ? await addDoc(attendEventRef, {
-            //         userId: auth.currentUser.uid,
-            //     })
-            //     : router.push("/SignIn");
+            isAuth
+                ? await addDoc(attendEventRef, {
+                      userId: auth.currentUser.uid,
+                  })
+                : router.push("/signin");
 
             await addDoc(attendEventRef, {
                 userId: auth.currentUser.uid,

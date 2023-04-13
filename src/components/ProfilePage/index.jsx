@@ -2,7 +2,8 @@ import React from "react";
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
-import { updatePassword, updateProfile, getAuth } from "firebase/auth";
+import { updatePassword } from "firebase/auth";
+import { useRouter } from "next/router";
 import { auth, storage, db } from "../../../config/firebase";
 import { useEffect, useState } from "react";
 import { ref, uploadBytes } from "firebase/storage";
@@ -10,14 +11,14 @@ import { onAuthStateChanged } from "firebase/auth";
 import {
     getDocs,
     collection,
-    addDoc,
-    deleteDoc,
     updateDoc,
     doc,
     query,
     where,
 } from "firebase/firestore";
+
 import EventImage from "../../components/EventImage/index";
+
 export default function ProfilePage() {
     const titles = [
         "No Poverty",
@@ -35,42 +36,48 @@ export default function ProfilePage() {
         "Life On Land",
         "Peace And Justice And Strong Institutions",
     ];
-    const [isAuth, setIsAuth] = useState(null);
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-        user ? setIsAuth(auth?.currentUser?.uid) : setIsAuth(null);
-    });
+
+    //##
+    // const router = useRouter(); // Getting the router instance
+    // onAuthStateChanged(auth, (user) => {
+    //     if (!user) {
+    //         // If the user is authenticated
+    //         router.push("/"); // Redirect to homepage
+    //     }
+
+    // });
     const [img, setImg] = useState("");
+    const [error, setError] = useState(null);
     const [newName, setNewName] = useState("");
     const [newLocation, setNewLocation] = useState("");
     const [checkedState, setCheckedState] = useState(
-        new Array(titles.length).fill(true)
+        new Array(titles.length).fill(false)
     );
     const [intersetList, setIntersetList] = useState([]);
     const [fileUpload, setFileUpload] = useState(null);
     const [passwordOne, setPasswordOne] = useState("");
     const [passwordTwo, setPasswordTwo] = useState("");
-    const [error, setError] = useState(null);
 
+    //rest password
     const restPassword = async () => {
         if (passwordOne === passwordTwo) {
             updatePassword(auth.currentUser, passwordTwo).then(
                 () => {
                     console.log("done");
-                    alert("done");
+                    alert("update password successfully");
                 },
                 (error) => {
                     setError(error);
                 }
             );
         } else {
-            setError("Password is not match");
+            setError("password is not match");
         }
     };
 
-    const updateUser = async (id) => {
-        const eventDoc = doc(db, "users", id);
-        await updateDoc(eventDoc, {
+    const updateUserInfo = async (id) => {
+        const userDoc = doc(db, "users", id);
+        await updateDoc(userDoc, {
             name: newName,
             location: newLocation,
             intersets: intersetList,
@@ -80,32 +87,34 @@ export default function ProfilePage() {
         alert("update profile successsfully");
     };
 
-    const updateUserInfo = async () => {
+    const updateuser = async () => {
         const usersCollectionRef = collection(db, "users");
-        const q = query(usersCollectionRef, where("uid", "==", isAuth));
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth.currentUser.uid)
+        );
         const data = await getDocs(q);
         const filteredData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
-        updateUser(filteredData[0].id);
+        updateUserInfo(filteredData[0]?.id);
     };
 
     const showImg = async () => {
         const usersCollectionRef = collection(db, "users");
-        const q = query(usersCollectionRef, where("uid", "==", isAuth));
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth?.currentUser?.uid)
+        );
         const data = await getDocs(q);
         const filteredData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
         setImg(filteredData[0]?.image);
-        console.log(isAuth);
+        console.log(img);
     };
-    useEffect(() => {
-        setIsAuth(auth?.currentUser?.uid);
-        showImg();
-    }, []);
 
     const handleOnChange = (position) => {
         const updatedCheckedState = checkedState.map((item, index) =>
@@ -125,15 +134,19 @@ export default function ProfilePage() {
 
     const uploadFile = async () => {
         if (!fileUpload) return;
-        // const fileName = getFileName(fileUpload.name);
+
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
             await uploadBytes(filesFolderRef, fileUpload);
-            // onSubmitEvent(fileName);
         } catch (err) {
             console.error(err);
         }
     };
+
+    //##
+    // useEffect(() => {
+    //     showImg()
+    // }, [])
 
     return (
         <div className='flex flex-col justify-center items-center space-y-10 mt-8 mb-8'>
@@ -152,7 +165,7 @@ export default function ProfilePage() {
                             />
                         ) : (
                             <span class='text-4xl text-white'>
-                                {auth.currentUser?.email[0]}{" "}
+                                {auth.currentUser?.email[0]}
                             </span>
                         )}
                     </div>
@@ -165,7 +178,7 @@ export default function ProfilePage() {
                         label='Uplaod New'
                         fontSize='text-xl'
                         onClick={() => {
-                            // uploadFile();
+                            //  uploadFile();
                             showImg();
                         }}
                     />
@@ -185,6 +198,7 @@ export default function ProfilePage() {
                     <input
                         type='file'
                         onChange={(e) => setFileUpload(e.target.files[0])}
+                        //value={fileUpload}
                         accept='image/x-png,image/gif,image/jpeg'
                     />
                 </div>
@@ -196,10 +210,11 @@ export default function ProfilePage() {
                         Name (Required)
                     </label>
                     <Inputcomponent
+                        onChange={(event) => setNewName(event.target.value)}
+                        value={newName}
                         type='text'
                         placeholder='Name'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
-                        onChange={(e) => setNewName(e.target.value)}
                     />
                 </div>
                 <div className='flex flex-col'>
@@ -207,10 +222,11 @@ export default function ProfilePage() {
                         Your Location
                     </label>
                     <Inputcomponent
+                        onChange={(e) => setNewLocation(e.target.value)}
+                        value={newLocation}
                         type='text'
                         placeholder='Location'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
-                        onChange={(e) => setNewLocation(e.target.value)}
                     />
                 </div>
             </div>
@@ -222,34 +238,22 @@ export default function ProfilePage() {
                 </div>
 
                 <div className='grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-x-8'>
-                    {/* {titles &&
-                        titles.map((title) => {
-                            return (
-                                <Checkboxcomponent
-                                    key={title}
-                                    title={title}
-                                    checked={true}
-                                    textColor='text-black'
-                                    textColorChecked='text-black'
-                                    borderColor='border-black'
-                                    borderRightAndDown='border-r-2 border-b-2'
-                                    height='h-20'
-                                />
-                            );
-                        })} */}
                     {titles &&
                         titles.map((title, index) => {
                             return (
                                 <Checkboxcomponent
                                     key={title}
                                     title={title}
+                                    onChange={() => handleOnChange(index)}
                                     checked={checkedState[index]}
                                     textColor='text-black'
                                     textColorChecked='text-black'
                                     borderColor='border-black'
                                     borderRightAndDown='border-r-2 border-b-2'
                                     height='h-20'
-                                    onChange={() => handleOnChange(index)}
+                                    view='hidden'
+                                    afterChecked='flex items-center justify-center text-center border bg-primary-orange p-3 rounded font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
+                                    beforeChecked='checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
                                 />
                             );
                         })}
@@ -264,15 +268,15 @@ export default function ProfilePage() {
                         textColor='text-white'
                         label='Save Changes'
                         fontSize='text-xl'
-                        onClick={updateUserInfo}
+                        onClick={updateuser}
                     />
                 </div>
             </div>
-            {/* //---------------------------------------------------------------------------------------- */}
             <div className='flex flex-col items-center bg-slate-300 rounded-lg sm:p-7 p-1'>
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
-                        Change Password {error}
+                        Change Password{" "}
+                        <div className='text-red-500 text-center'>{error}</div>
                     </h1>
                 </div>
 
@@ -282,12 +286,14 @@ export default function ProfilePage() {
                         placeholder='Password'
                         className='border border-black rounded p-3 w-48 m-4'
                         onChange={(e) => setPasswordOne(e.target.value)}
+                        value={passwordOne}
                     />
                     <Inputcomponent
                         type='password'
                         placeholder='Retype Password'
                         className='border border-black rounded p-3 w-48 m-4'
                         onChange={(e) => setPasswordTwo(e.target.value)}
+                        value={passwordTwo}
                     />
                 </div>
                 <div className='flex flex-col sm:flex-row sm:justify-end justify-center sm:m-6 m-2 sm:w-full'>

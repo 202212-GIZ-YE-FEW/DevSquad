@@ -24,9 +24,7 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="text-4xl text-white"
-        >
-           
-        </span>
+        />
       </div>
       <button
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2"
@@ -57,6 +55,7 @@ exports[`renders correctly 1`] = `
         onChange={[Function]}
         placeholder="Name"
         type="text"
+        value=""
       />
     </div>
     <div
@@ -72,6 +71,7 @@ exports[`renders correctly 1`] = `
         onChange={[Function]}
         placeholder="Location"
         type="text"
+        value=""
       />
     </div>
   </div>
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -106,7 +106,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             No Poverty
           </span>
@@ -120,7 +120,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -128,7 +128,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Good Health And Well-Being
           </span>
@@ -142,7 +142,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -150,7 +150,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Quality Education
           </span>
@@ -164,7 +164,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -172,7 +172,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Gender Equality
           </span>
@@ -186,7 +186,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -194,7 +194,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Clean Water And Sanitation
           </span>
@@ -208,7 +208,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -216,7 +216,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Affordable And Clean Energy
           </span>
@@ -230,7 +230,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -238,7 +238,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Decent Work And Economic Growth
           </span>
@@ -252,7 +252,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -260,7 +260,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Industry Innovation And Infrastructure
           </span>
@@ -274,7 +274,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -282,7 +282,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Reduced Inequalities
           </span>
@@ -296,7 +296,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -304,7 +304,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Sustainable Cities And Communities
           </span>
@@ -318,7 +318,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -326,7 +326,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Responsible Consumption And Production
           </span>
@@ -340,7 +340,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -348,7 +348,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Life Below Water
           </span>
@@ -362,7 +362,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -370,7 +370,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Life On Land
           </span>
@@ -384,7 +384,7 @@ exports[`renders correctly 1`] = `
             borderColor="border-black"
             borderRightAndDown="border-r-2 border-b-2"
             checked={false}
-            className="undefined"
+            className="hidden"
             height="h-20"
             onChange={[Function]}
             textColor="text-black"
@@ -392,7 +392,7 @@ exports[`renders correctly 1`] = `
             type="checkbox"
           />
           <span
-            className="undefined"
+            className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20"
           >
             Peace And Justice And Strong Institutions
           </span>
@@ -421,6 +421,9 @@ exports[`renders correctly 1`] = `
         className="text-2xl font-Rubik font-medium"
       >
         Change Password 
+        <div
+          className="text-red-500 text-center"
+        />
       </h1>
     </div>
     <div
@@ -431,12 +434,14 @@ exports[`renders correctly 1`] = `
         onChange={[Function]}
         placeholder="Password"
         type="password"
+        value=""
       />
       <input
         className="border border-black rounded p-3 w-48 m-4"
         onChange={[Function]}
         placeholder="Retype Password"
         type="password"
+        value=""
       />
     </div>
     <div

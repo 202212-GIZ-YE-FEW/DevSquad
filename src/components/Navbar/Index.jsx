@@ -1,7 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import Link from "next/link";
 import { useState } from "react";
-
 import { auth } from "../../../config/firebase";
 const UnauthNav = () => {
     const [navbar, setNavbar] = useState(false);
@@ -313,7 +312,7 @@ const AuthNav = ({ logout }) => {
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black'>
                                 <Link
-                                    href='/blogs'
+                                    href='/aboutpage'
                                     className=' text-lg md:text-white text-black '
                                 >
                                     About
