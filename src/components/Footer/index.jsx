@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 import React from "react";
 function Footer() {
+    const { t } = useTranslation("common");
     return (
         <div className='mx-auto flex w-full flex-col justify-center bg-primary-orange p-6'>
             <div className='flex flex-col items-center space-y-6  p-6 md:flex-row md:items-center md:justify-evenly md:p-6 md:px-4'>
@@ -58,22 +60,22 @@ function Footer() {
                     <ul className='flex justify-center space-x-4 mx-2'>
                         <li className='cursor-pointer p-2 '>
                             <Link href="'/events'>">
-                                <b>Events</b>
+                                <b>{t("Navbar.Events")}</b>
                             </Link>
                         </li>
                         <li className='cursor-pointer p-2 '>
                             <Link href='/about'>
-                                <b>About</b>
+                                <b>{t("Navbar.About")}</b>
                             </Link>
                         </li>
                         <li className='cursor-pointer p-2 '>
                             <Link href='/how to work'>
-                                <b>How to work</b>
+                                <b>{t("home.Howitwork")}</b>
                             </Link>
                         </li>
                     </ul>
                 </div>
-                <div className='flex basis-1/4 justify-center space-x-6'>
+                <div className='flex basis-1/4 justify-center gap-8'>
                     <Link href='#'>
                         <svg
                             width='24'

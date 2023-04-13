@@ -313,7 +313,7 @@ Array [
     onClick={[Function]}
   >
     <p
-      className="px-2"
+      className="px-2 font-Rubik"
     >
       Change Interest
     </p>

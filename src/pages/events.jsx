@@ -4,7 +4,7 @@ import Eventinerestcomponent from "@/components/Eventinerestcomponent";
 
 import Layout from "@/layout/Layout";
 
-const signin = () => {
+const events = () => {
     return (
         <div>
             <Layout>
@@ -23,4 +23,4 @@ export async function getStaticProps({ locale }) {
     };
 }
 
-export default signin;
+export default events;

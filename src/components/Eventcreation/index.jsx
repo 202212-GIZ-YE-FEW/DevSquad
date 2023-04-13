@@ -26,10 +26,10 @@ const Eventcreation = () => {
     return (
         <div className=' container mx-auto md:px-32 px-10 pt-12	pb-4 font-Rubik'>
             {/* choose event section */}
-            <div className=' grid md:grid-cols-2 gap-10  grid-cols-1 mb-4 '>
+            <div className=' grid md:grid-cols-2 gap-14  grid-cols-1 mb-4 '>
                 <div>
                     <p className='font-medium py-5'>Choose Location</p>
-                    <p className='md:pr-28 text-primary-gray pb-7'>
+                    <p className=' text-primary-gray pb-7'>
                         Pebble Events can be both local or online Choose where
                         you want to host your event.
                     </p>

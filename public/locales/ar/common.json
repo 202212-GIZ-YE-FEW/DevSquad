@@ -1,4 +1,33 @@
 {
     "test": "مرحبا",
-    "Get Started": "ابدأ"
+    "Navbar": {
+        "SignUp": "انشاء حساب",
+        "SignIn": "تسجيل دخول",
+        "Signout": " تسجيل خروج",
+        "Events": "الاحداث",
+        "About": "من نحن ",
+        "YourEvents": "احداثك",
+        "ViewProfile": "الملف الشخصي",
+        "Setting": "الاعدادات",
+        "EN": "انجليزي",
+        "AR": "عربي"
+    },
+    "home": {
+        "Howitwork": "الية العمل",
+        "GetStarted": "ابدأ",
+        "Register": "سجل",
+        "Attendevevts": "احضر الاحداث",
+        "Organizeyourown": "نظم حدثك !",
+        "SustainableDevlopmentGoals": "أهداف التنمية المستدامة",
+        "goals":"تهدف هذه الأهداف ، المعروفة أيضًا باسم أهداف التنمية المستدامة ، إلى القضاء على الفقر وحماية الكوكب وضمان الرخاء للجميع بحلول عام 2030",
+        "Hearitfromvolunteers": "اسمع من المتطوعين",
+        "Becomethechangeyouwishtoseeintheworld": "كن انت التغيير الذي ترغب رؤيته في العالم",
+        "Whoareyou?": " من انت؟ ",
+        "Viewevents": "عرض الاحداث",
+        "Doeverythingyoucantocreateanamazing,inspiring experienceintheworld":"افعل كل ما في وسعك لخلق تجربة مذهلة وملهمة فى العالم",
+        "hiro":{
+            "title":" معا يمكننا أن نفعل الكثير",
+            "describtion":"تمنحك فعاليات التطوع الفرصة لإحداث تأثير إيجابي على العالم وحياة الآخرين. لذا ، إذا كنت تريد أن تحدث فرقًا وأن تكون جزءًا من شيء أكبر منك ، فقم بالانضمام إلى الأحداث أو تنظيمها اليوم!"
+        }
+    }
 }

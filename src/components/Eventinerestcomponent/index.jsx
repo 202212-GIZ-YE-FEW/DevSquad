@@ -56,7 +56,7 @@ const Eventinerestcomponent = () => {
                 className='flex items-center  p-2 border border-black rounded mt-4 md:hidden'
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <p className='px-2'>Change Interest</p>
+                <p className='px-2 font-Rubik'>Change Interest</p>
                 <svg
                     width='13'
                     height='8'
