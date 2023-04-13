@@ -21,12 +21,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               All
             </span>
@@ -37,12 +36,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               No Poverty
             </span>
@@ -53,12 +51,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Zero Hunger
             </span>
@@ -69,12 +66,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Good Health And Well-Being
             </span>
@@ -85,12 +81,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Quality Education
             </span>
@@ -101,12 +96,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Gender Equality
             </span>
@@ -117,12 +111,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Clean Water And Sanitation
             </span>
@@ -133,12 +126,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Affordable And Clean Energy
             </span>
@@ -149,12 +141,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Decent Work And Economic Growth
             </span>
@@ -165,12 +156,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Industry Innovation And Infrastructure
             </span>
@@ -181,12 +171,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Reduced Inequalities
             </span>
@@ -197,12 +186,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Sustainable Cities And Communities
             </span>
@@ -213,12 +201,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Responsible Consumption And Production
             </span>
@@ -229,12 +216,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Climate Action
             </span>
@@ -245,12 +231,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Life Below Water
             </span>
@@ -261,12 +246,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Life On Land
             </span>
@@ -277,12 +261,11 @@ Array [
             className="flex md:block"
           >
             <input
-              checked={true}
-              className="checked md:hidden"
+              className="md:hidden"
               type="checkbox"
             />
             <span
-              className="flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+              className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
             >
               Peace And Justice And Strong Institutions
             </span>
