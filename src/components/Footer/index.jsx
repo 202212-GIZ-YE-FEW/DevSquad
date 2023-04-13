@@ -64,7 +64,7 @@ function Footer() {
                             </Link>
                         </li>
                         <li className='cursor-pointer p-2 '>
-                            <Link href='/about'>
+                            <Link href='/aboutpage'>
                                 <b>{t("Navbar.About")}</b>
                             </Link>
                         </li>

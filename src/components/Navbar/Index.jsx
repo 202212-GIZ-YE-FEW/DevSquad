@@ -352,7 +352,9 @@ const AuthNav = ({ logout }) => {
                                 <Link href='/events'>{t("Navbar.Events")}</Link>
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white  '>
-                                <Link href='/about'>{t("Navbar.About")}</Link>
+                                <Link href='/aboutpage'>
+                                    {t("Navbar.About")}
+                                </Link>
                             </li>
                             <li className='hover:text-white flex  p-4 justify-center items-center gap-2 hover:bg-primary-orange'>
                                 <svg

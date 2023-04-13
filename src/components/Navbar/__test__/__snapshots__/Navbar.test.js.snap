@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
               className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white  "
             >
               <a
-                href="/about"
+                href="/aboutpage"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
