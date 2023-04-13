@@ -26,10 +26,10 @@ const Eventcreation = () => {
     return (
         <div className=' container mx-auto md:px-32 px-10 pt-12	pb-4 font-Rubik'>
             {/* choose event section */}
-            <div className=' grid md:grid-cols-2 gap-10  grid-cols-1 mb-4 '>
+            <div className=' grid md:grid-cols-2 gap-14  grid-cols-1 mb-4 '>
                 <div>
                     <p className='font-medium py-5'>Choose Location</p>
-                    <p className='md:pr-28 text-primary-gray pb-7'>
+                    <p className=' text-primary-gray pb-7'>
                         Pebble Events can be both local or online Choose where
                         you want to host your event.
                     </p>
@@ -64,9 +64,8 @@ const Eventcreation = () => {
                                 <Checkboxcomponent
                                     key={title}
                                     title={title}
-                                    checked={true}
                                     afterChecked='flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
-                                    beforeChecked='flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
+                                    beforeChecked='checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
                                     view='hidden'
                                 />
                             );
