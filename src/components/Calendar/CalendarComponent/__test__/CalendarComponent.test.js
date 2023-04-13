@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import Calander from "../index";
+import CalendarComponent from "../index";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<Calander />).toJSON();
+    const tree = renderer.create(<CalendarComponent />).toJSON();
     expect(tree).toMatchSnapshot();
 });
