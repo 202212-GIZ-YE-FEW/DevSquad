@@ -4,6 +4,7 @@ import { useState } from "react";
 import CalendarComponent from "./CalendarComponent";
 
 export default function Calendar() {
+    const [isOpen, setIsOpen] = useState(false);
     const d = new Date();
     let month = d.getMonth();
     const [date, setDate] = useState(month);
@@ -119,41 +120,43 @@ export default function Calendar() {
         }
     }
     return (
-        <div className='flex flex-col items-center fixed md:static md:z-0 z-50 top-1/2 left-1/2 md:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full md:w-80 h-80 md:h-full'>
-            <p className='font-medium font-Rubik text-center block md:hidden text-lg m-2'>
-                Change Date
-            </p>
-            <div className='sm:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2'>
-                <div className='grid grid-cols-7 justify-items-center m-3'>
-                    {daysOfTheWeek &&
-                        daysOfTheWeek.map((day) => {
-                            return (
-                                <p key={day} className='text-xs font-bold'>
-                                    {day}
-                                </p>
-                            );
+        <>
+            <div className='sm:block flex-col items-center fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-sm p-4  w-full sm:w-80  '>
+                <p className='font-medium font-Rubik text-center block sm:hidden text-lg m-2'>
+                    Change Date
+                </p>
+                <div className='sm:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2'>
+                    <div className='grid grid-cols-7 justify-items-center m-3'>
+                        {daysOfTheWeek &&
+                            daysOfTheWeek.map((day) => {
+                                return (
+                                    <p key={day} className='text-xs font-bold'>
+                                        {day}
+                                    </p>
+                                );
+                            })}
+                    </div>
+                    <div className='grid grid-cols-7 gap-2 justify-items-center m-3'>
+                        {months[date].days.map((day) => {
+                            return <CalendarComponent day={day} key={day} />;
                         })}
+                    </div>
                 </div>
-                <div className='grid grid-cols-7 gap-2 justify-items-center m-3'>
-                    {months[date].days.map((day) => {
-                        return <CalendarComponent day={day} key={day} />;
-                    })}
+                <div>
+                    <button
+                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3 m-1'
+                        onClick={handleThisMonth}
+                    >
+                        This Month
+                    </button>
+                    <button
+                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3'
+                        onClick={handleNexMonth}
+                    >
+                        Next Month
+                    </button>
                 </div>
             </div>
-            <div>
-                <button
-                    className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3 m-1'
-                    onClick={handleThisMonth}
-                >
-                    This Month
-                </button>
-                <button
-                    className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3'
-                    onClick={handleNexMonth}
-                >
-                    Next Month
-                </button>
-            </div>
-        </div>
+        </>
     );
 }
