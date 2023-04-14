@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="flex flex-col items-center fixed md:static md:z-0 z-50 top-1/2 left-1/2 md:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full md:w-80 h-80 md:h-full"
+  className="sm:block flex-col items-center fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-sm p-4  w-full sm:w-80  "
 >
   <p
-    className="font-medium font-Rubik text-center block md:hidden text-lg m-2"
+    className="font-medium font-Rubik text-center block sm:hidden text-lg m-2"
   >
     Change Date
   </p>

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 
 import Pagination from "./Pagination";
+import Eventcard from "../Eventcard";
 // this number of recoded
 let PageSize = 1;
 
@@ -8,17 +9,21 @@ const PaginationComponent = () => {
     const data = [
         {
             id: 999,
-            first_name: "Berke",
-            last_name: "Lohmeyer",
-            email: "blohmeyerrq@wunderground.com",
-            phone: "754-548-5689",
+            eventImage: "/images/Rectangle2.png",
+            eventDate: "FRI, JUL -7:00 PM GMT+3",
+            eventTitle: "Title of the Event1",
+            eventDetails:
+                "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
+            eventAttendance: [],
         },
         {
             id: 1000,
-            first_name: "Roderigo",
-            last_name: "Jordeson",
-            email: "rjordesonrr@nbcnews.com",
-            phone: "596-412-7883",
+            eventImage: "/images/Rectangle2.png",
+            eventDate: "FRI, JUL -7:00 PM GMT+3",
+            eventTitle: "Title of the Event2",
+            eventDetails:
+                "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
+            eventAttendance: [],
         },
     ];
 
@@ -35,37 +40,34 @@ const PaginationComponent = () => {
 
     return (
         <>
-            {/* this is example replase it with events list */}
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>FIRST NAME</th>
-                        <th>LAST NAME</th>
-                        <th>EMAIL</th>
-                        <th>PHONE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {currentTableData.map((item, index) => {
-                        return (
-                            <tr key={index}>
-                                <td>{item.id}</td>
-                                <td>{item.first_name}</td>
-                                <td>{item.last_name}</td>
-                                <td>{item.email}</td>
-                                <td>{item.phone}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
-            <Pagination
-                currentPage={currentPage}
-                totalCount={data.length}
-                pageSize={PageSize}
-                onPageChange={onPageChange}
-            />
+            <div className='flex flex-col'>
+                {/* this is example replase it with events list */}
+
+                {currentTableData.map((item, index) => {
+                    return (
+                        <>
+                            <div className='md:order-1 order-2'>
+                                <Eventcard
+                                    key={index}
+                                    eventImage={item.eventImage}
+                                    eventDate={item.eventDate}
+                                    eventDetails={item.eventDetails}
+                                    eventTitle={item.eventTitle}
+                                    eventAttendance={item.eventAttendance}
+                                />
+                            </div>
+                        </>
+                    );
+                })}
+                <div className='md:order-2 order-1 text-center md:text-start'>
+                    <Pagination
+                        currentPage={currentPage}
+                        totalCount={data.length}
+                        pageSize={PageSize}
+                        onPageChange={onPageChange}
+                    />
+                </div>
+            </div>
         </>
     );
 };
