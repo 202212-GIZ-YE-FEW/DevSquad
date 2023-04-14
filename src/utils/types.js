@@ -1,0 +1,18 @@
+export const types = [
+    "No Poverty",
+    "Zero Hunger",
+    "Good Health And Well-Being",
+    "Quality Education",
+    "Gender Equality",
+    "Clean Water And Sanitation",
+    "Affordable And Clean Energy",
+    "Decent Work And Economic Growth",
+    "Industry Innovation And Infrastructure",
+    "Reduced Inequalities",
+    "Sustainable Cities And Communities",
+    "Responsible Consumption And Production",
+    "Climate Action",
+    "Life Below Water",
+    "Life On Land",
+    "Peace And Justice And Strong Institutions",
+];
