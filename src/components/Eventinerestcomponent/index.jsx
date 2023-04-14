@@ -27,13 +27,13 @@ const Eventinerestcomponent = () => {
         <>
             {/* disktop design */}
             <div
-                className={`md:mx-32 mx-10 md:w-80 md:p-5 md:block md:static md:z-0	fixed z-50 top-0 left-0 md:h-full h-96 bg-opacity-50 md:opacity-100 transition-opacity  ${
+                className={`sm:mx-32 mx-10 sm:w-80 sm:p-5 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0 sm:h-full h-96 bg-opacity-50 sm:opacity-100 transition-opacity  ${
                     isOpen ? "" : "opacity-0 pointer-events-none"
                 }`}
             >
-                <div className='fixed md:static md:z-0 z-50 top-1/2 left-1/2 md:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full md:w-80 h-80 md:h-full overflow-y-scroll md:overflow-auto scrollbar '>
+                <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full sm:w-80 h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar '>
                     <div className='grid grid-cols-1 gap-2 '>
-                        <p className='font-medium font-Rubik underline text-center md:block hidden'>
+                        <p className='font-medium font-Rubik underline text-center sm:block hidden'>
                             Pick Your Interest
                         </p>
                         {titles &&
@@ -42,9 +42,9 @@ const Eventinerestcomponent = () => {
                                     <Checkboxcomponent
                                         key={title}
                                         title={title}
-                                        afterChecked='flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
-                                        beforeChecked='checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
-                                        view='md:hidden'
+                                        afterChecked='flex items-center justify-center text-center sm:border-2 sm:border-black border-0 sm:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
+                                        beforeChecked='checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
+                                        view='sm:hidden'
                                     />
                                 );
                             })}

@@ -12,7 +12,7 @@ const Inputcomponent = ({
     // const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
         <div>
-            <label className='flex md:block'>
+            <label className='flex sm:block'>
                 <input
                     type='checkbox'
                     checked={checked}

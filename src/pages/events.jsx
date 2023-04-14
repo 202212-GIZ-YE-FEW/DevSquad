@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Eventinerestcomponent from "@/components/Eventinerestcomponent";
+import Eventslist from "@/components/Eventslist";
 
 import Layout from "@/layout/Layout";
 
@@ -8,7 +8,7 @@ const events = () => {
     return (
         <div>
             <Layout>
-                <Eventinerestcomponent />
+                <Eventslist />
             </Layout>
         </div>
     );

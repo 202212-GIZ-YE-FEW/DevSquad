@@ -2,46 +2,113 @@
 
 exports[`renders correctly 1`] = `
 Array [
-  <table>
-    <thead>
-      <tr>
-        <th>
-          ID
-        </th>
-        <th>
-          FIRST NAME
-        </th>
-        <th>
-          LAST NAME
-        </th>
-        <th>
-          EMAIL
-        </th>
-        <th>
-          PHONE
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          999
-        </td>
-        <td>
-          Berke
-        </td>
-        <td>
-          Lohmeyer
-        </td>
-        <td>
-          blohmeyerrq@wunderground.com
-        </td>
-        <td>
-          754-548-5689
-        </td>
-      </tr>
-    </tbody>
-  </table>,
+  <div
+    className="border-2 border-black rounded-lg px-4 my-6 font-Rubik "
+  >
+    <div
+      className="flex justify-between"
+    >
+      <div>
+        <p
+          className="pt-2"
+        >
+          FRI, JUL -7:00 PM GMT+3
+        </p>
+      </div>
+      <div
+        className=" pt-2"
+      >
+        <div
+          className="flex flex-row items-center justify-between"
+        >
+          <div>
+            <div
+              class="relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+            >
+              <span
+                class="text-white font-Rubik"
+              >
+                R
+              </span>
+            </div>
+            <div
+              class="-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+            >
+              <span
+                class="text-white font-Rubik"
+              >
+                R
+              </span>
+            </div>
+            <div
+              class="-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+            >
+              <span
+                class="text-white font-Rubik"
+              >
+                R
+              </span>
+            </div>
+          </div>
+          <p
+            className="font-Rubik p-2"
+          >
+            +12 Attendance
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-3 align-items-center gap-4 "
+    >
+      <div
+        className="col-span-1"
+      >
+        <img
+          alt="eventCardImage"
+          className="rounded border-2 border-black"
+          data-nimg="1"
+          decoding="async"
+          height={380}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          responsive={true}
+          src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
+          srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
+          style={
+            Object {
+              "color": "transparent",
+            }
+          }
+          width={650}
+        />
+      </div>
+      <div
+        className="col-span-2 flex flex-col"
+      >
+        <p
+          className="font-medium"
+        >
+          Title of the Event
+        </p>
+        <p
+          className="font-normal line-clamp-2"
+        >
+          Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!
+        </p>
+        <div
+          className="flex justify-end py-5"
+        >
+          <button
+            className="bg-primary-orange text-white rounded px-8 py-1 "
+          >
+            Join
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
   <ul
     className="md:mx-32 mx-10 inline-flex max-w-xs justify-center items-center border border-black h-8"
   >
