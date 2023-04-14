@@ -1,462 +1,434 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="sm:block flex-col items-center fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-sm p-4  w-full sm:w-80  "
+>
+  <p
+    className="font-medium font-Rubik text-center block sm:hidden text-lg m-2"
+  >
+    Change Date
+  </p>
   <div
-    className="sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  opacity-0 pointer-events-none"
+    className="sm:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2"
   >
     <div
-      className="sm:block flex-col items-center fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-sm p-4  w-full sm:w-80  "
+      className="grid grid-cols-7 justify-items-center m-3"
     >
       <p
-        className="font-medium font-Rubik text-center block sm:hidden text-lg m-2"
+        className="text-xs font-bold"
       >
-        Change Date
+        Mon
       </p>
-      <div
-        className="sm:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2"
+      <p
+        className="text-xs font-bold"
       >
-        <div
-          className="grid grid-cols-7 justify-items-center m-3"
-        >
-          <p
-            className="text-xs font-bold"
-          >
-            Mon
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Tue
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Wed
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Thu
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Fri
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Sat
-          </p>
-          <p
-            className="text-xs font-bold"
-          >
-            Sun
-          </p>
-        </div>
-        <div
-          className="grid grid-cols-7 gap-2 justify-items-center m-3"
-        >
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              1
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              2
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              3
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              4
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              5
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              6
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              7
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              8
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              9
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              10
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              11
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              12
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              13
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              14
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              15
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              16
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              17
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              18
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              19
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              20
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              21
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              22
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              23
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              24
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              25
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              26
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              27
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              28
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              29
-            </span>
-          </label>
-          <label>
-            <input
-              hidden={true}
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <span
-              className="bg-white rounded font-bold text-lg"
-            >
-              30
-            </span>
-          </label>
-        </div>
-      </div>
-      <div>
-        <button
-          className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3 m-1"
-          onClick={[Function]}
-        >
-          This Month
-        </button>
-        <button
-          className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3"
-          onClick={[Function]}
-        >
-          Next Month
-        </button>
-      </div>
+        Tue
+      </p>
+      <p
+        className="text-xs font-bold"
+      >
+        Wed
+      </p>
+      <p
+        className="text-xs font-bold"
+      >
+        Thu
+      </p>
+      <p
+        className="text-xs font-bold"
+      >
+        Fri
+      </p>
+      <p
+        className="text-xs font-bold"
+      >
+        Sat
+      </p>
+      <p
+        className="text-xs font-bold"
+      >
+        Sun
+      </p>
     </div>
-  </div>,
-  <button
-    className="flex items-center  p-2 border border-black rounded mt-4 sm:hidden"
-    onClick={[Function]}
-  >
-    <p
-      className="px-2 font-Rubik"
+    <div
+      className="grid grid-cols-7 gap-2 justify-items-center m-3"
     >
-      Change Date
-    </p>
-    <svg
-      fill="none"
-      height="8"
-      viewBox="0 0 13 8"
-      width="13"
-      xmlns="http://www.w3.org/2000/svg"
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          1
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          2
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          3
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          4
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          5
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          6
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          7
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          8
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          9
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          10
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          11
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          12
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          13
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          14
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          15
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          16
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          17
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          18
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          19
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          20
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          21
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          22
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          23
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          24
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          25
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          26
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          27
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          28
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          29
+        </span>
+      </label>
+      <label>
+        <input
+          hidden={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="bg-white rounded font-bold text-lg"
+        >
+          30
+        </span>
+      </label>
+    </div>
+  </div>
+  <div>
+    <button
+      className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3 m-1"
+      onClick={[Function]}
     >
-      <path
-        d="M11.4704 0.705392C11.6865 0.465228 12.0564 0.445759 12.2965 0.661906C12.5366 0.878053 12.5561 1.24797 12.34 1.48813L7.07538 7.3385C6.84301 7.59672 6.43816 7.59672 6.20579 7.3385L0.941182 1.48813C0.725065 1.24797 0.744531 0.878053 0.984662 0.661906C1.22479 0.445759 1.59465 0.465228 1.81077 0.705392L6.64058 6.07259L11.4704 0.705392Z"
-        fill="#1A1A1A"
-      />
-    </svg>
-  </button>,
-]
+      This Month
+    </button>
+    <button
+      className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3"
+      onClick={[Function]}
+    >
+      Next Month
+    </button>
+  </div>
+</div>
 `;
