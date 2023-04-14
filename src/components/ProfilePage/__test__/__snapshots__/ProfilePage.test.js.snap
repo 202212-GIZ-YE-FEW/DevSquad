@@ -399,7 +399,6 @@ exports[`renders correctly 1`] = `
         </label>
       </div>
     </div>
-    <div />
     <div
       className="flex flex-row sm:justify-end justify-center sm:m-6 m-2"
     >

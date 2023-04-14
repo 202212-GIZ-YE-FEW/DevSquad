@@ -267,7 +267,7 @@ export default function ProfilePage() {
                             );
                         })}
                 </div>
-                <div>{intersetList}</div>
+                {/* <div>{intersetList}</div> */}
                 <div className='flex flex-row sm:justify-end justify-center sm:m-6 m-2'>
                     <Buttoncomponent
                         bgColor='bg-orange-400'
