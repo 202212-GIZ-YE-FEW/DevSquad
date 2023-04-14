@@ -1,28 +1,122 @@
+import { addDoc, collection } from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
 import Link from "next/link";
+// import { useRouter } from "next/router"; // Importing useRouter hook from next
+import React, { useState } from "react";
+
+import Gmap from "@/components/Gmap/index";
 
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
+import { types } from "../../utils/types";
+import { auth, db, storage } from "../../../config/firebase";
+export default function Eventcreation() {
+    // const router = useRouter(); // Getting the router instance
+    //form states
+    const [location, setLocation] = useState("");
+    const [city, setCity] = useState("Izmer");
+    const [country, setCountry] = useState("");
+    const [title, setTitle] = useState("");
+    const [desc, setDesc] = useState("");
+    const [eventDate, setEventDate] = useState("");
+    const [eventTime, setEventTime] = useState("");
+    const [eventTypeList, setEventTypeList] = useState([]);
+    // File Upload State
+    const [fileUpload, setFileUpload] = useState(null);
 
-const Eventcreation = () => {
-    const titles = [
-        "No Poverty",
-        "Zero Hunger",
-        "Good Health And Well-Being",
-        "Quality Education",
-        "Gender Equality",
-        "Clean Water And Sanitation",
-        "Affordable And Clean Energy",
-        "Decent Work And Economic Growth",
-        "Industry Innovation And Infrastructure",
-        "Reduced Inequalities",
-        "Sustainable Cities And Communities",
-        "Responsible Consumption And Production",
-        "Climate Action",
-        "Life Below Water",
-        "Life On Land",
-        "Peace And Justice And Strong Institutions",
-    ];
+    // Listening to authentication state changes
+    // onAuthStateChanged(auth, (user) => {
+    //     if (!user) {
+    //         // If the user is authenticated
+    //         router.push("/"); // Redirect to homepage
+    //     }
+    // });
+
+    const eventCollectionRef = collection(db, "events");
+    const getLocation = (param) => {
+        setLocation(param);
+    };
+
+    const getCity = (param) => {
+        setCity(param);
+    };
+
+    const getCountry = (param) => {
+        setCountry(param);
+    };
+    const [checkedState, setCheckedState] = useState(
+        new Array(types.length).fill(false)
+    );
+
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+        let x = [];
+
+        const typeList = updatedCheckedState.map((item, index) => {
+            if (item === true) {
+                x.push(types[index]);
+            }
+        });
+
+        setEventTypeList(x);
+    };
+
+    const uploadFile = async () => {
+        if (!fileUpload) return;
+        const fileName = getFileName(fileUpload.name);
+        const filesFolderRef = ref(storage, `eventsFolder/${fileName}`);
+        try {
+            await uploadBytes(filesFolderRef, fileUpload);
+            onSubmitEvent(fileName);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const onSubmitEvent = async (fileName) => {
+        try {
+            await addDoc(eventCollectionRef, {
+                title: title,
+                description: desc,
+                location: location,
+                country: country,
+                city: city,
+                types: eventTypeList,
+                eventDate: eventDate,
+                eventTime: eventTime,
+                eventImage: fileName,
+                userId: auth?.currentUser?.uid,
+            });
+            alert("The event was created successfully !");
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const getFileName = (fileName) => {
+        let currentdate = new Date();
+        let datetime =
+            currentdate.getDate() +
+            "-" +
+            (currentdate.getMonth() + 1) +
+            "-" +
+            currentdate.getFullYear() +
+            "@" +
+            currentdate.getHours() +
+            "-" +
+            currentdate.getMinutes() +
+            "-" +
+            currentdate.getSeconds() +
+            "-" +
+            currentdate.getMilliseconds();
+        datetime += fileName;
+        return datetime;
+    };
+    const [showModal, setShowModal] = useState(false);
     return (
         <div className=' container mx-auto md:px-32 px-10 pt-12	pb-4 font-Rubik'>
             {/* choose event section */}
@@ -33,20 +127,90 @@ const Eventcreation = () => {
                         Pebble Events can be both local or online Choose where
                         you want to host your event.
                     </p>
+
                     <Inputcomponent
                         type='text'
                         id='eventLocation'
                         name='eventLocation'
-                        value='eventLocation'
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
                         className='w-80	 h-12 border border-black rounded placeholder:p-2'
                         placeholder='city'
                     />
                 </div>
                 <div className='pt-11	'>
-                    <p className='text-7xl font-medium'>Izmer</p>
-                    <Link href='#' className='cursor-pointer text-blue-600'>
+                    <p className='text-7xl font-medium'>{city}</p>
+                    {/* <Link href='#' className='cursor-pointer text-blue-600'>
                         choose location
-                    </Link>
+                    </Link> */}
+                    <>
+                        <button
+                            className='cursor-pointer text-blue-600'
+                            type='button'
+                            onClick={() => setShowModal(true)}
+                        >
+                            choose location
+                        </button>
+                        {showModal ? (
+                            <>
+                                <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
+                                    <div className='relative w-auto my-6 mx-auto max-w-3xl'>
+                                        {/*content*/}
+                                        <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
+                                            {/*header*/}
+                                            <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
+                                                <h3 className='text-3xl font-semibold'>
+                                                    choose your Location
+                                                </h3>
+                                                <button
+                                                    className='p-1 ml-auto bg-transparent border-0 text-black opacity-9 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
+                                                    onClick={() =>
+                                                        setShowModal(false)
+                                                    }
+                                                >
+                                                    <span className='bg-transparent text-black opacity-9 h-6 w-6 text-2xl block outline-none focus:outline-none'>
+                                                        ×
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            {/*body*/}
+                                            <div className='relative p-6 flex-auto'>
+                                                <p className='my-4 text-slate-500 text-lg leading-relaxed'>
+                                                    <Gmap
+                                                        loc={getLocation}
+                                                        city={getCity}
+                                                        country={getCountry}
+                                                    />
+                                                </p>
+                                            </div>
+                                            {/*footer*/}
+                                            <div className='flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b'>
+                                                <button
+                                                    className='text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                                                    type='button'
+                                                    onClick={() =>
+                                                        setShowModal(false)
+                                                    }
+                                                >
+                                                    Close
+                                                </button>
+                                                <button
+                                                    className='bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                                                    type='button'
+                                                    onClick={() =>
+                                                        setShowModal(false)
+                                                    }
+                                                >
+                                                    Save Changes
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
+                            </>
+                        ) : null}
+                    </>
                 </div>
             </div>
             {/* Choose Event Type section */}
@@ -58,12 +222,16 @@ const Eventcreation = () => {
                     do you want to help in ? Sellect all thet apply
                 </p>
                 <div className=' grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 '>
-                    {titles &&
-                        titles.map((title) => {
+                    {types &&
+                        types.map((value, index) => {
                             return (
                                 <Checkboxcomponent
-                                    key={title}
-                                    title={title}
+                                    key={index}
+                                    title={value}
+                                    value={value}
+                                    name={value}
+                                    checked={checkedState[index]}
+                                    onChange={() => handleOnChange(index)}
                                     afterChecked='flex items-center justify-center text-primary-orange text-center border border-primary-orange text-white bg-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
                                     beforeChecked='checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs'
                                     view='hidden'
@@ -84,7 +252,8 @@ const Eventcreation = () => {
                     type='text'
                     id='eventTitle'
                     name='eventTitle'
-                    value='eventTitle'
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     className='w-full	 h-12 border border-black rounded'
                     placeholder=''
                 />
@@ -97,9 +266,10 @@ const Eventcreation = () => {
                     type='date'
                     id='eventDate'
                     name='eventDate'
-                    value='eventDate'
                     className='w-80	 h-12 border border-black rounded'
                     placeholder=''
+                    value={eventDate}
+                    onChange={(e) => setEventDate(e.target.value)}
                 />
             </div>
             {/* Event time section */}
@@ -110,9 +280,10 @@ const Eventcreation = () => {
                     type='time'
                     id='eventtime'
                     name='eventtime'
-                    value='eventtime'
                     className='w-80	 h-12 border border-black rounded'
                     placeholder=''
+                    value={eventTime}
+                    onChange={(e) => setEventTime(e.target.value)}
                 />
             </div>
             {/* Event describtion section */}
@@ -126,6 +297,7 @@ const Eventcreation = () => {
                     placeholder='Please write at least 50 characters'
                     id='dateLocation'
                     name='dateLocation'
+                    onChange={(e) => setDesc(e.target.value)}
                     className='w-full	 h-44 border border-black rounded placeholder:p-2 placeholder:text-black'
                 />
             </div>
@@ -140,9 +312,9 @@ const Eventcreation = () => {
                     type='file'
                     id='eventImage'
                     name='eventImage'
-                    value='eventImage'
                     className='md:w-96 w-60	 h-12 border border-black rounded file:h-12'
                     placeholder=''
+                    onChange={(e) => setFileUpload(e.target.files[0])}
                 />
             </div>
             {/* done section */}
@@ -181,11 +353,10 @@ const Eventcreation = () => {
                         borderColor='border-black'
                         borderRaduis='rounded'
                         id='done'
+                        onClick={uploadFile}
                     />
                 </div>
             </div>
         </div>
     );
-};
-
-export default Eventcreation;
+}
