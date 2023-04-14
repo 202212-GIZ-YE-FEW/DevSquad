@@ -183,7 +183,7 @@ exports[`renders correctly 1`] = `
           </a>
         </p>
         <button
-          className="bg-orange-400 text-white md:w-24 undefined font-Rubik   rounded-md undefined mb-4 py-1"
+          className="bg-orange-400 text-white md:w-24 undefined font-Rubik   rounded-md undefined mb-4 py-1 "
           onClick={[Function]}
         >
           Sign Up
