@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <label
-    className="flex md:block"
+    className="undefined undefined"
   >
     <input
       className="undefined"

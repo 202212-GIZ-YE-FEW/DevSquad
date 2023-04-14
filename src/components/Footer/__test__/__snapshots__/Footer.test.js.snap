@@ -75,7 +75,7 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
           >
             <b>
-              Events
+              Navbar.Events
             </b>
           </a>
         </li>
@@ -83,13 +83,13 @@ exports[`renders correctly 1`] = `
           className="cursor-pointer p-2 "
         >
           <a
-            href="/about"
+            href="/aboutpage"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
             <b>
-              About
+              Navbar.About
             </b>
           </a>
         </li>
@@ -103,14 +103,14 @@ exports[`renders correctly 1`] = `
             onTouchStart={[Function]}
           >
             <b>
-              How to work
+              home.Howitwork
             </b>
           </a>
         </li>
       </ul>
     </div>
     <div
-      className="flex basis-1/4 justify-center space-x-6"
+      className="flex basis-1/4 justify-center gap-8"
     >
       <a
         href="#"

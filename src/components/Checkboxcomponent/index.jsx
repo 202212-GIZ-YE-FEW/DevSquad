@@ -1,5 +1,6 @@
-import { useState } from "react";
 const Inputcomponent = ({
+    block,
+    flex,
     afterChecked,
     beforeChecked,
     view,
@@ -12,7 +13,7 @@ const Inputcomponent = ({
     // const [isChecked, setIsChecked] = useState(defaultChecked);
     return (
         <div>
-            <label className='flex md:block'>
+            <label className={`${flex} ${block}`}>
                 <input
                     type='checkbox'
                     checked={checked}

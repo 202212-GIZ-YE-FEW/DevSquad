@@ -21,7 +21,7 @@ export default function Buttoncomponent({
         <button
             type={type}
             onClick={onClick}
-            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding}`}
+            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding} ${fontWeight}`}
         >
             {`${label}`}
         </button>

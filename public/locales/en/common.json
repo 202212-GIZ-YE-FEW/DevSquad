@@ -1,4 +1,33 @@
 {
     "test": "Hello",
-    "Get Started": "Get Started"
+    "Navbar": {
+        "SignUp": "Sign Up",
+        "SignIn": "Sign In",
+        "Signout": " Sign out",
+        "Events": "Events",
+        "About": "About",
+        "YourEvents": "Create Event",
+        "ViewProfile": "View Profile",
+        "Setting": "Setting",
+        "EN": "English",
+        "AR": "Arabic"
+    },
+    "home": {
+        "Howitwork": "How it work",
+        "GetStarted": "Get Started",
+        "Register": "Register",
+        "Attendevevts": "Attend evevts",
+        "Organizeyourown": "Organize your own!",
+        "SustainableDevlopmentGoals": "Sustainable Devlopment Goals",
+        "goals": "These goals, also known as the SDGs, aim to end poverty, protect the planet and ensure prosperity for everyone by 2030",
+        "Hearitfromvolunteers": "Hear it from volunteers",
+        "Becomethechangeyouwishtoseeintheworld": "Become the change you wish to see in the world",
+        "Whoareyou?": "Who are you?",
+        "Viewevents": "View events",
+        "Doeverythingyoucantocreateanamazing,inspiring experienceintheworld": " Do everything you can to create an amazing, inspiring experience in the world",
+        "hiro": {
+            "title": "Alone we can do so little; together we can do so much",
+            "describtion": "Volunteering events gives you the opportunity to make a positive impact on the world and the lives of others. So, if you want to make a difference and be a part of something bigger than yourself, join or organize events today!"
+        }
+    }
 }

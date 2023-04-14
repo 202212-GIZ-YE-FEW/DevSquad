@@ -42,10 +42,11 @@ const Eventinerestcomponent = () => {
                                     <Checkboxcomponent
                                         key={title}
                                         title={title}
-                                        checked={true}
                                         afterChecked='flex items-center justify-center text-center md:border-2 md:border-black border-0 md:bg-secondry-orange bg-white p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
-                                        beforeChecked='flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
+                                        beforeChecked='checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                         view='md:hidden'
+                                        block='block'
+                                        flex='flex'
                                     />
                                 );
                             })}
@@ -56,7 +57,7 @@ const Eventinerestcomponent = () => {
                 className='flex items-center  p-2 border border-black rounded mt-4 md:hidden'
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <p className='px-2'>Change Interest</p>
+                <p className='px-2 font-Rubik'>Change Interest</p>
                 <svg
                     width='13'
                     height='8'
