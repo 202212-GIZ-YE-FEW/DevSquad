@@ -12,7 +12,6 @@ import Inputcomponent from "../Inputcomponent";
 import { types } from "../../utils/types";
 import { auth, db, storage } from "../../../config/firebase";
 export default function Eventcreation() {
-    // const router = useRouter(); // Getting the router instance
     //form states
     const [location, setLocation] = useState("");
     const [city, setCity] = useState("Izmer");
@@ -24,14 +23,6 @@ export default function Eventcreation() {
     const [eventTypeList, setEventTypeList] = useState([]);
     // File Upload State
     const [fileUpload, setFileUpload] = useState(null);
-
-    // Listening to authentication state changes
-    // onAuthStateChanged(auth, (user) => {
-    //     if (!user) {
-    //         // If the user is authenticated
-    //         router.push("/"); // Redirect to homepage
-    //     }
-    // });
 
     const eventCollectionRef = collection(db, "events");
     const getLocation = (param) => {
