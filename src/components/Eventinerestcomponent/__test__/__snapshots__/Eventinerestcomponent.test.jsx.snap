@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full sm:w-80 h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
+  className="md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
 >
   <div
     className="grid grid-cols-1 gap-2 "
@@ -12,16 +12,21 @@ exports[`renders correctly 1`] = `
     >
       Pick Your Interest
     </p>
+    <p
+      className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
+    >
+      Change Interset
+    </p>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           All
         </span>
@@ -29,14 +34,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           No Poverty
         </span>
@@ -44,14 +49,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Zero Hunger
         </span>
@@ -59,14 +64,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Good Health And Well-Being
         </span>
@@ -74,14 +79,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Quality Education
         </span>
@@ -89,14 +94,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Gender Equality
         </span>
@@ -104,14 +109,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Clean Water And Sanitation
         </span>
@@ -119,14 +124,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Affordable And Clean Energy
         </span>
@@ -134,14 +139,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Decent Work And Economic Growth
         </span>
@@ -149,14 +154,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Industry Innovation And Infrastructure
         </span>
@@ -164,14 +169,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Reduced Inequalities
         </span>
@@ -179,14 +184,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Sustainable Cities And Communities
         </span>
@@ -194,14 +199,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Responsible Consumption And Production
         </span>
@@ -209,14 +214,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Climate Action
         </span>
@@ -224,14 +229,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Life Below Water
         </span>
@@ -239,14 +244,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Life On Land
         </span>
@@ -254,14 +259,14 @@ exports[`renders correctly 1`] = `
     </div>
     <div>
       <label
-        className="flex md:block"
+        className="flex sm:block"
       >
         <input
-          className="md:hidden"
+          className="sm:hidden"
           type="checkbox"
         />
         <span
-          className="checked flex items-center justify-center text-center  md:border-2 md:border-black border-0 p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs"
+          className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
         >
           Peace And Justice And Strong Institutions
         </span>

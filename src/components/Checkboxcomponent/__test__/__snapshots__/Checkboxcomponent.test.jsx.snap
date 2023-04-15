@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
       type="checkbox"
     />
     <span
-      className="undefined"
+      className="undefined undefined"
     />
   </label>
 </div>
