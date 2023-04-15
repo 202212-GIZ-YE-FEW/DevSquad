@@ -1,6 +1,7 @@
 const Inputcomponent = ({
     block,
     flex,
+    intrestMargin,
     afterChecked,
     beforeChecked,
     view,
@@ -23,7 +24,11 @@ const Inputcomponent = ({
                     {...props}
                 />
                 <span
-                    className={checked ? `${afterChecked}` : `${beforeChecked}`}
+                    className={
+                        checked
+                            ? `${afterChecked} ${intrestMargin}`
+                            : `${beforeChecked} ${intrestMargin}`
+                    }
                 >
                     {title}
                 </span>
