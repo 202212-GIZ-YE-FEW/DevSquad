@@ -121,7 +121,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
         </p>
         <a
           className="flex justify-center items-center"
@@ -194,7 +194,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
         </p>
         <a
           className="flex justify-center items-center"
@@ -267,7 +267,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at, illum itaque facilis
+           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
         </p>
         <a
           className="flex justify-center items-center"
@@ -904,7 +904,7 @@ Array [
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at ."
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at ."
           </p>
         </div>
       </div>
@@ -954,7 +954,7 @@ Array [
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at ."
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at ."
           </p>
         </div>
       </div>
@@ -1004,7 +1004,7 @@ Array [
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur at".
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at".
           </p>
         </div>
       </div>
