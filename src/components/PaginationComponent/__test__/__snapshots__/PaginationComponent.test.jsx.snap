@@ -5,13 +5,13 @@ exports[`renders correctly 1`] = `
   className="flex flex-col"
 >
   <div
-    className="md:order-1 order-2"
+    className="sm:order-1 order-2"
   >
     <div
-      className="border-2 border-black rounded-lg px-4 my-6 font-Rubik "
+      className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik "
     >
       <div
-        className="flex justify-between"
+        className="flex md:justify-between md:flex-row flex-col justify-center items-center"
       >
         <div>
           <p
@@ -24,11 +24,11 @@ exports[`renders correctly 1`] = `
           className=" pt-2"
         >
           <div
-            className="flex flex-row items-center justify-between"
+            className="flex flex-row items-center"
           >
             <div>
               <div
-                class="relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+                class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
               >
                 <span
                   class="text-white font-Rubik"
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
                 </span>
               </div>
               <div
-                class="-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+                class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
               >
                 <span
                   class="text-white font-Rubik"
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
                 </span>
               </div>
               <div
-                class="-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
+                class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
               >
                 <span
                   class="text-white font-Rubik"
@@ -64,14 +64,12 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="grid grid-cols-3 align-items-center gap-4 "
+        className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
       >
-        <div
-          className="col-span-1"
-        >
+        <div>
           <img
             alt="eventCardImage"
-            className="rounded border-2 border-black"
+            className="rounded border-2 border-black w-64 md:h-36 h-24"
             data-nimg="1"
             decoding="async"
             height={380}
@@ -116,6 +114,115 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
+    className="sm:order-1 order-2"
+  >
+    <div
+      className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik "
+    >
+      <div
+        className="flex md:justify-between md:flex-row flex-col justify-center items-center"
+      >
+        <div>
+          <p
+            className="pt-2"
+          >
+            FRI, JUL -7:00 PM GMT+3
+          </p>
+        </div>
+        <div
+          className=" pt-2"
+        >
+          <div
+            className="flex flex-row items-center"
+          >
+            <div>
+              <div
+                class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+              >
+                <span
+                  class="text-white font-Rubik"
+                >
+                  R
+                </span>
+              </div>
+              <div
+                class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+              >
+                <span
+                  class="text-white font-Rubik"
+                >
+                  R
+                </span>
+              </div>
+              <div
+                class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+              >
+                <span
+                  class="text-white font-Rubik"
+                >
+                  R
+                </span>
+              </div>
+            </div>
+            <p
+              className="font-Rubik p-2"
+            >
+              +12 Attendance
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
+      >
+        <div>
+          <img
+            alt="eventCardImage"
+            className="rounded border-2 border-black w-64 md:h-36 h-24"
+            data-nimg="1"
+            decoding="async"
+            height={380}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            responsive={true}
+            src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
+            srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
+            style={
+              Object {
+                "color": "transparent",
+              }
+            }
+            width={650}
+          />
+        </div>
+        <div
+          className="col-span-2 flex flex-col"
+        >
+          <p
+            className="font-medium"
+          >
+            Title of the Event2
+          </p>
+          <p
+            className="font-normal line-clamp-2"
+          >
+            Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!
+          </p>
+          <div
+            className="flex justify-end py-5"
+          >
+            <button
+              className="bg-primary-orange text-white rounded px-8 py-1 "
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
     className="md:order-2 order-1 text-center md:text-start"
   >
     <p
@@ -124,7 +231,7 @@ exports[`renders correctly 1`] = `
        Pages
     </p>
     <ul
-      className="md:mx-32 mx-10 inline-flex max-w-xs justify-center items-center border border-black h-8"
+      className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
     >
       <button
         className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"

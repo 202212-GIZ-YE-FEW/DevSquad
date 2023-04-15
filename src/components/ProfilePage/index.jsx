@@ -255,11 +255,6 @@ export default function ProfilePage() {
                                     title={title}
                                     onChange={() => handleOnChange(index)}
                                     checked={checkedState[index]}
-                                    textColor='text-black'
-                                    textColorChecked='text-black'
-                                    borderColor='border-black'
-                                    borderRightAndDown='border-r-2 border-b-2'
-                                    height='h-20'
                                     view='hidden'
                                     afterChecked='flex items-center justify-center text-center border bg-primary-orange p-3 rounded font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
                                     beforeChecked='checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'
