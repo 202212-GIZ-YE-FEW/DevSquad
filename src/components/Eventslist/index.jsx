@@ -11,7 +11,7 @@ const Eventslist = () => {
     const [isOpenlocation, setIsOpenlocation] = useState(false);
 
     return (
-        <div className='container mx-auto lg:px-16 md:px-10 font-Rubik'>
+        <div className='md:m-8 m-2 font-Rubik'>
             <div className='font-Rubik flex flex-col items-center py-10 '>
                 <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, John!
@@ -20,12 +20,12 @@ const Eventslist = () => {
                     Explore and Join Events.
                 </p>
             </div>
-            <div className='flex justify-evenly  md:pb-0 pb-4 border-t-2 border-b-2 border-black md:border-0'>
+            <div className='flex justify-evenly md:pb-0 pb-4 pt-4 border-t-2 border-b-2 border-black md:border-0 sm:hidden'>
                 <button
-                    className='flex items-center  p-2 border border-black rounded mt-4 md:hidden'
+                    className='flex items-center p-1 border border-black rounded mr-1'
                     onClick={() => setIsOpeninterset(!isOpeninterest)}
                 >
-                    <p className='px-2 font-Rubik'>Change Interest</p>
+                    <p className='pr-1 font-Rubik text-xs'>Change Interest</p>
                     <svg
                         width='13'
                         height='8'
@@ -40,10 +40,10 @@ const Eventslist = () => {
                     </svg>
                 </button>
                 <button
-                    className='flex items-center  p-2 border border-black rounded mt-4 md:hidden'
+                    className='flex items-center  p-1 border border-black rounded md:hidden mr-1'
                     onClick={() => setIsOpenlocation(!isOpenlocation)}
                 >
-                    <p className='px-2 font-Rubik'>Change Location</p>
+                    <p className='pr-1 font-Rubik text-xs'>Change Location</p>
                     <svg
                         width='13'
                         height='8'
@@ -58,10 +58,10 @@ const Eventslist = () => {
                     </svg>
                 </button>
                 <button
-                    className='flex items-center  p-2 border border-black rounded mt-4 sm:hidden'
+                    className='flex items-center p-1 border border-black rounded sm:hidden'
                     onClick={() => setIsOpencalender(!isOpencalender)}
                 >
-                    <p className='px-2 font-Rubik'>Change Date</p>
+                    <p className='pr-1 font-Rubik text-xs'>Change Date</p>
                     <svg
                         width='13'
                         height='8'
@@ -76,50 +76,44 @@ const Eventslist = () => {
                     </svg>
                 </button>
             </div>
-            <div className='grid grid-cols-3 px-10'>
-                <div className='flex flex-col items-center h-full  '>
+            <div className='sm:grid sm:grid-cols-3 md:gap-6 sm:gap-3'>
+                <div className='flex flex-col sm:items-center sm:space-y-6'>
                     <div
-                        className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                            isOpencalender
-                                ? ""
-                                : "opacity-0 pointer-events-none"
+                        className={`sm:block sm:static sm:z-0
+                        ${isOpencalender ? "block" : "hidden"}
+                        `}
+                    >
+                        <Calendar className='h-24' />
+                    </div>
+                    {/* <div className='flex flex-col items-center h-full '> */}
+                    <div
+                        className={`sm:block md:w-64 w-56 ${
+                            isOpenlocation ? "block" : "hidden"
                         }`}
                     >
-                        <Calendar className=' h-24' />
-                    </div>
-                    <div className='flex flex-col items-center h-full '>
-                        <div
-                            className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                                isOpenlocation
-                                    ? ""
-                                    : "opacity-0 pointer-events-none"
-                            }`}
-                        >
-                            <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full sm:w-80 h-80 sm:h-full'>
-                                <div className='border-t-2 border-b-2 border-black h-32 font-medium text-center  w-full flex flex-col'>
-                                    <button className='underline p-2'>
-                                        Change Location
-                                    </button>
-                                    <p className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full'>
-                                        İzmir, TR
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                                isOpeninterest
-                                    ? ""
-                                    : "opacity-0 pointer-events-none"
-                            }`}
-                        >
-                            <div className=''>
-                                <Eventinerestcomponent />
+                        <div className=' bg-white rounded-md'>
+                            <div className='border-t-2 border-b-2 border-black h-32 font-medium text-center w-full'>
+                                <button className='underline p-2'>
+                                    Change Location
+                                </button>
+                                <p className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full'>
+                                    İzmir, TR
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <div
+                        className={`sm:block ${
+                            isOpeninterest ? " block" : "hidden"
+                        }`}
+                    >
+                        <div className=''>
+                            <Eventinerestcomponent />
+                        </div>
+                    </div>
+                    {/* </div> */}
                 </div>
-                <div className='md:col-span-2 col-span-3'>
+                <div className='sm:col-span-2 col-span-3'>
                     <PaginationComponent />
                 </div>
             </div>

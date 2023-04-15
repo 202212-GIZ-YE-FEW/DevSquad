@@ -4,7 +4,6 @@ import { useState } from "react";
 import CalendarComponent from "./CalendarComponent";
 
 export default function Calendar() {
-    const [isOpen, setIsOpen] = useState(false);
     const d = new Date();
     let month = d.getMonth();
     const [date, setDate] = useState(month);
@@ -120,12 +119,12 @@ export default function Calendar() {
         }
     }
     return (
-        <>
-            <div className='sm:block flex-col items-center fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-sm p-4  w-full sm:w-80  '>
-                <p className='font-medium font-Rubik text-center block sm:hidden text-lg m-2'>
+        <div>
+            <div className='flex flex-col items-center'>
+                <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
                     Change Date
                 </p>
-                <div className='sm:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2'>
+                <div className='md:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2'>
                     <div className='grid grid-cols-7 justify-items-center m-3'>
                         {daysOfTheWeek &&
                             daysOfTheWeek.map((day) => {
@@ -142,21 +141,21 @@ export default function Calendar() {
                         })}
                     </div>
                 </div>
-                <div>
+                <div className='flex flex-row justify-between md:w-64 w-56 sm:m-3 mb-2'>
                     <button
-                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3 m-1'
+                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik md:p-2 p-1'
                         onClick={handleThisMonth}
                     >
                         This Month
                     </button>
                     <button
-                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 sm:m-3'
+                        className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik md:p-2 p-1'
                         onClick={handleNexMonth}
                     >
                         Next Month
                     </button>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
