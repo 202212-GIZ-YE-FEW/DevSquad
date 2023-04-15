@@ -221,10 +221,10 @@ export default function EventView(props) {
                     {/* <div className='flex flex-row items-center'>
                         <div>
                             {userAttend &&
-                                userAttend.map((index) => {
+                                userAttend.map((index, key) => {
                                     return (
                                         <div class='-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                            <span class='text-white font-Rubik'>{index.name[0]}</span>
+                                            <span class='text-white font-Rubik'>{index.name[key]}</span>
                                         </div>
 
                                     )
