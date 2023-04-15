@@ -96,7 +96,8 @@ exports[`renders correctly 1`] = `
           <p
             className="font-Rubik"
           >
-            +12 Attendance
+            +
+             Attendance
           </p>
         </div>
         <div

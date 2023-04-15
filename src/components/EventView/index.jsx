@@ -11,8 +11,8 @@ import { useRouter } from "next/router";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
-    // const [attendcount, setAttendcount] = useState();
-    // const [userAttend, setUserAttend] = useState();
+    const [attendcount, setAttendcount] = useState();
+    const [userAttend, setUserAttend] = useState();
     const router = useRouter();
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
@@ -36,30 +36,30 @@ export default function EventView(props) {
             console.error(err);
         }
     };
-    // const attendEvent = async (id) => {
-    //     const userList = []
-    //     const usersCollectionRef = collection(db, "users");
-    //     const attendEventRef = collection(db, `events/${id}/attendEvent`);
-    //     const dataAttend = await getDocs(attendEventRef);
-    //     const data = dataAttend.docs.map((entry) => entry.data());
+    const attendEvent = async (id) => {
+        const userList = [];
+        const usersCollectionRef = collection(db, "users");
+        const attendEventRef = collection(db, `events/${id}/attendEvent`);
+        const dataAttend = await getDocs(attendEventRef);
+        const data = dataAttend.docs.map((entry) => entry.data());
 
-    //     setAttendcount(data.length)
-    //     data.forEach(async (index) => {
+        setAttendcount(data.length);
+        data.forEach(async (index) => {
+            const users = await getDocs(
+                query(usersCollectionRef, where("uid", "==", index.userId))
+            );
 
-    //         const users = await getDocs(query(usersCollectionRef, where('uid', "==", index.userId)))
-
-    //         const userData = users.docs.map((index) => index.data());
-    //         userData.forEach((index) => {
-    //             userList.push(index)
-    //         })
-    //     })
-    //     setUserAttend(userList)
-    //     // console.log(userList);
-
-    // };
+            const userData = users.docs.map((index) => index.data());
+            userData.forEach((index) => {
+                userList.push(index);
+            });
+        });
+        setUserAttend(userList);
+        // console.log(userList);
+    };
     useEffect(() => {
         getUserInfo(props.entry.userId);
-        // attendEvent(props.id)
+        attendEvent(props.id);
     }, []);
 
     const joinEvent = async (id) => {
@@ -145,8 +145,10 @@ export default function EventView(props) {
                                     <span class='text-white font-Rubik'>R</span>
                                 </div> */}
                             </div>
-                            {/* <p className='font-Rubik'>+{attendcount} Attendance</p> */}
-                            <p className='font-Rubik'>+12 Attendance</p>
+                            <p className='font-Rubik'>
+                                +{attendcount} Attendance
+                            </p>
+                            {/* <p className='font-Rubik'>+12 Attendance</p> */}
                         </div>
 
                         {/* Organized by who */}
