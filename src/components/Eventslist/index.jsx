@@ -79,10 +79,8 @@ const Eventslist = () => {
             <div className='grid grid-cols-3 px-10'>
                 <div className='flex flex-col items-center h-full  '>
                     <div
-                        className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                            isOpencalender
-                                ? ""
-                                : "opacity-0 pointer-events-none"
+                        className={`sm:w-80 sm:block sm:static sm:z-0 fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
+                            isOpencalender ? "" : "opacity-0"
                         }`}
                     >
                         <Calendar className=' h-24' />
@@ -90,9 +88,7 @@ const Eventslist = () => {
                     <div className='flex flex-col items-center h-full '>
                         <div
                             className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                                isOpenlocation
-                                    ? ""
-                                    : "opacity-0 pointer-events-none"
+                                isOpenlocation ? "" : "opacity-0 "
                             }`}
                         >
                             <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md p-4  w-full sm:w-80 h-80 sm:h-full'>
@@ -108,9 +104,7 @@ const Eventslist = () => {
                         </div>
                         <div
                             className={`sm:w-80 sm:block sm:static sm:z-0	fixed z-50 top-0 left-0  bg-opacity-50 sm:opacity-100 transition-opacity  ${
-                                isOpeninterest
-                                    ? ""
-                                    : "opacity-0 pointer-events-none"
+                                isOpeninterest ? "" : "opacity-0 "
                             }`}
                         >
                             <div className=''>
