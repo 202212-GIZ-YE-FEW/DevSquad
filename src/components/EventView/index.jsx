@@ -11,7 +11,9 @@ import { useRouter } from "next/router";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
+    //1
     const [attendcount, setAttendcount] = useState();
+    //2
     const [userAttend, setUserAttend] = useState();
     const router = useRouter();
     onAuthStateChanged(auth, (user) => {
@@ -27,35 +29,43 @@ export default function EventView(props) {
                 ...doc.data(),
                 id: doc.id,
             }));
-
-            // setuserName(filteredData[0].name);
-            filteredData[0].name
-                ? setuserName(filteredData[0].name)
-                : setuserName(filteredData[0].email);
+            setuserName(filteredData[0].name);
         } catch (err) {
             console.error(err);
         }
     };
+
+    //##
     const attendEvent = async (id) => {
-        const userList = [];
-        const usersCollectionRef = collection(db, "users");
-        const attendEventRef = collection(db, `events/${id}/attendEvent`);
-        const dataAttend = await getDocs(attendEventRef);
-        const data = dataAttend.docs.map((entry) => entry.data());
+        try {
+            const userList = [];
+            const usersCollectionRef = collection(db, "users");
+            const attendEventRef = collection(db, `events/${id}/attendEvent`);
+            const dataAttend = await getDocs(attendEventRef);
+            const data = dataAttend.docs.map((entry) => entry.data());
 
-        setAttendcount(data.length);
-        data.forEach(async (index) => {
-            const users = await getDocs(
-                query(usersCollectionRef, where("uid", "==", index.userId))
-            );
+            //1
+            setAttendcount(data.length);
+            data.forEach(async (index) => {
+                const users = await getDocs(
+                    query(usersCollectionRef, where("uid", "==", index.userId))
+                );
 
-            const userData = users.docs.map((index) => index.data());
-            userData.forEach((index) => {
-                userList.push(index);
+                const userData = users.docs.map((index) => index.data());
+                userData.forEach((index) => {
+                    userList.push(index);
+                });
+                console.log({
+                    userData,
+                    userList,
+                });
             });
-        });
-        setUserAttend(userList);
-        // console.log(userList);
+            //2
+            console.log(userList);
+            setUserAttend(userList);
+        } catch (error) {
+            console.error(error);
+        }
     };
     useEffect(() => {
         getUserInfo(props.entry.userId);
@@ -71,11 +81,9 @@ export default function EventView(props) {
                   })
                 : router.push("/signin");
 
-            await addDoc(attendEventRef, {
-                userId: auth.currentUser.uid,
-            });
-
-            alert("you are joined to the event");
+            isAuth
+                ? alert("you are joined to the event")
+                : alert("signIn to your account for join to this event");
         } catch (err) {
             console.error(err);
         }
@@ -218,19 +226,18 @@ export default function EventView(props) {
 
                         </div>
                     </div> */}
-                    {/* <div className='flex flex-row items-center'>
+                    {/* <div>
                         <div>
                             {userAttend &&
-                                userAttend.map((index, key) => {
+                                userAttend.length > 0 &&
+                                userAttend.map((user) => {
+                                    console.log(user, userAttend);
                                     return (
-                                        <div class='-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                            <span class='text-white font-Rubik'>{index.name[key]}</span>
-                                        </div>
-
-                                    )
-                                })
-                            }
-
+                                        <p>{user.name}</p>
+                                        // <p>jjjjjjjjjjjjjjjjjjjjj</p>,
+                                        // <p>{console.log(props.id)}</p>
+                                    );
+                                })}
                         </div>
                     </div> */}
                 </div>
