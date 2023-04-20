@@ -39,7 +39,7 @@ const Pagination = (props) => {
             <p className='py-3 font-Rubik  font-bold'> Pages</p>
             <ul
                 className={classnames(
-                    "md:mx-32 mx-10 inline-flex max-w-xs justify-center items-center border border-black h-8",
+                    "sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8",
                     {
                         [className]: className,
                     }
