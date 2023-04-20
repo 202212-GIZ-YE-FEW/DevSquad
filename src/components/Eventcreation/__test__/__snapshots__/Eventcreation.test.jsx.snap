@@ -22,9 +22,10 @@ exports[`renders correctly 1`] = `
         className="w-80 h-12 border border-black rounded placeholder:p-2"
         id="eventLocation"
         name="eventLocation"
+        onChange={[Function]}
         placeholder="city"
         type="text"
-        value="eventLocation"
+        value=""
       />
     </div>
     <div
@@ -35,15 +36,13 @@ exports[`renders correctly 1`] = `
       >
         Izmer
       </p>
-      <a
+      <button
         className="cursor-pointer text-blue-600"
-        href="#"
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
+        type="button"
       >
         choose location
-      </a>
+      </button>
     </div>
   </div>
   <div>
@@ -65,8 +64,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="No Poverty"
+            onChange={[Function]}
             type="checkbox"
+            value="No Poverty"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -80,8 +83,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Zero Hunger"
+            onChange={[Function]}
             type="checkbox"
+            value="Zero Hunger"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -95,8 +102,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Good Health And Well-Being"
+            onChange={[Function]}
             type="checkbox"
+            value="Good Health And Well-Being"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -110,8 +121,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Quality Education"
+            onChange={[Function]}
             type="checkbox"
+            value="Quality Education"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -125,8 +140,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Gender Equality"
+            onChange={[Function]}
             type="checkbox"
+            value="Gender Equality"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -140,8 +159,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Clean Water And Sanitation"
+            onChange={[Function]}
             type="checkbox"
+            value="Clean Water And Sanitation"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -155,8 +178,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Affordable And Clean Energy"
+            onChange={[Function]}
             type="checkbox"
+            value="Affordable And Clean Energy"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -170,8 +197,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Decent Work And Economic Growth"
+            onChange={[Function]}
             type="checkbox"
+            value="Decent Work And Economic Growth"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -185,8 +216,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Industry Innovation And Infrastructure"
+            onChange={[Function]}
             type="checkbox"
+            value="Industry Innovation And Infrastructure"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -200,8 +235,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Reduced Inequalities"
+            onChange={[Function]}
             type="checkbox"
+            value="Reduced Inequalities"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -215,8 +254,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Sustainable Cities And Communities"
+            onChange={[Function]}
             type="checkbox"
+            value="Sustainable Cities And Communities"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -230,8 +273,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Responsible Consumption And Production"
+            onChange={[Function]}
             type="checkbox"
+            value="Responsible Consumption And Production"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -245,8 +292,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Climate Action"
+            onChange={[Function]}
             type="checkbox"
+            value="Climate Action"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -260,8 +311,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Life Below Water"
+            onChange={[Function]}
             type="checkbox"
+            value="Life Below Water"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -275,8 +330,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Life On Land"
+            onChange={[Function]}
             type="checkbox"
+            value="Life On Land"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -290,8 +349,12 @@ exports[`renders correctly 1`] = `
           className="undefined undefined"
         >
           <input
+            checked={false}
             className="hidden"
+            name="Peace And Justice And Strong Institutions"
+            onChange={[Function]}
             type="checkbox"
+            value="Peace And Justice And Strong Institutions"
           />
           <span
             className="checked flex items-center justify-center text-center text-primary-orange border border-primary-orange p-3 rounded h-32 font-Rubik font-medium sm:text-base text-xs undefined"
@@ -317,9 +380,10 @@ exports[`renders correctly 1`] = `
       className="w-full h-12 border border-black rounded"
       id="eventTitle"
       name="eventTitle"
+      onChange={[Function]}
       placeholder=""
       type="text"
-      value="eventTitle"
+      value=""
     />
   </div>
   <div>
@@ -337,9 +401,10 @@ exports[`renders correctly 1`] = `
       className="w-80 h-12 border border-black rounded"
       id="eventDate"
       name="eventDate"
+      onChange={[Function]}
       placeholder=""
       type="date"
-      value="eventDate"
+      value=""
     />
   </div>
   <div>
@@ -357,9 +422,10 @@ exports[`renders correctly 1`] = `
       className="w-80 h-12 border border-black rounded"
       id="eventtime"
       name="eventtime"
+      onChange={[Function]}
       placeholder=""
       type="time"
-      value="eventtime"
+      value=""
     />
   </div>
   <div>
@@ -377,6 +443,7 @@ exports[`renders correctly 1`] = `
       className="w-full h-44 border border-black rounded placeholder:p-2 placeholder:text-black"
       id="dateLocation"
       name="dateLocation"
+      onChange={[Function]}
       placeholder="Please write at least 50 characters"
     />
   </div>
@@ -395,9 +462,9 @@ exports[`renders correctly 1`] = `
       className="md:w-96 w-60 h-12 border border-black rounded file:h-12"
       id="eventImage"
       name="eventImage"
+      onChange={[Function]}
       placeholder=""
       type="file"
-      value="eventImage"
     />
   </div>
   <div>
@@ -449,6 +516,7 @@ exports[`renders correctly 1`] = `
     >
       <button
         className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2 "
+        onClick={[Function]}
       >
         Agree with tearms and create Event!
       </button>

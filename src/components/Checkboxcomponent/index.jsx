@@ -8,6 +8,8 @@ const Inputcomponent = ({
     title,
     checked,
     onChange,
+    value,
+    name,
     ...props
 }) => {
     // const defaultChecked = checked ? false : checked;
@@ -19,8 +21,10 @@ const Inputcomponent = ({
                     type='checkbox'
                     checked={checked}
                     // onChange={() => setIsChecked((prev) => !prev)}
+                    value={value}
                     onChange={onChange}
                     className={checked ? `checked ${view}` : `${view}`}
+                    name={name}
                     {...props}
                 />
                 <span
