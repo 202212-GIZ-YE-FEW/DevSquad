@@ -129,7 +129,7 @@ export default function SignIn() {
                             type='email'
                             id='email'
                             name='email'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Email address'
                         />
                         <Inputcomponent
@@ -140,7 +140,7 @@ export default function SignIn() {
                             type='password'
                             id='password'
                             name='password'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border rounded-md border-black py-1 px-2 '
                             placeholder='Password'
                         />
                         {error && (

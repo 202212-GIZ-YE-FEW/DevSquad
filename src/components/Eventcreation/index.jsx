@@ -177,7 +177,7 @@ const Eventcreation = () => {
                         label='Agree with tearms and create Event!'
                         width='md:w-96'
                         height='h-12'
-                        border='border'
+                        border='border border-b-2 border-r-2'
                         borderColor='border-black'
                         borderRaduis='rounded'
                         id='done'

@@ -123,7 +123,7 @@ exports[`renders correctly 1`] = `
           className="grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-2"
         >
           <input
-            className="border  rounded-md border-black py-1 pl-2 mb-2 sm:mb-0"
+            className="border  rounded-md border-black py-1 px-2 mb-2 sm:mb-0"
             id="name"
             name="name"
             onChange={[Function]}
@@ -132,7 +132,7 @@ exports[`renders correctly 1`] = `
             value=""
           />
           <input
-            className="border  rounded-md border-black py-1 pl-2"
+            className="border  rounded-md border-black py-1 px-2"
             id="Surname"
             name="Surname"
             onChange={[Function]}
@@ -142,7 +142,7 @@ exports[`renders correctly 1`] = `
           />
         </div>
         <input
-          className="border  rounded-md border-black py-1 pl-2"
+          className="border  rounded-md border-black py-1 px-2"
           id="email"
           name="email"
           onChange={[Function]}
@@ -151,7 +151,7 @@ exports[`renders correctly 1`] = `
           value=""
         />
         <input
-          className="border  rounded-md border-black py-1 pl-2"
+          className="border  rounded-md border-black py-1 px-2"
           id="password"
           name="password"
           onChange={[Function]}
@@ -160,7 +160,7 @@ exports[`renders correctly 1`] = `
           value=""
         />
         <input
-          className="border  rounded-md border-black py-1 pl-2"
+          className="border  rounded-md border-black py-1 px-2"
           id="confirmpassword"
           name="confirmpassword"
           onChange={[Function]}
