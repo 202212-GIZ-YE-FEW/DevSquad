@@ -5,6 +5,10 @@ exports[`renders correctly 1`] = `
   className="md:m-8 m-2 font-Rubik"
 >
   <div
+    className="w-full fixed top-0 h-[50%] hidden"
+    onClick={[Function]}
+  />
+  <div
     className="font-Rubik flex flex-col items-center py-10 "
   >
     <p
@@ -99,7 +103,9 @@ exports[`renders correctly 1`] = `
                         hidden
                         "
       >
-        <div>
+        <div
+          className="fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
+        >
           <div
             className="flex flex-col items-center"
           >
@@ -538,13 +544,13 @@ exports[`renders correctly 1`] = `
         className="sm:block md:w-64 w-56 hidden"
       >
         <div
-          className=" bg-white rounded-md"
+          className="p-6 sm:p-0 bg-white w-full sm:h-full h-[80vh] fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
         >
           <div
-            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full"
+            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full mt-[20%] sm:mt-0"
           >
             <button
-              className="underline p-2"
+              className="underline p-4"
             >
               Change Location
             </button>
@@ -560,279 +566,275 @@ exports[`renders correctly 1`] = `
         className="sm:block hidden"
       >
         <div
-          className=""
+          className="md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
         >
           <div
-            className="md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
+            className="grid grid-cols-1 gap-2 "
           >
-            <div
-              className="grid grid-cols-1 gap-2 "
+            <p
+              className="font-medium font-Rubik underline text-center sm:block hidden"
             >
-              <p
-                className="font-medium font-Rubik underline text-center sm:block hidden"
+              Pick Your Interest
+            </p>
+            <p
+              className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
+            >
+              Change Interset
+            </p>
+            <div>
+              <label
+                className="flex sm:block"
               >
-                Pick Your Interest
-              </p>
-              <p
-                className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                >
+                  All
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
               >
-                Change Interset
-              </p>
-              <div>
-                <label
-                  className="flex sm:block"
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    All
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  No Poverty
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    No Poverty
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Zero Hunger
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Zero Hunger
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Good Health And Well-Being
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Good Health And Well-Being
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Quality Education
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Quality Education
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Gender Equality
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Gender Equality
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Clean Water And Sanitation
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Clean Water And Sanitation
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Affordable And Clean Energy
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Affordable And Clean Energy
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Decent Work And Economic Growth
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Decent Work And Economic Growth
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Industry Innovation And Infrastructure
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Industry Innovation And Infrastructure
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Reduced Inequalities
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Reduced Inequalities
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Sustainable Cities And Communities
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Sustainable Cities And Communities
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Responsible Consumption And Production
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Responsible Consumption And Production
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Climate Action
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Climate Action
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Life Below Water
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Life Below Water
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
+                  Life On Land
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                className="flex sm:block"
+              >
+                <input
+                  className="sm:hidden sm:m-0 m-6"
+                  type="checkbox"
+                />
+                <span
+                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
                 >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Life On Land
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
-                >
-                  <input
-                    className="sm:hidden"
-                    type="checkbox"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    Peace And Justice And Strong Institutions
-                  </span>
-                </label>
-              </div>
+                  Peace And Justice And Strong Institutions
+                </span>
+              </label>
             </div>
           </div>
         </div>

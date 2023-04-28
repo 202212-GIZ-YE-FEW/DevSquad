@@ -119,7 +119,7 @@ export default function Calendar() {
         }
     }
     return (
-        <div>
+        <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
             <div className='flex flex-col items-center'>
                 <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
                     Change Date

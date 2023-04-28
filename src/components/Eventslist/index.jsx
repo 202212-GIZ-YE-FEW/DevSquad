@@ -3,15 +3,30 @@ import { useState } from "react";
 
 import Calendar from "../Calendar";
 import Eventinerestcomponent from "../Eventinerestcomponent";
+import LocationComponent from "../LocationComponent";
 import PaginationComponent from "../PaginationComponent";
 
 const Eventslist = () => {
+    const [overlay, setOverlay] = useState(false);
     const [isOpencalender, setIsOpencalender] = useState(false);
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
 
+    function closeModels() {
+        setIsOpencalender(false);
+        setIsOpeninterset(false);
+        setIsOpenlocation(false);
+        setOverlay(!overlay);
+    }
+
     return (
         <div className='md:m-8 m-2 font-Rubik'>
+            <div
+                onClick={closeModels}
+                className={`w-full fixed top-0 h-[50%] ${
+                    overlay ? "block" : "hidden"
+                }`}
+            ></div>
             <div className='font-Rubik flex flex-col items-center py-10 '>
                 <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, John!
@@ -23,7 +38,11 @@ const Eventslist = () => {
             <div className='flex justify-evenly md:pb-0 pb-4 pt-4 border-t-2 border-b-2 border-black md:border-0 sm:hidden'>
                 <button
                     className='flex items-center p-1 border border-black rounded mr-1'
-                    onClick={() => setIsOpeninterset(!isOpeninterest)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpeninterset(!isOpeninterest);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Interest</p>
                     <svg
@@ -41,7 +60,11 @@ const Eventslist = () => {
                 </button>
                 <button
                     className='flex items-center  p-1 border border-black rounded md:hidden mr-1'
-                    onClick={() => setIsOpenlocation(!isOpenlocation)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpenlocation(!isOpenlocation);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Location</p>
                     <svg
@@ -59,7 +82,11 @@ const Eventslist = () => {
                 </button>
                 <button
                     className='flex items-center p-1 border border-black rounded sm:hidden'
-                    onClick={() => setIsOpencalender(!isOpencalender)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpencalender(!isOpencalender);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Date</p>
                     <svg
@@ -85,33 +112,20 @@ const Eventslist = () => {
                     >
                         <Calendar className='h-24' />
                     </div>
-                    {/* <div className='flex flex-col items-center h-full '> */}
                     <div
                         className={`sm:block md:w-64 w-56 ${
                             isOpenlocation ? "block" : "hidden"
                         }`}
                     >
-                        <div className=' bg-white rounded-md'>
-                            <div className='border-t-2 border-b-2 border-black h-32 font-medium text-center w-full'>
-                                <button className='underline p-2'>
-                                    Change Location
-                                </button>
-                                <p className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full'>
-                                    İzmir, TR
-                                </p>
-                            </div>
-                        </div>
+                        <LocationComponent />
                     </div>
                     <div
                         className={`sm:block ${
                             isOpeninterest ? " block" : "hidden"
                         }`}
                     >
-                        <div className=''>
-                            <Eventinerestcomponent />
-                        </div>
+                        <Eventinerestcomponent />
                     </div>
-                    {/* </div> */}
                 </div>
                 <div className='sm:col-span-2 col-span-3'>
                     <PaginationComponent />
