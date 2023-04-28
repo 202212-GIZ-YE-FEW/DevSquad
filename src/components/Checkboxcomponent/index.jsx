@@ -1,6 +1,7 @@
 const Inputcomponent = ({
     block,
     flex,
+    checkMargin,
     intrestMargin,
     afterChecked,
     beforeChecked,
@@ -23,7 +24,11 @@ const Inputcomponent = ({
                     // onChange={() => setIsChecked((prev) => !prev)}
                     value={value}
                     onChange={onChange}
-                    className={checked ? `checked ${view}` : `${view}`}
+                    className={
+                        checked
+                            ? `checked ${view} ${checkMargin}`
+                            : `${view} ${checkMargin}`
+                    }
                     name={name}
                     {...props}
                 />
