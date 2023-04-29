@@ -1,35 +1,56 @@
 import React from "react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Calendar from "../Calendar";
 import Eventinerestcomponent from "../Eventinerestcomponent";
 import LocationComponent from "../LocationComponent";
 import PaginationComponent from "../PaginationComponent";
-
+import { auth, db } from "../../../config/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 const Eventslist = () => {
     const [overlay, setOverlay] = useState(false);
     const [isOpencalender, setIsOpencalender] = useState(false);
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
+    const [userName, setuserName] = useState();
 
-    function closeModels() {
-        setIsOpencalender(false);
-        setIsOpeninterset(false);
-        setIsOpenlocation(false);
-        setOverlay(!overlay);
-    }
+    const getUserInfo = async () => {
+        const usersCollectionRef = collection(db, "users");
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth.currentUser?.uid)
+        );
+        try {
+            const data = await getDocs(q);
+            const filteredData = data.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+            setuserName(filteredData[0].name);
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            user ? getUserInfo() : "";
+        });
+    }, []);
     return (
         <div className='md:m-8 m-2 font-Rubik'>
             <div
-                onClick={closeModels}
+                // onClick={closeModels}
                 className={`w-full fixed top-0 h-[50%] ${
                     overlay ? "block" : "hidden"
                 }`}
             ></div>
             <div className='font-Rubik flex flex-col items-center py-10 '>
-                <p className='text-5xl md:font-extrabold font:medium '>
+                {/* <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, John!
+                </p> */}
+                <p className='text-5xl md:font-extrabold font:medium '>
+                    Welcome, {userName}!
                 </p>
                 <p className='font-normal text-start'>
                     Explore and Join Events.

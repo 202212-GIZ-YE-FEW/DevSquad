@@ -72,11 +72,27 @@ export default function SignUp() {
         }
     };
 
-    // Handling sign in with Google
+    // Handling sign up with Google
     const signInWithGoogle = async () => {
         try {
             setError(null);
-            await signInWithPopup(auth, googleProvider);
+            await signInWithPopup(auth, googleProvider)
+                //--------------------------------------------##
+                .then(async (result) => {
+                    // The signed-in user info.
+                    const user = result.user;
+
+                    await addDoc(collection(db, "users"), {
+                        uid: user.uid,
+                        name: user.displayName,
+                        surname: user.email,
+                    });
+                })
+                .catch((error) => {
+                    // If an error occurred
+                    setError(error.message); // Set the error state with the error message
+                });
+            //---------------------------------------
             router.push("/");
         } catch (err) {
             setError(err.message);
