@@ -158,7 +158,7 @@ export default function SignUp() {
                                 type='text'
                                 id='name'
                                 name='name'
-                                className='border  rounded-md border-black py-1 pl-2 mb-2 sm:mb-0'
+                                className='border  rounded-md border-black py-1 px-2 mb-2 sm:mb-0'
                                 placeholder='Name'
                             />
                             <Inputcomponent
@@ -169,7 +169,7 @@ export default function SignUp() {
                                 type='text'
                                 id='Surname'
                                 name='Surname'
-                                className='border  rounded-md border-black py-1 pl-2'
+                                className='border  rounded-md border-black py-1 px-2'
                                 placeholder='Surname'
                             />
                         </div>
@@ -179,7 +179,7 @@ export default function SignUp() {
                             type='email'
                             id='email'
                             name='email'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Email address'
                         />
                         <Inputcomponent
@@ -190,7 +190,7 @@ export default function SignUp() {
                             type='password'
                             id='password'
                             name='password'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Password'
                         />
                         <Inputcomponent
@@ -201,7 +201,7 @@ export default function SignUp() {
                             type='password'
                             id='confirmpassword'
                             name='confirmpassword'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Confirm Password'
                         />
                         {error && (

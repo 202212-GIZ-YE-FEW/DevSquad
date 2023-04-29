@@ -23,8 +23,7 @@ const Eventinerestcomponent = () => {
     return (
         <>
             {/* desktop design */}
-            {/* fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 */}
-            <div className='md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar '>
+            <div className='md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
                 <div className='grid grid-cols-1 gap-2 '>
                     <p className='font-medium font-Rubik underline text-center sm:block hidden'>
                         Pick Your Interest
@@ -44,6 +43,7 @@ const Eventinerestcomponent = () => {
                                     block='sm:block'
                                     flex='flex'
                                     intrestMargin='ml-2'
+                                    checkMargin='sm:m-0 m-6'
                                 />
                             );
                         })}

@@ -6,7 +6,7 @@ const Getstartedbtn = () => {
         <div>
             <Link
                 href='/blogs'
-                className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-2xl font-medium'
+                className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium'
             >
                 {t("home.GetStarted")}
             </Link>

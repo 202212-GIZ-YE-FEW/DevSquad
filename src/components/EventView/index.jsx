@@ -55,10 +55,10 @@ export default function EventView(props) {
                 userData.forEach((index) => {
                     userList.push(index);
                 });
-                console.log({
-                    userData,
-                    userList,
-                });
+                // console.log({
+                //     userData,
+                //     userList,
+                // });
             });
             //2
             console.log(userList);
@@ -229,9 +229,9 @@ export default function EventView(props) {
                     {/* <div>
                         <div>
                             {userAttend &&
-                                userAttend.length > 0 &&
+                                // userAttend.length > 0 &&
                                 userAttend.map((user) => {
-                                    console.log(user, userAttend);
+                                    // console.log(user, userAttend);
                                     return (
                                         <p>{user.name}</p>
                                         // <p>jjjjjjjjjjjjjjjjjjjjj</p>,

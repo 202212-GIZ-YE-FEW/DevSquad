@@ -59,7 +59,7 @@ function Footer() {
                 <div className='flex basis-1/2 flex-col justify-center space-y-6 font-Rubik'>
                     <ul className='flex justify-center space-x-4 mx-2'>
                         <li className='cursor-pointer p-2 '>
-                            <Link href="'/events'>">
+                            <Link href='/events'>
                                 <b>{t("Navbar.Events")}</b>
                             </Link>
                         </li>

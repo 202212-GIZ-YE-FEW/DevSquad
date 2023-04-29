@@ -97,7 +97,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -114,7 +114,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -131,7 +131,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -148,7 +148,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -165,7 +165,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -182,7 +182,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -199,7 +199,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -216,7 +216,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -233,7 +233,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -250,7 +250,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -267,7 +267,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -284,7 +284,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -301,7 +301,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
@@ -318,7 +318,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             onChange={[Function]}
             type="checkbox"
           />
