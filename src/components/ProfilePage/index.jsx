@@ -9,8 +9,8 @@ import {
 } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import React from "react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
@@ -44,6 +44,7 @@ export default function ProfilePage() {
     //     }
 
     // });
+
     const [img, setImg] = useState("");
     const [error, setError] = useState(null);
     const [newName, setNewName] = useState("");
@@ -84,13 +85,14 @@ export default function ProfilePage() {
 
     const updateUserInfo = async (id) => {
         const userDoc = doc(db, "users", id);
+
         await updateDoc(userDoc, {
-            name: newName,
+            name: newName ? newName : auth?.currentUser?.displayName,
             location: newLocation,
             intersets: intersetList,
-            image: fileUpload?.name,
+            image: fileUpload ? fileUpload?.name : img,
         });
-        uploadFile();
+        // uploadFile();
         alert("update profile successsfully");
     };
 
@@ -120,7 +122,7 @@ export default function ProfilePage() {
             id: doc.id,
         }));
         setImg(filteredData[0]?.image);
-        console.log(img);
+        // console.log(img);
     };
 
     const handleOnChange = (position) => {
@@ -130,7 +132,7 @@ export default function ProfilePage() {
         setCheckedState(updatedCheckedState);
         let x = [];
 
-        const interstList = updatedCheckedState.map((item, index) => {
+        updatedCheckedState.map((item, index) => {
             if (item === true) {
                 x.push(titles[index]);
             }
@@ -145,15 +147,17 @@ export default function ProfilePage() {
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
             await uploadBytes(filesFolderRef, fileUpload);
+            alert("file uploaded!");
         } catch (err) {
             console.error(err);
         }
     };
 
-    //##
-    // useEffect(() => {
-    //     showImg()
-    // }, [])
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            user ? showImg() : "";
+        });
+    }, [img]);
 
     return (
         <div className='flex flex-col justify-center items-center space-y-10 mt-8 mb-8'>
@@ -185,8 +189,8 @@ export default function ProfilePage() {
                         label='Uplaod New'
                         fontSize='text-xl'
                         onClick={() => {
-                            //  uploadFile();
-                            showImg();
+                            uploadFile();
+                            // showImg();
                         }}
                     />
 
