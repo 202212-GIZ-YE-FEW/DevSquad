@@ -14,7 +14,7 @@ export default function EventView(props) {
     //1
     const [attendcount, setAttendcount] = useState();
     //2
-    const [userAttend, setUserAttend] = useState();
+    const [userAttend, setUserAttend] = useState([]);
     const router = useRouter();
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
@@ -29,47 +29,44 @@ export default function EventView(props) {
                 ...doc.data(),
                 id: doc.id,
             }));
+
             setuserName(filteredData[0].name);
         } catch (err) {
             console.error(err);
         }
     };
 
-    //##
     const attendEvent = async (id) => {
         try {
             const userList = [];
             const usersCollectionRef = collection(db, "users");
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
             const dataAttend = await getDocs(attendEventRef);
-            const data = dataAttend.docs.map((entry) => entry.data());
 
-            //1
-            setAttendcount(data.length);
-            data.forEach(async (index) => {
+            const data = dataAttend.docs.map(async (entry) => {
+                const user = entry.data(); //get userId as object
                 const users = await getDocs(
-                    query(usersCollectionRef, where("uid", "==", index.userId))
+                    query(usersCollectionRef, where("uid", "==", user.userId))
                 );
 
-                const userData = users.docs.map((index) => index.data());
-                userData.forEach((index) => {
-                    userList.push(index);
+                users.docs.map((doc) => {
+                    const userData = doc.data();
+                    userList.push(userData.name);
                 });
-                // console.log({
-                //     userData,
-                //     userList,
-                // });
+                setUserAttend(userList);
             });
-            //2
-            console.log(userList);
-            setUserAttend(userList);
+
+            setAttendcount(data.length);
         } catch (error) {
             console.error(error);
         }
     };
     useEffect(() => {
         getUserInfo(props.entry.userId);
-        attendEvent(props.id);
+        // attendEvent(props.id);
+        onAuthStateChanged(auth, (user) => {
+            user ? attendEvent(props.id) : "";
+        });
     }, []);
 
     const joinEvent = async (id) => {
@@ -215,31 +212,25 @@ export default function EventView(props) {
                     <p className='font-medium font-Rubik text-lg mb-2'>
                         Attendance:
                     </p>
-                    {/* <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
+                    <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
                         <div className='flex flex-col items-center'>
-                            <div class=' inline-flex items-center justify-center w-12 h-12 m-2 bg-black rounded-full'>
-                                <span class='font-medium text-white'>R</span>
-                            </div>
-                            <p className='font-Rubik md:text-base text-sm'>
-                                Jangis M.
-                            </p>
-
-                        </div>
-                    </div> */}
-                    {/* <div>
-                        <div>
                             {userAttend &&
-                                // userAttend.length > 0 &&
-                                userAttend.map((user) => {
-                                    // console.log(user, userAttend);
+                                userAttend.map((name, index) => {
                                     return (
-                                        <p>{user.name}</p>
-                                        // <p>jjjjjjjjjjjjjjjjjjjjj</p>,
-                                        // <p>{console.log(props.id)}</p>
+                                        <>
+                                            <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {name[0]}
+                                                </span>
+                                            </div>
+                                            <p className='font-Rubik md:text-base text-sm'>
+                                                {name}
+                                            </p>
+                                        </>
                                     );
                                 })}
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
