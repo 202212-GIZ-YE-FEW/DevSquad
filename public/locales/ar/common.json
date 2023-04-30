@@ -4,7 +4,7 @@
         "SignUp": "انشاء حساب",
         "SignIn": "تسجيل دخول",
         "Signout": " تسجيل خروج",
-        "Events": "الاحداث",
+        "Events": "الفعاليات",
         "About": "من نحن ",
         "YourEvents": "انشاء حدث",
         "ViewProfile": "الملف الشخصي",
@@ -13,21 +13,30 @@
         "AR": "عربي"
     },
     "home": {
-        "Howitwork": "الية العمل",
+        "Howitwork": "اّلية العمل",
         "GetStarted": "ابدأ",
         "Register": "سجل",
-        "Attendevevts": "احضر الاحداث",
+        "Attendevevts": "احضر الفعاليات",
         "Organizeyourown": "نظم حدثك !",
         "SustainableDevlopmentGoals": "أهداف التنمية المستدامة",
         "goals": "تهدف هذه الأهداف ، المعروفة أيضًا باسم أهداف التنمية المستدامة ، إلى القضاء على الفقر وحماية الكوكب وضمان الرخاء للجميع بحلول عام 2030",
         "Hearitfromvolunteers": "اسمع من المتطوعين",
         "Becomethechangeyouwishtoseeintheworld": "كن انت التغيير الذي ترغب رؤيته في العالم",
         "Whoareyou?": " من انت؟ ",
-        "Viewevents": "عرض الاحداث",
+        "Viewevents": "عرض الفعاليات",
         "Doeverythingyoucantocreateanamazing,inspiring experienceintheworld": "افعل كل ما في وسعك لخلق تجربة مذهلة وملهمة فى العالم",
         "hiro": {
             "title": " معا يمكننا أن نفعل الكثير",
-            "describtion": "تمنحك فعاليات التطوع الفرصة لإحداث تأثير إيجابي على العالم وحياة الآخرين. لذا ، إذا كنت تريد أن تحدث فرقًا وأن تكون جزءًا من شيء أكبر منك ، فقم بالانضمام إلى الأحداث أو تنظيمها اليوم!"
+            "describtion": "تمنحك فعاليات التطوع الفرصة لإحداث تأثير إيجابي على العالم وحياة الآخرين. لذا ، إذا كنت تريد أن تحدث فرقًا وأن تكون جزءًا من شيء أكبر منك ، فقم بالانضمام إلى الفعاليات أو تنظيمها اليوم!"
         }
-    }
+    },
+    "aboutPage": {
+        "title": "عن Pebble Work",
+        "describtion": "Pebble Work هو منصة يمكنك من خلالها إيجاد وبدء الحركات والتجمعات المحلية لدعم واحد أو أكثر من أهداف التنمية المستدامة السبعة عشر. نجمع الأشخاص العازمين معًا لجعل العالم مكانًا أفضل. يجعلنا مجتمعنا المتنامي أكثر شغفًا بما نقوم به.",
+        "team":"فريقنا",
+        "techTitle": "التقنيات المستخدمة وهيكل المشروع",
+        "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
+        
+            }
+
 }
