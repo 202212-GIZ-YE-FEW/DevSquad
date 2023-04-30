@@ -6,6 +6,7 @@ import CalendarComponent from "./CalendarComponent";
 export default function Calendar() {
     const d = new Date();
     let month = d.getMonth();
+    let year = d.getFullYear();
     const [date, setDate] = useState(month);
     const daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const months = [
@@ -137,7 +138,14 @@ export default function Calendar() {
                     </div>
                     <div className='grid grid-cols-7 gap-2 justify-items-center m-3'>
                         {months[date].days.map((day) => {
-                            return <CalendarComponent day={day} key={day} />;
+                            return (
+                                <CalendarComponent
+                                    day={day}
+                                    key={day}
+                                    year={year}
+                                    month={date + 1}
+                                />
+                            );
                         })}
                     </div>
                 </div>
