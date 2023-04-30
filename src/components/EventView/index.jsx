@@ -53,6 +53,7 @@ export default function EventView(props) {
                     const userData = doc.data();
                     userList.push(userData.name);
                 });
+
                 setUserAttend(userList);
             });
 
@@ -63,11 +64,11 @@ export default function EventView(props) {
     };
     useEffect(() => {
         getUserInfo(props.entry.userId);
-        // attendEvent(props.id);
-        onAuthStateChanged(auth, (user) => {
-            user ? attendEvent(props.id) : "";
-        });
-    }, []);
+        attendEvent(props.id);
+        // onAuthStateChanged(auth, (user) => {
+        //     user ? attendEvent(props.id) : "";
+        // });
+    }, [attendcount]);
 
     const joinEvent = async (id) => {
         try {
