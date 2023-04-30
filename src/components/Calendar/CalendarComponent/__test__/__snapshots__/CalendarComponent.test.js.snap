@@ -5,6 +5,7 @@ exports[`renders correctly 1`] = `
   <input
     hidden={true}
     onChange={[Function]}
+    onClick={[Function]}
     type="checkbox"
   />
   <span
