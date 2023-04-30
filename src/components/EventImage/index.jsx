@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { storage } from "../../../config/firebase";
 import { getDownloadURL, ref } from "firebase/storage";
 
-export default function EventImage({ pic, width, height, className }) {
+export default function EventImage({ pic, width, height, className, onClick }) {
     const [image, setImage] = useState("");
 
     const img = async () => {
@@ -24,6 +24,7 @@ export default function EventImage({ pic, width, height, className }) {
                 width={width}
                 height={height}
                 className={className}
+                onClick={onClick}
             />
         </div>
     );
