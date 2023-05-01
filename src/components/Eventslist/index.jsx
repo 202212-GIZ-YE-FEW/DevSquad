@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import Calendar from "../Calendar";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Eventcard from "../Eventcard";
-import { paginate } from "../PaginationComponent/Paginate";
+import paginate from "../PaginationComponent/paginate";
 import Pagination from "../PaginationComponent/Pagination";
 import { auth, db } from "../../../config/firebase";
 let eventsCollectionRef = collection(db, "events");
