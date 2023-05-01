@@ -7,7 +7,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router"; // Importing useRouter hook from next
+import { useTranslation } from "next-i18next";
 import React, { useState } from "react"; // Importing React and useState
+
 import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
 import {
@@ -33,6 +35,7 @@ export default function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
+    const { i18n } = useTranslation();
 
     // Handling sign in with Twitter
     const signInWithTwitter = async () => {
@@ -76,7 +79,13 @@ export default function SignIn() {
         <div className='grid grid-cols-1 place-items-center md:grid-cols-2'>
             {/* sitting image part */}
             <div className='grid justify-items-center'>
-                <Image src={sitting} alt='sitting' className='p-6' />
+                <Image
+                    src={sitting}
+                    alt='sitting'
+                    className={`p-6 ${
+                        i18n.language === "en" ? "" : "transform -scale-x-100"
+                    }`}
+                />
             </div>
 
             {/* form part */}

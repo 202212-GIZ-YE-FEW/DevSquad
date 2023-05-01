@@ -1,11 +1,12 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import EventImage from "../../components/EventImage/index";
 import { auth, db } from "../../../config/firebase";
-import { collection, getDocs, query, where } from "firebase/firestore";
 const UnauthNav = () => {
     const [navbar, setNavbar] = useState(false);
     // const [langMenue, setLangmenue] = useState(false);
@@ -15,7 +16,7 @@ const UnauthNav = () => {
 
     return (
         <nav className='w-full bg-primary-orange shadow font-Rubik'>
-            <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
+            <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-6'>
                 <div>
                     <div className='flex items-center justify-between py-3 md:py-5 md:block'>
                         <div className='md:hidden'>

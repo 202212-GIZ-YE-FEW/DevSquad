@@ -5,8 +5,8 @@ const Getstartedbtn = () => {
     return (
         <div>
             <Link
-                href='/blogs'
-                className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium'
+                href='/signup'
+                className='w-80 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium'
             >
                 {t("home.GetStarted")}
             </Link>

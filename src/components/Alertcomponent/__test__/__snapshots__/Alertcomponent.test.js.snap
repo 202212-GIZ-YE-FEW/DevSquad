@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="fixed top-0 right-0 z-10 mx-2 p-4 max-w-4xl flex justify-center items-center space-x-2 shadow rounded animate__animated animate__backInRight bg-gray-500 text-white"
+>
+   
+  <p
+    className="font-medium font-Rubik text-lg"
+  />
+</div>
+`;
