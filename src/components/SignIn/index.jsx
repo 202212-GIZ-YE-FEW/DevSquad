@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router"; // Importing useRouter hook from next
 import React, { useState } from "react"; // Importing React and useState
-
 import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
 import {
@@ -62,7 +61,7 @@ export default function SignIn() {
         setError(null); // Resetting the error state
         // user sign in with the email and password
         signInWithEmailAndPassword(auth, email, password)
-            .then((authUser) => {
+            .then(() => {
                 router.push("/"); // Redirect to homepage after user sign in
             })
             .catch((error) => {
@@ -129,7 +128,7 @@ export default function SignIn() {
                             type='email'
                             id='email'
                             name='email'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Email address'
                         />
                         <Inputcomponent
@@ -140,7 +139,7 @@ export default function SignIn() {
                             type='password'
                             id='password'
                             name='password'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border rounded-md border-black py-1 px-2 '
                             placeholder='Password'
                         />
                         {error && (

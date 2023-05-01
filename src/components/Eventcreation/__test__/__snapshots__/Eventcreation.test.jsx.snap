@@ -65,7 +65,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="No Poverty"
             onChange={[Function]}
             type="checkbox"
@@ -84,7 +84,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Zero Hunger"
             onChange={[Function]}
             type="checkbox"
@@ -103,7 +103,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Good Health And Well-Being"
             onChange={[Function]}
             type="checkbox"
@@ -122,7 +122,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Quality Education"
             onChange={[Function]}
             type="checkbox"
@@ -141,7 +141,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Gender Equality"
             onChange={[Function]}
             type="checkbox"
@@ -160,7 +160,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Clean Water And Sanitation"
             onChange={[Function]}
             type="checkbox"
@@ -179,7 +179,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Affordable And Clean Energy"
             onChange={[Function]}
             type="checkbox"
@@ -198,7 +198,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Decent Work And Economic Growth"
             onChange={[Function]}
             type="checkbox"
@@ -217,7 +217,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Industry Innovation And Infrastructure"
             onChange={[Function]}
             type="checkbox"
@@ -236,7 +236,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Reduced Inequalities"
             onChange={[Function]}
             type="checkbox"
@@ -255,7 +255,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Sustainable Cities And Communities"
             onChange={[Function]}
             type="checkbox"
@@ -274,7 +274,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Responsible Consumption And Production"
             onChange={[Function]}
             type="checkbox"
@@ -293,7 +293,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Climate Action"
             onChange={[Function]}
             type="checkbox"
@@ -312,7 +312,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Life Below Water"
             onChange={[Function]}
             type="checkbox"
@@ -331,7 +331,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Life On Land"
             onChange={[Function]}
             type="checkbox"
@@ -350,7 +350,7 @@ exports[`renders correctly 1`] = `
         >
           <input
             checked={false}
-            className="hidden"
+            className="hidden undefined"
             name="Peace And Justice And Strong Institutions"
             onChange={[Function]}
             type="checkbox"
@@ -515,7 +515,7 @@ exports[`renders correctly 1`] = `
       className="py-20 flex flex-col items-center justify-center text-center"
     >
       <button
-        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border m-2 p-2 "
+        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2 "
         onClick={[Function]}
       >
         Agree with tearms and create Event!

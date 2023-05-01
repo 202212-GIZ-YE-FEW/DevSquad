@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
+  className="md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
 >
   <div
     className="grid grid-cols-1 gap-2 "
@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={0}
           name="types"
           onChange={[Function]}
@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={1}
           name="types"
           onChange={[Function]}
@@ -60,7 +60,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={2}
           name="types"
           onChange={[Function]}
@@ -79,7 +79,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={3}
           name="types"
           onChange={[Function]}
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={4}
           name="types"
           onChange={[Function]}
@@ -117,7 +117,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={5}
           name="types"
           onChange={[Function]}
@@ -136,7 +136,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={6}
           name="types"
           onChange={[Function]}
@@ -155,7 +155,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={7}
           name="types"
           onChange={[Function]}
@@ -174,7 +174,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={8}
           name="types"
           onChange={[Function]}
@@ -193,7 +193,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={9}
           name="types"
           onChange={[Function]}
@@ -212,7 +212,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={10}
           name="types"
           onChange={[Function]}
@@ -231,7 +231,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={11}
           name="types"
           onChange={[Function]}
@@ -250,7 +250,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={12}
           name="types"
           onChange={[Function]}
@@ -269,7 +269,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={13}
           name="types"
           onChange={[Function]}
@@ -288,7 +288,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={14}
           name="types"
           onChange={[Function]}
@@ -307,7 +307,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={15}
           name="types"
           onChange={[Function]}
@@ -326,7 +326,7 @@ exports[`renders correctly 1`] = `
         className="flex sm:block"
       >
         <input
-          className="sm:hidden"
+          className="sm:hidden sm:m-0 m-6"
           id={16}
           name="types"
           onChange={[Function]}

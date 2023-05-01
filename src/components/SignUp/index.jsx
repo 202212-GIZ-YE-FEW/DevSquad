@@ -72,11 +72,27 @@ export default function SignUp() {
         }
     };
 
-    // Handling sign in with Google
+    // Handling sign up with Google
     const signInWithGoogle = async () => {
         try {
             setError(null);
-            await signInWithPopup(auth, googleProvider);
+            await signInWithPopup(auth, googleProvider)
+                //--------------------------------------------##
+                .then(async (result) => {
+                    // The signed-in user info.
+                    const user = result.user;
+
+                    await addDoc(collection(db, "users"), {
+                        uid: user.uid,
+                        name: user.displayName,
+                        surname: user.email,
+                    });
+                })
+                .catch((error) => {
+                    // If an error occurred
+                    setError(error.message); // Set the error state with the error message
+                });
+            //---------------------------------------
             router.push("/");
         } catch (err) {
             setError(err.message);
@@ -142,7 +158,7 @@ export default function SignUp() {
                                 type='text'
                                 id='name'
                                 name='name'
-                                className='border  rounded-md border-black py-1 pl-2 mb-2 sm:mb-0'
+                                className='border  rounded-md border-black py-1 px-2 mb-2 sm:mb-0'
                                 placeholder='Name'
                             />
                             <Inputcomponent
@@ -153,7 +169,7 @@ export default function SignUp() {
                                 type='text'
                                 id='Surname'
                                 name='Surname'
-                                className='border  rounded-md border-black py-1 pl-2'
+                                className='border  rounded-md border-black py-1 px-2'
                                 placeholder='Surname'
                             />
                         </div>
@@ -163,7 +179,7 @@ export default function SignUp() {
                             type='email'
                             id='email'
                             name='email'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Email address'
                         />
                         <Inputcomponent
@@ -174,7 +190,7 @@ export default function SignUp() {
                             type='password'
                             id='password'
                             name='password'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Password'
                         />
                         <Inputcomponent
@@ -185,7 +201,7 @@ export default function SignUp() {
                             type='password'
                             id='confirmpassword'
                             name='confirmpassword'
-                            className='border  rounded-md border-black py-1 pl-2'
+                            className='border  rounded-md border-black py-1 px-2'
                             placeholder='Confirm Password'
                         />
                         {error && (

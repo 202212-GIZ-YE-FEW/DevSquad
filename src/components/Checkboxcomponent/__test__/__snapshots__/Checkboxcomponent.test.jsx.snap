@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
     className="undefined undefined"
   >
     <input
-      className="undefined"
+      className="undefined undefined"
       type="checkbox"
     />
     <span

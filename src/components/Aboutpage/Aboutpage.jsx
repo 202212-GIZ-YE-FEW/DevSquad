@@ -50,10 +50,7 @@ function Aboutpage() {
                     width={100}
                     height={500}
                     className='w-full '
-                    // style="contain"
                     layout='responsive'
-                    // className='object-cover'
-                    // fill
                 />
 
                 <div className='absolute top-0 left-0 right-0 bottom-0'>

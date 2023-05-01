@@ -101,7 +101,9 @@ exports[`renders correctly 1`] = `
                         hidden
                         "
       >
-        <div>
+        <div
+          className="fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
+        >
           <div
             className="flex flex-col items-center"
           >
@@ -631,7 +633,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={0}
                     name="types"
                     onChange={[Function]}
@@ -651,7 +653,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={1}
                     name="types"
                     onChange={[Function]}
@@ -671,7 +673,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={2}
                     name="types"
                     onChange={[Function]}
@@ -691,7 +693,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={3}
                     name="types"
                     onChange={[Function]}
@@ -711,7 +713,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={4}
                     name="types"
                     onChange={[Function]}
@@ -731,7 +733,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={5}
                     name="types"
                     onChange={[Function]}
@@ -751,7 +753,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={6}
                     name="types"
                     onChange={[Function]}
@@ -771,7 +773,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={7}
                     name="types"
                     onChange={[Function]}
@@ -791,7 +793,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={8}
                     name="types"
                     onChange={[Function]}
@@ -811,7 +813,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={9}
                     name="types"
                     onChange={[Function]}
@@ -831,7 +833,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={10}
                     name="types"
                     onChange={[Function]}
@@ -851,7 +853,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={11}
                     name="types"
                     onChange={[Function]}
@@ -871,7 +873,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={12}
                     name="types"
                     onChange={[Function]}
@@ -891,7 +893,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={13}
                     name="types"
                     onChange={[Function]}
@@ -911,7 +913,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={14}
                     name="types"
                     onChange={[Function]}
@@ -931,7 +933,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={15}
                     name="types"
                     onChange={[Function]}
@@ -951,7 +953,7 @@ exports[`renders correctly 1`] = `
                 >
                   <input
                     checked={false}
-                    className="sm:hidden"
+                    className="sm:hidden undefined"
                     id={16}
                     name="types"
                     onChange={[Function]}

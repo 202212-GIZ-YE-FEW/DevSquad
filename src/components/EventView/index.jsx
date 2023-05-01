@@ -11,6 +11,10 @@ import { useRouter } from "next/router";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
+    //1
+    const [attendcount, setAttendcount] = useState();
+    //2
+    const [userAttend, setUserAttend] = useState([]);
     const router = useRouter();
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
@@ -26,18 +30,45 @@ export default function EventView(props) {
                 id: doc.id,
             }));
 
-            // setuserName(filteredData[0].name);
-            filteredData[0].name
-                ? setuserName(filteredData[0].name)
-                : setuserName(filteredData[0].email);
+            setuserName(filteredData[0].name);
         } catch (err) {
             console.error(err);
         }
     };
 
+    const attendEvent = async (id) => {
+        try {
+            const userList = [];
+            const usersCollectionRef = collection(db, "users");
+            const attendEventRef = collection(db, `events/${id}/attendEvent`);
+            const dataAttend = await getDocs(attendEventRef);
+
+            const data = dataAttend.docs.map(async (entry) => {
+                const user = entry.data(); //get userId as object
+                const users = await getDocs(
+                    query(usersCollectionRef, where("uid", "==", user.userId))
+                );
+
+                users.docs.map((doc) => {
+                    const userData = doc.data();
+                    userList.push(userData.name);
+                });
+
+                setUserAttend(userList);
+            });
+
+            setAttendcount(data.length);
+        } catch (error) {
+            console.error(error);
+        }
+    };
     useEffect(() => {
         getUserInfo(props.entry.userId);
-    }, []);
+        attendEvent(props.id);
+        // onAuthStateChanged(auth, (user) => {
+        //     user ? attendEvent(props.id) : "";
+        // });
+    }, [attendcount]);
 
     const joinEvent = async (id) => {
         try {
@@ -48,11 +79,9 @@ export default function EventView(props) {
                   })
                 : router.push("/signin");
 
-            await addDoc(attendEventRef, {
-                userId: auth.currentUser.uid,
-            });
-
-            alert("you are joined to the event");
+            isAuth
+                ? alert("you are joined to the event")
+                : alert("signIn to your account for join to this event");
         } catch (err) {
             console.error(err);
         }
@@ -112,7 +141,7 @@ export default function EventView(props) {
                         {/* attendance */}
                         <div className='flex flex-row items-center'>
                             <div>
-                                <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
+                                {/* <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
                                     <span class='text-white font-Rubik'>R</span>
                                 </div>
                                 <div class='-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
@@ -120,9 +149,12 @@ export default function EventView(props) {
                                 </div>
                                 <div class='-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
                                     <span class='text-white font-Rubik'>R</span>
-                                </div>
+                                </div> */}
                             </div>
-                            <p className='font-Rubik'>+12 Attendance</p>
+                            <p className='font-Rubik'>
+                                +{attendcount} Attendance
+                            </p>
+                            {/* <p className='font-Rubik'>+12 Attendance</p> */}
                         </div>
 
                         {/* Organized by who */}
@@ -183,12 +215,21 @@ export default function EventView(props) {
                     </p>
                     <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
                         <div className='flex flex-col items-center'>
-                            <div class=' inline-flex items-center justify-center w-12 h-12 m-2 bg-black rounded-full'>
-                                <span class='font-medium text-white'>R</span>
-                            </div>
-                            <p className='font-Rubik md:text-base text-sm'>
-                                Jangis M.
-                            </p>
+                            {userAttend &&
+                                userAttend.map((name, index) => {
+                                    return (
+                                        <>
+                                            <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {name[0]}
+                                                </span>
+                                            </div>
+                                            <p className='font-Rubik md:text-base text-sm'>
+                                                {name}
+                                            </p>
+                                        </>
+                                    );
+                                })}
                         </div>
                     </div>
                 </div>
