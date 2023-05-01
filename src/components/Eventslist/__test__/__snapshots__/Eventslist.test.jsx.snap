@@ -5,15 +5,13 @@ exports[`renders correctly 1`] = `
   className="md:m-8 m-2 font-Rubik"
 >
   <div
-    className="w-full fixed top-0 h-[50%] hidden"
-  />
-  <div
     className="font-Rubik flex flex-col items-center py-10 "
   >
     <p
       className="text-5xl md:font-extrabold font:medium "
     >
       Welcome, 
+      asd
       !
     </p>
     <p
@@ -169,7 +167,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    1
+                    01
                   </span>
                 </label>
                 <label>
@@ -182,7 +180,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    2
+                    02
                   </span>
                 </label>
                 <label>
@@ -195,7 +193,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    3
+                    03
                   </span>
                 </label>
                 <label>
@@ -208,7 +206,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    4
+                    04
                   </span>
                 </label>
                 <label>
@@ -221,7 +219,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    5
+                    05
                   </span>
                 </label>
                 <label>
@@ -234,7 +232,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    6
+                    06
                   </span>
                 </label>
                 <label>
@@ -247,7 +245,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    7
+                    07
                   </span>
                 </label>
                 <label>
@@ -260,7 +258,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    8
+                    08
                   </span>
                 </label>
                 <label>
@@ -273,7 +271,7 @@ exports[`renders correctly 1`] = `
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    9
+                    09
                   </span>
                 </label>
                 <label>
@@ -549,6 +547,19 @@ exports[`renders correctly 1`] = `
                     30
                   </span>
                 </label>
+                <label>
+                  <input
+                    hidden={true}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="bg-white rounded font-bold text-lg"
+                  >
+                    31
+                  </span>
+                </label>
               </div>
             </div>
             <div
@@ -574,20 +585,22 @@ exports[`renders correctly 1`] = `
         className="sm:block md:w-64 w-56 hidden"
       >
         <div
-          className="p-6 sm:p-0 bg-white w-full sm:h-full h-[80vh] fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
+          className=" bg-white rounded-md"
         >
           <div
-            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full mt-[20%] sm:mt-0"
+            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full"
           >
             <button
-              className="underline p-4"
+              className="underline p-2"
+              onClick={[Function]}
             >
               Change Location
             </button>
             <p
               className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full"
             >
-              İzmir, TR
+              Izmer
+               
             </p>
           </div>
         </div>
@@ -596,275 +609,364 @@ exports[`renders correctly 1`] = `
         className="sm:block hidden"
       >
         <div
-          className="md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
+          className=""
         >
           <div
-            className="grid grid-cols-1 gap-2 "
+            className="md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
           >
-            <p
-              className="font-medium font-Rubik underline text-center sm:block hidden"
+            <div
+              className="grid grid-cols-1 gap-2 "
             >
-              Pick Your Interest
-            </p>
-            <p
-              className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
-            >
-              Change Interset
-            </p>
-            <div>
-              <label
-                className="flex sm:block"
+              <p
+                className="font-medium font-Rubik underline text-center sm:block hidden"
               >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                >
-                  All
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
+                Pick Your Interest
+              </p>
+              <p
+                className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
               >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                Change Interset
+              </p>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  No Poverty
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={0}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="All"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    All
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Zero Hunger
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={1}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="No Poverty"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    No Poverty
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Good Health And Well-Being
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={2}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Zero Hunger"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Zero Hunger
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Quality Education
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={3}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Good Health And Well-Being"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Good Health And Well-Being
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Gender Equality
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={4}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Quality Education"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Quality Education
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Clean Water And Sanitation
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={5}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Gender Equality"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Gender Equality
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Affordable And Clean Energy
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={6}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Clean Water And Sanitation"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Clean Water And Sanitation
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Decent Work And Economic Growth
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={7}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Affordable And Clean Energy"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Affordable And Clean Energy
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Industry Innovation And Infrastructure
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={8}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Decent Work And Economic Growth"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Decent Work And Economic Growth
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Reduced Inequalities
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={9}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Industry Innovation And Infrastructure"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Industry Innovation And Infrastructure
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Sustainable Cities And Communities
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={10}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Reduced Inequalities"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Reduced Inequalities
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Responsible Consumption And Production
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={11}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Sustainable Cities And Communities"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Sustainable Cities And Communities
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Climate Action
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={12}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Responsible Consumption And Production"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Responsible Consumption And Production
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Life Below Water
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={13}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Climate Action"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Climate Action
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Life On Land
-                </span>
-              </label>
-            </div>
-            <div>
-              <label
-                className="flex sm:block"
-              >
-                <input
-                  className="sm:hidden sm:m-0 m-6"
-                  type="checkbox"
-                />
-                <span
-                  className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={14}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Life Below Water"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Life Below Water
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
                 >
-                  Peace And Justice And Strong Institutions
-                </span>
-              </label>
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={15}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Life On Land"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Life On Land
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label
+                  className="flex sm:block"
+                >
+                  <input
+                    checked={false}
+                    className="sm:hidden undefined"
+                    id={16}
+                    name="types"
+                    onChange={[Function]}
+                    type="checkbox"
+                    value="Peace And Justice And Strong Institutions"
+                  />
+                  <span
+                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
+                  >
+                    Peace And Justice And Strong Institutions
+                  </span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -874,8 +976,58 @@ exports[`renders correctly 1`] = `
       className="sm:col-span-2 col-span-3"
     >
       <div
-        className="flex flex-col"
-      />
+        className="md:order-2 order-1 text-center md:text-start"
+      >
+        <p
+          className="py-3 font-Rubik  font-bold"
+        >
+           Pages
+        </p>
+        <ul
+          className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
+        >
+          <button
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
+            disabled={true}
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
+            disabled={true}
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM13.3833 8C13.6175 8 13.8422 8.0879 14.0078 8.24435L24.2413 16.4101C24.5862 16.7359 24.5862 17.2641 24.2413 17.5899L14.0078 25.7556C13.6629 26.0815 13.1036 26.0815 12.7587 25.7556C12.5931 25.5992 12.5 25.387 12.5 25.1657V8.83427C12.5 8.37352 12.8955 8 13.3833 8Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
