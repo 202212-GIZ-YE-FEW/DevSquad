@@ -1,53 +1,25 @@
 import classnames from "classnames";
-import React from "react";
 
-import { DOTS, usePagination } from "./usePagination";
+const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
+    const pagesCount = Math.ceil(items / pageSize); // 100/10
 
-const Pagination = (props) => {
-    const {
-        onPageChange,
-        totalCount,
-        siblingCount = 1,
-        currentPage,
-        pageSize,
-        className,
-    } = props;
+    if (pagesCount === 1) return null;
+    const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
 
-    const paginationRange = usePagination({
-        currentPage,
-        totalCount,
-        siblingCount,
-        pageSize,
-    });
-
-    // If there are less than 2 times in pagination range we shall not render the component
-    if (currentPage === 0 || paginationRange.length < 2) {
-        return null;
-    }
-
-    const onNext = () => {
-        onPageChange(currentPage + 1);
-    };
-
-    const onPrevious = () => {
-        onPageChange(currentPage - 1);
-    };
-
-    let lastPage = paginationRange[paginationRange.length - 1];
     return (
         <>
             <p className='py-3 font-Rubik  font-bold'> Pages</p>
             <ul
                 className={classnames(
-                    "sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8",
-                    {
-                        [className]: className,
-                    }
+                    "sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
                 )}
             >
                 {/* Left navigation arrow */}
                 {currentPage > 1 ? (
-                    <li onClick={onPrevious} className='m-1 h-8'>
+                    <li
+                        onClick={() => onPageChange(currentPage - 1)}
+                        className='m-1 h-8'
+                    >
                         <svg
                             width='34'
                             height='34'
@@ -87,37 +59,24 @@ const Pagination = (props) => {
                     </button>
                 )}
 
-                {paginationRange.map((pageNumber, index) => {
-                    // If the pageItem is a DOT, render the DOTS unicode character
-                    if (pageNumber === DOTS) {
-                        return (
-                            <li
-                                key={index}
-                                className='flex items-center p-3 text-center  min-w-6  border-2 border-black dots m-1 rounded-lg h-8'
-                            >
-                                &#8230;
-                            </li>
-                        );
-                    }
-
-                    // Render our Page Pills
-                    return (
-                        <li
-                            key={index}
-                            className={`flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg ${
-                                pageNumber === currentPage
-                                    ? "bg-primary-orange text-white"
-                                    : "bg-white text-black"
-                            }`}
-                            onClick={() => onPageChange(pageNumber)}
-                        >
-                            {pageNumber}
-                        </li>
-                    );
-                })}
+                {pages.map((page) => (
+                    <li
+                        key={page}
+                        className={`flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg ${
+                            page === currentPage
+                                ? "bg-primary-orange text-white"
+                                : "bg-white text-black"
+                        }`}
+                    >
+                        <a onClick={() => onPageChange(page)}>{page}</a>
+                    </li>
+                ))}
                 {/*  Right Navigation arrow */}
-                {currentPage !== lastPage ? (
-                    <li onClick={onNext} className='m-1 h-8'>
+                {currentPage < pagesCount ? (
+                    <li
+                        onClick={() => onPageChange(currentPage + 1)}
+                        className='m-1 h-8'
+                    >
                         <svg
                             width='34'
                             height='34'

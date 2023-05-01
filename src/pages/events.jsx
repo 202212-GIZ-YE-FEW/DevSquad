@@ -1,24 +1,32 @@
+import { collection, getDocs } from "firebase/firestore";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Eventslist from "@/components/Eventslist";
 
 import Layout from "@/layout/Layout";
 
-const events = () => {
+import { db } from "../../config/firebase";
+let eventsCollectionRef = collection(db, "events");
+const events = (props) => {
     return (
         <div>
             <Layout>
-                <Eventslist />
+                <Eventslist items={props} />
             </Layout>
         </div>
     );
 };
 
 export async function getStaticProps({ locale }) {
+    const entries = await getDocs(eventsCollectionRef);
+    const entriesData = entries.docs.map((entry) => ({
+        id: entry.id,
+        ...entry.data(),
+    }));
     return {
         props: {
             ...(await serverSideTranslations(locale, ["common"])),
-            // Will be passed to the page component as props
+            entries: entriesData,
         },
     };
 }
