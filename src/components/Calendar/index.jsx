@@ -3,10 +3,14 @@ import { useState } from "react";
 
 import CalendarComponent from "./CalendarComponent";
 
-export default function Calendar() {
-    const d = new Date();
-    let month = d.getMonth();
+export default function Calendar({ myDate }) {
+    let d = new Date();
+
     let year = d.getFullYear();
+    let month = d.getMonth();
+    const hundelDate = (date) => {
+        myDate(date);
+    };
     const [date, setDate] = useState(month);
     const daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const months = [
@@ -140,10 +144,11 @@ export default function Calendar() {
                         {months[date].days.map((day) => {
                             return (
                                 <CalendarComponent
-                                    day={day}
                                     key={day}
+                                    day={day}
                                     year={year}
                                     month={date + 1}
+                                    date={hundelDate}
                                 />
                             );
                         })}

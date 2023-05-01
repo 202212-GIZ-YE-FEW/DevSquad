@@ -67,7 +67,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            1
+            01
           </span>
         </label>
         <label>
@@ -80,7 +80,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            2
+            02
           </span>
         </label>
         <label>
@@ -93,7 +93,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            3
+            03
           </span>
         </label>
         <label>
@@ -106,7 +106,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            4
+            04
           </span>
         </label>
         <label>
@@ -119,7 +119,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            5
+            05
           </span>
         </label>
         <label>
@@ -132,7 +132,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            6
+            06
           </span>
         </label>
         <label>
@@ -145,7 +145,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            7
+            07
           </span>
         </label>
         <label>
@@ -158,7 +158,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            8
+            08
           </span>
         </label>
         <label>
@@ -171,7 +171,7 @@ exports[`renders correctly 1`] = `
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            9
+            09
           </span>
         </label>
         <label>
@@ -445,6 +445,19 @@ exports[`renders correctly 1`] = `
             className="bg-white rounded font-bold text-lg"
           >
             30
+          </span>
+        </label>
+        <label>
+          <input
+            hidden={true}
+            onChange={[Function]}
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="bg-white rounded font-bold text-lg"
+          >
+            31
           </span>
         </label>
       </div>

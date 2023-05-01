@@ -1,6 +1,7 @@
-import EventImage from "../../components/EventImage/index";
-import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+
+import EventImage from "../../components/EventImage/index";
 import { db } from "../../../config/firebase";
 const Eventcard = ({
     eventImage,
