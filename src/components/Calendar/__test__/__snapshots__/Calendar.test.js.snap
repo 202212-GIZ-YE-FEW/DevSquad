@@ -415,6 +415,18 @@ exports[`renders correctly 1`] = `
             30
           </span>
         </label>
+        <label>
+          <input
+            hidden={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <span
+            className="bg-white rounded font-bold text-lg"
+          >
+            31
+          </span>
+        </label>
       </div>
     </div>
     <div

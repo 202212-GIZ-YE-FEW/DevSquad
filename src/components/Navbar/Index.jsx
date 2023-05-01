@@ -7,7 +7,7 @@ import { useState } from "react";
 import { auth } from "../../../config/firebase";
 const UnauthNav = () => {
     const [navbar, setNavbar] = useState(false);
-    const [langMenue, setLangmenue] = useState(false);
+    // const [langMenue, setLangmenue] = useState(false);
     const { t } = useTranslation("common");
     const { asPath } = useRouter();
     const { i18n } = useTranslation();
@@ -130,14 +130,14 @@ const UnauthNav = () => {
                                     {t("Navbar.SignIn")}
                                 </Link>
                             </li>
-                            <li className='hover:text-white flex  p-4 justify-center items-center gap-2 hover:bg-primary-orange'>
+                            <li className='hover:text-white flex  p-4 justify-center items-center gap-1 hover:bg-primary-orange'>
                                 <svg
                                     width='28'
                                     height='28'
                                     viewBox='0 0 28 28'
                                     fill='none'
                                     xmlns='http://www.w3.org/2000/svg'
-                                    onClick={() => setLangmenue(!langMenue)}
+                                    // onClick={() => setLangmenue(!langMenue)}
                                 >
                                     <path
                                         fillRule='evenodd'
@@ -146,9 +146,25 @@ const UnauthNav = () => {
                                         className='md:fill-white fill-black'
                                     />
                                 </svg>
-
+                                {i18n.language === "en" ? (
+                                    <Link
+                                        href={asPath}
+                                        locale='ar'
+                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                    >
+                                        {t("Navbar.lang")}
+                                    </Link>
+                                ) : (
+                                    <Link
+                                        href={asPath}
+                                        locale='en'
+                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                    >
+                                        {t("Navbar.lang")}
+                                    </Link>
+                                )}
                                 {/* language menue */}
-                                <div class='relative ml-3 '>
+                                {/* <div class='relative ml-3 '>
                                     <div
                                         class={`absolute ${
                                             i18n.language === "en"
@@ -177,7 +193,7 @@ const UnauthNav = () => {
                                             {t("Navbar.AR")}
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
                             </li>
                         </ul>
                     </div>
@@ -357,24 +373,41 @@ const AuthNav = ({ logout }) => {
                                     {t("Navbar.About")}
                                 </Link>
                             </li>
-                            <li className='hover:text-white flex  p-4 justify-center items-center gap-2 hover:bg-primary-orange'>
+                            <li className='hover:text-white flex  p-4 justify-center items-center gap-1 hover:bg-primary-orange'>
                                 <svg
                                     width='28'
                                     height='28'
                                     viewBox='0 0 28 28'
                                     fill='none'
                                     xmlns='http://www.w3.org/2000/svg'
-                                    onClick={() => setLangmenue(!langMenue)}
+                                    // onClick={() => setLangmenue(!langMenue)}
                                 >
                                     <path
                                         fillRule='evenodd'
                                         clipRule='evenodd'
                                         d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
-                                        fill='black'
+                                        className='md:fill-white fill-black'
                                     />
                                 </svg>
-                                {/* languages drop down menue */}
-                                <div class='relative ml-3 '>
+                                {i18n.language === "en" ? (
+                                    <Link
+                                        href={asPath}
+                                        locale='ar'
+                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                    >
+                                        {t("Navbar.lang")}
+                                    </Link>
+                                ) : (
+                                    <Link
+                                        href={asPath}
+                                        locale='en'
+                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                    >
+                                        {t("Navbar.lang")}
+                                    </Link>
+                                )}
+                                {/* language menue */}
+                                {/* <div class='relative ml-3 '>
                                     <div
                                         class={`absolute ${
                                             i18n.language === "en"
@@ -403,7 +436,7 @@ const AuthNav = ({ logout }) => {
                                             {t("Navbar.AR")}
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
                             </li>
 
                             <div className='hidden  md:block lg:block'>
