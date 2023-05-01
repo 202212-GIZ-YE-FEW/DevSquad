@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  className="fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
+>
   <div
     className="flex flex-col items-center"
   >
@@ -59,114 +61,124 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            1
+            01
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            2
+            02
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            3
+            03
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            4
+            04
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            5
+            05
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            6
+            06
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            7
+            07
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            8
+            08
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
             className="bg-white rounded font-bold text-lg"
           >
-            9
+            09
           </span>
         </label>
         <label>
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -179,6 +191,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -191,6 +204,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -203,6 +217,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -215,6 +230,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -227,6 +243,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -239,6 +256,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -251,6 +269,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -263,6 +282,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -275,6 +295,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -287,6 +308,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -299,6 +321,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -311,6 +334,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -323,6 +347,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -335,6 +360,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -347,6 +373,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -359,6 +386,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -371,6 +399,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -383,6 +412,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -395,6 +425,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -407,6 +438,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span
@@ -419,6 +451,7 @@ exports[`renders correctly 1`] = `
           <input
             hidden={true}
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <span

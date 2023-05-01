@@ -2,9 +2,10 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
-
-import { auth } from "../../../config/firebase";
+import { useState, useEffect } from "react";
+import EventImage from "../../components/EventImage/index";
+import { auth, db } from "../../../config/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 const UnauthNav = () => {
     const [navbar, setNavbar] = useState(false);
     // const [langMenue, setLangmenue] = useState(false);
@@ -210,6 +211,29 @@ const AuthNav = ({ logout }) => {
     const { t } = useTranslation("common");
     const { asPath } = useRouter();
     const { i18n } = useTranslation();
+    const [img, setImg] = useState("");
+
+    const showImg = async () => {
+        const usersCollectionRef = collection(db, "users");
+        const q = query(
+            usersCollectionRef,
+            where("uid", "==", auth?.currentUser?.uid)
+        );
+        const data = await getDocs(q);
+        const filteredData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }));
+        setImg(filteredData[0]?.image);
+        // console.log(img);
+    };
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            user ? showImg() : "";
+        });
+    }, [img]);
+
     return (
         <nav className='w-full bg-primary-orange shadow font-Rubik'>
             <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
@@ -438,8 +462,8 @@ const AuthNav = ({ logout }) => {
                                     </div>
                                 </div> */}
                             </li>
-
-                            <div className='hidden  md:block lg:block'>
+                            {/* //------------- */}
+                            {/* <div className='hidden  md:block lg:block'>
                                 <svg
                                     onClick={() => setProfilenav(!profilenav)}
                                     width='72'
@@ -459,6 +483,42 @@ const AuthNav = ({ logout }) => {
                                         fill='white'
                                     />
                                 </svg>
+                            </div> */}
+                            <div>
+                                {/* {setProfilenav(!profilenav)} */}
+                                {img ? (
+                                    <EventImage
+                                        pic={img}
+                                        className='inline-flex  w-20 h-20 bg-black rounded-full'
+                                        onClick={() =>
+                                            setProfilenav(!profilenav)
+                                        }
+                                    />
+                                ) : (
+                                    <div className='hidden  md:block lg:block'>
+                                        <svg
+                                            onClick={() =>
+                                                setProfilenav(!profilenav)
+                                            }
+                                            width='72'
+                                            height='72'
+                                            viewBox='0 0 72 72'
+                                            fill='none'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                        >
+                                            <rect
+                                                width='72'
+                                                height='72'
+                                                rx='36'
+                                                fill='#1A1A1A'
+                                            />
+                                            <path
+                                                d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
+                                                fill='white'
+                                            />
+                                        </svg>
+                                    </div>
+                                )}
                             </div>
                         </ul>
                     </div>
@@ -477,7 +537,7 @@ const AuthNav = ({ logout }) => {
                             tabindex='-1'
                         >
                             <Link
-                                href='#'
+                                href='/eventcreation'
                                 class='block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange  text-black hover:text-white'
                             >
                                 {t("Navbar.YourEvents")}

@@ -1,5 +1,5 @@
 import Checkboxcomponent from "../Checkboxcomponent";
-const Eventinerestcomponent = () => {
+const Eventinerestcomponent = (props) => {
     const titles = [
         "All",
         "No Poverty",
@@ -23,8 +23,7 @@ const Eventinerestcomponent = () => {
     return (
         <>
             {/* desktop design */}
-            {/* fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 -translate-y-1/2 */}
-            <div className='md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar '>
+            <div className='md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
                 <div className='grid grid-cols-1 gap-2 '>
                     <p className='font-medium font-Rubik underline text-center sm:block hidden'>
                         Pick Your Interest
@@ -33,17 +32,25 @@ const Eventinerestcomponent = () => {
                         Change Interset
                     </p>
                     {titles &&
-                        titles.map((title) => {
+                        titles.map((value, index) => {
                             return (
                                 <Checkboxcomponent
-                                    key={title}
-                                    title={title}
+                                    key={index}
+                                    title={value}
+                                    name='types'
+                                    value={value}
+                                    onChange={() => props.onChange}
+                                    id={index}
+                                    checked={
+                                        props.checked && props.checked[index]
+                                    }
                                     afterChecked='flex items-center justify-center text-center sm:border-2 sm:border-black border-0 sm:bg-secondry-orange bg-white md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     beforeChecked='checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     view='sm:hidden'
                                     block='sm:block'
                                     flex='flex'
                                     intrestMargin='ml-2'
+                                    checkMargin='sm:m-0 m-6'
                                 />
                             );
                         })}

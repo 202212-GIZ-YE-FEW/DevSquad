@@ -188,28 +188,30 @@ exports[`renders correctly 1`] = `
                 Navbar.lang
               </a>
             </li>
-            <div
-              className="hidden  md:block lg:block"
-            >
-              <svg
-                fill="none"
-                height="72"
-                onClick={[Function]}
-                viewBox="0 0 72 72"
-                width="72"
-                xmlns="http://www.w3.org/2000/svg"
+            <div>
+              <div
+                className="hidden  md:block lg:block"
               >
-                <rect
-                  fill="#1A1A1A"
+                <svg
+                  fill="none"
                   height="72"
-                  rx="36"
+                  onClick={[Function]}
+                  viewBox="0 0 72 72"
                   width="72"
-                />
-                <path
-                  d="M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z"
-                  fill="white"
-                />
-              </svg>
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    fill="#1A1A1A"
+                    height="72"
+                    rx="36"
+                    width="72"
+                  />
+                  <path
+                    d="M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
             </div>
           </ul>
         </div>
@@ -225,7 +227,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange  text-black hover:text-white"
-              href="#"
+              href="/eventcreation"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onTouchStart={[Function]}

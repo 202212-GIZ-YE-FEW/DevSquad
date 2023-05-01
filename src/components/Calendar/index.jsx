@@ -3,9 +3,14 @@ import { useState } from "react";
 
 import CalendarComponent from "./CalendarComponent";
 
-export default function Calendar() {
-    const d = new Date();
+export default function Calendar({ myDate }) {
+    let d = new Date();
+
+    let year = d.getFullYear();
     let month = d.getMonth();
+    const hundelDate = (date) => {
+        myDate(date);
+    };
     const [date, setDate] = useState(month);
     const daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const months = [
@@ -119,7 +124,7 @@ export default function Calendar() {
         }
     }
     return (
-        <div>
+        <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
             <div className='flex flex-col items-center'>
                 <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
                     Change Date
@@ -137,7 +142,15 @@ export default function Calendar() {
                     </div>
                     <div className='grid grid-cols-7 gap-2 justify-items-center m-3'>
                         {months[date].days.map((day) => {
-                            return <CalendarComponent day={day} key={day} />;
+                            return (
+                                <CalendarComponent
+                                    key={day}
+                                    day={day}
+                                    year={year}
+                                    month={date + 1}
+                                    date={hundelDate}
+                                />
+                            );
                         })}
                     </div>
                 </div>

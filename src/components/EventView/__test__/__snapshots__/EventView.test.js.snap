@@ -92,39 +92,12 @@ exports[`renders correctly 1`] = `
         <div
           className="flex flex-row items-center"
         >
-          <div>
-            <div
-              class="relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
-            >
-              <span
-                class="text-white font-Rubik"
-              >
-                R
-              </span>
-            </div>
-            <div
-              class="-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
-            >
-              <span
-                class="text-white font-Rubik"
-              >
-                R
-              </span>
-            </div>
-            <div
-              class="-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full"
-            >
-              <span
-                class="text-white font-Rubik"
-              >
-                R
-              </span>
-            </div>
-          </div>
+          <div />
           <p
             className="font-Rubik"
           >
-            +12 Attendance
+            +
+             Attendance
           </p>
         </div>
         <div
@@ -180,22 +153,7 @@ exports[`renders correctly 1`] = `
       >
         <div
           className="flex flex-col items-center"
-        >
-          <div
-            class=" inline-flex items-center justify-center w-12 h-12 m-2 bg-black rounded-full"
-          >
-            <span
-              class="font-medium text-white"
-            >
-              R
-            </span>
-          </div>
-          <p
-            className="font-Rubik md:text-base text-sm"
-          >
-            Jangis M.
-          </p>
-        </div>
+        />
       </div>
     </div>
   </div>
