@@ -10,7 +10,9 @@ exports[`renders correctly 1`] = `
     <p
       className="text-5xl md:font-extrabold font:medium "
     >
-      Welcome, John!
+      Welcome, 
+      asd
+      !
     </p>
     <p
       className="font-normal text-start"
@@ -157,114 +159,124 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    1
+                    01
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    2
+                    02
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    3
+                    03
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    4
+                    04
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    5
+                    05
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    6
+                    06
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    7
+                    07
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    8
+                    08
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
-                    9
+                    09
                   </span>
                 </label>
                 <label>
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -277,6 +289,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -289,6 +302,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -301,6 +315,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -313,6 +328,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -325,6 +341,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -337,6 +354,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -349,6 +367,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -361,6 +380,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -373,6 +393,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -385,6 +406,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -397,6 +419,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -409,6 +432,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -421,6 +445,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -433,6 +458,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -445,6 +471,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -457,6 +484,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -469,6 +497,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -481,6 +510,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -493,6 +523,7 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
@@ -505,12 +536,26 @@ exports[`renders correctly 1`] = `
                   <input
                     hidden={true}
                     onChange={[Function]}
+                    onClick={[Function]}
                     type="checkbox"
                   />
                   <span
                     className="bg-white rounded font-bold text-lg"
                   >
                     30
+                  </span>
+                </label>
+                <label>
+                  <input
+                    hidden={true}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="bg-white rounded font-bold text-lg"
+                  >
+                    31
                   </span>
                 </label>
               </div>
@@ -545,13 +590,15 @@ exports[`renders correctly 1`] = `
           >
             <button
               className="underline p-2"
+              onClick={[Function]}
             >
               Change Location
             </button>
             <p
               className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full"
             >
-              İzmir, TR
+              Izmer
+               
             </p>
           </div>
         </div>
@@ -583,8 +630,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={0}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="All"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -598,8 +650,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={1}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="No Poverty"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -613,8 +670,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={2}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Zero Hunger"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -628,8 +690,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={3}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Good Health And Well-Being"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -643,8 +710,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={4}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Quality Education"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -658,8 +730,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={5}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Gender Equality"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -673,8 +750,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={6}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Clean Water And Sanitation"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -688,8 +770,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={7}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Affordable And Clean Energy"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -703,8 +790,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={8}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Decent Work And Economic Growth"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -718,8 +810,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={9}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Industry Innovation And Infrastructure"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -733,8 +830,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={10}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Reduced Inequalities"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -748,8 +850,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={11}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Sustainable Cities And Communities"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -763,8 +870,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={12}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Responsible Consumption And Production"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -778,8 +890,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={13}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Climate Action"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -793,8 +910,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={14}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Life Below Water"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -808,8 +930,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={15}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Life On Land"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -823,8 +950,13 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden"
+                    id={16}
+                    name="types"
+                    onChange={[Function]}
                     type="checkbox"
+                    value="Peace And Justice And Strong Institutions"
                   />
                   <span
                     className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
@@ -842,291 +974,57 @@ exports[`renders correctly 1`] = `
       className="sm:col-span-2 col-span-3"
     >
       <div
-        className="flex flex-col"
+        className="md:order-2 order-1 text-center md:text-start"
       >
-        <div
-          className="sm:order-1 order-2"
+        <p
+          className="py-3 font-Rubik  font-bold"
         >
-          <div
-            className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik "
-          >
-            <div
-              className="flex md:justify-between md:flex-row flex-col justify-center items-center"
-            >
-              <div>
-                <p
-                  className="pt-2"
-                >
-                  FRI, JUL -7:00 PM GMT+3
-                </p>
-              </div>
-              <div
-                className=" pt-2"
-              >
-                <div
-                  className="flex flex-row items-center"
-                >
-                  <div>
-                    <div
-                      class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                    <div
-                      class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                    <div
-                      class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                  </div>
-                  <p
-                    className="font-Rubik p-2"
-                  >
-                    +12 Attendance
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
-            >
-              <div>
-                <img
-                  alt="eventCardImage"
-                  className="rounded border-2 border-black w-64 md:h-36 h-24"
-                  data-nimg="1"
-                  decoding="async"
-                  height={380}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  responsive={true}
-                  src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
-                  srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={650}
-                />
-              </div>
-              <div
-                className="col-span-2 flex flex-col"
-              >
-                <p
-                  className="font-medium"
-                >
-                  Title of the Event1
-                </p>
-                <p
-                  className="font-normal line-clamp-2"
-                >
-                  Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!
-                </p>
-                <div
-                  className="flex justify-end py-5"
-                >
-                  <button
-                    className="bg-primary-orange text-white rounded px-8 py-1 "
-                  >
-                    Join
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="sm:order-1 order-2"
+           Pages
+        </p>
+        <ul
+          className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
         >
-          <div
-            className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik "
+          <button
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
+            disabled={true}
           >
-            <div
-              className="flex md:justify-between md:flex-row flex-col justify-center items-center"
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div>
-                <p
-                  className="pt-2"
-                >
-                  FRI, JUL -7:00 PM GMT+3
-                </p>
-              </div>
-              <div
-                className=" pt-2"
-              >
-                <div
-                  className="flex flex-row items-center"
-                >
-                  <div>
-                    <div
-                      class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                    <div
-                      class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                    <div
-                      class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-                    >
-                      <span
-                        class="text-white font-Rubik"
-                      >
-                        R
-                      </span>
-                    </div>
-                  </div>
-                  <p
-                    className="font-Rubik p-2"
-                  >
-                    +12 Attendance
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
-            >
-              <div>
-                <img
-                  alt="eventCardImage"
-                  className="rounded border-2 border-black w-64 md:h-36 h-24"
-                  data-nimg="1"
-                  decoding="async"
-                  height={380}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  responsive={true}
-                  src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
-                  srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
-                  style={
-                    Object {
-                      "color": "transparent",
-                    }
-                  }
-                  width={650}
-                />
-              </div>
-              <div
-                className="col-span-2 flex flex-col"
-              >
-                <p
-                  className="font-medium"
-                >
-                  Title of the Event2
-                </p>
-                <p
-                  className="font-normal line-clamp-2"
-                >
-                  Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!
-                </p>
-                <div
-                  className="flex justify-end py-5"
-                >
-                  <button
-                    className="bg-primary-orange text-white rounded px-8 py-1 "
-                  >
-                    Join
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="md:order-2 order-1 text-center md:text-start"
-        >
-          <p
-            className="py-3 font-Rubik  font-bold"
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
+            disabled={true}
           >
-             Pages
-          </p>
-          <ul
-            className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
-          >
-            <button
-              className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
-              disabled={true}
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="34"
-                viewBox="0 0 34 34"
-                width="34"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
-                  fill="#1A1A1A"
-                  fill-opacity="0.7"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
-            <li
-              className="flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg bg-primary-orange text-white"
-              onClick={[Function]}
-            >
-              1
-            </li>
-            <li
-              className="flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg bg-white text-black"
-              onClick={[Function]}
-            >
-              2
-            </li>
-            <li
-              className="m-1 h-8"
-              onClick={[Function]}
-            >
-              <svg
-                fill="none"
-                height="34"
-                viewBox="0 0 34 34"
-                width="34"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM13.3833 8C13.6175 8 13.8422 8.0879 14.0078 8.24435L24.2413 16.4101C24.5862 16.7359 24.5862 17.2641 24.2413 17.5899L14.0078 25.7556C13.6629 26.0815 13.1036 26.0815 12.7587 25.7556C12.5931 25.5992 12.5 25.387 12.5 25.1657V8.83427C12.5 8.37352 12.8955 8 13.3833 8Z"
-                  fill="#1A1A1A"
-                  fill-opacity="0.7"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </li>
-          </ul>
-        </div>
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM13.3833 8C13.6175 8 13.8422 8.0879 14.0078 8.24435L24.2413 16.4101C24.5862 16.7359 24.5862 17.2641 24.2413 17.5899L14.0078 25.7556C13.6629 26.0815 13.1036 26.0815 12.7587 25.7556C12.5931 25.5992 12.5 25.387 12.5 25.1657V8.83427C12.5 8.37352 12.8955 8 13.3833 8Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </ul>
       </div>
     </div>
   </div>

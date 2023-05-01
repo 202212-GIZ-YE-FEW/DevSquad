@@ -3,9 +3,14 @@ import { useState } from "react";
 
 import CalendarComponent from "./CalendarComponent";
 
-export default function Calendar() {
-    const d = new Date();
+export default function Calendar({ myDate }) {
+    let d = new Date();
+
+    let year = d.getFullYear();
     let month = d.getMonth();
+    const hundelDate = (date) => {
+        myDate(date);
+    };
     const [date, setDate] = useState(month);
     const daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const months = [
@@ -137,7 +142,15 @@ export default function Calendar() {
                     </div>
                     <div className='grid grid-cols-7 gap-2 justify-items-center m-3'>
                         {months[date].days.map((day) => {
-                            return <CalendarComponent day={day} key={day} />;
+                            return (
+                                <CalendarComponent
+                                    key={day}
+                                    day={day}
+                                    year={year}
+                                    month={date + 1}
+                                    date={hundelDate}
+                                />
+                            );
                         })}
                     </div>
                 </div>

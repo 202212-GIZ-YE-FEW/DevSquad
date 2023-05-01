@@ -1,7 +1,20 @@
 import React from "react";
 import { useState } from "react";
-export default function CalendarComponent({ day }) {
+
+export default function CalendarComponent({ day, year, month, date }) {
     const [isChecked, setIsChecked] = useState(false);
+    let selectedDate = [];
+    if (month <= 9) {
+        month = "0" + month;
+    }
+
+    if (day <= 9) {
+        day = "0" + day;
+    }
+    function handleDayClick() {
+        selectedDate.push(`${year}-${month}-${day}`);
+        date(selectedDate);
+    }
     return (
         <label>
             <input
@@ -9,6 +22,7 @@ export default function CalendarComponent({ day }) {
                 key={day}
                 onChange={() => setIsChecked((isChecked) => !isChecked)}
                 hidden
+                onClick={handleDayClick}
             />
             <span
                 className={

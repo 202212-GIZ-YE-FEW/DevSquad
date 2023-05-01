@@ -26,39 +26,11 @@ exports[`renders correctly 1`] = `
           <div
             className="flex flex-row items-center"
           >
-            <div>
-              <div
-                class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-              <div
-                class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-              <div
-                class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-            </div>
             <p
               className="font-Rubik p-2"
             >
-              +12 Attendance
+              +
+               Attendance
             </p>
           </div>
         </div>
@@ -67,25 +39,14 @@ exports[`renders correctly 1`] = `
         className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
       >
         <div>
-          <img
-            alt="eventCardImage"
-            className="rounded border-2 border-black w-64 md:h-36 h-24"
-            data-nimg="1"
-            decoding="async"
-            height={380}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            responsive={true}
-            src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={650}
-          />
+          <div>
+            <img
+              className="rounded border-2 border-black w-64 md:h-36 h-24"
+              height={380}
+              src=""
+              width={650}
+            />
+          </div>
         </div>
         <div
           className="col-span-2 flex flex-col"
@@ -135,39 +96,11 @@ exports[`renders correctly 1`] = `
           <div
             className="flex flex-row items-center"
           >
-            <div>
-              <div
-                class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-              <div
-                class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-              <div
-                class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
-              >
-                <span
-                  class="text-white font-Rubik"
-                >
-                  R
-                </span>
-              </div>
-            </div>
             <p
               className="font-Rubik p-2"
             >
-              +12 Attendance
+              +
+               Attendance
             </p>
           </div>
         </div>
@@ -176,25 +109,14 @@ exports[`renders correctly 1`] = `
         className="grid sm:grid-cols-3 align-items-center gap-4 p-4"
       >
         <div>
-          <img
-            alt="eventCardImage"
-            className="rounded border-2 border-black w-64 md:h-36 h-24"
-            data-nimg="1"
-            decoding="async"
-            height={380}
-            loading="lazy"
-            onError={[Function]}
-            onLoad={[Function]}
-            responsive={true}
-            src="/_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75"
-            srcSet="/_next/image?url=%2Fimages%2FRectangle2.png&w=750&q=75 1x, /_next/image?url=%2Fimages%2FRectangle2.png&w=1920&q=75 2x"
-            style={
-              Object {
-                "color": "transparent",
-              }
-            }
-            width={650}
-          />
+          <div>
+            <img
+              className="rounded border-2 border-black w-64 md:h-36 h-24"
+              height={380}
+              src=""
+              width={650}
+            />
+          </div>
         </div>
         <div
           className="col-span-2 flex flex-col"
@@ -253,21 +175,9 @@ exports[`renders correctly 1`] = `
           />
         </svg>
       </button>
-      <li
-        className="flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg bg-primary-orange text-white"
-        onClick={[Function]}
-      >
-        1
-      </li>
-      <li
-        className="flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg bg-white text-black"
-        onClick={[Function]}
-      >
-        2
-      </li>
-      <li
-        className="m-1 h-8"
-        onClick={[Function]}
+      <button
+        className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
+        disabled={true}
       >
         <svg
           fill="none"
@@ -284,7 +194,7 @@ exports[`renders correctly 1`] = `
             fill-rule="evenodd"
           />
         </svg>
-      </li>
+      </button>
     </ul>
   </div>
 </div>

@@ -1,5 +1,5 @@
 import Checkboxcomponent from "../Checkboxcomponent";
-const Eventinerestcomponent = () => {
+const Eventinerestcomponent = (props) => {
     const titles = [
         "All",
         "No Poverty",
@@ -33,11 +33,18 @@ const Eventinerestcomponent = () => {
                         Change Interset
                     </p>
                     {titles &&
-                        titles.map((title) => {
+                        titles.map((value, index) => {
                             return (
                                 <Checkboxcomponent
-                                    key={title}
-                                    title={title}
+                                    key={index}
+                                    title={value}
+                                    name='types'
+                                    value={value}
+                                    onChange={() => props.onChange}
+                                    id={index}
+                                    checked={
+                                        props.checked && props.checked[index]
+                                    }
                                     afterChecked='flex items-center justify-center text-center sm:border-2 sm:border-black border-0 sm:bg-secondry-orange bg-white md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     beforeChecked='checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     view='sm:hidden'
