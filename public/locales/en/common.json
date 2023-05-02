@@ -28,5 +28,12 @@
             "title": "Alone we can do so little; together we can do so much",
             "describtion": "Volunteering events gives you the opportunity to make a positive impact on the world and the lives of others. So, if you want to make a difference and be a part of something bigger than yourself, join or organize events today!"
         }
+    },
+    "aboutPage": {
+        "title": "About Pebble Work",
+        "describtion": "Pebble Work is a platform where you can discover and launch neighborhood movements and get-togethers in support of one or more of the 17 Sustainable Development Goals. To improve the world, we assemble committed individuals. We become more enthusiastic about what we do as our community expands.",
+        "team": "Our Team",
+        "techTitle": "Technologies Used and Project Structure",
+        "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
     }
 }
