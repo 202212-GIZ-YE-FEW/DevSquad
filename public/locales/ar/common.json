@@ -32,10 +32,8 @@
     "aboutPage": {
         "title": "عن Pebble Work",
         "describtion": "Pebble Work هو منصة يمكنك من خلالها إيجاد وبدء الحركات والتجمعات المحلية لدعم واحد أو أكثر من أهداف التنمية المستدامة السبعة عشر. نجمع الأشخاص العازمين معًا لجعل العالم مكانًا أفضل. يجعلنا مجتمعنا المتنامي أكثر شغفًا بما نقوم به.",
-        "team":"فريقنا",
+        "team": "فريقنا",
         "techTitle": "التقنيات المستخدمة وهيكل المشروع",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
-        
-            }
-
+    }
 }

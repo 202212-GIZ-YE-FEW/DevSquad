@@ -32,9 +32,8 @@
     "aboutPage": {
         "title": "About Pebble Work",
         "describtion": "Pebble Work is a platform where you can discover and launch neighborhood movements and get-togethers in support of one or more of the 17 Sustainable Development Goals. To improve the world, we assemble committed individuals. We become more enthusiastic about what we do as our community expands.",
-        "team":"Our Team",
+        "team": "Our Team",
         "techTitle": "Technologies Used and Project Structure",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
-        
-    }        
+    }
 }
