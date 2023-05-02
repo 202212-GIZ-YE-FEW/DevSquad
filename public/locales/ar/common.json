@@ -9,8 +9,7 @@
         "YourEvents": "انشاء حدث",
         "ViewProfile": "الملف الشخصي",
         "Setting": "الاعدادات",
-        "EN": "انجليزي",
-        "AR": "عربي"
+        "lang": "EN"
     },
     "home": {
         "Howitwork": "اّلية العمل",

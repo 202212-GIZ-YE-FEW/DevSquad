@@ -6,10 +6,10 @@ import Getstartedbtn from "@/components/Getstartedbtn";
 const Hirosection = () => {
     const { t } = useTranslation("common");
     return (
-        <div className='container mx-auto lg:px-32 px-10 pt-12	pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
+        <div className='container mx-auto px-6 pt-12	pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
             <div className='relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start'>
-                <div className='absolute top-14 left-0 right-0 bottom-0'>
-                    <div className='flex flex-col'>
+                <div className='md:absolute top-14 left-0 right-0 bottom-0 static'>
+                    <div className='flex flex-col pt-10'>
                         <p className='text-4xl font-medium p-2'>
                             {t("home.hiro.title")}
                         </p>
