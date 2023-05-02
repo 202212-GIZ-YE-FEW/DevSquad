@@ -35,5 +35,10 @@
         "team": "Our Team",
         "techTitle": "Technologies Used and Project Structure",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
+    },
+    "calendar": {
+        "date": "Change Date",
+        "thismonth": "This Month",
+        "nextmonth": "Next Month"
     }
 }
