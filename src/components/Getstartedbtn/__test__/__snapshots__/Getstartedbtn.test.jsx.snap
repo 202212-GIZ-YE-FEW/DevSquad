@@ -3,8 +3,8 @@
 exports[`renders correctly 1`] = `
 <div>
   <a
-    className="w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium"
-    href="/blogs"
+    className="w-80 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium"
+    href="/signup"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onTouchStart={[Function]}

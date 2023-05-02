@@ -9,8 +9,7 @@
         "YourEvents": "Create Event",
         "ViewProfile": "View Profile",
         "Setting": "Setting",
-        "EN": "English",
-        "AR": "Arabic"
+        "lang": "ع"
     },
     "home": {
         "Howitwork": "How it work",

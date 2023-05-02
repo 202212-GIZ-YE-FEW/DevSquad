@@ -3,6 +3,7 @@ import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+import Alertcomponent from "../Alertcomponent";
 import Calendar from "../Calendar";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Eventcard from "../Eventcard";
@@ -12,6 +13,35 @@ import { auth, db } from "../../../config/firebase";
 let eventsCollectionRef = collection(db, "events");
 const usersCollectionRef = collection(db, "users");
 const Eventslist = (props) => {
+    // alert
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+    const [alertType, setAlertType] = useState("");
+    const [alertIcon, setAlertIcon] = useState(
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='currentColor'
+            class='h-5 w-5'
+        >
+            <path
+                fill-rule='evenodd'
+                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                clip-rule='evenodd'
+            />
+        </svg>
+    );
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            // After 3 seconds set the show value to false
+            setShowAlert(false);
+        }, 4000);
+
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, [showAlert]);
+    //
     const [isOpencalender, setIsOpencalender] = useState(false);
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
@@ -192,7 +222,23 @@ const Eventslist = (props) => {
             );
 
             if (!querySnapshot.empty) {
-                alert("You have already attended this event.");
+                // alert("You have already attended this event.");
+                setShowAlert(true);
+                setAlertMessage("You have already attended this event.");
+                setAlertType("info");
+                setAlertIcon(
+                    <svg
+                        fill='none'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        class='w-5 h-5 mr-2 text-white'
+                    >
+                        <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                    </svg>
+                );
                 return;
             }
 
@@ -201,7 +247,24 @@ const Eventslist = (props) => {
                 userId: auth.currentUser.uid,
             });
 
-            alert("You have joined the event!");
+            // alert("You have joined the event!");
+            setShowAlert(true);
+            setAlertMessage("You have joined the event!");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
         } catch (err) {
             console.error(err);
         }
@@ -525,6 +588,13 @@ const Eventslist = (props) => {
                             pageSize={pageSize} // 10
                             onPageChange={onPageChange}
                         />
+                        {showAlert && (
+                            <Alertcomponent
+                                type={alertType}
+                                message={alertMessage}
+                                icon={alertIcon}
+                            />
+                        )}
                     </div>
                 </div>
             </div>
