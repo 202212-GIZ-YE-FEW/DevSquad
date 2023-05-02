@@ -45,5 +45,10 @@
         "signUp": "Sign up",
         "or": "OR"
 
+    },
+    "calendar": {
+        "date": "Change Date",
+        "thismonth": "This Month",
+        "nextmonth": "Next Month"
     }
 }
