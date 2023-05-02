@@ -1,9 +1,12 @@
+import { useTranslation } from "next-i18next";
 import React from "react";
 import { useState } from "react";
 
 import CalendarComponent from "./CalendarComponent";
 
 export default function Calendar({ myDate }) {
+    const { t } = useTranslation("common");
+
     let d = new Date();
 
     let year = d.getFullYear();
@@ -127,7 +130,7 @@ export default function Calendar({ myDate }) {
         <div className='fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 bg-white w-full sm:w-0 sm:h-full h-[80vh] shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
             <div className='flex flex-col items-center'>
                 <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
-                    Change Date
+                    {t("calendar.date")}
                 </p>
                 <div className='md:w-64 w-56 border-2 rounded-lg border-black sm:m-3 mb-2'>
                     <div className='grid grid-cols-7 justify-items-center m-3'>
@@ -159,13 +162,13 @@ export default function Calendar({ myDate }) {
                         className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik md:p-2 p-1'
                         onClick={handleThisMonth}
                     >
-                        This Month
+                        {t("calendar.thismonth")}
                     </button>
                     <button
                         className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik md:p-2 p-1'
                         onClick={handleNexMonth}
                     >
-                        Next Month
+                        {t("calendar.nextmonth")}
                     </button>
                 </div>
             </div>

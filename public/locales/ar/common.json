@@ -12,7 +12,7 @@
         "lang": "EN"
     },
     "home": {
-        "Howitwork": "اّلية العمل",
+        "Howitwork": "آلية العمل",
         "GetStarted": "ابدأ",
         "Register": "سجل",
         "Attendevevts": "احضر الفعاليات",
@@ -35,5 +35,10 @@
         "team": "فريقنا",
         "techTitle": "التقنيات المستخدمة وهيكل المشروع",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
+    },
+    "calendar":{
+        "date":"غير التاريخ",
+        "thismonth":"هذا الشهر",
+        "nextmonth":"الشهر القادم"
     }
 }
