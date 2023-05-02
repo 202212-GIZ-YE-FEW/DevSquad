@@ -1,4 +1,5 @@
 import { updatePassword } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import {
     collection,
     doc,
@@ -9,8 +10,9 @@ import {
 } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import React from "react";
-import { useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
+
+import Alertcomponent from "../Alertcomponent";
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
@@ -56,14 +58,58 @@ export default function ProfilePage() {
     const [fileUpload, setFileUpload] = useState(null);
     const [passwordOne, setPasswordOne] = useState("");
     const [passwordTwo, setPasswordTwo] = useState("");
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+    const [alertType, setAlertType] = useState("");
+    const [alertIcon, setAlertIcon] = useState(
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='currentColor'
+            class='h-5 w-5'
+        >
+            <path
+                fill-rule='evenodd'
+                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                clip-rule='evenodd'
+            />
+        </svg>
+    );
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            // After 3 seconds set the show value to false
+            setShowAlert(false);
+        }, 4000);
+
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, [showAlert]);
 
     //rest password
     const restPassword = async () => {
         if (passwordOne === passwordTwo) {
             updatePassword(auth.currentUser, passwordTwo).then(
                 () => {
-                    console.log("done");
-                    alert("update password successfully");
+                    // console.log("done");
+                    // alert("update password successfully");
+                    setShowAlert(true);
+                    setAlertMessage("update password successfully");
+                    setAlertType("success");
+                    setAlertIcon(
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            viewBox='0 0 24 24'
+                            fill='currentColor'
+                            class='h-5 w-5'
+                        >
+                            <path
+                                fill-rule='evenodd'
+                                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                                clip-rule='evenodd'
+                            />
+                        </svg>
+                    );
                 },
                 (error) => {
                     setError(error);
@@ -79,8 +125,25 @@ export default function ProfilePage() {
         setPasswordOne(null);
         setPasswordTwo(null);
 
-        console.log("done");
-        alert("cancel update password");
+        // console.log("done");
+        // alert("cancel update password");
+        setShowAlert(true);
+        setAlertMessage("cancel update password");
+        setAlertType("success");
+        setAlertIcon(
+            <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='h-5 w-5'
+            >
+                <path
+                    fill-rule='evenodd'
+                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                    clip-rule='evenodd'
+                />
+            </svg>
+        );
     };
 
     const updateUserInfo = async (id) => {
@@ -93,7 +156,24 @@ export default function ProfilePage() {
             image: fileUpload ? fileUpload?.name : img,
         });
         // uploadFile();
-        alert("update profile successsfully");
+        // alert("update profile successsfully");
+        setShowAlert(true);
+        setAlertMessage("update profile successsfully");
+        setAlertType("success");
+        setAlertIcon(
+            <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='h-5 w-5'
+            >
+                <path
+                    fill-rule='evenodd'
+                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                    clip-rule='evenodd'
+                />
+            </svg>
+        );
     };
 
     const updateuser = async () => {
@@ -147,7 +227,24 @@ export default function ProfilePage() {
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
             await uploadBytes(filesFolderRef, fileUpload);
-            alert("file uploaded!");
+            // alert("file uploaded!");
+            setShowAlert(true);
+            setAlertMessage("image uploaded successguly");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
         } catch (err) {
             console.error(err);
         }
@@ -330,6 +427,13 @@ export default function ProfilePage() {
                             clear();
                         }}
                     />
+                    {showAlert && (
+                        <Alertcomponent
+                            type={alertType}
+                            message={alertMessage}
+                            icon={alertIcon}
+                        />
+                    )}
                 </div>
             </div>
         </div>

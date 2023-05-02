@@ -24,6 +24,9 @@ module.exports = {
             fontFamily: {
                 Rubik: ["Rubik", "sans-serif"],
             },
+            scale: {
+                "-100": "-1",
+            },
         },
     },
     plugins: [require("@tailwindcss/line-clamp")],

@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
   >
     <img
       alt="sitting"
-      className="p-6"
+      className="p-6 transform -scale-x-100"
       data-nimg="1"
       decoding="async"
       height={40}

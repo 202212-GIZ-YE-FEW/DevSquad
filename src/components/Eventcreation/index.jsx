@@ -2,16 +2,46 @@ import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import Link from "next/link";
 // import { useRouter } from "next/router"; // Importing useRouter hook from next
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Gmap from "@/components/Gmap/index";
 
+import Alertcomponent from "../Alertcomponent";
 import Buttoncomponent from "../Buttoncomponent";
 import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
 import { types } from "../../utils/types";
 import { auth, db, storage } from "../../../config/firebase";
 export default function Eventcreation() {
+    // alert
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+    const [alertType, setAlertType] = useState("");
+    const [alertIcon, setAlertIcon] = useState(
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='currentColor'
+            class='h-5 w-5'
+        >
+            <path
+                fill-rule='evenodd'
+                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                clip-rule='evenodd'
+            />
+        </svg>
+    );
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            // After 3 seconds set the show value to false
+            setShowAlert(false);
+        }, 4000);
+
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, [showAlert]);
+    //
     //form states
     const [location, setLocation] = useState("");
     const [city, setCity] = useState("Izmer");
@@ -82,7 +112,24 @@ export default function Eventcreation() {
                 eventImage: fileName,
                 userId: auth?.currentUser?.uid,
             });
-            alert("The event was created successfully !");
+            // alert("The event was created successfully !");
+            setShowAlert(true);
+            setAlertMessage("The event was created successfully");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
         } catch (err) {
             console.error(err);
         }
@@ -346,6 +393,13 @@ export default function Eventcreation() {
                         id='done'
                         onClick={uploadFile}
                     />
+                    {showAlert && (
+                        <Alertcomponent
+                            type={alertType}
+                            message={alertMessage}
+                            icon={alertIcon}
+                        />
+                    )}
                 </div>
             </div>
         </div>
