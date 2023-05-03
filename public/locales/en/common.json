@@ -36,9 +36,32 @@
         "techTitle": "Technologies Used and Project Structure",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
     },
+    "signin": {
+        "signIn": "Sign in",
+        "signWithTwitter": "Continue with Twitter",
+        "signWithGoogle": "Continue with Google",
+        "email": "Email address",
+        "password": "Password",
+        "haveAccount": "Don't have an account? ",
+        "signUp": "Sign up",
+        "or": "OR"
+    },
     "calendar": {
         "date": "Change Date",
         "thismonth": "This Month",
         "nextmonth": "Next Month"
+    },
+    "signup": {
+        "signUp": "Sign Up",
+        "signWithTwitter": "Continue with Twitter",
+        "signWithGoogle": "Continue with Google",
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "password": "Password",
+        "haveAccount": "Have an account? ",
+        "signIn": "Sign in",
+        "or": "OR",
+        "confirmpassword": "Confirm Password"
     }
 }
