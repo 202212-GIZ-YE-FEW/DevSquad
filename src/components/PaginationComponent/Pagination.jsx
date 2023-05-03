@@ -1,11 +1,10 @@
 import classnames from "classnames";
 
 const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
-    const pagesCount = Math.ceil(items / pageSize); // 100/10
+    const pagesCount = Math.ceil(items / pageSize); // number of events in db/2
 
     if (pagesCount === 1) return null;
     const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-
     return (
         <>
             <p className='py-3 font-Rubik  font-bold'> Pages</p>
@@ -59,18 +58,21 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
                     </button>
                 )}
 
-                {pages.map((page) => (
-                    <li
-                        key={page}
-                        className={`flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg ${
-                            page === currentPage
-                                ? "bg-primary-orange text-white"
-                                : "bg-white text-black"
-                        }`}
-                    >
-                        <a onClick={() => onPageChange(page)}>{page}</a>
-                    </li>
-                ))}
+                <div className='overflow-hidden w-1/2 flex flex-row'>
+                    {pages.map((page) => (
+                        <li
+                            key={page}
+                            className={`flex items-center p-3 text-center h-8 min-w-6 border-2 border-black m-1 rounded-lg ${
+                                page === currentPage
+                                    ? "bg-primary-orange text-white"
+                                    : "bg-white text-black"
+                            }`}
+                        >
+                            <a onClick={() => onPageChange(page)}>{page}</a>
+                        </li>
+                    ))}
+                </div>
+
                 {/*  Right Navigation arrow */}
                 {currentPage < pagesCount ? (
                     <li
