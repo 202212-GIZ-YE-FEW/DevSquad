@@ -72,9 +72,11 @@ const Eventcard = ({
                         className='rounded border-2 border-black w-64 md:h-36 h-24'
                     />
                 </div>
-                <div className='col-span-2 flex flex-col'>
+                <div className='col-span-2 flex flex-col w-80 sm:w-full'>
                     <p className='font-medium'>{eventTitle}</p>
-                    <p className='font-normal line-clamp-2'>{eventDetails}</p>
+                    <p className='font-normal text-ellipsis overflow-hidden'>
+                        {eventDetails}
+                    </p>
                     <div className='flex justify-end py-5'>
                         <button
                             className='bg-primary-orange text-white rounded px-8 py-1 '
