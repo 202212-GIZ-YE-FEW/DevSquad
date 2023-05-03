@@ -88,92 +88,148 @@ export default function ProfilePage() {
 
     //rest password
     const restPassword = async () => {
-        if (passwordOne === passwordTwo) {
-            updatePassword(auth.currentUser, passwordTwo).then(
-                () => {
-                    // console.log("done");
-                    // alert("update password successfully");
-                    setShowAlert(true);
-                    setAlertMessage("update password successfully");
-                    setAlertType("success");
-                    setAlertIcon(
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 24 24'
-                            fill='currentColor'
-                            class='h-5 w-5'
-                        >
-                            <path
-                                fill-rule='evenodd'
-                                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                                clip-rule='evenodd'
-                            />
-                        </svg>
-                    );
-                },
-                (error) => {
-                    setError(error);
-                }
+        if (!passwordOne || !passwordTwo) {
+            setShowAlert(true);
+            setAlertMessage("Entre correct password");
+            setAlertType("error");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
             );
         } else {
-            setError("password is not match");
+            if (passwordOne === passwordTwo) {
+                updatePassword(auth.currentUser, passwordTwo).then(
+                    () => {
+                        // console.log("done");
+                        // alert("update password successfully");
+                        setShowAlert(true);
+                        setAlertMessage("update password successfully");
+                        setAlertType("success");
+                        setAlertIcon(
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                viewBox='0 0 24 24'
+                                fill='currentColor'
+                                class='h-5 w-5'
+                            >
+                                <path
+                                    fill-rule='evenodd'
+                                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                                    clip-rule='evenodd'
+                                />
+                            </svg>
+                        );
+                    },
+                    (error) => {
+                        setError(error);
+                    }
+                );
+            } else {
+                // setError("password is not match");
+                setShowAlert(true);
+                setAlertMessage("Password is not match");
+                setAlertType("error");
+                setAlertIcon(
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='0 0 24 24'
+                        fill='currentColor'
+                        class='h-5 w-5'
+                    >
+                        <path
+                            fill-rule='evenodd'
+                            d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                            clip-rule='evenodd'
+                        />
+                    </svg>
+                );
+            }
         }
     };
 
     //Cancel Button
     const clear = async () => {
-        setPasswordOne(null);
-        setPasswordTwo(null);
+        if (passwordOne || passwordTwo) {
+            setPasswordOne(null);
+            setPasswordTwo(null);
 
-        // console.log("done");
-        // alert("cancel update password");
-        setShowAlert(true);
-        setAlertMessage("cancel update password");
-        setAlertType("success");
-        setAlertIcon(
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='currentColor'
-                class='h-5 w-5'
-            >
-                <path
-                    fill-rule='evenodd'
-                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                    clip-rule='evenodd'
-                />
-            </svg>
-        );
+            setShowAlert(true);
+            setAlertMessage("Cancel update password");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
+        }
     };
 
     const updateUserInfo = async (id) => {
-        const userDoc = doc(db, "users", id);
+        if (!newName) {
+            setShowAlert(true);
+            setAlertMessage("Name is required");
+            setAlertType("error");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
+        } else {
+            const userDoc = doc(db, "users", id);
 
-        await updateDoc(userDoc, {
-            name: newName ? newName : auth?.currentUser?.displayName,
-            location: newLocation,
-            intersets: intersetList,
-            image: fileUpload ? fileUpload?.name : img,
-        });
-        // uploadFile();
-        // alert("update profile successsfully");
-        setShowAlert(true);
-        setAlertMessage("update profile successsfully");
-        setAlertType("success");
-        setAlertIcon(
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='currentColor'
-                class='h-5 w-5'
-            >
-                <path
-                    fill-rule='evenodd'
-                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                    clip-rule='evenodd'
-                />
-            </svg>
-        );
+            await updateDoc(userDoc, {
+                name: newName ? newName : auth?.currentUser?.displayName,
+                location: newLocation,
+                intersets: intersetList,
+                image: fileUpload ? fileUpload?.name : img,
+            });
+
+            setShowAlert(true);
+            setAlertMessage("Update profile successsfully");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
+        }
     };
 
     const updateuser = async () => {
@@ -287,7 +343,6 @@ export default function ProfilePage() {
                         fontSize='text-xl'
                         onClick={() => {
                             uploadFile();
-                            // showImg();
                         }}
                     />
 
