@@ -93,6 +93,7 @@ exports[`renders correctly 1`] = `
             className=" lg:hidden md:hidden flex"
           >
             <svg
+              className="w-14 h-14"
               fill="none"
               height="50"
               viewBox="0 0 72 72"
@@ -132,7 +133,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="md:flex-1 md:static md:bg-primary-orange justify-self-center mt-8 md:block md:pb-0 md:mt-0 absolute md:left-0 top-10 bg-white w-32 md:w-full hidden"
+          className="md:flex-1 md:static md:bg-primary-orange justify-self-center md:block md:pb-0 md:mt-0 absolute z-10  md:left-0  bg-white w-32 md:w-full hidden"
         >
           <ul
             className="items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10 border border-1 border-black md:border-none"
@@ -162,56 +163,59 @@ exports[`renders correctly 1`] = `
               </a>
             </li>
             <li
-              className="hover:text-white flex  p-4 justify-center items-center gap-1 hover:bg-primary-orange"
+              className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white"
             >
-              <svg
-                fill="none"
-                height="28"
-                viewBox="0 0 28 28"
-                width="28"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  className="md:fill-white fill-black"
-                  clipRule="evenodd"
-                  d="M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z"
-                  fillRule="evenodd"
-                />
-              </svg>
               <a
-                class="block px-2 py-2 text-lg md:text-white text-black"
+                class="flex text-lg md:text-white text-black"
                 href=""
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onTouchStart={[Function]}
               >
-                Navbar.lang
-              </a>
-            </li>
-            <div>
-              <div
-                className="hidden  md:block lg:block"
-              >
                 <svg
                   fill="none"
-                  height="72"
-                  onClick={[Function]}
-                  viewBox="0 0 72 72"
-                  width="72"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  width="28"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect
-                    fill="#1A1A1A"
-                    height="72"
-                    rx="36"
-                    width="72"
-                  />
                   <path
-                    d="M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z"
-                    fill="white"
+                    className="md:fill-white fill-black hover:fill-white px-2"
+                    clipRule="evenodd"
+                    d="M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z"
+                    fillRule="evenodd"
                   />
                 </svg>
-              </div>
+                <p
+                  className="px-2 hover:text-white"
+                >
+                  Navbar.lang
+                </p>
+              </a>
+            </li>
+            <div
+              className="hidden  md:block lg:block"
+            >
+              <svg
+                className="w-14 h-14"
+                fill="none"
+                height="72"
+                onClick={[Function]}
+                viewBox="0 0 72 72"
+                width="72"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#1A1A1A"
+                  height="72"
+                  rx="36"
+                  width="72"
+                />
+                <path
+                  d="M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z"
+                  fill="white"
+                />
+              </svg>
             </div>
           </ul>
         </div>
@@ -221,7 +225,7 @@ exports[`renders correctly 1`] = `
           <div
             aria-labelledby="user-menu-button"
             aria-orientation="vertical"
-            class="absolute left-0  z-10 mt-2 w-48 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black hidden"
+            class="absolute left-0  z-10 md:mt-5 mt-0 w-48 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black  hidden"
             role="menu"
             tabindex="-1"
           >
