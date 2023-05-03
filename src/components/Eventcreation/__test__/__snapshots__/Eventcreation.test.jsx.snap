@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
         Pebble Events can be both local or online Choose where you want to host your event.
       </p>
       <input
-        className="w-80 h-12 border border-black rounded placeholder:p-2"
+        className="md:w-80 w-64 h-12 border border-black rounded placeholder:p-2 px-2"
         id="eventLocation"
         name="eventLocation"
         onChange={[Function]}
@@ -377,7 +377,7 @@ exports[`renders correctly 1`] = `
       Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You can edit this later if you change your mind.
     </p>
     <input
-      className="w-full h-12 border border-black rounded"
+      className="w-full h-12 border border-black rounded px-2"
       id="eventTitle"
       name="eventTitle"
       onChange={[Function]}
@@ -419,7 +419,7 @@ exports[`renders correctly 1`] = `
       Choose a Event Time
     </p>
     <input
-      className="w-80 h-12 border border-black rounded"
+      className="w-80 h-12 border border-black rounded px-2"
       id="eventtime"
       name="eventtime"
       onChange={[Function]}
@@ -440,7 +440,7 @@ exports[`renders correctly 1`] = `
       Describe the purpose of your event. Who should join and what will you do at the event?
     </p>
     <textarea
-      className="w-full h-44 border border-black rounded placeholder:p-2 placeholder:text-black"
+      className="w-full h-44 border border-black rounded  placeholder:text-primary-gray p-2"
       id="dateLocation"
       name="dateLocation"
       onChange={[Function]}
@@ -515,7 +515,7 @@ exports[`renders correctly 1`] = `
       className="py-20 flex flex-col items-center justify-center text-center"
     >
       <button
-        className="slate-300 text-black md:w-96 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2 "
+        className="slate-300 text-black md:w-96 w-80 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2 "
         onClick={[Function]}
       >
         Agree with tearms and create Event!
