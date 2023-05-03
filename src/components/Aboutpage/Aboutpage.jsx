@@ -30,8 +30,8 @@ function Aboutpage() {
         },
         {
             name: "Fatima Jubary",
-            github: "https://github.com",
-            linkedin: "https://www.linkedin.com",
+            github: "https://github.com/fatGubari",
+            linkedin: "https://www.linkedin.com/in/fatima-abdullah-37248226b/",
             instagram: "https://www.instagram.com",
             imageLink: "/images/icon.png",
         },
