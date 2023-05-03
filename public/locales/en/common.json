@@ -50,5 +50,17 @@
         "date": "Change Date",
         "thismonth": "This Month",
         "nextmonth": "Next Month"
+    },"signup":{
+        "signUp": "Sign Up",
+        "signWithTwitter": "Continue with Twitter",
+        "signWithGoogle": "Continue with Google",
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "password": "Password",
+        "haveAccount": "Have an account? ",
+        "signIn": "Sign in",
+        "or": "OR",
+        "confirmpassword":"Confirm Password"
     }
 }
