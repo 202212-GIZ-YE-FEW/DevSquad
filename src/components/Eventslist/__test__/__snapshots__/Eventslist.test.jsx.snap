@@ -988,12 +988,13 @@ exports[`renders correctly 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
-
           </li>
+          <div
+            className="overflow-hidden w-1/2 flex flex-row"
+          />
           <li
             className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
             onClick={[Function]}
-
           >
             <svg
               fill="none"
