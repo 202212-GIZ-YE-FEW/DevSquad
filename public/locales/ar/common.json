@@ -51,7 +51,7 @@
         "thismonth": "هذا الشهر",
         "nextmonth": "الشهر القادم"
     },
-    "signup":{
+    "signup": {
         "signUp": "إنشاء حساب جديد",
         "signWithTwitter": "تسجيل الدخول بواسطة تويتر",
         "signWithGoogle": "تسجيل الدخول بواسطة جوجل",
@@ -62,6 +62,6 @@
         "haveAccount": "   لديك حساب بالفعل؟",
         "signIn": " تسجيل الدخول ",
         "or": "أو",
-        "confirmpassword":"تأكيد كلمة المرور"
+        "confirmpassword": "تأكيد كلمة المرور"
     }
 }

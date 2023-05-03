@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
       <h1
         className="font-bold text-xl tracking-wide"
       >
-           
+         
         signup.signUp
       </h1>
     </div>
@@ -173,7 +173,7 @@ exports[`renders correctly 1`] = `
           className="text-sm hidden sm:block"
         >
           signup.haveAccount
-                                      
+           
           <a
             className="md:underline text-orange-400 md:text-black "
             href="/signin"
