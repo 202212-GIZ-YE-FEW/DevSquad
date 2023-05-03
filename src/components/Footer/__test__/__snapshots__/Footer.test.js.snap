@@ -174,7 +174,7 @@ exports[`renders correctly 1`] = `
   <div
     className="flex justify-center"
   >
-    ©Company name, 2020
+    ©DevSquad, 2023
   </div>
 </div>
 `;

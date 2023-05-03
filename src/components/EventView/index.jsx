@@ -1,13 +1,14 @@
+import { onAuthStateChanged } from "firebase/auth";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { useRouter } from "next/router";
 import React from "react";
+import { useEffect, useState } from "react";
 import { AiFillClockCircle } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
-import EventImage from "../../components/EventImage/index";
+
 import Buttoncomponent from "../Buttoncomponent";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { collection, getDocs, query, addDoc, where } from "firebase/firestore";
-import { db, auth } from "../../../config/firebase";
-import { useRouter } from "next/router";
+import EventImage from "../../components/EventImage/index";
+import { auth, db } from "../../../config/firebase";
 export default function EventView(props) {
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
@@ -98,17 +99,8 @@ export default function EventView(props) {
                 </div>
 
                 <div className='grid justify-items-center md:flex md:items-center sm:order-2'>
-                    {/* <Image
-                        src='/images/chart.png'
-                        alt='chart'
-                        width={500}
-                        height={500}
-                        className='w-5/6'
-                    /> */}
                     <EventImage
                         pic={props.entry?.eventImage}
-                        // src='/images/chart.png'
-                        // alt='chart'
                         width='500px'
                         height='500px'
                         className='max-w-sm max-h-22'
@@ -121,7 +113,7 @@ export default function EventView(props) {
                         {/* location */}
                         <div className='flex flex-row items-center'>
                             <ImLocation className='w-8' />
-                            <p className='font-medium font-Rubik'>
+                            <p className='font-medium font-Rubik truncate overflow-hidden w-40'>
                                 {/* City, Country */}
                                 {props.entry?.location}
                             </p>
@@ -154,7 +146,6 @@ export default function EventView(props) {
                             <p className='font-Rubik'>
                                 +{attendcount} Attendance
                             </p>
-                            {/* <p className='font-Rubik'>+12 Attendance</p> */}
                         </div>
 
                         {/* Organized by who */}
@@ -195,16 +186,6 @@ export default function EventView(props) {
                         Event Description:
                     </h1>
                     <p className='font-Rubik text-gray-500 sm:max-w-md'>
-                        {/* The oldest classical British and Latin writing had
-                        little or no space between words and could be written in
-                        boustrophedon alternating directions. Over time, text
-                        direction left to right became standardized. dividers
-                        and terminal punctuation became common. The first way to
-                        divide sentences into groups wa original paragraphos,
-                        similar to an underscore at the beginning of the new
-                        group. The Greek parágr evolved into the pilcrow, which
-                        in English manuscripts in the Middle Ages can be seen
-                        inserted inline between sentences. */}
                         {props.entry?.description}
                     </p>
                 </div>
@@ -214,23 +195,23 @@ export default function EventView(props) {
                         Attendance:
                     </p>
                     <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
-                        <div className='flex flex-col items-center'>
-                            {userAttend &&
-                                userAttend.map((name, index) => {
-                                    return (
-                                        <>
-                                            <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                                <span class='text-white font-Rubik'>
+                        {userAttend &&
+                            userAttend.map((name, index) => {
+                                return (
+                                    <>
+                                        <div className='flex flex-col items-center'>
+                                            <div class='inline-flex items-center justify-center w-12 h-12 m-2 bg-black rounded-full'>
+                                                <span class='font-medium text-white'>
                                                     {name[0]}
                                                 </span>
                                             </div>
                                             <p className='font-Rubik md:text-base text-sm'>
                                                 {name}
                                             </p>
-                                        </>
-                                    );
-                                })}
-                        </div>
+                                        </div>
+                                    </>
+                                );
+                            })}
                     </div>
                 </div>
             </div>

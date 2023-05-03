@@ -489,7 +489,7 @@ exports[`renders correctly 1`] = `
               className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
             >
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/fatima-abdullah-37248226b/"
                 target="_blank"
               >
                 <img
@@ -515,7 +515,7 @@ exports[`renders correctly 1`] = `
               className="m-px h-4 w-4 hover:cursor-pointer md:h-8 md:w-8 lg:h-12 lg:w-12"
             >
               <a
-                href="https://github.com"
+                href="https://github.com/fatGubari"
                 target="_blank"
               >
                 <img
