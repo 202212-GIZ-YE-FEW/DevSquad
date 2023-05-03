@@ -36,9 +36,32 @@
         "techTitle": "التقنيات المستخدمة وهيكل المشروع",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
     },
+    "signin": {
+        "signIn": "تسجيل الدخول",
+        "signWithTwitter": "تسجيل الدخول بواسطة تويتر",
+        "signWithGoogle": "تسجيل الدخول بواسطة جوجل",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "haveAccount": "ليس لديك حساب؟ ",
+        "signUp": "إنشاء حساب",
+        "or": "أو"
+    },
     "calendar": {
         "date": "غير التاريخ",
         "thismonth": "هذا الشهر",
         "nextmonth": "الشهر القادم"
+    },
+    "signup": {
+        "signUp": "إنشاء حساب جديد",
+        "signWithTwitter": "تسجيل الدخول بواسطة تويتر",
+        "signWithGoogle": "تسجيل الدخول بواسطة جوجل",
+        "name": "الاسم",
+        "surname": "اسم العائلة",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "haveAccount": "   لديك حساب بالفعل؟",
+        "signIn": " تسجيل الدخول ",
+        "or": "أو",
+        "confirmpassword": "تأكيد كلمة المرور"
     }
 }

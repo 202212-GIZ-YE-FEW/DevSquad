@@ -1,4 +1,5 @@
 "use client";
+
 import {
     onAuthStateChanged,
     signInWithEmailAndPassword,
@@ -22,6 +23,8 @@ import sitting from "../../../public/images/Sitting.png";
 import twitter from "../../../public/images/twitter.png";
 
 export default function SignIn() {
+    const { t } = useTranslation("common");
+
     const router = useRouter(); // Getting the router instance
 
     // Listening to authentication state changes
@@ -91,7 +94,10 @@ export default function SignIn() {
             {/* form part */}
             <div className='grid grid-cols-1 gap-y-2 m-3 md:m-0'>
                 <div className='my-2 md:my-8 flex justify-center md:justify-start'>
-                    <h1 className='font-bold text-xl tracking-wide'>Sign In</h1>
+                    <h1 className='font-bold text-xl tracking-wide'>
+                        {" "}
+                        {t("signin.signIn")}
+                    </h1>
                 </div>
 
                 {/* using flex box to reverse the component when it is mobile or tablet */}
@@ -107,7 +113,9 @@ export default function SignIn() {
                                 alt='Twitter'
                                 className='w-5 pt-1'
                             />
-                            <span className='pl-2'>Continue with Twitter</span>
+                            <span className='pl-2'>
+                                {t("signin.signWithTwitter")}
+                            </span>
                         </button>
                         <button
                             onClick={signInWithGoogle}
@@ -118,14 +126,18 @@ export default function SignIn() {
                                 alt='Google'
                                 className='w-5 pt-1'
                             />
-                            <span className='pl-2'>Continue with Google</span>
+                            <span className='pl-2'>
+                                {t("signin.signWithGoogle")}
+                            </span>
                         </button>
                     </div>
 
                     {/* component two */}
                     <div className='items-center hidden sm:inline-flex'>
                         <hr className='w-48 h-px my-8 bg-gray-300 border-0'></hr>
-                        <span className='px-3 text-gray-500 bg-white'>OR</span>
+                        <span className='px-3 text-gray-500 bg-white'>
+                            {t("signin.or")}
+                        </span>
                         <hr className='w-48 h-px my-8 bg-gray-300 border-0'></hr>
                     </div>
 
@@ -138,7 +150,7 @@ export default function SignIn() {
                             id='email'
                             name='email'
                             className='border  rounded-md border-black py-1 px-2'
-                            placeholder='Email address'
+                            placeholder={t("signin.email")}
                         />
                         <Inputcomponent
                             onChange={(event) =>
@@ -149,7 +161,7 @@ export default function SignIn() {
                             id='password'
                             name='password'
                             className='border rounded-md border-black py-1 px-2 '
-                            placeholder='Password'
+                            placeholder={t("signin.password")}
                         />
                         {error && (
                             <div className='text-red-500 text-center'>
@@ -158,12 +170,12 @@ export default function SignIn() {
                         )}
 
                         <p className='text-sm hidden sm:block'>
-                            Do not have an account?
+                            {t("signin.haveAccount")}
                             <Link
                                 href='/signup'
                                 className='md:underline text-orange-400 md:text-black'
                             >
-                                Sign Up
+                                {t("signin.signUp")}
                             </Link>
                         </p>
                         <Buttoncomponent
@@ -173,7 +185,7 @@ export default function SignIn() {
                             width='md:w-24'
                             padding='py-1'
                             margin='mb-4'
-                            label='Sign In'
+                            label={t("signin.signIn")}
                             onClick={signIn}
                         />
                     </form>
