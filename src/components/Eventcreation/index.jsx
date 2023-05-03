@@ -172,7 +172,7 @@ export default function Eventcreation() {
                         name='eventLocation'
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        className='w-80	 h-12 border border-black rounded placeholder:p-2'
+                        className='md:w-80 w-64	 h-12 border border-black rounded placeholder:p-2 px-2'
                         placeholder='city'
                     />
                 </div>
@@ -292,7 +292,7 @@ export default function Eventcreation() {
                     name='eventTitle'
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className='w-full	 h-12 border border-black rounded'
+                    className='w-full	 h-12 border border-black rounded px-2'
                     placeholder=''
                 />
             </div>
@@ -318,7 +318,7 @@ export default function Eventcreation() {
                     type='time'
                     id='eventtime'
                     name='eventtime'
-                    className='w-80	 h-12 border border-black rounded'
+                    className='w-80	 h-12 border border-black rounded px-2'
                     placeholder=''
                     value={eventTime}
                     onChange={(e) => setEventTime(e.target.value)}
@@ -336,7 +336,7 @@ export default function Eventcreation() {
                     id='dateLocation'
                     name='dateLocation'
                     onChange={(e) => setDesc(e.target.value)}
-                    className='w-full	 h-44 border border-black rounded placeholder:p-2 placeholder:text-black'
+                    className='w-full	 h-44 border border-black rounded  placeholder:text-primary-gray p-2'
                 />
             </div>
             {/* Event image section */}
@@ -385,7 +385,7 @@ export default function Eventcreation() {
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
                     <Buttoncomponent
                         label='Agree with tearms and create Event!'
-                        width='md:w-96'
+                        width='md:w-96 w-80'
                         height='h-12'
                         border='border border-b-2 border-r-2'
                         borderColor='border-black'
