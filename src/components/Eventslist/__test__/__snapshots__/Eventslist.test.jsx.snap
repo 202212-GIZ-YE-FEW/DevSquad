@@ -986,29 +986,9 @@ exports[`renders correctly 1`] = `
         <ul
           className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
         >
-          <button
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
-            disabled={true}
-          >
-            <svg
-              fill="none"
-              height="34"
-              viewBox="0 0 34 34"
-              width="34"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
-                fill="#1A1A1A"
-                fill-opacity="0.7"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <button
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
-            disabled={true}
+          <li
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
+            onClick={[Function]}
           >
             <svg
               fill="none"
@@ -1025,7 +1005,27 @@ exports[`renders correctly 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
-          </button>
+          </li>
+          <li
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </li>
         </ul>
       </div>
     </div>
