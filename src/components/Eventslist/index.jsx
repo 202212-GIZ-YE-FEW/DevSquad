@@ -5,8 +5,9 @@ import React, { useEffect, useState } from "react";
 
 import Alertcomponent from "../Alertcomponent";
 import Calendar from "../Calendar";
-import Checkboxcomponent from "../Checkboxcomponent";
 import Eventcard from "../Eventcard";
+import Eventinerestcomponent from "../Eventinerestcomponent";
+import LocationComponent from "../LocationComponent";
 import paginate from "../PaginationComponent/paginate";
 import Pagination from "../PaginationComponent/Pagination";
 import { auth, db } from "../../../config/firebase";
@@ -94,7 +95,6 @@ const Eventslist = (props) => {
     };
 
     const paginatedPosts = paginate(entries, currentPage, pageSize);
-    //////////filters
 
     const [eventFilters, setEventFilters] = useState({
         types: [],
@@ -294,12 +294,25 @@ const Eventslist = (props) => {
         });
     }, [0]);
 
+    const [overlay, setOverlay] = useState(false);
+    function closeModels() {
+        setIsOpencalender(false);
+        setIsOpeninterset(false);
+        setIsOpenlocation(false);
+        setOverlay(!overlay);
+    }
     return (
         <div className='md:m-8 m-2 font-Rubik'>
             <div className='font-Rubik flex flex-col items-center py-10 '>
                 {/* <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, John!
                 </p> */}
+                <div
+                    onClick={closeModels}
+                    className={`w-full fixed top-0 h-[50%] ${
+                        overlay ? "block" : "hidden"
+                    }`}
+                ></div>
                 <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, {userName}!
                 </p>
@@ -307,10 +320,15 @@ const Eventslist = (props) => {
                     Explore and Join Events.
                 </p>
             </div>
+
             <div className='flex justify-evenly md:pb-0 pb-4 pt-4 border-t-2 border-b-2 border-black md:border-0 sm:hidden'>
                 <button
                     className='flex items-center p-1 border border-black rounded mr-1'
-                    onClick={() => setIsOpeninterset(!isOpeninterest)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpeninterset(!isOpeninterest);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Interest</p>
                     <svg
@@ -328,10 +346,13 @@ const Eventslist = (props) => {
                 </button>
                 <button
                     className='flex items-center  p-1 border border-black rounded md:hidden mr-1'
-                    onClick={() => setIsOpenlocation(!isOpenlocation)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpenlocation(!isOpenlocation);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Location</p>
-
                     <svg
                         width='13'
                         height='8'
@@ -347,7 +368,11 @@ const Eventslist = (props) => {
                 </button>
                 <button
                     className='flex items-center p-1 border border-black rounded sm:hidden'
-                    onClick={() => setIsOpencalender(!isOpencalender)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setIsOpencalender(!isOpencalender);
+                        setOverlay(!overlay);
+                    }}
                 >
                     <p className='pr-1 font-Rubik text-xs'>Change Date</p>
                     <svg
@@ -379,7 +404,8 @@ const Eventslist = (props) => {
                             isOpenlocation ? "block" : "hidden"
                         }`}
                     >
-                        <div className=' bg-white rounded-md'>
+                        <LocationComponent />
+                        {/* <div className=' bg-white rounded-md'>
                             <div className='border-t-2 border-b-2 border-black h-32 font-medium text-center w-full'>
                                 <button
                                     className='underline p-2'
@@ -395,11 +421,11 @@ const Eventslist = (props) => {
                         {showModal ? (
                             <>
                                 <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
-                                    <div className='relative w-auto my-6 mx-auto max-w-3xl'>
-                                        {/*content*/}
-                                        <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
-                                            {/*header*/}
-                                            <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
+                                    <div className='relative w-auto my-6 mx-auto max-w-3xl'> */}
+                        {/*content*/}
+                        {/* <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'> */}
+                        {/*header*/}
+                        {/* <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
                                                 <h3 className='text-3xl font-semibold'>
                                                     choose your Location
                                                 </h3>
@@ -413,9 +439,9 @@ const Eventslist = (props) => {
                                                         ×
                                                     </span>
                                                 </button>
-                                            </div>
-                                            {/*body*/}
-                                            <div className='relative p-6 flex-auto'>
+                                            </div> */}
+                        {/*body*/}
+                        {/* <div className='relative p-6 flex-auto'>
                                                 <p className='my-4 text-slate-500 text-lg leading-relaxed'>
                                                     <select
                                                         className='w-9/12'
@@ -483,10 +509,10 @@ const Eventslist = (props) => {
                                                                 </option>
                                                             ))}
                                                     </select>
-                                                </p>
-                                            </div>
-                                            {/*footer*/}
-                                            <div className='flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b'>
+                                                </p> */}
+                        {/* </div> */}
+                        {/*footer*/}
+                        {/* <div className='flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b'>
                                                 <button
                                                     className='text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                                                     type='button'
@@ -511,16 +537,17 @@ const Eventslist = (props) => {
                                 </div>
                                 <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
                             </>
-                        ) : null}
+                        ) : null} */}
                     </div>
                     <div
                         className={`sm:block ${
                             isOpeninterest ? " block" : "hidden"
                         }`}
                     >
-                        <div className=''>
+                        <div>
                             {/* <Eventinerestcomponent onChange={handleFilterChange} checked={checkedState} /> */}
-                            <div className='md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar '>
+                            <Eventinerestcomponent />
+                            {/* <div className='md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar '>
                                 <div className='grid grid-cols-1 gap-2 '>
                                     <p className='font-medium font-Rubik underline text-center sm:block hidden'>
                                         Pick Your Interest
@@ -553,7 +580,7 @@ const Eventslist = (props) => {
                                             );
                                         })}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     {/* </div> */}
@@ -583,9 +610,9 @@ const Eventslist = (props) => {
                     })}
                     <div className='md:order-2 order-1 text-center md:text-start'>
                         <Pagination
-                            items={entries.length} // 100
+                            items={entries.length} // number of events in db
                             currentPage={currentPage} // 1
-                            pageSize={pageSize} // 10
+                            pageSize={pageSize} // 2
                             onPageChange={onPageChange}
                         />
                         {showAlert && (

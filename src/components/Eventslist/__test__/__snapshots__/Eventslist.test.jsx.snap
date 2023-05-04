@@ -7,6 +7,10 @@ exports[`renders correctly 1`] = `
   <div
     className="font-Rubik flex flex-col items-center py-10 "
   >
+    <div
+      className="w-full fixed top-0 h-[50%] hidden"
+      onClick={[Function]}
+    />
     <p
       className="text-5xl md:font-extrabold font:medium "
     >
@@ -585,22 +589,20 @@ exports[`renders correctly 1`] = `
         className="sm:block md:w-64 w-56 hidden"
       >
         <div
-          className=" bg-white rounded-md"
+          className="p-6 sm:p-0 bg-white w-full sm:h-full h-[80vh] fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
         >
           <div
-            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full"
+            className="border-t-2 border-b-2 border-black h-32 font-medium text-center w-full mt-[20%] sm:mt-0"
           >
             <button
-              className="underline p-2"
-              onClick={[Function]}
+              className="underline p-4"
             >
               Change Location
             </button>
             <p
               className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full"
             >
-              Izmer
-               
+              İzmir, TR
             </p>
           </div>
         </div>
@@ -608,11 +610,9 @@ exports[`renders correctly 1`] = `
       <div
         className="sm:block hidden"
       >
-        <div
-          className=""
-        >
+        <div>
           <div
-            className="md:w-64 sm:w-56 w-full bg-white rounded-md h-80 sm:h-full overflow-y-scroll sm:overflow-auto scrollbar "
+            className="md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg"
           >
             <div
               className="grid grid-cols-1 gap-2 "
@@ -632,8 +632,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={0}
                     name="types"
                     onChange={[Function]}
@@ -652,8 +651,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={1}
                     name="types"
                     onChange={[Function]}
@@ -672,8 +670,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={2}
                     name="types"
                     onChange={[Function]}
@@ -692,8 +689,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={3}
                     name="types"
                     onChange={[Function]}
@@ -712,8 +708,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={4}
                     name="types"
                     onChange={[Function]}
@@ -732,8 +727,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={5}
                     name="types"
                     onChange={[Function]}
@@ -752,8 +746,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={6}
                     name="types"
                     onChange={[Function]}
@@ -772,8 +765,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={7}
                     name="types"
                     onChange={[Function]}
@@ -792,8 +784,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={8}
                     name="types"
                     onChange={[Function]}
@@ -812,8 +803,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={9}
                     name="types"
                     onChange={[Function]}
@@ -832,8 +822,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={10}
                     name="types"
                     onChange={[Function]}
@@ -852,8 +841,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={11}
                     name="types"
                     onChange={[Function]}
@@ -872,8 +860,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={12}
                     name="types"
                     onChange={[Function]}
@@ -892,8 +879,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={13}
                     name="types"
                     onChange={[Function]}
@@ -912,8 +898,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={14}
                     name="types"
                     onChange={[Function]}
@@ -932,8 +917,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={15}
                     name="types"
                     onChange={[Function]}
@@ -952,8 +936,7 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
-                    checked={false}
-                    className="sm:hidden undefined"
+                    className="sm:hidden sm:m-0 m-6"
                     id={16}
                     name="types"
                     onChange={[Function]}
@@ -986,29 +969,9 @@ exports[`renders correctly 1`] = `
         <ul
           className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
         >
-          <button
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
-            disabled={true}
-          >
-            <svg
-              fill="none"
-              height="34"
-              viewBox="0 0 34 34"
-              width="34"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
-                fill="#1A1A1A"
-                fill-opacity="0.7"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <button
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8"
-            disabled={true}
+          <li
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
+            onClick={[Function]}
           >
             <svg
               fill="none"
@@ -1025,7 +988,30 @@ exports[`renders correctly 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
-          </button>
+          </li>
+          <div
+            className="overflow-hidden w-1/2 flex flex-row"
+          />
+          <li
+            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height="34"
+              viewBox="0 0 34 34"
+              width="34"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
+                fill="#1A1A1A"
+                fill-opacity="0.7"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </li>
         </ul>
       </div>
     </div>

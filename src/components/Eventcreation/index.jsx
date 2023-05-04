@@ -31,6 +31,26 @@ export default function Eventcreation() {
             />
         </svg>
     );
+
+    const myAlert = () => {
+        setShowAlert(true);
+        setAlertMessage("The event was created successfully");
+        setAlertType("success");
+        setAlertIcon(
+            <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='h-5 w-5'
+            >
+                <path
+                    fill-rule='evenodd'
+                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                    clip-rule='evenodd'
+                />
+            </svg>
+        );
+    };
     useEffect(() => {
         const timeId = setTimeout(() => {
             // After 3 seconds set the show value to false
@@ -41,35 +61,122 @@ export default function Eventcreation() {
             clearTimeout(timeId);
         };
     }, [showAlert]);
-    //
-    //form states
-    const [location, setLocation] = useState("");
-    const [city, setCity] = useState("Izmer");
-    const [country, setCountry] = useState("");
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [eventDate, setEventDate] = useState("");
-    const [eventTime, setEventTime] = useState("");
-    const [eventTypeList, setEventTypeList] = useState([]);
-    // File Upload State
-    const [fileUpload, setFileUpload] = useState(null);
 
+    // Get a reference to the "events" collection in Firestore
     const eventCollectionRef = collection(db, "events");
-    const getLocation = (param) => {
-        setLocation(param);
+
+    // Initialize form state
+    const [formData, setFormData] = useState({
+        location: "",
+        city: "Izmer", // Default city value
+        country: "",
+        title: "",
+        description: "",
+        date: "",
+        time: "",
+        typeList: [], // An array to hold selected event types
+        fileUpload: null, // Uploaded file (event image)
+    });
+
+    //Initialize error state
+    const [showError, setShowError] = useState({
+        location: false,
+        title: false,
+        description: false,
+        date: false,
+        time: false,
+        typeList: false,
+        fileUpload: false,
+    });
+
+    //the error message
+    const erroreMessage = (message) => {
+        return (
+            <div className='flex items-center'>
+                <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                    <span className='text-white font-bold text-xs'>!</span>
+                </div>
+                <span className='text-red-500'>{message}</span>
+            </div>
+        );
+    };
+    //hundle submit to validate the form data
+    const handleSubmit = (e) => {
+        const myobj = {
+            location: false,
+            title: false,
+            description: false,
+            date: false,
+            time: false,
+            typeList: false,
+            fileUpload: false,
+        };
+        e.preventDefault();
+        let error = false;
+
+        // Check if each field is empty
+        if (!formData.location || formData.location == "") {
+            myobj.location = true;
+            error = true;
+        }
+        if (!formData.title) {
+            myobj.title = true;
+            error = true;
+        }
+        if (!formData.description) {
+            myobj.description = true;
+            error = true;
+        }
+        if (!formData.date) {
+            myobj.date = true;
+            error = true;
+        }
+        if (!formData.time) {
+            myobj.time = true;
+            error = true;
+        }
+        if (!formData.fileUpload) {
+            myobj.fileUpload = true;
+            error = true;
+        } else {
+            if (!formData.fileUpload.type.startsWith("image/")) {
+                myobj.fileUpload = true;
+                error = true;
+            }
+        }
+
+        if (formData.typeList.length === 0) {
+            myobj.typeList = true;
+            error = true;
+        }
+
+        if (error) {
+            setShowError(myobj);
+        }
+        // If there is an error, stop submitting the form
+        if (error) return;
+
+        // Otherwise, submit the form
+        uploadFile();
     };
 
-    const getCity = (param) => {
-        setCity(param);
+    // Handle location change callback from Google Maps component
+    const handleLocationChange = (locationInfo) => {
+        setFormData({
+            ...formData,
+            location: locationInfo.location,
+            city: locationInfo.city,
+            country: locationInfo.country,
+        });
     };
 
-    const getCountry = (param) => {
-        setCountry(param);
-    };
+    // State for the checkbox group
+    // Initialize checkbox state with default false values
     const [checkedState, setCheckedState] = useState(
         new Array(types.length).fill(false)
     );
 
+    // Handle checkbox change callback
     const handleOnChange = (position) => {
         const updatedCheckedState = checkedState.map((item, index) =>
             index === position ? !item : item
@@ -77,64 +184,58 @@ export default function Eventcreation() {
         setCheckedState(updatedCheckedState);
         let x = [];
 
+        // Create a list of selected event types
         const typeList = updatedCheckedState.map((item, index) => {
             if (item === true) {
                 x.push(types[index]);
             }
         });
 
-        setEventTypeList(x);
+        // Update form data with selected event types
+        setFormData({ ...formData, typeList: x });
     };
 
+    // Upload event image to Firebase Storage
     const uploadFile = async () => {
-        if (!fileUpload) return;
-        const fileName = getFileName(fileUpload.name);
+        if (!formData.fileUpload) return;
+        // Get file name
+        const fileName = getFileName(formData.fileUpload.name);
+        // Get a reference to the events folder in Storage
         const filesFolderRef = ref(storage, `eventsFolder/${fileName}`);
         try {
-            await uploadBytes(filesFolderRef, fileUpload);
+            // Upload file to Storage
+            await uploadBytes(filesFolderRef, formData.fileUpload);
+            // Submit event data to Firestore
             onSubmitEvent(fileName);
         } catch (err) {
             console.error(err);
         }
     };
 
+    // Submit event data to Firestore
     const onSubmitEvent = async (fileName) => {
         try {
+            // Add event data to Firestore
             await addDoc(eventCollectionRef, {
-                title: title,
-                description: desc,
-                location: location,
-                country: country,
-                city: city,
-                types: eventTypeList,
-                eventDate: eventDate,
-                eventTime: eventTime,
+                title: formData.title,
+                description: formData.description,
+                location: formData.location,
+                country: formData.country,
+                city: formData.city,
+                types: formData.typeList,
+                eventDate: formData.date,
+                eventTime: formData.time,
                 eventImage: fileName,
                 userId: auth?.currentUser?.uid,
             });
-            // alert("The event was created successfully !");
-            setShowAlert(true);
-            setAlertMessage("The event was created successfully");
-            setAlertType("success");
-            setAlertIcon(
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 24 24'
-                    fill='currentColor'
-                    class='h-5 w-5'
-                >
-                    <path
-                        fill-rule='evenodd'
-                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                        clip-rule='evenodd'
-                    />
-                </svg>
-            );
+            // Alert user that the event was created successfully
+            myAlert();
         } catch (err) {
             console.error(err);
         }
     };
 
+    // Get file name with timestamp prefix
     const getFileName = (fileName) => {
         let currentdate = new Date();
         let datetime =
@@ -154,7 +255,10 @@ export default function Eventcreation() {
         datetime += fileName;
         return datetime;
     };
+
+    // Initialize modal state
     const [showModal, setShowModal] = useState(false);
+
     return (
         <div className=' container mx-auto md:px-32 px-10 pt-12	pb-4 font-Rubik'>
             {/* choose event section */}
@@ -170,14 +274,21 @@ export default function Eventcreation() {
                         type='text'
                         id='eventLocation'
                         name='eventLocation'
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                        className='w-80	 h-12 border border-black rounded placeholder:p-2'
+                        value={formData.location}
+                        onChange={(e) =>
+                            setFormData({
+                                ...formData,
+                                location: e.target.value,
+                            })
+                        }
+                        className='md:w-80 w-64	 h-12 border border-black rounded placeholder:p-2 px-2'
                         placeholder='city'
                     />
+                    {showError.location &&
+                        erroreMessage("Please enter the event location.")}
                 </div>
                 <div className='pt-11	'>
-                    <p className='text-7xl font-medium'>{city}</p>
+                    <p className='text-7xl font-medium'>{formData.city}</p>
                     {/* <Link href='#' className='cursor-pointer text-blue-600'>
                         choose location
                     </Link> */}
@@ -215,9 +326,9 @@ export default function Eventcreation() {
                                             <div className='relative p-6 flex-auto'>
                                                 <p className='my-4 text-slate-500 text-lg leading-relaxed'>
                                                     <Gmap
-                                                        loc={getLocation}
-                                                        city={getCity}
-                                                        country={getCountry}
+                                                        locationInfo={
+                                                            handleLocationChange
+                                                        }
                                                     />
                                                 </p>
                                             </div>
@@ -259,6 +370,7 @@ export default function Eventcreation() {
                     sustainable devlopment goals of United Nations. whitch goal
                     do you want to help in ? Sellect all thet apply
                 </p>
+
                 <div className=' grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 '>
                     {types &&
                         types.map((value, index) => {
@@ -277,6 +389,10 @@ export default function Eventcreation() {
                             );
                         })}
                 </div>
+                {showError.typeList &&
+                    erroreMessage(
+                        "Please select at least one type for this event."
+                    )}
             </div>
             {/* Event Title section */}
             <div>
@@ -290,11 +406,15 @@ export default function Eventcreation() {
                     type='text'
                     id='eventTitle'
                     name='eventTitle'
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className='w-full	 h-12 border border-black rounded'
+                    value={formData.title}
+                    onChange={(e) =>
+                        setFormData({ ...formData, title: e.target.value })
+                    }
+                    className='w-full	 h-12 border border-black rounded px-2'
                     placeholder=''
                 />
+                {showError.title &&
+                    erroreMessage("Please enter the event title.")}
             </div>
             {/* Event date section */}
             <div>
@@ -306,9 +426,13 @@ export default function Eventcreation() {
                     name='eventDate'
                     className='w-80	 h-12 border border-black rounded'
                     placeholder=''
-                    value={eventDate}
-                    onChange={(e) => setEventDate(e.target.value)}
+                    value={formData.date}
+                    onChange={(e) =>
+                        setFormData({ ...formData, date: e.target.value })
+                    }
                 />
+                {showError.date &&
+                    erroreMessage("Please enter the event date.")}
             </div>
             {/* Event time section */}
             <div>
@@ -318,11 +442,15 @@ export default function Eventcreation() {
                     type='time'
                     id='eventtime'
                     name='eventtime'
-                    className='w-80	 h-12 border border-black rounded'
+                    className='w-80	 h-12 border border-black rounded px-2'
                     placeholder=''
-                    value={eventTime}
-                    onChange={(e) => setEventTime(e.target.value)}
+                    value={formData.time}
+                    onChange={(e) =>
+                        setFormData({ ...formData, time: e.target.value })
+                    }
                 />
+                {showError.time &&
+                    erroreMessage("Please enter the event time.")}
             </div>
             {/* Event describtion section */}
             <div>
@@ -335,9 +463,16 @@ export default function Eventcreation() {
                     placeholder='Please write at least 50 characters'
                     id='dateLocation'
                     name='dateLocation'
-                    onChange={(e) => setDesc(e.target.value)}
-                    className='w-full	 h-44 border border-black rounded placeholder:p-2 placeholder:text-black'
+                    onChange={(e) =>
+                        setFormData({
+                            ...formData,
+                            description: e.target.value,
+                        })
+                    }
+                    className='w-full	 h-44 border border-black rounded  placeholder:text-primary-gray p-2'
                 />
+                {showError.description &&
+                    erroreMessage("Please enter the event description.")}
             </div>
             {/* Event image section */}
             <div>
@@ -352,8 +487,16 @@ export default function Eventcreation() {
                     name='eventImage'
                     className='md:w-96 w-60	 h-12 border border-black rounded file:h-12'
                     placeholder=''
-                    onChange={(e) => setFileUpload(e.target.files[0])}
+                    onChange={(e) =>
+                        setFormData({
+                            ...formData,
+                            fileUpload: e.target.files[0],
+                        })
+                    }
+                    // onChange={(e) => console.log(e.target.files[0])}
                 />
+                {showError.fileUpload &&
+                    erroreMessage("Please upload the event image.")}
             </div>
             {/* done section */}
             <div>
@@ -385,13 +528,13 @@ export default function Eventcreation() {
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
                     <Buttoncomponent
                         label='Agree with tearms and create Event!'
-                        width='md:w-96'
+                        width='md:w-96 w-80'
                         height='h-12'
                         border='border border-b-2 border-r-2'
                         borderColor='border-black'
                         borderRaduis='rounded'
                         id='done'
-                        onClick={uploadFile}
+                        onClick={handleSubmit}
                     />
                     {showAlert && (
                         <Alertcomponent

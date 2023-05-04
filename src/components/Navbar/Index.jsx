@@ -111,7 +111,7 @@ const UnauthNav = () => {
                 <div>
                     {/* unsigned user */}
                     <div
-                        className={`flex-1 justify-self-center mt-8 md:block md:pb-0 md:mt-0 absolute top-14 md:static w-44 md:w-full md:bg-primary-orange bg-white z-10 ${
+                        className={`flex-1 justify-self-center md:block md:pb-0 md:mt-0 absolute md:static w-44 md:w-full md:bg-primary-orange bg-white z-10 ${
                             navbar ? "block" : "hidden"
                         }`}
                     >
@@ -132,70 +132,57 @@ const UnauthNav = () => {
                                     {t("Navbar.SignIn")}
                                 </Link>
                             </li>
-                            <li className='hover:text-white flex  p-4 justify-center items-center gap-1 hover:bg-primary-orange'>
-                                <svg
-                                    width='28'
-                                    height='28'
-                                    viewBox='0 0 28 28'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    // onClick={() => setLangmenue(!langMenue)}
-                                >
-                                    <path
-                                        fillRule='evenodd'
-                                        clipRule='evenodd'
-                                        d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
-                                        className='md:fill-white fill-black'
-                                    />
-                                </svg>
+                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
                                 {i18n.language === "en" ? (
                                     <Link
                                         href={asPath}
                                         locale='ar'
-                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                        class='flex text-lg md:text-white text-black hover:text-white'
                                     >
-                                        {t("Navbar.lang")}
+                                        <svg
+                                            width='28'
+                                            height='28'
+                                            viewBox='0 0 28 28'
+                                            fill='none'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                        >
+                                            <path
+                                                fillRule='evenodd'
+                                                clipRule='evenodd'
+                                                d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
+                                                className='md:fill-white fill-black px-2 hover:fill-white'
+                                            />
+                                        </svg>
+
+                                        <p className='px-2'>
+                                            {t("Navbar.lang")}
+                                        </p>
                                     </Link>
                                 ) : (
                                     <Link
                                         href={asPath}
                                         locale='en'
-                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                        class='flex text-lg md:text-white text-black hover:text-white'
                                     >
-                                        {t("Navbar.lang")}
+                                        <svg
+                                            width='28'
+                                            height='28'
+                                            viewBox='0 0 28 28'
+                                            fill='none'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                        >
+                                            <path
+                                                fillRule='evenodd'
+                                                clipRule='evenodd'
+                                                d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
+                                                className='md:fill-white fill-black px-2 hover:fill-white'
+                                            />
+                                        </svg>
+                                        <p className='px-2 hover:text-white'>
+                                            {t("Navbar.lang")}
+                                        </p>
                                     </Link>
                                 )}
-                                {/* language menue */}
-                                {/* <div class='relative ml-3 '>
-                                    <div
-                                        class={`absolute ${
-                                            i18n.language === "en"
-                                                ? "md:right-0"
-                                                : "md:left-0"
-                                        } z-20 mt-8 w-auto origin-top-right  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black ${
-                                            langMenue ? "block" : "hidden"
-                                        }`}
-                                        role='menu'
-                                        aria-orientation='vertical'
-                                        aria-labelledby='user-menu-button'
-                                        tabindex='-1'
-                                    >
-                                        <Link
-                                            href={asPath}
-                                            locale='en'
-                                            class='block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange  text-black hover:text-white'
-                                        >
-                                            {t("Navbar.EN")}
-                                        </Link>
-                                        <Link
-                                            href={asPath}
-                                            locale='ar'
-                                            class='block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange text-black hover:text-white'
-                                        >
-                                            {t("Navbar.AR")}
-                                        </Link>
-                                    </div>
-                                </div> */}
                             </li>
                         </ul>
                     </div>
@@ -208,7 +195,6 @@ const UnauthNav = () => {
 const AuthNav = ({ logout }) => {
     const [navbar, setNavbar] = useState(false);
     const [profilenav, setProfilenav] = useState(false);
-    const [langMenue, setLangmenue] = useState(false);
     const { t } = useTranslation("common");
     const { asPath } = useRouter();
     const { i18n } = useTranslation();
@@ -226,7 +212,6 @@ const AuthNav = ({ logout }) => {
             id: doc.id,
         }));
         setImg(filteredData[0]?.image);
-        // console.log(img);
     };
 
     useEffect(() => {
@@ -327,24 +312,33 @@ const AuthNav = ({ logout }) => {
                         </Link>
                         {/* signin profile menue */}
                         <div className=' lg:hidden md:hidden flex'>
-                            <svg
-                                width='50'
-                                height='50'
-                                viewBox='0 0 72 72'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'
-                            >
-                                <rect
-                                    width='72'
-                                    height='72'
-                                    rx='36'
-                                    fill='#1A1A1A'
+                            {img ? (
+                                <EventImage
+                                    pic={img}
+                                    className='inline-flex  w-14 h-14 bg-black rounded-full'
+                                    onClick={() => setProfilenav(!profilenav)}
                                 />
-                                <path
-                                    d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
-                                    fill='white'
-                                />
-                            </svg>
+                            ) : (
+                                <svg
+                                    width='50'
+                                    height='50'
+                                    viewBox='0 0 72 72'
+                                    fill='none'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    className='w-14 h-14'
+                                >
+                                    <rect
+                                        width='72'
+                                        height='72'
+                                        rx='36'
+                                        fill='#1A1A1A'
+                                    />
+                                    <path
+                                        d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
+                                        fill='white'
+                                    />
+                                </svg>
+                            )}
                             <button
                                 className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
                                 onClick={() => setProfilenav(!profilenav)}
@@ -383,9 +377,9 @@ const AuthNav = ({ logout }) => {
                 <div>
                     {/* signed  drop down user */}
                     <div
-                        className={`md:flex-1 md:static md:bg-primary-orange justify-self-center mt-8 md:block md:pb-0 md:mt-0 absolute ${
+                        className={`md:flex-1 md:static md:bg-primary-orange justify-self-center md:block md:pb-0 md:mt-0 absolute z-10  ${
                             i18n.language === "en" ? "md:right-0" : "md:left-0"
-                        } top-10 bg-white w-32 md:w-full ${
+                        }  bg-white w-32 md:w-full ${
                             navbar ? "block" : "hidden"
                         }`}
                     >
@@ -398,127 +392,91 @@ const AuthNav = ({ logout }) => {
                                     {t("Navbar.About")}
                                 </Link>
                             </li>
-                            <li className='hover:text-white flex  p-4 justify-center items-center gap-1 hover:bg-primary-orange'>
-                                <svg
-                                    width='28'
-                                    height='28'
-                                    viewBox='0 0 28 28'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    // onClick={() => setLangmenue(!langMenue)}
-                                >
-                                    <path
-                                        fillRule='evenodd'
-                                        clipRule='evenodd'
-                                        d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
-                                        className='md:fill-white fill-black'
-                                    />
-                                </svg>
+                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
                                 {i18n.language === "en" ? (
                                     <Link
                                         href={asPath}
                                         locale='ar'
-                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                        class='flex text-lg md:text-white text-black hover:text-white'
                                     >
-                                        {t("Navbar.lang")}
+                                        <svg
+                                            width='28'
+                                            height='28'
+                                            viewBox='0 0 28 28'
+                                            fill='none'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                        >
+                                            <path
+                                                fillRule='evenodd'
+                                                clipRule='evenodd'
+                                                d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
+                                                className='md:fill-white fill-black hover:fill-white px-2'
+                                            />
+                                        </svg>
+
+                                        <p className='px-2'>
+                                            {t("Navbar.lang")}
+                                        </p>
                                     </Link>
                                 ) : (
                                     <Link
                                         href={asPath}
                                         locale='en'
-                                        class='block px-2 py-2 text-lg md:text-white text-black'
+                                        class='flex text-lg md:text-white text-black'
                                     >
-                                        {t("Navbar.lang")}
+                                        <svg
+                                            width='28'
+                                            height='28'
+                                            viewBox='0 0 28 28'
+                                            fill='none'
+                                            xmlns='http://www.w3.org/2000/svg'
+                                        >
+                                            <path
+                                                fillRule='evenodd'
+                                                clipRule='evenodd'
+                                                d='M14 27.75C21.5939 27.75 27.75 21.5939 27.75 14C27.75 6.40608 21.5939 0.25 14 0.25C6.40608 0.25 0.25 6.40608 0.25 14C0.25 21.5939 6.40608 27.75 14 27.75ZM11.6258 25.2121C9.49226 21.8802 8.30818 18.5222 8.08965 15.1458H2.59824C3.09437 20.1428 6.80075 24.1954 11.6258 25.2121ZM8.08965 12.8542C8.30818 9.47784 9.49226 6.11978 11.6258 2.78795C6.80075 3.80459 3.09437 7.85719 2.59824 12.8542H8.08965ZM19.9104 12.8542C19.6918 9.47784 18.5077 6.11978 16.3742 2.78795C21.1993 3.80459 24.9056 7.85719 25.4018 12.8542H19.9104ZM16.3742 25.2121C18.5077 21.8802 19.6918 18.5222 19.9104 15.1458H25.4018C24.9056 20.1428 21.1993 24.1954 16.3742 25.2121ZM10.3869 12.8542C10.621 9.71035 11.8191 6.54607 14 3.35196C16.1809 6.54607 17.379 9.71035 17.6131 12.8542H10.3869ZM14 24.648C11.8191 21.4539 10.621 18.2896 10.3869 15.1458H17.6131C17.379 18.2896 16.1809 21.4539 14 24.648Z'
+                                                className='md:fill-white fill-black hover:fill-white px-2'
+                                            />
+                                        </svg>
+                                        <p className='px-2 hover:text-white'>
+                                            {t("Navbar.lang")}
+                                        </p>
                                     </Link>
                                 )}
-                                {/* language menue */}
-                                {/* <div class='relative ml-3 '>
-                                    <div
-                                        class={`absolute ${
-                                            i18n.language === "en"
-                                                ? "md:right-0"
-                                                : "md:left-0"
-                                        } z-20 mt-8 w-auto origin-top-right  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black ${
-                                            langMenue ? "block" : "hidden"
-                                        }`}
-                                        role='menu'
-                                        aria-orientation='vertical'
-                                        aria-labelledby='user-menu-button'
-                                        tabindex='-1'
-                                    >
-                                        <Link
-                                            href={asPath}
-                                            locale='en'
-                                            class='block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange  text-black hover:text-white'
-                                        >
-                                            {t("Navbar.EN")}
-                                        </Link>
-                                        <Link
-                                            href={asPath}
-                                            locale='ar'
-                                            class='block px-4 py-2 text-lg border border-b-1 border-black hover:bg-primary-orange text-black hover:text-white'
-                                        >
-                                            {t("Navbar.AR")}
-                                        </Link>
-                                    </div>
-                                </div> */}
                             </li>
-                            {/* //------------- */}
-                            {/* <div className='hidden  md:block lg:block'>
-                                <svg
-                                    onClick={() => setProfilenav(!profilenav)}
-                                    width='72'
-                                    height='72'
-                                    viewBox='0 0 72 72'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                >
-                                    <rect
-                                        width='72'
-                                        height='72'
-                                        rx='36'
-                                        fill='#1A1A1A'
-                                    />
-                                    <path
-                                        d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
-                                        fill='white'
-                                    />
-                                </svg>
-                            </div> */}
-                            <div>
-                                {/* {setProfilenav(!profilenav)} */}
+
+                            <div className='hidden  md:block lg:block'>
                                 {img ? (
                                     <EventImage
                                         pic={img}
-                                        className='inline-flex  w-20 h-20 bg-black rounded-full'
+                                        className='inline-flex  w-14 h-14 bg-black rounded-full'
                                         onClick={() =>
                                             setProfilenav(!profilenav)
                                         }
                                     />
                                 ) : (
-                                    <div className='hidden  md:block lg:block'>
-                                        <svg
-                                            onClick={() =>
-                                                setProfilenav(!profilenav)
-                                            }
+                                    <svg
+                                        onClick={() =>
+                                            setProfilenav(!profilenav)
+                                        }
+                                        width='72'
+                                        height='72'
+                                        viewBox='0 0 72 72'
+                                        fill='none'
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        className='w-14 h-14'
+                                    >
+                                        <rect
                                             width='72'
                                             height='72'
-                                            viewBox='0 0 72 72'
-                                            fill='none'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                        >
-                                            <rect
-                                                width='72'
-                                                height='72'
-                                                rx='36'
-                                                fill='#1A1A1A'
-                                            />
-                                            <path
-                                                d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
-                                                fill='white'
-                                            />
-                                        </svg>
-                                    </div>
+                                            rx='36'
+                                            fill='#1A1A1A'
+                                        />
+                                        <path
+                                            d='M36 63C25.7124 63 20.2443 58.4724 15 52.8293C18.2032 49.7491 22.9895 47.3595 29.3591 45.6604C30.263 45.3037 30.1085 44.044 29.1984 43.7027C21.9765 40.9943 19.7174 35.099 19.7174 27.0202C19.7174 16.577 28.2939 11 36 11C43.7061 11 52.2826 16.577 52.2826 27.0202C52.2826 35.099 50.0235 40.9943 42.8017 43.7027C41.8914 44.044 41.7369 45.3037 42.6408 45.6604C49.0104 47.3595 53.7968 49.7492 57 52.8293C51.7557 58.4725 46.2876 63 36 63Z'
+                                            fill='white'
+                                        />
+                                    </svg>
                                 )}
                             </div>
                         </ul>
@@ -529,7 +487,7 @@ const AuthNav = ({ logout }) => {
                         <div
                             class={`absolute ${
                                 i18n.language === "en" ? "right-0" : "left-0"
-                            }  z-10 mt-2 w-48 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black ${
+                            }  z-10 md:mt-5 mt-0 w-48 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border border-black  ${
                                 profilenav ? "block" : "hidden"
                             }`}
                             role='menu'
