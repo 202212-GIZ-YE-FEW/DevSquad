@@ -120,7 +120,7 @@ function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className='flex justify-center'>&copy;DevSquad, 2023</div>
+            <div className='flex justify-center'>&copy;Pebble Work, 2023</div>
         </div>
     );
 }
