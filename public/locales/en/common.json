@@ -15,11 +15,20 @@
         "Howitwork": "How it work",
         "GetStarted": "Get Started",
         "Register": "Register",
+        "RegisterDesc":"Create your account to become a part of Pebble’s volunteer network.",
         "Attendevevts": "Attend evevts",
+        "AttendeDesc": "Browse events and join them! You can sort by date and location",
         "Organizeyourown": "Organize your own!",
+        "OrganizeyourownDesc": "Got a brilliant idea you want to pursue with others? Organize your own event!",
         "SustainableDevlopmentGoals": "Sustainable Devlopment Goals",
         "goals": "These goals, also known as the SDGs, aim to end poverty, protect the planet and ensure prosperity for everyone by 2030",
         "Hearitfromvolunteers": "Hear it from volunteers",
+        "volunteersName1":"Mike, Student",
+        "volunteersQu1":"Pebble Work is great at connecting me with other young individuals who share my desire to work for a good cause.",
+        "volunteersName2":"Alice, Engineer",
+        "volunteersQu2":"Pebble Work is incredibly important in getting people involved with the Sustainable Development Goals.",
+        "volunteersName3":"Mitra, Teacher",
+        "volunteersQu3":"There is usually an event at Pebble Work that I am eager to attend. If not, I can always start one on my own!",
         "Becomethechangeyouwishtoseeintheworld": "Become the change you wish to see in the world",
         "Whoareyou?": "Who are you?",
         "Viewevents": "View events",
@@ -36,9 +45,32 @@
         "techTitle": "Technologies Used and Project Structure",
         "techDesc": "HTML, JavaScript, ReactJS, NextJS, npm - Testing: Jest -  Formatting: Prettier, ESLint - Styling:TailwindCSS - Translation: i18next - Version control: git, GitHub"
     },
+    "signin": {
+        "signIn": "Sign in",
+        "signWithTwitter": "Continue with Twitter",
+        "signWithGoogle": "Continue with Google",
+        "email": "Email address",
+        "password": "Password",
+        "haveAccount": "Don't have an account? ",
+        "signUp": "Sign up",
+        "or": "OR"
+    },
     "calendar": {
         "date": "Change Date",
         "thismonth": "This Month",
         "nextmonth": "Next Month"
+    },
+    "signup": {
+        "signUp": "Sign Up",
+        "signWithTwitter": "Continue with Twitter",
+        "signWithGoogle": "Continue with Google",
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "password": "Password",
+        "haveAccount": "Have an account? ",
+        "signIn": "Sign in",
+        "or": "OR",
+        "confirmpassword": "Confirm Password"
     }
 }
