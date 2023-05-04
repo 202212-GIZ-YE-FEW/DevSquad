@@ -73,7 +73,7 @@
         "or": "OR",
         "confirmpassword": "Confirm Password"
     },
-    "profilepage":{
+    "profilepage": {
         "editProfile": "Edit Profile",
         "uploadNew": "Upload New photo",
         "saveChanges": "Save Changes",
@@ -88,15 +88,15 @@
         "cancel": "Cancel",
         "submit": "Submit"
     },
-    "eventcreation":{
+    "eventcreation": {
         "chooseLocation": "Choose Location",
-        "chooseyourLocation":"Choose your Location",
-        "saveChange":"Save Change",
-        "close":"Close",
+        "chooseyourLocation": "Choose your Location",
+        "saveChange": "Save Change",
+        "close": "Close",
         "locationPlaceholder": "City",
         "changeLocation": "Change Location",
         "locationDescription": "Pubble events can be both local or online. Choose where you want to host your event.",
-    
+
         "EventType": {
             "eventTypeTitle": "Choose Event Type",
             "EventTypeDescription": "Every pebble event should serve at least one of the sustainable development goals of United Nations. Which goal do you want to help in? Select all that apply."
@@ -105,9 +105,9 @@
             "eventTitle": "Event Title:",
             "eventTitleDescription": "  Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You canedit this later if you change your mind.",
             "eventDate": "Event Date:",
-            "ChooseEventDate":"Choose a Event Date",
+            "ChooseEventDate": "Choose a Event Date",
             "eventTime": "Event Time",
-            "ChooseEventTime":"Choose a Event Time",
+            "ChooseEventTime": "Choose a Event Time",
             "eventDescriptionHeading": "Event Description:",
             "eventDescriptionText": "Describe the purpose of your event. Who should join and what will you do at the event?",
             "eventDescriptionPlaceholder": "Please write at least 50 characters",
@@ -124,29 +124,27 @@
             "guidelinesLink": "community guidelines.",
             "submitButton": "Agree with terms and Create Event!"
         }
-       
     },
-    "pagination":{
-        "page":"Pages"
+    "pagination": {
+        "page": "Pages"
     },
-    "eventlist":{
-        "welcome":"Welcome",
-        "explore":"Explore and Join Events",
-        "changeInterest":"Change Interest",
-        "changeLocation":"Change Location",
-        "changeDate":" Change Date"
-
+    "eventlist": {
+        "welcome": "Welcome",
+        "explore": "Explore and Join Events",
+        "changeInterest": "Change Interest",
+        "changeLocation": "Change Location",
+        "changeDate": " Change Date"
     },
-    "eventview":{
-        "attendance":"Attendance",
-        "organizedBy":"Organized by",
-        "eventDescription":"Event Description:"
-
+    "eventview": {
+        "attendance": "Attendance",
+        "organizedBy": "Organized by",
+        "eventDescription": "Event Description:"
     },
-    "eventinterest":{
-        "pick":"Pick Your Interest",
-        "changeInterset":"Change Interset"
+    "eventinterest": {
+        "pick": "Pick Your Interest",
+        "changeInterset": "Change Interset"
     },
-    "location":{
-        "changeLocation":"Change Location"    }
+    "location": {
+        "changeLocation": "Change Location"
+    }
 }

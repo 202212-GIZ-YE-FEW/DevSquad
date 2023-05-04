@@ -97,7 +97,7 @@ exports[`renders correctly 1`] = `
             className="font-Rubik"
           >
             +
-              
+             
             eventview.attendance
           </p>
         </div>
@@ -138,7 +138,7 @@ exports[`renders correctly 1`] = `
         className="font-Rubik font-medium text-lg"
       >
         eventview.eventDescription
-                            
+         
       </h1>
       <p
         className="font-Rubik text-gray-500 sm:max-w-md"
