@@ -146,5 +146,9 @@
     },
     "location": {
         "changeLocation": "Change Location"
-    }
+    },
+    "eventcard": {
+        "attendance": "Attendance",  
+        "join":"Join"  }
+
 }
