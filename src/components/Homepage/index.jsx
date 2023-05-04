@@ -43,22 +43,19 @@ const Homepage = () => {
                 <HowitworkCard
                     title={t("home.Register")}
                     imageSrc='/images/ManTop.png'
-                    describtion=' Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at, illum itaque facilis'
+                    describtion={t("home.RegisterDesc")}
                     linkWord={t("Navbar.SignUp")}
                 />
                 <HowitworkCard
                     title={t("home.Attendevevts")}
                     imageSrc='/images/attend.png'
-                    describtion=' Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at, illum itaque facilis'
+                    describtion={t("home.AttendeDesc")}
                     linkWord={t("home.Viewevents")}
                 />
                 <HowitworkCard
                     title={t("home.Organizeyourown")}
                     imageSrc='/images/Girl.png'
-                    describtion=' Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at, illum itaque facilis'
+                    describtion={t("home.OrganizeyourownDesc")}
                     linkWord={t("home.GetStarted")}
                 />
             </div>
@@ -76,24 +73,21 @@ const Homepage = () => {
             <p className='text-4xl text-center pt-20 font-Rubik font-medium'>
                 {t("home.Hearitfromvolunteers")}
             </p>
-            <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
+            <div className='container mx-auto  md:px-32 px-10 pt-12	pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
                 <VolunteerCard
-                    volunteerImage='/images/volunteer.png'
-                    name='Name, Occupation'
-                    voldescribtion='"Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at ."'
+                    volunteerImage='/images/volunteer 1.png'
+                    name={t("home.volunteersName1")}
+                    voldescribtion={t("home.volunteersQu1")}
                 />
                 <VolunteerCard
-                    volunteerImage='/images/volunteer.png'
-                    name='Name, Occupation'
-                    voldescribtion='"Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at ."'
+                    volunteerImage='/images/volunteer 2.png'
+                    name={t("home.volunteersName2")}
+                    voldescribtion={t("home.volunteersQu2")}
                 />
                 <VolunteerCard
-                    volunteerImage='/images/volunteer.png'
-                    name='Name, Occupation'
-                    voldescribtion='"Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur at".'
+                    volunteerImage='/images/volunteer 3.png'
+                    name={t("home.volunteersName3")}
+                    voldescribtion={t("home.volunteersQu3")}
                 />
             </div>
             {/* images section in home page */}

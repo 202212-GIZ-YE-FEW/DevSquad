@@ -6,11 +6,11 @@ exports[`renders correctly 1`] = `
     className="flex flex-col items-center font-Rubik "
   >
     <div
-      className="relative w-20 h-20"
+      className="relative w-20 h-20 "
     >
       <img
         alt="profile"
-        className="object-contain rounded-xl"
+        className=" object-contain rounded-full "
         data-nimg="fill"
         decoding="async"
         loading="lazy"

@@ -117,7 +117,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
+          home.RegisterDesc
         </p>
         <a
           className="flex justify-center items-center"
@@ -190,7 +190,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
+          home.AttendeDesc
         </p>
         <a
           className="flex justify-center items-center"
@@ -263,7 +263,7 @@ Array [
         <p
           className="text-lg text-primary-gray text-center font-normal  "
         >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at, illum itaque facilis
+          home.OrganizeyourownDesc
         </p>
         <a
           className="flex justify-center items-center"
@@ -853,26 +853,26 @@ Array [
     home.Hearitfromvolunteers
   </p>,
   <div
-    className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
+    className="container mx-auto  md:px-32 px-10 pt-12 pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
   >
     <div>
       <div
         className="flex flex-col items-center font-Rubik "
       >
         <div
-          className="relative w-20 h-20"
+          className="relative w-20 h-20 "
         >
           <img
             alt="profile"
-            className="object-contain rounded-xl"
+            className=" object-contain rounded-full "
             data-nimg="fill"
             decoding="async"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
             sizes="100vw"
-            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
-            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            src="/_next/image?url=%2Fimages%2Fvolunteer%201.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer%201.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer%201.png&w=3840&q=75 3840w"
             style={
               Object {
                 "bottom": 0,
@@ -895,12 +895,12 @@ Array [
           <p
             className="text-xl text-center font-medium"
           >
-            Name, Occupation
+            home.volunteersName1
           </p>
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at ."
+            home.volunteersQu1
           </p>
         </div>
       </div>
@@ -910,19 +910,19 @@ Array [
         className="flex flex-col items-center font-Rubik "
       >
         <div
-          className="relative w-20 h-20"
+          className="relative w-20 h-20 "
         >
           <img
             alt="profile"
-            className="object-contain rounded-xl"
+            className=" object-contain rounded-full "
             data-nimg="fill"
             decoding="async"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
             sizes="100vw"
-            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
-            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            src="/_next/image?url=%2Fimages%2Fvolunteer%202.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer%202.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer%202.png&w=3840&q=75 3840w"
             style={
               Object {
                 "bottom": 0,
@@ -945,12 +945,12 @@ Array [
           <p
             className="text-xl text-center font-medium"
           >
-            Name, Occupation
+            home.volunteersName2
           </p>
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at ."
+            home.volunteersQu2
           </p>
         </div>
       </div>
@@ -960,19 +960,19 @@ Array [
         className="flex flex-col items-center font-Rubik "
       >
         <div
-          className="relative w-20 h-20"
+          className="relative w-20 h-20 "
         >
           <img
             alt="profile"
-            className="object-contain rounded-xl"
+            className=" object-contain rounded-full "
             data-nimg="fill"
             decoding="async"
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
             sizes="100vw"
-            src="/_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75"
-            srcSet="/_next/image?url=%2Fimages%2Fvolunteer.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer.png&w=3840&q=75 3840w"
+            src="/_next/image?url=%2Fimages%2Fvolunteer%203.png&w=3840&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvolunteer%203.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fvolunteer%203.png&w=3840&q=75 3840w"
             style={
               Object {
                 "bottom": 0,
@@ -995,12 +995,12 @@ Array [
           <p
             className="text-xl text-center font-medium"
           >
-            Name, Occupation
+            home.volunteersName3
           </p>
           <p
             className="text-lg text-primary-gray text-center font-normal "
           >
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.   Consectetur at".
+            home.volunteersQu3
           </p>
         </div>
       </div>

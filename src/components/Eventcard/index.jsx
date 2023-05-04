@@ -1,4 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import EventImage from "../../components/EventImage/index";
@@ -73,7 +74,12 @@ const Eventcard = ({
                     />
                 </div>
                 <div className='col-span-2 flex flex-col w-80 sm:w-full'>
-                    <p className='font-medium'>{eventTitle}</p>
+                    <Link
+                        key={eventAttendance}
+                        href={`/eventPage/${eventAttendance}`}
+                    >
+                        <p className='font-medium'>{eventTitle}</p>
+                    </Link>
                     <p className='font-normal text-ellipsis overflow-hidden'>
                         {eventDetails}
                     </p>

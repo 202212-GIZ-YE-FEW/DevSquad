@@ -43,9 +43,16 @@ exports[`renders correctly 1`] = `
     <div
       className="col-span-2 flex flex-col w-80 sm:w-full"
     >
-      <p
-        className="font-medium"
-      />
+      <a
+        href="/eventPage/undefined"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <p
+          className="font-medium"
+        />
+      </a>
       <p
         className="font-normal text-ellipsis overflow-hidden"
       />
