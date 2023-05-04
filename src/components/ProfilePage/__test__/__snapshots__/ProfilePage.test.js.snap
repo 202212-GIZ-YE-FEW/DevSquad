@@ -38,6 +38,13 @@ exports[`renders correctly 1`] = `
         onChange={[Function]}
         type="file"
       />
+      <div
+        className="flex items-center"
+      >
+        <span
+          className="text-red-500"
+        />
+      </div>
     </div>
   </div>
   <div
@@ -58,6 +65,13 @@ exports[`renders correctly 1`] = `
         type="text"
         value=""
       />
+      <div
+        className="flex items-center"
+      >
+        <span
+          className="text-red-500"
+        />
+      </div>
     </div>
     <div
       className="flex flex-col"
@@ -353,8 +367,12 @@ exports[`renders correctly 1`] = `
         Change Password
          
         <div
-          className="text-red-500 text-center"
-        />
+          className="flex items-center"
+        >
+          <span
+            className="text-red-500"
+          />
+        </div>
       </h1>
     </div>
     <div

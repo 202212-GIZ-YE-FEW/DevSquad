@@ -48,14 +48,17 @@ export default function ProfilePage() {
     // });
 
     const [img, setImg] = useState("");
-    const [error, setError] = useState(null);
+
+    const [message, setMessage] = useState(null);
     const [newName, setNewName] = useState("");
+    const [checkName, setCheckName] = useState(null);
     const [newLocation, setNewLocation] = useState("");
     const [checkedState, setCheckedState] = useState(
         new Array(titles.length).fill(false)
     );
     const [intersetList, setIntersetList] = useState([]);
     const [fileUpload, setFileUpload] = useState(null);
+    const [checkFileUpload, setCheckFileUpload] = useState("");
     const [passwordOne, setPasswordOne] = useState("");
     const [passwordTwo, setPasswordTwo] = useState("");
     const [showAlert, setShowAlert] = useState(false);
@@ -89,29 +92,14 @@ export default function ProfilePage() {
     //rest password
     const restPassword = async () => {
         if (!passwordOne || !passwordTwo) {
-            setShowAlert(true);
-            setAlertMessage("Entre correct password");
-            setAlertType("error");
-            setAlertIcon(
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 24 24'
-                    fill='currentColor'
-                    class='h-5 w-5'
-                >
-                    <path
-                        fill-rule='evenodd'
-                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                        clip-rule='evenodd'
-                    />
-                </svg>
-            );
+            setMessage("Enter correct password");
         } else {
             if (passwordOne === passwordTwo) {
                 updatePassword(auth.currentUser, passwordTwo).then(
                     () => {
                         // console.log("done");
                         // alert("update password successfully");
+                        setMessage(null);
                         setShowAlert(true);
                         setAlertMessage("update password successfully");
                         setAlertType("success");
@@ -131,28 +119,11 @@ export default function ProfilePage() {
                         );
                     },
                     (error) => {
-                        setError(error);
+                        setMessage(error);
                     }
                 );
             } else {
-                // setError("password is not match");
-                setShowAlert(true);
-                setAlertMessage("Password is not match");
-                setAlertType("error");
-                setAlertIcon(
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 24 24'
-                        fill='currentColor'
-                        class='h-5 w-5'
-                    >
-                        <path
-                            fill-rule='evenodd'
-                            d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                            clip-rule='evenodd'
-                        />
-                    </svg>
-                );
+                setMessage("Password is not match");
             }
         }
     };
@@ -160,9 +131,9 @@ export default function ProfilePage() {
     //Cancel Button
     const clear = async () => {
         if (passwordOne || passwordTwo) {
+            setMessage(null);
             setPasswordOne(null);
             setPasswordTwo(null);
-
             setShowAlert(true);
             setAlertMessage("Cancel update password");
             setAlertType("success");
@@ -181,27 +152,13 @@ export default function ProfilePage() {
                 </svg>
             );
         }
+
+        message ? setMessage(null) : "";
     };
 
     const updateUserInfo = async (id) => {
         if (!newName) {
-            setShowAlert(true);
-            setAlertMessage("Name is required");
-            setAlertType("error");
-            setAlertIcon(
-                <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 24 24'
-                    fill='currentColor'
-                    class='h-5 w-5'
-                >
-                    <path
-                        fill-rule='evenodd'
-                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                        clip-rule='evenodd'
-                    />
-                </svg>
-            );
+            setCheckName("Name is required");
         } else {
             const userDoc = doc(db, "users", id);
 
@@ -211,7 +168,7 @@ export default function ProfilePage() {
                 intersets: intersetList,
                 image: fileUpload ? fileUpload?.name : img,
             });
-
+            setCheckName(null);
             setShowAlert(true);
             setAlertMessage("Update profile successsfully");
             setAlertType("success");
@@ -279,11 +236,14 @@ export default function ProfilePage() {
 
     const uploadFile = async () => {
         if (!fileUpload) return;
-
+        if (!fileUpload.type.startsWith("image/")) {
+            setCheckFileUpload("Please upload only image.");
+        }
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
             await uploadBytes(filesFolderRef, fileUpload);
             // alert("file uploaded!");
+            setCheckFileUpload(null);
             setShowAlert(true);
             setAlertMessage("image uploaded successguly");
             setAlertType("success");
@@ -304,6 +264,22 @@ export default function ProfilePage() {
         } catch (err) {
             console.error(err);
         }
+    };
+
+    //the error message
+    const erroreMessage = (messageValidation) => {
+        return (
+            <div className='flex items-center'>
+                {messageValidation ? (
+                    <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                        <span className='text-white font-bold text-xs'>!</span>
+                    </div>
+                ) : (
+                    ""
+                )}
+                <span className='text-red-500'>{messageValidation}</span>
+            </div>
+        );
     };
 
     useEffect(() => {
@@ -366,6 +342,7 @@ export default function ProfilePage() {
                         accept='image/x-png,image/gif,image/jpeg'
                         className='rounded sm:w-64 w-52 font-Rubik sm:text-xl border border-r-2 border-b-2 border-black font-medium'
                     />
+                    {erroreMessage(checkFileUpload)}
                 </div>
             </div>
 
@@ -381,6 +358,7 @@ export default function ProfilePage() {
                         placeholder='Name'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
                     />
+                    {erroreMessage(checkName)}
                 </div>
                 <div className='flex flex-col'>
                     <label className='text-xl font-Rubik font-medium tracking-wide'>
@@ -436,7 +414,18 @@ export default function ProfilePage() {
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
                         Change Password{" "}
-                        <div className='text-red-500 text-center'>{error}</div>
+                        <div className='flex items-center'>
+                            {message ? (
+                                <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                                    <span className='text-white font-bold text-xs'>
+                                        !
+                                    </span>
+                                </div>
+                            ) : (
+                                ""
+                            )}
+                            <span className='text-red-500'>{message}</span>
+                        </div>
                     </h1>
                 </div>
 
