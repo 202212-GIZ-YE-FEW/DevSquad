@@ -9,6 +9,7 @@ import {
     where,
 } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
+import { useTranslation } from "next-i18next";
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -20,8 +21,10 @@ import EventImage from "../../components/EventImage/index";
 import { auth, db, storage } from "../../../config/firebase";
 
 export default function ProfilePage() {
+    const { t } = useTranslation("common");
+
     const titles = [
-        "No Poverty",
+        "noPoverty ",
         "Good Health And Well-Being",
         "Quality Education",
         "Gender Equality",
@@ -261,7 +264,7 @@ export default function ProfilePage() {
             <div className='flex flex-col sm:m-0 m-2 md:w-5/6'>
                 <div className='flex flex-row sm:justify-start justify-center'>
                     <h1 className='text-2xl font-Rubik font-medium tracking-wide'>
-                        Edit Profile
+                        {t("profilepage.editProfile")}
                     </h1>
                 </div>
                 <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
@@ -283,7 +286,7 @@ export default function ProfilePage() {
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
-                        label='Uplaod New'
+                        label={t("profilepage.uploadNew")}
                         fontSize='text-xl'
                         onClick={() => {
                             uploadFile();
@@ -317,25 +320,25 @@ export default function ProfilePage() {
             <div className='flex flex-col w-5/6 space-y-4'>
                 <div className='flex flex-col'>
                     <label className='text-xl font-Rubik font-medium tracking-wide'>
-                        Name (Required)
+                        {t("profilepage.nameRequired")}
                     </label>
                     <Inputcomponent
                         onChange={(event) => setNewName(event.target.value)}
                         value={newName}
                         type='text'
-                        placeholder='Name'
+                        placeholder={t("profilepage.placeholderName")}
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
                     />
                 </div>
                 <div className='flex flex-col'>
                     <label className='text-xl font-Rubik font-medium tracking-wide'>
-                        Your Location
+                        {t("profilepage.yourLocation")}
                     </label>
                     <Inputcomponent
                         onChange={(e) => setNewLocation(e.target.value)}
                         value={newLocation}
                         type='text'
-                        placeholder='Location'
+                        placeholder={t("profilepage.placeholderLocation")}
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
                     />
                 </div>
@@ -343,7 +346,7 @@ export default function ProfilePage() {
             <div className='sm:m-6 m-2'>
                 <div className='flex flex-row sm:justify-start justify-center mb-3'>
                     <h1 className='text-2xl font-Rubik font-medium'>
-                        Your Interests
+                        {t("profilepage.yourInterests")}
                     </h1>
                 </div>
 
@@ -371,7 +374,7 @@ export default function ProfilePage() {
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
-                        label='Save Changes'
+                        label={t("profilepage.saveChanges")}
                         fontSize='text-xl'
                         onClick={updateuser}
                     />
@@ -380,7 +383,7 @@ export default function ProfilePage() {
             <div className='flex flex-col items-center bg-slate-300 rounded-lg sm:p-7 p-1'>
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
-                        Change Password{" "}
+                        {t("profilepage.changePassword")}{" "}
                         <div className='text-red-500 text-center'>{error}</div>
                     </h1>
                 </div>
@@ -388,14 +391,14 @@ export default function ProfilePage() {
                 <div className='flex justify-center flex-col sm:flex-row'>
                     <Inputcomponent
                         type='password'
-                        placeholder='Password'
+                        placeholder={t("profilepage.newPassword")}
                         className='border border-black rounded p-3 w-48 m-4'
                         onChange={(e) => setPasswordOne(e.target.value)}
                         value={passwordOne}
                     />
                     <Inputcomponent
                         type='password'
-                        placeholder='Retype Password'
+                        placeholder={t("profilepage.confirmPassword")}
                         className='border border-black rounded p-3 w-48 m-4'
                         onChange={(e) => setPasswordTwo(e.target.value)}
                         value={passwordTwo}
@@ -408,7 +411,7 @@ export default function ProfilePage() {
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
-                        label='Submit'
+                        label={t("profilepage.submit")}
                         fontSize='text-xl'
                         onClick={() => {
                             restPassword();
@@ -419,7 +422,7 @@ export default function ProfilePage() {
                         borderRaduis='rounded'
                         width='w-40'
                         height='h-14'
-                        label='Cancel'
+                        label={t("profilepage.cancel")}
                         fontSize='text-xl'
                         border='border border-r-2 border-b-2'
                         borderColor='border-black'

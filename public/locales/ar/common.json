@@ -52,7 +52,7 @@
         "nextmonth": "الشهر القادم"
     },
     "signup": {
-        "signUp": "إنشاء حساب جديد",
+        "signUp": "إنشاء حساب ",
         "signWithTwitter": "تسجيل الدخول بواسطة تويتر",
         "signWithGoogle": "تسجيل الدخول بواسطة جوجل",
         "name": "الاسم",
@@ -63,5 +63,80 @@
         "signIn": " تسجيل الدخول ",
         "or": "أو",
         "confirmpassword": "تأكيد كلمة المرور"
+    },"profilepage":{
+        "editProfile": "تعديل الملف الشخصي",
+        "uploadNew": "تحميل صورة جديدة",
+        "saveChanges": "حفظ التغييرات",
+        "nameRequired": "الاسم (مطلوب)",
+        "yourLocation": "موقعك",
+        "placeholderName": "اسم",
+        "placeholderLocation": "موقع",
+        "yourInterests": "اهتماماتك",
+        "changePassword": "تغيير كلمة المرور",
+        "newPassword": "كلمة مرور جديدة",
+        "confirmPassword": "تأكيد كلمة المرور",
+        "cancel": "إِلغاء",
+        "submit": "إِرسال"
+        },
+    "eventcreation":{  
+    "chooseLocation": "اختر الموقع",
+    "chooseyourLocation":"اختر موقعك",
+    "saveChange":"حفظ التغييرات",
+    "close":"إِغلاق",
+    "locationPlaceholder": "المدينة",
+    "changeLocation": "تغيير الموقع",
+    "locationDescription": "يمكن أن تكون فعاليات Pebble محلية أو عبر الإنترنت. اختر المكان الذي تريد استضافة حدثك فيه.",
+    "EventType": {
+        "eventTypeTitle": "اختر نوع الحدث",
+        "EventTypeDescription": "يجب أن يخدم كل حدث هدفًا واحدًا على الأقل من أهداف التنمية المستدامة للأمم المتحدة. أي هدف تريد المساعدة في تحقيقه؟ حدد كل ما ينطبق."
+    },
+    "CreateEventInfo": {
+        "eventTitle": "عنوان الحدث:",
+        "eventTitleDescription": "اختر عنوانًا سيعطي الناس فكرة واضحة عما يتعلق الحدث. لا تتردد في الإبداع! يمكنك تعديل هذا لاحقًا إذا قررت التغيير.",
+        "eventTitlePlaceholder": "أدخل عنوان الحدث هنا",
+        "eventDate": "تاريخ الحدث:",
+        "ChooseEventDate":"اختر تاريخ الحدث",
+        "eventTime": "وقت الحدث:",
+        "ChooseEventTime":"اختر وقت الحدث", 
+        "eventDescriptionHeading": "وصف الحدث:",
+        "eventDescriptionText": "صف الغرض من الحدث. من يجب أن ينضم وماذا ستفعل في الحدث؟",
+        "eventDescriptionPlaceholder": "يرجى كتابة ما لا يقل عن 50 حرفًا",
+        "eventImageHeading": "صورة الحدث:",
+        "eventImageText": "وجدنا أن القوائم التي تحتوي على صورة تجذب المزيد من الاهتمام."
+    },
+    "Guidelines": {
+        "guidelinesHeading": "تقريبًا تم! فقط خذ دقيقة لمراجعة إرشاداتنا.",
+        "guidelinesText": "يتعلق Pebble بمساعدة الناس بمساعدة المتطوعين مثلك. وهذا يعني أن جميع الأحداث يجب أن تكون:",
+        "list1": "كن شفافًا حول نوايا الحدث.",
+        "list2": "شجع التفاعلات الإنسانية الحقيقية وجهًا لوجه أو عبر الإنترنت.",
+        "list3": "يجب أن يكون المضيف متواجدًا في جميع الأحداث.",
+        "guidelinesCommunity": "يمكنك قراءة المزيد عن كل هذا في .",
+        "guidelinesLink": "إرشادات مجتمعنا.",
+        "submitButton": "موافق على الشروط وإنشاء الحدث!"
+    }
+
+    },
+    "pagination":{
+        "page":"الصفحات"
+    },
+    "eventlist":{
+        "welcome":"مرحبا",
+        "explore":"تصفح و انظم للفعاليات",
+        "changeInterest":"تغيير الاهتمام",
+        "changeLocation":"تغيير الموقع",
+        "changeDate":"تغيير التاريخ"
+    },
+    "eventview":{
+        "attendance":"الحضور",
+        "organizedBy":" تم تنظيمه عن طريق",
+        "eventDescription":"وصف الحدث:"
+        
+    },
+    "eventinterest":{
+        "pick":"اختر اهتماماتك",
+        "changeInterset":"تغيير الاهتمام"
+    },
+    "location":{
+        "changeLocation":"تغيير الموقع"
     }
 }

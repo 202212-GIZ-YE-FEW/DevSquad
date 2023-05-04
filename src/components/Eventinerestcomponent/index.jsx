@@ -1,5 +1,9 @@
+import { useTranslation } from "next-i18next";
+
 import Checkboxcomponent from "../Checkboxcomponent";
+
 const Eventinerestcomponent = (props) => {
+    const { t } = useTranslation("common");
     const titles = [
         "All",
         "No Poverty",
@@ -26,10 +30,10 @@ const Eventinerestcomponent = (props) => {
             <div className='md:w-64 sm:w-56 w-full bg-white sm:h-full h-[50%] overflow-auto scrollbar fixed sm:static sm:z-0 z-50 top-1/2 left-1/2 sm:transform-none transform -translate-x-1/2 shadow-inner sm:shadow-none shadow-gray-700 rounded-lg'>
                 <div className='grid grid-cols-1 gap-2 '>
                     <p className='font-medium font-Rubik underline text-center sm:block hidden'>
-                        Pick Your Interest
+                        {t("eventinterest.pick")}
                     </p>
                     <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
-                        Change Interset
+                        {t("eventinterest.changeInterset")}
                     </p>
                     {titles &&
                         titles.map((value, index) => {

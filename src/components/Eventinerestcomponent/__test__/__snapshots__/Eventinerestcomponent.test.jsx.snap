@@ -10,12 +10,12 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium font-Rubik underline text-center sm:block hidden"
     >
-      Pick Your Interest
+      eventinterest.pick
     </p>
     <p
       className="font-medium font-Rubik text-center block sm:hidden text-lg my-2"
     >
-      Change Interset
+      eventinterest.changeInterset
     </p>
     <div>
       <label
