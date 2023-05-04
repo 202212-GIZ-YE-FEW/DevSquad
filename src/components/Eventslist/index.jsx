@@ -1,6 +1,5 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import Alertcomponent from "../Alertcomponent";
@@ -588,24 +587,19 @@ const Eventslist = (props) => {
                 <div className='sm:col-span-2 col-span-3'>
                     {paginatedPosts.map((event) => {
                         return (
-                            <Link
-                                key={event.id}
-                                href={`/eventPage/${event.id}`}
-                            >
-                                <div className='sm:order-1 order-2'>
-                                    <Eventcard
-                                        key={event.id}
-                                        eventImage={event.eventImage}
-                                        eventDate={event.eventDate}
-                                        eventDetails={event.description}
-                                        eventTitle={event.title}
-                                        eventAttendance={event.id}
-                                        onClick={() => {
-                                            joinEvent(event.id);
-                                        }}
-                                    />
-                                </div>
-                            </Link>
+                            <div key={event.id} className='sm:order-1 order-2'>
+                                <Eventcard
+                                    key={event.id}
+                                    eventImage={event.eventImage}
+                                    eventDate={event.eventDate}
+                                    eventDetails={event.description}
+                                    eventTitle={event.title}
+                                    eventAttendance={event.id}
+                                    onClick={() => {
+                                        joinEvent(event.id);
+                                    }}
+                                />
+                            </div>
                         );
                     })}
                     <div className='md:order-2 order-1 text-center md:text-start'>
