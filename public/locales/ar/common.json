@@ -151,6 +151,7 @@
         "changeLocation": "تغيير الموقع"
     },
     "eventcard": {
-        "attendance": "الحاضرين",  
-        "join":"انضمام"  }
+        "attendance": "الحاضرين",
+        "join": "انضمام"
+    }
 }

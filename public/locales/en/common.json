@@ -148,7 +148,7 @@
         "changeLocation": "Change Location"
     },
     "eventcard": {
-        "attendance": "Attendance",  
-        "join":"Join"  }
-
+        "attendance": "Attendance",
+        "join": "Join"
+    }
 }
