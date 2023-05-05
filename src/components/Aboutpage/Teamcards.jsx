@@ -9,8 +9,6 @@ const Teamcards = ({ name, github, linkedin, instagram, imageLink }) => {
                         <Image
                             src={imageLink}
                             alt='User'
-                            // width={200}
-                            // height={150}
                             className='w-full w-100% h-100'
                             objectFit='cover'
                             layout='fill'

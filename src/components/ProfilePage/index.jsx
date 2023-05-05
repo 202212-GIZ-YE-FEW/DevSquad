@@ -37,22 +37,13 @@ export default function ProfilePage() {
         "Peace And Justice And Strong Institutions",
     ];
 
-    //##
-    // const router = useRouter(); // Getting the router instance
-    // onAuthStateChanged(auth, (user) => {
-    //     if (!user) {
-    //         // If the user is authenticated
-    //         router.push("/"); // Redirect to homepage
-    //     }
-
-    // });
-
     const [img, setImg] = useState("");
 
     const [message, setMessage] = useState(null);
     const [newName, setNewName] = useState("");
     const [checkName, setCheckName] = useState(null);
     const [newLocation, setNewLocation] = useState("");
+    // make all the checkboxes (titles) false
     const [checkedState, setCheckedState] = useState(
         new Array(titles.length).fill(false)
     );
@@ -95,6 +86,7 @@ export default function ProfilePage() {
             setMessage("Enter correct password");
         } else {
             if (passwordOne === passwordTwo) {
+                // get the currentUser and change its passowrd using updatePassword from firebase/auth
                 updatePassword(auth.currentUser, passwordTwo).then(
                     () => {
                         // console.log("done");
@@ -157,15 +149,19 @@ export default function ProfilePage() {
     };
 
     const updateUserInfo = async (id) => {
+        // check if the user entered the name which is required
         if (!newName) {
             setCheckName("Name is required");
         } else {
+            // go the user collection and use the doc id go the spesific doc and update the data
             const userDoc = doc(db, "users", id);
 
             await updateDoc(userDoc, {
+                // if the user did not change the name user the current name
                 name: newName ? newName : auth?.currentUser?.displayName,
                 location: newLocation,
                 intersets: intersetList,
+                // if the user did not change the image use the name to get the first letter of the name
                 image: fileUpload ? fileUpload?.name : img,
             });
             setCheckName(null);
@@ -190,41 +186,53 @@ export default function ProfilePage() {
     };
 
     const updateuser = async () => {
+        // go to db and get all info of users collection
         const usersCollectionRef = collection(db, "users");
+        // get the info where the user id equal to current user id
         const q = query(
             usersCollectionRef,
             where("uid", "==", auth.currentUser.uid)
         );
+        // get docs for that specific user
         const data = await getDocs(q);
+        // get the id and info
         const filteredData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
+        // send the id to updateUserInfo function of the doc to update the user info
         updateUserInfo(filteredData[0]?.id);
     };
 
     const showImg = async () => {
+        // get the collection of users
         const usersCollectionRef = collection(db, "users");
+        // get the user info where the id equal the current user id
         const q = query(
             usersCollectionRef,
             where("uid", "==", auth?.currentUser?.uid)
         );
+        // get the doc of that user
         const data = await getDocs(q);
         const filteredData = data.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
         }));
+        // get the image in the db if there is an image
         setImg(filteredData[0]?.image);
-        // console.log(img);
     };
 
     const handleOnChange = (position) => {
+        // get all the titles with thier state
         const updatedCheckedState = checkedState.map((item, index) =>
+            // if index equal the spesific position change the state
             index === position ? !item : item
         );
+        // add all the titles that have a true state to checkedState using setCheckedState
         setCheckedState(updatedCheckedState);
         let x = [];
 
+        // add all the true items to x for stroing interset in db
         updatedCheckedState.map((item, index) => {
             if (item === true) {
                 x.push(titles[index]);
@@ -235,12 +243,14 @@ export default function ProfilePage() {
     };
 
     const uploadFile = async () => {
+        // if there is no file return null
         if (!fileUpload) return;
         if (!fileUpload.type.startsWith("image/")) {
             setCheckFileUpload("Please upload only image.");
         }
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
+            // add the location where the image is to be upload
             await uploadBytes(filesFolderRef, fileUpload);
             // alert("file uploaded!");
             setCheckFileUpload(null);
@@ -283,6 +293,7 @@ export default function ProfilePage() {
     };
 
     useEffect(() => {
+        // if the user auth add the user image
         onAuthStateChanged(auth, (user) => {
             user ? showImg() : "";
         });
@@ -297,13 +308,14 @@ export default function ProfilePage() {
                     </h1>
                 </div>
                 <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
-                    <div class=' inline-flex items-center justify-center w-36 h-36 bg-black rounded-full'>
+                    <div class=' inline-flex items-center justify-center w-32 h-32 bg-black rounded-full'>
                         {img ? (
                             <EventImage
                                 pic={img}
                                 className='inline-flex  w-36 h-36 bg-black rounded-full'
                             />
                         ) : (
+                            // if there is no image get the first letter in the email
                             <span class='text-4xl text-white'>
                                 {auth.currentUser?.email[0]}
                             </span>
@@ -322,23 +334,9 @@ export default function ProfilePage() {
                         }}
                     />
 
-                    {/* <Buttoncomponent
-                        type="file"
-                        borderRaduis='rounded'
-
-                        width='sm:w-64 w-52'
-                        height='h-14'
-                        label='Choose from Library'
-                        fontSize='sm:text-xl text-lg'
-                        border='border border-r-2 border-b-2'
-                        borderColor='border-black'
-                        fontWeight='font-medium'
-                    /> */}
-
                     <Inputcomponent
                         type='file'
                         onChange={(e) => setFileUpload(e.target.files[0])}
-                        //value={fileUpload}
                         accept='image/x-png,image/gif,image/jpeg'
                         className='rounded sm:w-64 w-52 font-Rubik sm:text-xl border border-r-2 border-b-2 border-black font-medium'
                     />
@@ -387,7 +385,9 @@ export default function ProfilePage() {
                                 <Checkboxcomponent
                                     key={title}
                                     title={title}
+                                    // send the index of the component to the function for storing interest
                                     onChange={() => handleOnChange(index)}
+                                    // base in index the color
                                     checked={checkedState[index]}
                                     view='hidden'
                                     afterChecked='flex items-center justify-center text-center border bg-primary-orange p-3 rounded font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20'

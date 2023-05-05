@@ -6,16 +6,20 @@ import CalendarComponent from "./CalendarComponent";
 
 export default function Calendar({ myDate }) {
     const { t } = useTranslation("common");
-
+    // is a built in object in js to get the date
     let d = new Date();
-
+    // to get the current year
     let year = d.getFullYear();
+    // to get the current month
     let month = d.getMonth();
+    // to send the selected date to Eventslist
     const hundelDate = (date) => {
         myDate(date);
     };
+    // set date to the current month
     const [date, setDate] = useState(month);
     const daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    // an array of object to display all months
     const months = [
         {
             id: 1,
@@ -115,11 +119,14 @@ export default function Calendar({ myDate }) {
         },
     ];
 
+    // once the user click the button it will return the user to the current month
     function handleThisMonth() {
         return setDate(month);
     }
 
+    // every time the user click on the button the user will move between the months
     function handleNexMonth() {
+        // if the user reach the 12 it will return to 1
         if (date === 11) {
             return setDate(0);
         } else {

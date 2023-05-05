@@ -5,6 +5,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
     const pagesCount = Math.ceil(items / pageSize); // number of events in db/2
 
     if (pagesCount === 1) return null;
+    // start the paginatiton from the 1 to the length of the pages based on the number of events
     const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
     return (
         <>
@@ -59,7 +60,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
                     )}
                 </li>
 
-                <div className='overflow-hidden w-1/2 flex flex-row'>
+                <div className='overflow-hidden sm:w-full flex flex-row'>
                     {pages.map((page) => (
                         <li
                             key={page}

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db, auth } from "../../../config/firebase";
 import { useRouter } from "next/router";
-// import Pagination from "./Pagination";
 import Eventcard from "../Eventcard";
 import Link from "next/link";
 import Alertcomponent from "../Alertcomponent";
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 // this number of recoded
-// let PageSize = 2;
+// PageSize = 2;
 
 const PaginationComponent = () => {
     // alert
@@ -29,6 +28,16 @@ const PaginationComponent = () => {
             />
         </svg>
     );
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            // After 3 seconds set the show value to false
+            setShowAlert(false);
+        }, 4000);
+
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, [showAlert]);
     // const data = [
     //     {
     //         id: 999,
@@ -74,12 +83,13 @@ const PaginationComponent = () => {
 
     const getEventList = async () => {
         try {
+            // get the docs of of event in events collection
             const data = await getDocs(eventCollectionRef);
             const filteredData = data.docs.map((doc) => ({
                 ...doc.data(),
                 id: doc.id,
             }));
-
+            // store the data in eventList useState as an array
             setEventList(filteredData);
         } catch (err) {
             console.error(err);
@@ -88,6 +98,7 @@ const PaginationComponent = () => {
     const [isAuth, setIsAuth] = useState(null);
 
     onAuthStateChanged(auth, (user) => {
+        // if the user is auth set isAuth to the current user email if not set isAuth to null
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
     // const joinEvent = async (id) => {
@@ -108,46 +119,12 @@ const PaginationComponent = () => {
     // };
     const joinEvent = async (id) => {
         try {
-            if (!isAuth) {
-                alert("Sign in to your account to join this event.");
-                return;
-            }
-
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
-
-            // Check if the user has already attended the event
-            const querySnapshot = await getDocs(
-                query(
-                    attendEventRef,
-                    where("userId", "==", auth.currentUser.uid)
-                )
-            );
-
-            if (!querySnapshot.empty) {
-                // alert("You have already attended this event.");
-                setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
-                setAlertType("info");
-                setAlertIcon(
-                    <svg
-                        fill='none'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'
-                        class='w-5 h-5 mr-2 text-white'
-                    >
-                        <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'></path>
-                    </svg>
-                );
-                return;
-            }
-
-            // If the user has not already attended the event, add their attendance
-            await addDoc(attendEventRef, {
-                userId: auth.currentUser.uid,
-            });
+            isAuth
+                ? await addDoc(attendEventRef, {
+                      userId: auth.currentUser.uid,
+                  })
+                : router.push("/signin");
 
             // alert("You have joined the event!");
             setShowAlert(true);
@@ -171,17 +148,6 @@ const PaginationComponent = () => {
             console.error(err);
         }
     };
-    useEffect(() => {
-        const timeId = setTimeout(() => {
-            // After 3 seconds set the show value to false
-            setShowAlert(false);
-        }, 4000);
-
-        return () => {
-            clearTimeout(timeId);
-        };
-    }, [showAlert]);
-
     useEffect(() => {
         getEventList();
     }, []);
@@ -211,6 +177,7 @@ const PaginationComponent = () => {
                 {eventList.map((item, index) => {
                     return (
                         <>
+                            {/* once is clicked go to the event page with the event id */}
                             <Link href={`/eventPage/${item.id}`}>
                                 <div className='sm:order-1 order-2'>
                                     <Eventcard
@@ -220,6 +187,7 @@ const PaginationComponent = () => {
                                         eventDetails={item.description}
                                         eventTitle={item.title}
                                         eventAttendance={item.id}
+                                        // once is clicked sent the event id to the joinEvent function
                                         onClick={() => {
                                             joinEvent(item.id);
                                         }}
