@@ -38,8 +38,10 @@ export default function ProfilePage() {
     ];
 
     const [img, setImg] = useState("");
-    const [error, setError] = useState(null);
+
+    const [message, setMessage] = useState(null);
     const [newName, setNewName] = useState("");
+    const [checkName, setCheckName] = useState(null);
     const [newLocation, setNewLocation] = useState("");
     // make all the checkboxes (titles) false
     const [checkedState, setCheckedState] = useState(
@@ -47,6 +49,7 @@ export default function ProfilePage() {
     );
     const [intersetList, setIntersetList] = useState([]);
     const [fileUpload, setFileUpload] = useState(null);
+    const [checkFileUpload, setCheckFileUpload] = useState("");
     const [passwordOne, setPasswordOne] = useState("");
     const [passwordTwo, setPasswordTwo] = useState("");
     const [showAlert, setShowAlert] = useState(false);
@@ -79,96 +82,106 @@ export default function ProfilePage() {
 
     //rest password
     const restPassword = async () => {
-        if (passwordOne === passwordTwo) {
-            // get the currentUser and change its passowrd using updatePassword from firebase/auth
-            updatePassword(auth.currentUser, passwordTwo).then(
-                () => {
-                    // console.log("done");
-                    // alert("update password successfully");
-                    setShowAlert(true);
-                    setAlertMessage("update password successfully");
-                    setAlertType("success");
-                    setAlertIcon(
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 24 24'
-                            fill='currentColor'
-                            class='h-5 w-5'
-                        >
-                            <path
-                                fill-rule='evenodd'
-                                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                                clip-rule='evenodd'
-                            />
-                        </svg>
-                    );
-                },
-                (error) => {
-                    setError(error);
-                }
-            );
+        if (!passwordOne || !passwordTwo) {
+            setMessage("Enter correct password");
         } else {
-            setError("password is not match");
+            if (passwordOne === passwordTwo) {
+                // get the currentUser and change its passowrd using updatePassword from firebase/auth
+                updatePassword(auth.currentUser, passwordTwo).then(
+                    () => {
+                        // console.log("done");
+                        // alert("update password successfully");
+                        setMessage(null);
+                        setShowAlert(true);
+                        setAlertMessage("update password successfully");
+                        setAlertType("success");
+                        setAlertIcon(
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                viewBox='0 0 24 24'
+                                fill='currentColor'
+                                class='h-5 w-5'
+                            >
+                                <path
+                                    fill-rule='evenodd'
+                                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                                    clip-rule='evenodd'
+                                />
+                            </svg>
+                        );
+                    },
+                    (error) => {
+                        setMessage(error);
+                    }
+                );
+            } else {
+                setMessage("Password is not match");
+            }
         }
     };
 
     //Cancel Button
     const clear = async () => {
-        setPasswordOne(null);
-        setPasswordTwo(null);
+        if (passwordOne || passwordTwo) {
+            setMessage(null);
+            setPasswordOne(null);
+            setPasswordTwo(null);
+            setShowAlert(true);
+            setAlertMessage("Cancel update password");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
+        }
 
-        // console.log("done");
-        // alert("cancel update password");
-        setShowAlert(true);
-        setAlertMessage("cancel update password");
-        setAlertType("success");
-        setAlertIcon(
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='currentColor'
-                class='h-5 w-5'
-            >
-                <path
-                    fill-rule='evenodd'
-                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                    clip-rule='evenodd'
-                />
-            </svg>
-        );
+        message ? setMessage(null) : "";
     };
 
     const updateUserInfo = async (id) => {
-        // go the user collection and use the doc id go the spesific doc and update the data
-        const userDoc = doc(db, "users", id);
+        if (!newName) {
+            setCheckName("Name is required");
+        } else {
+            // go the user collection and use the doc id go the spesific doc and update the data
+            const userDoc = doc(db, "users", id);
 
-        await updateDoc(userDoc, {
-            // if the user did not change the name user the current name
-            name: newName ? newName : auth?.currentUser?.displayName,
-            location: newLocation,
-            intersets: intersetList,
-            // if the user did not change the image use the name to get the first letter of the name
-            image: fileUpload ? fileUpload?.name : img,
-        });
-        // uploadFile();
-        // alert("update profile successsfully");
-        setShowAlert(true);
-        setAlertMessage("update profile successsfully");
-        setAlertType("success");
-        setAlertIcon(
-            <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='currentColor'
-                class='h-5 w-5'
-            >
-                <path
-                    fill-rule='evenodd'
-                    d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
-                    clip-rule='evenodd'
-                />
-            </svg>
-        );
+            await updateDoc(userDoc, {
+                // if the user did not change the name user the current name
+                name: newName ? newName : auth?.currentUser?.displayName,
+                location: newLocation,
+                intersets: intersetList,
+                // if the user did not change the image use the name to get the first letter of the name
+                image: fileUpload ? fileUpload?.name : img,
+            });
+            setCheckName(null);
+            setShowAlert(true);
+            setAlertMessage("Update profile successsfully");
+            setAlertType("success");
+            setAlertIcon(
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    class='h-5 w-5'
+                >
+                    <path
+                        fill-rule='evenodd'
+                        d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z'
+                        clip-rule='evenodd'
+                    />
+                </svg>
+            );
+        }
     };
 
     const updateuser = async () => {
@@ -231,13 +244,15 @@ export default function ProfilePage() {
     const uploadFile = async () => {
         // if there is no file return null
         if (!fileUpload) return;
-
-        // Create a reference to where the image is to be saved
+        if (!fileUpload.type.startsWith("image/")) {
+            setCheckFileUpload("Please upload only image.");
+        }
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
             // add the location where the image is to be upload
             await uploadBytes(filesFolderRef, fileUpload);
             // alert("file uploaded!");
+            setCheckFileUpload(null);
             setShowAlert(true);
             setAlertMessage("image uploaded successguly");
             setAlertType("success");
@@ -258,6 +273,22 @@ export default function ProfilePage() {
         } catch (err) {
             console.error(err);
         }
+    };
+
+    //the error message
+    const erroreMessage = (messageValidation) => {
+        return (
+            <div className='flex items-center'>
+                {messageValidation ? (
+                    <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                        <span className='text-white font-bold text-xs'>!</span>
+                    </div>
+                ) : (
+                    ""
+                )}
+                <span className='text-red-500'>{messageValidation}</span>
+            </div>
+        );
     };
 
     useEffect(() => {
@@ -308,6 +339,7 @@ export default function ProfilePage() {
                         accept='image/x-png,image/gif,image/jpeg'
                         className='rounded sm:w-64 w-52 font-Rubik sm:text-xl border border-r-2 border-b-2 border-black font-medium'
                     />
+                    {erroreMessage(checkFileUpload)}
                 </div>
             </div>
 
@@ -323,6 +355,7 @@ export default function ProfilePage() {
                         placeholder='Name'
                         className='border border-black rounded p-3 md:w-3/6 mt-2 mb-2'
                     />
+                    {erroreMessage(checkName)}
                 </div>
                 <div className='flex flex-col'>
                     <label className='text-xl font-Rubik font-medium tracking-wide'>
@@ -380,7 +413,18 @@ export default function ProfilePage() {
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
                         Change Password{" "}
-                        <div className='text-red-500 text-center'>{error}</div>
+                        <div className='flex items-center'>
+                            {message ? (
+                                <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                                    <span className='text-white font-bold text-xs'>
+                                        !
+                                    </span>
+                                </div>
+                            ) : (
+                                ""
+                            )}
+                            <span className='text-red-500'>{message}</span>
+                        </div>
                     </h1>
                 </div>
 
