@@ -365,7 +365,6 @@ exports[`renders correctly 1`] = `
         className="text-2xl font-Rubik font-medium"
       >
         profilepage.changePassword
-         
         <div
           className="flex items-center"
         >

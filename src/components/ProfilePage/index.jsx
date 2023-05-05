@@ -416,7 +416,7 @@ export default function ProfilePage() {
             <div className='flex flex-col items-center bg-slate-300 rounded-lg sm:p-7 p-1'>
                 <div className='flex flex-row sm:justify-start justify-center mb-3 mt-2 sm:mt-0 sm:w-full'>
                     <h1 className='text-2xl font-Rubik font-medium'>
-                         {t("profilepage.changePassword")}
+                        {t("profilepage.changePassword")}
                         <div className='flex items-center'>
                             {message ? (
                                 <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
