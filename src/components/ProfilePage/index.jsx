@@ -149,6 +149,7 @@ export default function ProfilePage() {
     };
 
     const updateUserInfo = async (id) => {
+        // check if the user entered the name which is required
         if (!newName) {
             setCheckName("Name is required");
         } else {
