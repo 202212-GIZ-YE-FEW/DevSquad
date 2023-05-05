@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik "
+  className="border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik w-full"
 >
   <div
     className="flex md:justify-between md:flex-row flex-col justify-center items-center"
@@ -42,7 +42,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="col-span-2 flex flex-col w-80 sm:w-full"
+      className="col-span-2 flex flex-col"
     >
       <a
         href="/eventPage/undefined"
@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
         />
       </a>
       <p
-        className="font-normal text-ellipsis overflow-hidden"
+        className="font-normal text-ellipsis overflow-hidden  w-80 sm:w-full"
       />
       <div
         className="flex justify-end py-5"

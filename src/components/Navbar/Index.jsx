@@ -9,9 +9,10 @@ import EventImage from "../../components/EventImage/index";
 import { auth, db } from "../../../config/firebase";
 const UnauthNav = () => {
     const [navbar, setNavbar] = useState(false);
-    // const [langMenue, setLangmenue] = useState(false);
+    // for translation
     const { t } = useTranslation("common");
     const { asPath } = useRouter();
+    // for translation
     const { i18n } = useTranslation();
 
     return (
@@ -19,6 +20,7 @@ const UnauthNav = () => {
             <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-6'>
                 <div>
                     <div className='flex items-center justify-between py-3 md:py-5 md:block'>
+                        {/* for phone design to show the dorpdown menu */}
                         <div className='md:hidden'>
                             <button
                                 className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
@@ -55,6 +57,7 @@ const UnauthNav = () => {
                                 )}
                             </button>
                         </div>
+                        {/* logos */}
                         <Link href='/'>
                             <svg
                                 viewBox='0 0 216 70'
@@ -117,6 +120,7 @@ const UnauthNav = () => {
                     >
                         <ul className='items-center justify-center md:flex  border border-1 border-black md:border-none'>
                             <li className='p-4 md:border-none border border-b-1 border-black hover:bg-primary-orange hover:text-white '>
+                                {/* signup button */}
                                 <Link
                                     href='/signup'
                                     className='w-20 h-7 border py-2.5 px-4 border-black border-b-4 border-r-4 rounded-lg text-black bg-white text-xl'
@@ -125,6 +129,7 @@ const UnauthNav = () => {
                                 </Link>
                             </li>
                             <li className='p-4 md:border-none border border-b-1 border-black hover:bg-primary-orange hover:text-white '>
+                                {/* signup button */}
                                 <Link
                                     href='/signin'
                                     className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl  '
@@ -133,6 +138,7 @@ const UnauthNav = () => {
                                 </Link>
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
+                                {/* language statue button */}
                                 {i18n.language === "en" ? (
                                     <Link
                                         href={asPath}
@@ -194,12 +200,15 @@ const UnauthNav = () => {
 
 const AuthNav = ({ logout }) => {
     const [navbar, setNavbar] = useState(false);
+    // to show the dropdown menu
     const [profilenav, setProfilenav] = useState(false);
     const { t } = useTranslation("common");
     const { asPath } = useRouter();
     const { i18n } = useTranslation();
+    // to get the image in db
     const [img, setImg] = useState("");
 
+    // to get the image of the user from the database
     const showImg = async () => {
         const usersCollectionRef = collection(db, "users");
         const q = query(
@@ -226,6 +235,7 @@ const AuthNav = ({ logout }) => {
                 <div>
                     <div className='flex items-center justify-between py-3 md:py-5 md:block'>
                         <div className='md:hidden'>
+                            {/* buttom for responsiveness */}
                             <button
                                 className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
                                 onClick={() => setNavbar(!navbar)}
@@ -261,6 +271,7 @@ const AuthNav = ({ logout }) => {
                                 )}
                             </button>
                         </div>
+                        {/* logo */}
                         <Link href='/'>
                             <svg
                                 viewBox='0 0 216 70'
@@ -310,7 +321,7 @@ const AuthNav = ({ logout }) => {
                                 />
                             </svg>
                         </Link>
-                        {/* signin profile menue */}
+                        {/* signin profile menue for phone*/}
                         <div className=' lg:hidden md:hidden flex'>
                             {img ? (
                                 <EventImage
@@ -319,6 +330,7 @@ const AuthNav = ({ logout }) => {
                                     onClick={() => setProfilenav(!profilenav)}
                                 />
                             ) : (
+                                // temprary profile image
                                 <svg
                                     width='50'
                                     height='50'
@@ -339,6 +351,7 @@ const AuthNav = ({ logout }) => {
                                     />
                                 </svg>
                             )}
+                            {/* ask if it's not important */}
                             <button
                                 className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
                                 onClick={() => setProfilenav(!profilenav)}
@@ -383,6 +396,7 @@ const AuthNav = ({ logout }) => {
                             navbar ? "block" : "hidden"
                         }`}
                     >
+                        {/* the signed menu */}
                         <ul className='items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10 border border-1 border-black md:border-none'>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange hover:text-white text-lg md:text-white text-black '>
                                 <Link href='/events'>{t("Navbar.Events")}</Link>
@@ -393,6 +407,7 @@ const AuthNav = ({ logout }) => {
                                 </Link>
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
+                                {/* for language in signin */}
                                 {i18n.language === "en" ? (
                                     <Link
                                         href={asPath}
@@ -446,6 +461,7 @@ const AuthNav = ({ logout }) => {
                             </li>
 
                             <div className='hidden  md:block lg:block'>
+                                {/* for the desktop and table or phone profile either with image or not */}
                                 {img ? (
                                     <EventImage
                                         pic={img}
@@ -529,6 +545,7 @@ const AuthNav = ({ logout }) => {
 };
 
 const Navbar = () => {
+    // to know wether the user is authnticate or not
     const [isAuth, setIsAuth] = useState(true);
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -545,6 +562,7 @@ const Navbar = () => {
             // console.error(err);
         }
     };
+    // depond on this condition witch navbar will appear
     return <div>{isAuth ? <AuthNav logout={logout} /> : <UnauthNav />}</div>;
 };
 

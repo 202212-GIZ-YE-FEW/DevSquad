@@ -11,6 +11,7 @@ import LocationComponent from "../LocationComponent";
 import paginate from "../PaginationComponent/paginate";
 import Pagination from "../PaginationComponent/Pagination";
 import { auth, db } from "../../../config/firebase";
+// get the events and users collection
 let eventsCollectionRef = collection(db, "events");
 const usersCollectionRef = collection(db, "users");
 const Eventslist = (props) => {
@@ -44,7 +45,7 @@ const Eventslist = (props) => {
             clearTimeout(timeId);
         };
     }, [showAlert]);
-    //
+    // for the responsiveness of the phone to show the location, calendar and interset
     const [isOpencalender, setIsOpencalender] = useState(false);
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
@@ -68,11 +69,12 @@ const Eventslist = (props) => {
         "Life On Land",
         "Peace And Justice And Strong Institutions",
     ];
-    /////////
+
     const [showModal, setShowModal] = useState(false);
     // const [location, setLocation] = useState("");
-    const [city, setCity] = useState("Izmer");
-    const [country, setCountry] = useState("");
+    const [city, setCity] = useState("City");
+    const [country, setCountry] = useState("Country");
+    // make all the checkboxes (titles) false
     const [checkedState, setCheckedState] = useState(
         new Array(titles.length).fill(false)
     );
@@ -87,17 +89,25 @@ const Eventslist = (props) => {
     // const getCountry = (param) => {
     //     setCountry(param);
     // };
+
+    // get all events from the events index
     const [entries, setEntries] = useState(props.items?.entries || []);
 
+    // the page we are in we use this for pagination
     const [currentPage, setCurrentPage] = useState(1);
+    // the sigle page can have only to events
     const pageSize = 2;
 
+    // set the currentPage with page selected
     const onPageChange = (page) => {
         setCurrentPage(page);
     };
 
+    // send to the paginate function the events , currentPage we are in and the page size which is 2
+    // it will the return the indexes of events to show
     const paginatedPosts = paginate(entries, currentPage, pageSize);
 
+    // use state for filtering based on interest, country , city and date
     const [eventFilters, setEventFilters] = useState({
         types: [],
         country: "",
@@ -106,11 +116,13 @@ const Eventslist = (props) => {
     });
 
     const hundelDate = (date) => {
+        // if the date is not empty set the date empty in eventFilters
         if (eventFilters.date != "") {
             setEventFilters({
                 ...eventFilters,
                 date: "",
             });
+            // if the date is empty set the date to selected date
         } else {
             setEventFilters({
                 ...eventFilters,
@@ -146,24 +158,31 @@ const Eventslist = (props) => {
     };
 
     const getFilters = async () => {
+        // get the events collection
         let myQ = eventsCollectionRef;
 
+        // if there is interests and is bigger than 0 then
         if (eventFilters.types && eventFilters.types.length > 0) {
+            // go to types docs and see if any of the interest array in doc equal to interest that have been selected
             myQ = query(
                 myQ,
                 where("types", "array-contains-any", eventFilters.types)
             );
         }
+        // got to the country doc and find the countty that have been selected
         if (eventFilters.country) {
             myQ = query(myQ, where("country", "==", eventFilters.country));
         }
+        // got to the city doc and find the city that have been selected
         if (eventFilters.city) {
             myQ = query(myQ, where("city", "==", eventFilters.city));
         }
+        // got to the date doc and find the date that have been selected
         if (eventFilters.date) {
             myQ = query(myQ, where("eventDate", "==", eventFilters.date));
         }
 
+        // get add events
         const entries = await getDocs(myQ);
         const eventsData = entries.docs.map((entry) => ({
             id: entry.id,
@@ -173,17 +192,18 @@ const Eventslist = (props) => {
     };
 
     useEffect(() => {
+        // get the country
         if (eventFilters.country) {
             setCountry(eventFilters.country);
         }
-
+        // get the city
         if (eventFilters.city) {
             setCity(eventFilters.city);
         }
+        // call the getFilters function
         getFilters();
     }, [eventFilters]);
 
-    // }, [eventFilters]);
     const [isAuth, setIsAuth] = useState(null);
     // const router = useRouter();
     // onAuthStateChanged(auth, (user) => {
@@ -207,12 +227,13 @@ const Eventslist = (props) => {
     // };
 
     const joinEvent = async (id) => {
+        // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
                 alert("Sign in to your account to join this event.");
                 return;
             }
-
+            // got to the event attendance and using the event id
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
 
             // Check if the user has already attended the event
@@ -222,7 +243,7 @@ const Eventslist = (props) => {
                     where("userId", "==", auth.currentUser.uid)
                 )
             );
-
+            // if the user aready join
             if (!querySnapshot.empty) {
                 // alert("You have already attended this event.");
                 setShowAlert(true);
@@ -273,6 +294,7 @@ const Eventslist = (props) => {
     };
 
     const getUserInfo = async () => {
+        // go to the users collection and get the current user info using its id
         const q = query(
             usersCollectionRef,
             where("uid", "==", auth.currentUser?.uid)
@@ -283,6 +305,7 @@ const Eventslist = (props) => {
                 ...doc.data(),
                 id: doc.id,
             }));
+            // get the user name to use it with welcome
             setuserName(filteredData[0].name);
         } catch (err) {
             console.error(err);
@@ -290,12 +313,14 @@ const Eventslist = (props) => {
     };
 
     useEffect(() => {
+        // if the user auth set isAuth true and call getUserInfo function
         onAuthStateChanged(auth, (user) => {
             user ? getUserInfo() : "";
             user ? setIsAuth(true) : setIsAuth(null);
         });
     }, [0]);
 
+    // for the responsiveness of the phoen
     const [overlay, setOverlay] = useState(false);
     function closeModels() {
         setIsOpencalender(false);
@@ -605,6 +630,7 @@ const Eventslist = (props) => {
                                     eventTitle={event.title}
                                     eventAttendance={event.id}
                                     onClick={() => {
+                                        // once the event clicked send the event id to joinEvent function
                                         joinEvent(event.id);
                                     }}
                                 />

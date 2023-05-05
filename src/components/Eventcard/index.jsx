@@ -18,6 +18,7 @@ const Eventcard = ({
     const [attendcount, setAttendcount] = useState();
     const attendEvent = async (id) => {
         try {
+            // to get the number of attendance
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
             const dataAttend = await getDocs(attendEventRef);
             const data = dataAttend.docs.map((entry) => entry.data());
@@ -29,10 +30,11 @@ const Eventcard = ({
         }
     };
     useEffect(() => {
+        // send the id of the event to attendEvent funciton to get the number of the attendance
         attendEvent(eventAttendance);
     }, [attendcount]);
     return (
-        <div className='border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik '>
+        <div className='border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik w-full'>
             <div className='flex md:justify-between md:flex-row flex-col justify-center items-center'>
                 <div>
                     <p className='pt-2'>{eventDate}</p>
@@ -76,14 +78,14 @@ const Eventcard = ({
                         className='rounded border-2 border-black w-64 md:h-36 h-24'
                     />
                 </div>
-                <div className='col-span-2 flex flex-col w-80 sm:w-full'>
+                <div className='col-span-2 flex flex-col'>
                     <Link
                         key={eventAttendance}
                         href={`/eventPage/${eventAttendance}`}
                     >
                         <p className='font-medium'>{eventTitle}</p>
                     </Link>
-                    <p className='font-normal text-ellipsis overflow-hidden'>
+                    <p className='font-normal text-ellipsis overflow-hidden  w-80 sm:w-full'>
                         {eventDetails}
                     </p>
                     <div className='flex justify-end py-5'>
