@@ -7,7 +7,9 @@ import Hirosection from "./Hirosection";
 import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
 import Getstartedbtn from "../Getstartedbtn";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Homepage = () => {
     const { t } = useTranslation("common");
     const { i18n } = useTranslation();
@@ -31,12 +33,15 @@ const Homepage = () => {
         "/images/17.png",
         "/images/18.png",
     ];
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <>
             {/* hiro section */}
             <Hirosection />
             {/* how it work section */}
-            <p className='text-4xl text-center py-16 font-Rubik font-medium'>
+            <p className='text-4xl text-center py-16 font-Rubik font-medium '>
                 {t("home.Howitwork")}
             </p>
             <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
@@ -99,6 +104,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                     <div className='relative h-80 overflow-hidden '>
@@ -107,6 +113,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                 </div>
@@ -117,6 +124,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                     <div className='relative h-60 overflow-hidden'>
@@ -125,6 +133,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                 </div>

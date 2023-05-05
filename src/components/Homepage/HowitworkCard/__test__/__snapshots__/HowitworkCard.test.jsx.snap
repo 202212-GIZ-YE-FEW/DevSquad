@@ -10,6 +10,7 @@ exports[`renders correctly 1`] = `
     <img
       alt="profile"
       className="object-contain rounded-xl"
+      data-aos="zoom-in"
       data-nimg="fill"
       decoding="async"
       loading="lazy"
@@ -33,16 +34,19 @@ exports[`renders correctly 1`] = `
     />
   </div>
   <div
-    className="flex flex-col gap-2 "
+    className="flex flex-col gap-2"
   >
     <p
-      className="text-3xl text-center font-medium"
+      className="text-3xl text-center font-medium "
+      data-aos="fade-up"
     />
     <p
-      className="text-lg text-primary-gray text-center font-normal  "
+      className="text-lg text-primary-gray text-center font-normal"
+      data-aos="fade-up"
     />
     <a
       className="flex justify-center items-center"
+      data-aos="fade-up"
       href="#"
       onClick={[Function]}
       onMouseEnter={[Function]}
