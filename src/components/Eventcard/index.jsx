@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import EventImage from "../../components/EventImage/index";
@@ -11,6 +12,8 @@ const Eventcard = ({
     eventAttendance,
     onClick,
 }) => {
+    const { t } = useTranslation("common");
+
     const [attendcount, setAttendcount] = useState();
     const [userAttend, setUserAttend] = useState([]);
     // const attendEvent = async (id) => {
@@ -97,7 +100,7 @@ const Eventcard = ({
                                 })}
                         </div>
                         <p className='font-Rubik p-2'>
-                            +{attendcount} Attendance
+                            +{attendcount} {t("eventcard.attendance")}
                         </p>
                     </div>
                 </div>
@@ -136,7 +139,7 @@ const Eventcard = ({
                             className='bg-primary-orange text-white rounded px-8 py-1 '
                             onClick={onClick}
                         >
-                            Join
+                            {t("eventcard.join")}
                         </button>
                     </div>
                 </div>

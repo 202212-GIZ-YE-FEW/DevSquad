@@ -1,15 +1,20 @@
 import classnames from "classnames";
 import { useTranslation } from "next-i18next";
 const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
+    const { t } = useTranslation("common");
     const { i18n } = useTranslation();
     const pagesCount = Math.ceil(items / pageSize); // number of events in db/2
 
     if (pagesCount === 1) return null;
     // start the paginatiton from the 1 to the length of the pages based on the number of events
     const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
+
     return (
         <>
-            <p className='py-3 font-Rubik  font-bold'> Pages</p>
+            <p className='py-3 font-Rubik  font-bold'>
+                {" "}
+                {t("pagination.page")}
+            </p>
             <ul
                 className={classnames(
                     "sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
