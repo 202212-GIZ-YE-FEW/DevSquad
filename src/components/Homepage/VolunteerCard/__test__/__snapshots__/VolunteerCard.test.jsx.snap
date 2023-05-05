@@ -4,6 +4,7 @@ exports[`renders correctly 1`] = `
 <div>
   <div
     className="flex flex-col items-center font-Rubik "
+    data-aos="fade-up"
   >
     <div
       className="relative w-20 h-20"

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import { storage } from "../../../config/firebase";
 import { getDownloadURL, ref } from "firebase/storage";
+import { useEffect, useState } from "react";
+
+import { storage } from "../../../config/firebase";
 
 export default function EventImage({ pic, width, height, className, onClick }) {
     const [image, setImage] = useState("");
