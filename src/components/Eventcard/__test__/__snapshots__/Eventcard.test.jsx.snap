@@ -22,7 +22,8 @@ exports[`renders correctly 1`] = `
           className="font-Rubik p-2"
         >
           +
-           Attendance
+           
+          eventcard.attendance
         </p>
       </div>
     </div>
@@ -62,7 +63,7 @@ exports[`renders correctly 1`] = `
         <button
           className="bg-primary-orange text-white rounded px-8 py-1 "
         >
-          Join
+          eventcard.join
         </button>
       </div>
     </div>

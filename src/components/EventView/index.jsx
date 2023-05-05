@@ -1,6 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import React from "react";
 import { useEffect, useState } from "react";
 import { AiFillClockCircle } from "react-icons/ai";
@@ -10,6 +11,8 @@ import Buttoncomponent from "../Buttoncomponent";
 import EventImage from "../../components/EventImage/index";
 import { auth, db } from "../../../config/firebase";
 export default function EventView(props) {
+    const { t } = useTranslation("common");
+
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -28,6 +31,7 @@ export default function EventView(props) {
             />
         </svg>
     );
+
     const [userName, setuserName] = useState();
     const [isAuth, setIsAuth] = useState(null);
     //1
@@ -243,7 +247,7 @@ export default function EventView(props) {
                                 </div> */}
                             </div>
                             <p className='font-Rubik'>
-                                +{attendcount} Attendance
+                                +{attendcount} {t("eventview.attendance")}
                             </p>
                         </div>
 
@@ -255,7 +259,8 @@ export default function EventView(props) {
                                 </span>
                             </div>
                             <p className='font-Rubik ml-2'>
-                                Organized by {userName}
+                                {t("eventview.organizedBy")}
+                                {userName}
                             </p>
                         </div>
                     </div>
@@ -282,7 +287,7 @@ export default function EventView(props) {
             <div className='sm:grid sm:gap-5 sm:justify-center md:grid-cols-2 md:m-0 flex flex-col m-2 space-y-4 sm:space-y-0'>
                 <div>
                     <h1 className='font-Rubik font-medium text-lg'>
-                        Event Description:
+                        {t("eventview.eventDescription")}{" "}
                     </h1>
                     <p className='font-Rubik text-gray-500 sm:max-w-md'>
                         {props.entry?.description}
@@ -291,7 +296,7 @@ export default function EventView(props) {
 
                 <div>
                     <p className='font-medium font-Rubik text-lg mb-2'>
-                        Attendance:
+                        {t("eventview.attendance")}
                     </p>
                     <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
                         {/* map through all the attendance */}
