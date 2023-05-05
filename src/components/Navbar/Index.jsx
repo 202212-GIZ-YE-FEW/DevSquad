@@ -123,7 +123,7 @@ const UnauthNav = () => {
                                 {/* signup button */}
                                 <Link
                                     href='/signup'
-                                    className='w-20 h-7 border py-2.5 px-4 border-black border-b-4 border-r-4 rounded-lg text-black bg-white text-xl'
+                                    className='w-20 h-7 border py-2.5 px-4 border-black border-b-4 border-r-4 rounded-lg overflow-hidden group text-black bg-white relative hover:bg-gradient-to-r text-xl hover:ring-2 hover:ring-offset-2 hover:ring-black transition-all ease-out duration-300'
                                 >
                                     {t("Navbar.SignUp")}
                                 </Link>

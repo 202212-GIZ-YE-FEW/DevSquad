@@ -311,7 +311,7 @@ export default function ProfilePage() {
                     </h1>
                 </div>
                 <div className='mt-2 mb-2 sm: space-y-3'>
-                    <div class=' inline-flex items-center justify-center w-32 h-32 bg-black rounded-full'>
+                    <div class=' inline-flex items-center justify-center w-36 h-36 bg-black rounded-full'>
                         {img ? (
                             <EventImage
                                 pic={img}
@@ -468,6 +468,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-white'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r  hover:ring-2 hover:ring-offset-2 hover:ring-black transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         label={t("profilepage.cancel")}
