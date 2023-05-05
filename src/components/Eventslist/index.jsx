@@ -1,5 +1,6 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { useTranslation } from "next-i18next";
 import React, { useEffect, useState } from "react";
 
 import Alertcomponent from "../Alertcomponent";
@@ -14,6 +15,8 @@ import { auth, db } from "../../../config/firebase";
 let eventsCollectionRef = collection(db, "events");
 const usersCollectionRef = collection(db, "users");
 const Eventslist = (props) => {
+    const { t } = useTranslation("common");
+
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -338,10 +341,10 @@ const Eventslist = (props) => {
                     }`}
                 ></div>
                 <p className='text-5xl md:font-extrabold font:medium '>
-                    Welcome, {userName}!
+                    {t("eventlist.welcome")}, {userName}!
                 </p>
                 <p className='font-normal text-start'>
-                    Explore and Join Events.
+                    {t("eventlist.explore")}
                 </p>
             </div>
 
@@ -354,7 +357,9 @@ const Eventslist = (props) => {
                         setOverlay(!overlay);
                     }}
                 >
-                    <p className='pr-1 font-Rubik text-xs'>Change Interest</p>
+                    <p className='pr-1 font-Rubik text-xs'>
+                        {t("eventlist.changeInterest")}
+                    </p>
                     <svg
                         width='13'
                         height='8'
@@ -376,7 +381,9 @@ const Eventslist = (props) => {
                         setOverlay(!overlay);
                     }}
                 >
-                    <p className='pr-1 font-Rubik text-xs'>Change Location</p>
+                    <p className='pr-1 font-Rubik text-xs'>
+                        {t("eventlist.changeLocation")}
+                    </p>
                     <svg
                         width='13'
                         height='8'
@@ -398,7 +405,9 @@ const Eventslist = (props) => {
                         setOverlay(!overlay);
                     }}
                 >
-                    <p className='pr-1 font-Rubik text-xs'>Change Date</p>
+                    <p className='pr-1 font-Rubik text-xs'>
+                        {t("eventlist.changeDate")}
+                    </p>
                     <svg
                         width='13'
                         height='8'

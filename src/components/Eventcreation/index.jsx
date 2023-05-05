@@ -1,6 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 // import { useRouter } from "next/router"; // Importing useRouter hook from next
 import React, { useEffect, useState } from "react";
 
@@ -13,6 +14,7 @@ import Inputcomponent from "../Inputcomponent";
 import { types } from "../../utils/types";
 import { auth, db, storage } from "../../../config/firebase";
 export default function Eventcreation() {
+    const { t } = useTranslation("common");
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -264,10 +266,12 @@ export default function Eventcreation() {
             {/* choose event section */}
             <div className=' grid md:grid-cols-2 gap-14  grid-cols-1 mb-4 '>
                 <div>
-                    <p className='font-medium py-5'>Choose Location</p>
+                    <p className='font-medium py-5'>
+                        {" "}
+                        {t("eventcreation.chooseLocation")}
+                    </p>
                     <p className=' text-primary-gray pb-7'>
-                        Pebble Events can be both local or online Choose where
-                        you want to host your event.
+                        {t("eventcreation.locationDescription")}
                     </p>
 
                     <Inputcomponent
@@ -282,7 +286,7 @@ export default function Eventcreation() {
                             })
                         }
                         className='md:w-80 w-64	 h-12 border border-black rounded placeholder:p-2 px-2'
-                        placeholder='city'
+                        placeholder={t("eventcreation.locationPlaceholder")}
                     />
                     {showError.location &&
                         erroreMessage("Please enter the event location.")}
@@ -298,7 +302,7 @@ export default function Eventcreation() {
                             type='button'
                             onClick={() => setShowModal(true)}
                         >
-                            choose location
+                            {t("eventcreation.changeLocation")}{" "}
                         </button>
                         {showModal ? (
                             <>
@@ -309,7 +313,9 @@ export default function Eventcreation() {
                                             {/*header*/}
                                             <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
                                                 <h3 className='text-3xl font-semibold'>
-                                                    choose your Location
+                                                    {t(
+                                                        "eventcreation.chooseyourLocation"
+                                                    )}{" "}
                                                 </h3>
                                                 <button
                                                     className='p-1 ml-auto bg-transparent border-0 text-black opacity-9 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
@@ -341,7 +347,7 @@ export default function Eventcreation() {
                                                         setShowModal(false)
                                                     }
                                                 >
-                                                    Close
+                                                    {t("eventcreation.close")}
                                                 </button>
                                                 <button
                                                     className='bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
@@ -350,7 +356,9 @@ export default function Eventcreation() {
                                                         setShowModal(false)
                                                     }
                                                 >
-                                                    Save Changes
+                                                    {t(
+                                                        "eventcreation.saveChange"
+                                                    )}
                                                 </button>
                                             </div>
                                         </div>
@@ -364,11 +372,12 @@ export default function Eventcreation() {
             </div>
             {/* Choose Event Type section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Choose Event Type</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {" "}
+                    {t("eventcreation.EventType.eventTypeTitle")}
+                </p>
                 <p className='text-primary-gray pb-7'>
-                    Every Pebble events should serve at least one of th
-                    sustainable devlopment goals of United Nations. whitch goal
-                    do you want to help in ? Sellect all thet apply
+                    {t("eventcreation.EventType.EventTypeDescription")}
                 </p>
 
                 <div className=' grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 '>
@@ -396,11 +405,12 @@ export default function Eventcreation() {
             </div>
             {/* Event Title section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Event Title:</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {" "}
+                    {t("eventcreation.CreateEventInfo.eventTitle")}
+                </p>
                 <p className='text-primary-gray pb-7'>
-                    Choose a title that will give people a clear idea of what
-                    the event is about. Feel free to be creative! You can edit
-                    this later if you change your mind.
+                    {t("eventcreation.CreateEventInfo.eventTitleDescription")}
                 </p>
                 <Inputcomponent
                     type='text'
@@ -418,14 +428,21 @@ export default function Eventcreation() {
             </div>
             {/* Event date section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Event Date:</p>
-                <p className='text-primary-gray pb-7'>Choose a Event date</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {" "}
+                    {t("eventcreation.CreateEventInfo.eventDate")}
+                </p>
+                <p className='text-primary-gray pb-7'>
+                    {t("eventcreation.CreateEventInfo.ChooseEventDate")}
+                </p>
                 <Inputcomponent
                     type='date'
                     id='eventDate'
                     name='eventDate'
                     className='w-80	 h-12 border border-black rounded'
-                    placeholder=''
+                    placeholder={t(
+                        "eventcreation.CreateEventInfo.eventTitlePlaceholder"
+                    )}
                     value={formData.date}
                     onChange={(e) =>
                         setFormData({ ...formData, date: e.target.value })
@@ -436,8 +453,14 @@ export default function Eventcreation() {
             </div>
             {/* Event time section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Event Time:</p>
-                <p className='text-primary-gray pb-7'>Choose a Event Time</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {" "}
+                    {t("eventcreation.CreateEventInfo.eventTime")}
+                </p>
+                <p className='text-primary-gray pb-7'>
+                    {" "}
+                    {t("eventcreation.CreateEventInfo.ChooseEventTime")}
+                </p>
                 <Inputcomponent
                     type='time'
                     id='eventtime'
@@ -454,13 +477,16 @@ export default function Eventcreation() {
             </div>
             {/* Event describtion section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Event description:</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {t("eventcreation.CreateEventInfo.eventDescriptionHeading")}
+                </p>
                 <p className='text-primary-gray pb-7'>
-                    Describe the purpose of your event. Who should join and what
-                    will you do at the event?
+                    {t("eventcreation.CreateEventInfo.eventDescriptionText")}
                 </p>
                 <textarea
-                    placeholder='Please write at least 50 characters'
+                    placeholder={t(
+                        "eventcreation.CreateEventInfo.eventDescriptionPlaceholder"
+                    )}
                     id='dateLocation'
                     name='dateLocation'
                     onChange={(e) =>
@@ -476,10 +502,11 @@ export default function Eventcreation() {
             </div>
             {/* Event image section */}
             <div>
-                <p className='font-medium py-5 text-3xl'>Event Image:</p>
+                <p className='font-medium py-5 text-3xl'>
+                    {t("eventcreation.CreateEventInfo.eventImageHeading")}
+                </p>
                 <p className='text-primary-gray pb-7'>
-                    We have found that listings with a photo attract more
-                    interest.
+                    {t("eventcreation.CreateEventInfo.eventImageText")}
                 </p>
                 <Inputcomponent
                     type='file'
@@ -501,33 +528,32 @@ export default function Eventcreation() {
             {/* done section */}
             <div>
                 <p className='font-medium py-3 text-3xl'>
-                    Almost Done! Just take a minute to review our guidlines.
+                    {t("eventcreation.Guidelines.guidelinesHeading")}
                 </p>
                 <ul className='list-disc'>
                     <p className='text-primary-gray py-2'>
-                        Pebble is all about helping people with the help of
-                        volunteers like you. This means that all events should:
+                        {t("eventcreation.Guidelines.guidelinesText")}
                     </p>
                     <li className='font-normal'>
-                        Be transparent about the event’s intentions.
+                        {t("eventcreation.Guidelines.list1")}
                     </li>
                     <li className='font-normal'>
-                        Encourage real human interactions in person or online.
+                        {t("eventcreation.Guidelines.list2")}
                     </li>
                     <li className='font-normal'>
-                        Have the host present in all events.
+                        {t("eventcreation.Guidelines.list3")}
                     </li>
                 </ul>
 
                 <p className='text-primary-gray'>
-                    You can read more about all of this in our
+                    {t("eventcreation.Guidelines.guidelinesCommunity")}
                     <Link href='#' className='text-blue-600'>
-                        Community Guidelines
+                        {t("eventcreation.Guidelines.guidelinesLink")}
                     </Link>
                 </p>
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
                     <Buttoncomponent
-                        label='Agree with tearms and create Event!'
+                        label={t("eventcreation.Guidelines.submitButton")}
                         width='md:w-96 w-80'
                         height='h-12'
                         border='border border-b-2 border-r-2'

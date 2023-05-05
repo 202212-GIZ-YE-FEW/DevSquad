@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
       <h1
         className="text-2xl font-Rubik font-medium tracking-wide"
       >
-        Edit Profile
+        profilepage.editProfile
       </h1>
     </div>
     <div
@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
-        Uplaod New
+        profilepage.uploadNew
       </button>
       <input
         accept="image/x-png,image/gif,image/jpeg"
@@ -56,12 +56,12 @@ exports[`renders correctly 1`] = `
       <label
         className="text-xl font-Rubik font-medium tracking-wide"
       >
-        Name (Required)
+        profilepage.nameRequired
       </label>
       <input
         className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
         onChange={[Function]}
-        placeholder="Name"
+        placeholder="profilepage.placeholderName"
         type="text"
         value=""
       />
@@ -79,12 +79,12 @@ exports[`renders correctly 1`] = `
       <label
         className="text-xl font-Rubik font-medium tracking-wide"
       >
-        Your Location
+        profilepage.yourLocation
       </label>
       <input
         className="border border-black rounded p-3 md:w-3/6 mt-2 mb-2"
         onChange={[Function]}
-        placeholder="Location"
+        placeholder="profilepage.placeholderLocation"
         type="text"
         value=""
       />
@@ -99,7 +99,7 @@ exports[`renders correctly 1`] = `
       <h1
         className="text-2xl font-Rubik font-medium"
       >
-        Your Interests
+        profilepage.yourInterests
       </h1>
     </div>
     <div
@@ -118,7 +118,7 @@ exports[`renders correctly 1`] = `
           <span
             className="checked flex items-center justify-center text-center  border p-3 rounded  font-medium sm:text-base text-xs text-black border-black border-r-2 border-b-2 h-20 undefined"
           >
-            No Poverty
+            noPoverty 
           </span>
         </label>
       </div>
@@ -351,7 +351,7 @@ exports[`renders correctly 1`] = `
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
-        Save Changes
+        profilepage.saveChanges
       </button>
     </div>
   </div>
@@ -364,8 +364,7 @@ exports[`renders correctly 1`] = `
       <h1
         className="text-2xl font-Rubik font-medium"
       >
-        Change Password
-         
+        profilepage.changePassword
         <div
           className="flex items-center"
         >
@@ -381,14 +380,14 @@ exports[`renders correctly 1`] = `
       <input
         className="border border-black rounded p-3 w-48 m-4"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="profilepage.newPassword"
         type="password"
         value=""
       />
       <input
         className="border border-black rounded p-3 w-48 m-4"
         onChange={[Function]}
-        placeholder="Retype Password"
+        placeholder="profilepage.confirmPassword"
         type="password"
         value=""
       />
@@ -400,13 +399,13 @@ exports[`renders correctly 1`] = `
         className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
-        Submit
+        profilepage.submit
       </button>
       <button
         className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2  undefined"
         onClick={[Function]}
       >
-        Cancel
+        profilepage.cancel
       </button>
     </div>
   </div>

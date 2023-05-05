@@ -11,19 +11,20 @@ exports[`renders correctly 1`] = `
       <p
         className="font-medium py-5"
       >
-        Choose Location
+         
+        eventcreation.chooseLocation
       </p>
       <p
         className=" text-primary-gray pb-7"
       >
-        Pebble Events can be both local or online Choose where you want to host your event.
+        eventcreation.locationDescription
       </p>
       <input
         className="md:w-80 w-64 h-12 border border-black rounded placeholder:p-2 px-2"
         id="eventLocation"
         name="eventLocation"
         onChange={[Function]}
-        placeholder="city"
+        placeholder="eventcreation.locationPlaceholder"
         type="text"
         value=""
       />
@@ -41,7 +42,8 @@ exports[`renders correctly 1`] = `
         onClick={[Function]}
         type="button"
       >
-        choose location
+        eventcreation.changeLocation
+         
       </button>
     </div>
   </div>
@@ -49,12 +51,13 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-      Choose Event Type
+       
+      eventcreation.EventType.eventTypeTitle
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      Every Pebble events should serve at least one of th sustainable devlopment goals of United Nations. whitch goal do you want to help in ? Sellect all thet apply
+      eventcreation.EventType.EventTypeDescription
     </p>
     <div
       className=" grid md:grid-cols-4 gap-4  grid-cols-2 mb-4 "
@@ -369,12 +372,13 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-      Event Title:
+       
+      eventcreation.CreateEventInfo.eventTitle
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You can edit this later if you change your mind.
+      eventcreation.CreateEventInfo.eventTitleDescription
     </p>
     <input
       className="w-full h-12 border border-black rounded px-2"
@@ -390,19 +394,20 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-      Event Date:
+       
+      eventcreation.CreateEventInfo.eventDate
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      Choose a Event date
+      eventcreation.CreateEventInfo.ChooseEventDate
     </p>
     <input
       className="w-80 h-12 border border-black rounded"
       id="eventDate"
       name="eventDate"
       onChange={[Function]}
-      placeholder=""
+      placeholder="eventcreation.CreateEventInfo.eventTitlePlaceholder"
       type="date"
       value=""
     />
@@ -411,12 +416,14 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-      Event Time:
+       
+      eventcreation.CreateEventInfo.eventTime
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      Choose a Event Time
+       
+      eventcreation.CreateEventInfo.ChooseEventTime
     </p>
     <input
       className="w-80 h-12 border border-black rounded px-2"
@@ -432,31 +439,31 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-      Event description:
+      eventcreation.CreateEventInfo.eventDescriptionHeading
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      Describe the purpose of your event. Who should join and what will you do at the event?
+      eventcreation.CreateEventInfo.eventDescriptionText
     </p>
     <textarea
       className="w-full h-44 border border-black rounded  placeholder:text-primary-gray p-2"
       id="dateLocation"
       name="dateLocation"
       onChange={[Function]}
-      placeholder="Please write at least 50 characters"
+      placeholder="eventcreation.CreateEventInfo.eventDescriptionPlaceholder"
     />
   </div>
   <div>
     <p
       className="font-medium py-5 text-3xl"
     >
-      Event Image:
+      eventcreation.CreateEventInfo.eventImageHeading
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-      We have found that listings with a photo attract more interest.
+      eventcreation.CreateEventInfo.eventImageText
     </p>
     <input
       className="md:w-96 w-60 h-12 border border-black rounded file:h-12"
@@ -471,7 +478,7 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-3 text-3xl"
     >
-      Almost Done! Just take a minute to review our guidlines.
+      eventcreation.Guidelines.guidelinesHeading
     </p>
     <ul
       className="list-disc"
@@ -479,28 +486,28 @@ exports[`renders correctly 1`] = `
       <p
         className="text-primary-gray py-2"
       >
-        Pebble is all about helping people with the help of volunteers like you. This means that all events should:
+        eventcreation.Guidelines.guidelinesText
       </p>
       <li
         className="font-normal"
       >
-        Be transparent about the event’s intentions.
+        eventcreation.Guidelines.list1
       </li>
       <li
         className="font-normal"
       >
-        Encourage real human interactions in person or online.
+        eventcreation.Guidelines.list2
       </li>
       <li
         className="font-normal"
       >
-        Have the host present in all events.
+        eventcreation.Guidelines.list3
       </li>
     </ul>
     <p
       className="text-primary-gray"
     >
-      You can read more about all of this in our
+      eventcreation.Guidelines.guidelinesCommunity
       <a
         className="text-blue-600"
         href="#"
@@ -508,7 +515,7 @@ exports[`renders correctly 1`] = `
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
       >
-        Community Guidelines
+        eventcreation.Guidelines.guidelinesLink
       </a>
     </p>
     <div
@@ -518,7 +525,7 @@ exports[`renders correctly 1`] = `
         className="slate-300 text-black md:w-96 w-80 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2  undefined"
         onClick={[Function]}
       >
-        Agree with tearms and create Event!
+        eventcreation.Guidelines.submitButton
       </button>
     </div>
   </div>

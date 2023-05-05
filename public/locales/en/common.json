@@ -72,5 +72,83 @@
         "signIn": "Sign in",
         "or": "OR",
         "confirmpassword": "Confirm Password"
+    },
+    "profilepage": {
+        "editProfile": "Edit Profile",
+        "uploadNew": "Upload New photo",
+        "saveChanges": "Save Changes",
+        "nameRequired": "Name (Required)",
+        "yourLocation": "Your Location",
+        "placeholderName": "Name",
+        "placeholderLocation": "Location ",
+        "yourInterests": "Your Interests",
+        "changePassword": "Change Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password",
+        "cancel": "Cancel",
+        "submit": "Submit"
+    },
+    "eventcreation": {
+        "chooseLocation": "Choose Location",
+        "chooseyourLocation": "Choose your Location",
+        "saveChange": "Save Change",
+        "close": "Close",
+        "locationPlaceholder": "City",
+        "changeLocation": "Change Location",
+        "locationDescription": "Pubble events can be both local or online. Choose where you want to host your event.",
+
+        "EventType": {
+            "eventTypeTitle": "Choose Event Type",
+            "EventTypeDescription": "Every pebble event should serve at least one of the sustainable development goals of United Nations. Which goal do you want to help in? Select all that apply."
+        },
+        "CreateEventInfo": {
+            "eventTitle": "Event Title:",
+            "eventTitleDescription": "  Choose a title that will give people a clear idea of what the event is about. Feel free to be creative! You canedit this later if you change your mind.",
+            "eventDate": "Event Date:",
+            "ChooseEventDate": "Choose a Event Date",
+            "eventTime": "Event Time",
+            "ChooseEventTime": "Choose a Event Time",
+            "eventDescriptionHeading": "Event Description:",
+            "eventDescriptionText": "Describe the purpose of your event. Who should join and what will you do at the event?",
+            "eventDescriptionPlaceholder": "Please write at least 50 characters",
+            "eventImageHeading": "Event Image:",
+            "eventImageText": "We've found that listings with a photo attract more interest."
+        },
+        "Guidelines": {
+            "guidelinesHeading": "Almost Done! Just take a minute to review our guidlines.",
+            "guidelinesText": "Pebble is all about helping people with the help of volunteers like you. This means that all events should:",
+            "list1": "Be transparent about the event’s intentions.",
+            "list2": "Encourage real human interactions in person or online.",
+            "list3": "Have the host present in all events.",
+            "guidelinesCommunity": "You can read more about all of this in our",
+            "guidelinesLink": "community guidelines.",
+            "submitButton": "Agree with terms and Create Event!"
+        }
+    },
+    "pagination": {
+        "page": "Pages"
+    },
+    "eventlist": {
+        "welcome": "Welcome",
+        "explore": "Explore and Join Events",
+        "changeInterest": "Change Interest",
+        "changeLocation": "Change Location",
+        "changeDate": " Change Date"
+    },
+    "eventview": {
+        "attendance": "Attendance",
+        "organizedBy": "Organized by",
+        "eventDescription": "Event Description:"
+    },
+    "eventinterest": {
+        "pick": "Pick Your Interest",
+        "changeInterset": "Change Interset"
+    },
+    "location": {
+        "changeLocation": "Change Location"
+    },
+    "eventcard": {
+        "attendance": "Attendance",
+        "join": "Join"
     }
 }
