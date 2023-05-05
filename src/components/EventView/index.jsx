@@ -17,11 +17,14 @@ export default function EventView(props) {
     //2
     const [userAttend, setUserAttend] = useState([]);
     const router = useRouter();
+    // if the user is auth set isAuth to the user email if it's not set isAuth to null
     onAuthStateChanged(auth, (user) => {
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
+    // get the users collection
     const usersCollectionRef = collection(db, "users");
 
+    // get the user info based on it's id
     const getUserInfo = async (id) => {
         const q = query(usersCollectionRef, where("uid", "==", id));
         try {
@@ -41,29 +44,36 @@ export default function EventView(props) {
         try {
             const userList = [];
             const usersCollectionRef = collection(db, "users");
+            // go to the event attend and get all the attendance
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
             const dataAttend = await getDocs(attendEventRef);
 
             const data = dataAttend.docs.map(async (entry) => {
                 const user = entry.data(); //get userId as object
+                // get the user attend from the attendEvent doc usitn the user id
                 const users = await getDocs(
                     query(usersCollectionRef, where("uid", "==", user.userId))
                 );
 
                 users.docs.map((doc) => {
+                    // get the name of the users they attend
                     const userData = doc.data();
                     userList.push(userData.name);
                 });
 
+                // add the users that attend the event to userAttend array
                 setUserAttend(userList);
             });
 
+            // set all attendance of the event to attendcount using the length of the data
+            // that get all user attendance
             setAttendcount(data.length);
         } catch (error) {
             console.error(error);
         }
     };
     useEffect(() => {
+        // once the page is open get the user name and the attendance of the event
         getUserInfo(props.entry.userId);
         attendEvent(props.id);
         // onAuthStateChanged(auth, (user) => {
@@ -74,6 +84,7 @@ export default function EventView(props) {
     const joinEvent = async (id) => {
         try {
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
+            // if the user is auth add the user to attendance else send the user to the signin page
             isAuth
                 ? await addDoc(attendEventRef, {
                       userId: auth.currentUser.uid,
@@ -195,6 +206,7 @@ export default function EventView(props) {
                         Attendance:
                     </p>
                     <div className='grid grid-cols-3 gap-2 sm:grid-cols-6 max-w-md md:w-80 md:grid-cols-4'>
+                        {/* map through all the attendance */}
                         {userAttend &&
                             userAttend.map((name, index) => {
                                 return (
@@ -202,6 +214,7 @@ export default function EventView(props) {
                                         <div className='flex flex-col items-center'>
                                             <div class='inline-flex items-center justify-center w-12 h-12 m-2 bg-black rounded-full'>
                                                 <span class='font-medium text-white'>
+                                                    {/* get the first letter of the name */}
                                                     {name[0]}
                                                 </span>
                                             </div>

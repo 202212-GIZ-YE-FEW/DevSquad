@@ -1,48 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { collection, getDocs, addDoc } from "firebase/firestore";
-import { db, auth } from "../../../config/firebase";
-import { useRouter } from "next/router";
-// import Pagination from "./Pagination";
-import Eventcard from "../Eventcard";
-import Link from "next/link";
 import { onAuthStateChanged } from "firebase/auth";
+import { addDoc, collection, getDocs } from "firebase/firestore";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+
+import Eventcard from "../Eventcard";
+import { auth, db } from "../../../config/firebase";
 // this number of recoded
-// let PageSize = 2;
+// PageSize = 2;
 
 const PaginationComponent = () => {
-    // const data = [
-    //     {
-    //         id: 999,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event1",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    //     {
-    //         id: 1000,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event2",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    //     {
-    //         id: 1000,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event2",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    // ];
-
-    // const onPageChange = (page) => {
-    //     setCurrentPage(page);
-    // };
+    // get all the events from events collection
     const eventCollectionRef = collection(db, "events");
     const [eventList, setEventList] = useState([]);
     // const [currentPage, setCurrentPage] = useState(1);
@@ -55,12 +23,13 @@ const PaginationComponent = () => {
 
     const getEventList = async () => {
         try {
+            // get the docs of of event in events collection
             const data = await getDocs(eventCollectionRef);
             const filteredData = data.docs.map((doc) => ({
                 ...doc.data(),
                 id: doc.id,
             }));
-
+            // store the data in eventList useState as an array
             setEventList(filteredData);
         } catch (err) {
             console.error(err);
@@ -69,11 +38,14 @@ const PaginationComponent = () => {
     const [isAuth, setIsAuth] = useState(null);
 
     onAuthStateChanged(auth, (user) => {
+        // if the user is auth set isAuth to the current user email if not set isAuth to null
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
     const joinEvent = async (id) => {
         try {
+            // go to the event attend collection
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
+            // if the user is auth add the user id to the attendance doc if not sent the signin page
             isAuth
                 ? await addDoc(attendEventRef, {
                       userId: auth.currentUser.uid,
@@ -117,6 +89,7 @@ const PaginationComponent = () => {
                 {eventList.map((item, index) => {
                     return (
                         <>
+                            {/* once is clicked go to the event page with the event id */}
                             <Link href={`/eventPage/${item.id}`}>
                                 <div className='sm:order-1 order-2'>
                                     <Eventcard
@@ -126,6 +99,7 @@ const PaginationComponent = () => {
                                         eventDetails={item.description}
                                         eventTitle={item.title}
                                         eventAttendance={item.id}
+                                        // once is clicked sent the event id to the joinEvent function
                                         onClick={() => {
                                             joinEvent(item.id);
                                         }}

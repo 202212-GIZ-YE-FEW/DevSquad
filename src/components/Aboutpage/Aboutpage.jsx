@@ -45,7 +45,7 @@ function Aboutpage() {
     ];
 
     return (
-        <div className=''>
+        <div>
             <div className='relative'>
                 <Image
                     src='/images/aboutPage.png'

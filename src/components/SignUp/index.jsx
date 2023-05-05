@@ -22,6 +22,7 @@ import google from "../../../public/images/google.png";
 import sitting from "../../../public/images/Sitting.png";
 import twitter from "../../../public/images/twitter.png";
 export default function SignUp() {
+    // for translation
     const { t } = useTranslation("common");
 
     const router = useRouter(); // Getting the router instance
@@ -32,6 +33,7 @@ export default function SignUp() {
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [error, setError] = useState(null);
+    // fot the language direction
     const { i18n } = useTranslation();
 
     // Listening to authentication state changes
@@ -49,6 +51,8 @@ export default function SignUp() {
             // If both password fields are the same
             // Create a new user with the email and password  and Add user data to users collection in Firestore
             createUserWithEmailAndPassword(auth, email, passwordOne)
+                // because createUserWithEmailAndPassword function can only accept email and password we will use .then to
+                // store the user name and surname
                 .then(async (registeredUser) => {
                     await addDoc(collection(db, "users"), {
                         uid: registeredUser.user.uid,
