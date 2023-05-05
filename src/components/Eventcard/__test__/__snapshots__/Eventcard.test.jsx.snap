@@ -18,6 +18,7 @@ exports[`renders correctly 1`] = `
       <div
         className="flex flex-row items-center"
       >
+        <div />
         <p
           className="font-Rubik p-2"
         >

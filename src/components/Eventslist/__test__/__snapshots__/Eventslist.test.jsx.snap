@@ -12,13 +12,6 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
     />
     <p
-      className="text-5xl md:font-extrabold font:medium "
-    >
-      Welcome, 
-      asd
-      !
-    </p>
-    <p
       className="font-normal text-start"
     >
       Explore and Join Events.

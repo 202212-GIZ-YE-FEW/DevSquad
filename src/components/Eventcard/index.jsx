@@ -1,7 +1,6 @@
-import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import { collection, getDocs, query, where } from "firebase/firestore";
 import EventImage from "../../components/EventImage/index";
 import { db } from "../../../config/firebase";
 const Eventcard = ({
@@ -13,14 +12,47 @@ const Eventcard = ({
     onClick,
 }) => {
     const [attendcount, setAttendcount] = useState();
+    const [userAttend, setUserAttend] = useState([]);
+    // const attendEvent = async (id) => {
+    //     try {
+    //         // to get the number of attendance
+    //         const attendEventRef = collection(db, `events/${id}/attendEvent`);
+    //         const dataAttend = await getDocs(attendEventRef);
+    //         const data = dataAttend.docs.map((entry) => entry.data());
+
+    //         //1
+    //         setAttendcount(data.length);
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // };
     const attendEvent = async (id) => {
         try {
-            // to get the number of attendance
+            const userList = [];
+            const usersCollectionRef = collection(db, "users");
+            // go to the event attend and get all the attendance
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
             const dataAttend = await getDocs(attendEventRef);
-            const data = dataAttend.docs.map((entry) => entry.data());
 
-            //1
+            const data = dataAttend.docs.map(async (entry) => {
+                const user = entry.data(); //get userId as object
+                // get the user attend from the attendEvent doc usitn the user id
+                const users = await getDocs(
+                    query(usersCollectionRef, where("uid", "==", user.userId))
+                );
+
+                users.docs.map((doc) => {
+                    // get the name of the users they attend
+                    const userData = doc.data();
+                    userList.push(userData.name);
+                });
+
+                // add the users that attend the event to userAttend array
+                setUserAttend(userList);
+            });
+
+            // set all attendance of the event to attendcount using the length of the data
+            // that get all user attendance
             setAttendcount(data.length);
         } catch (error) {
             console.error(error);
@@ -41,7 +73,7 @@ const Eventcard = ({
                     <div className='flex flex-row items-center'>
                         {/* <div>
                             <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
+                                <span class='text-white font-Rubik'></span>
                             </div>
                             <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
                                 <span class='text-white font-Rubik'>R</span>
@@ -50,6 +82,20 @@ const Eventcard = ({
                                 <span class='text-white font-Rubik'>R</span>
                             </div>
                         </div> */}
+                        <div>
+                            {userAttend &&
+                                userAttend.map((name, index) => {
+                                    return (
+                                        <>
+                                            <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {name[0]}
+                                                </span>
+                                            </div>
+                                        </>
+                                    );
+                                })}
+                        </div>
                         <p className='font-Rubik p-2'>
                             +{attendcount} Attendance
                         </p>

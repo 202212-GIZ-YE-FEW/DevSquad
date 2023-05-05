@@ -93,7 +93,7 @@ export default function SignUp() {
                     await addDoc(collection(db, "users"), {
                         uid: user.uid,
                         name: user.displayName,
-                        surname: user.email,
+                        surname: user.displayName,
                     });
                 })
                 .catch((error) => {
