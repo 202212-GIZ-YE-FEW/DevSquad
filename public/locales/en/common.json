@@ -75,7 +75,7 @@
     },
     "profilepage": {
         "editProfile": "Edit Profile",
-        "uploadNew": "Upload New photo",
+        "uploadNew": "Upload photo",
         "saveChanges": "Save Changes",
         "nameRequired": "Name (Required)",
         "yourLocation": "Your Location",

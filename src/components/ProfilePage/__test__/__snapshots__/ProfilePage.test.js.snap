@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="mt-2 mb-2 sm:space-x-3 space-y-3"
+      className="mt-2 mb-2 sm: space-y-3"
     >
       <div
         class=" inline-flex items-center justify-center w-32 h-32 bg-black rounded-full"
@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
         />
       </div>
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined ml-2 m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
         profilepage.uploadNew

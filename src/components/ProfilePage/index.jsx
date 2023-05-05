@@ -310,7 +310,7 @@ export default function ProfilePage() {
                         {t("profilepage.editProfile")}
                     </h1>
                 </div>
-                <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
+                <div className='mt-2 mb-2 sm: space-y-3'>
                     <div class=' inline-flex items-center justify-center w-32 h-32 bg-black rounded-full'>
                         {img ? (
                             <EventImage
@@ -330,6 +330,7 @@ export default function ProfilePage() {
                         hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
+                        margin='ml-2 m-2'
                         textColor='text-white'
                         label={t("profilepage.uploadNew")}
                         fontSize='text-xl'

@@ -1,6 +1,5 @@
 import AOS from "aos";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 
