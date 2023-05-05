@@ -515,7 +515,7 @@ exports[`renders correctly 1`] = `
       className="py-20 flex flex-col items-center justify-center text-center"
     >
       <button
-        className="slate-300 text-black md:w-96 w-80 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2 "
+        className="slate-300 text-black md:w-96 w-80 h-12 font-Rubik  border-black rounded border border-b-2 border-r-2 m-2 p-2  undefined"
         onClick={[Function]}
       >
         Agree with tearms and create Event!

@@ -5,7 +5,13 @@ import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 
 import "aos/dist/aos.css";
-const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
+const HowitworkCard = ({
+    title,
+    imageSrc,
+    describtion,
+    linkWord,
+    hreflink,
+}) => {
     const { i18n } = useTranslation();
     useEffect(() => {
         AOS.init();
@@ -35,8 +41,8 @@ const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
                     >
                         {describtion}
                     </p>
-                    <Link
-                        href='#'
+                    <a
+                        herf={hreflink}
                         className='flex justify-center items-center'
                         data-aos='fade-up'
                     >
@@ -66,7 +72,7 @@ const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
                                 />
                             </svg>
                         )}
-                    </Link>
+                    </a>
                 </div>
             </div>
         </>

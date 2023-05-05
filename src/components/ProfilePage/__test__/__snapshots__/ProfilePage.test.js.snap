@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
         />
       </div>
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
         Uplaod New
@@ -348,7 +348,7 @@ exports[`renders correctly 1`] = `
       className="flex flex-row sm:justify-end justify-center sm:m-6 m-2"
     >
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
         Save Changes
@@ -397,13 +397,13 @@ exports[`renders correctly 1`] = `
       className="flex flex-col sm:flex-row sm:justify-end justify-center sm:m-6 m-2 sm:w-full"
     >
       <button
-        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2 "
+        className="bg-orange-400 text-white w-40 h-14 font-Rubik text-xl  rounded undefined m-2 p-2  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
         onClick={[Function]}
       >
         Submit
       </button>
       <button
-        className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2 "
+        className="bg-white text-black w-40 h-14 font-Rubik text-xl border-black rounded border border-r-2 border-b-2 m-2 p-2  undefined"
         onClick={[Function]}
       >
         Cancel

@@ -134,10 +134,7 @@ Array [
         <a
           className="flex justify-center items-center"
           data-aos="fade-up"
-          href="#"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          herf="/signup"
         >
           <p
             className=" text-xl p-2 font-medium"
@@ -211,10 +208,7 @@ Array [
         <a
           className="flex justify-center items-center"
           data-aos="fade-up"
-          href="#"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          herf="/events"
         >
           <p
             className=" text-xl p-2 font-medium"
@@ -288,10 +282,7 @@ Array [
         <a
           className="flex justify-center items-center"
           data-aos="fade-up"
-          href="#"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
+          herf="/signup"
         >
           <p
             className=" text-xl p-2 font-medium"

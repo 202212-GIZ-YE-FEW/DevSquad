@@ -1,15 +1,16 @@
+import AOS from "aos";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
 
 import Goalimage from "./Goalimage";
 import Hirosection from "./Hirosection";
 import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
 import Getstartedbtn from "../Getstartedbtn";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 const Homepage = () => {
     const { t } = useTranslation("common");
     const { i18n } = useTranslation();
@@ -50,18 +51,21 @@ const Homepage = () => {
                     imageSrc='/images/ManTop.png'
                     describtion={t("home.RegisterDesc")}
                     linkWord={t("Navbar.SignUp")}
+                    hreflink='/signup'
                 />
                 <HowitworkCard
                     title={t("home.Attendevevts")}
                     imageSrc='/images/attend.png'
                     describtion={t("home.AttendeDesc")}
                     linkWord={t("home.Viewevents")}
+                    hreflink='/events'
                 />
                 <HowitworkCard
                     title={t("home.Organizeyourown")}
                     imageSrc='/images/Girl.png'
                     describtion={t("home.OrganizeyourownDesc")}
                     linkWord={t("home.GetStarted")}
+                    hreflink='/signup'
                 />
             </div>
             {/* goals dection */}

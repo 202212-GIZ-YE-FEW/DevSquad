@@ -324,6 +324,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
@@ -401,6 +402,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
@@ -449,6 +451,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
