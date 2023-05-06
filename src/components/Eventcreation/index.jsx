@@ -554,6 +554,7 @@ export default function Eventcreation() {
                 <div className='py-20 flex flex-col items-center justify-center text-center'>
                     <Buttoncomponent
                         label={t("eventcreation.Guidelines.submitButton")}
+                        hoverEffect='relative hover:bg-gradient-to-r  hover:ring-2 hover:ring-offset-2 hover:ring-black transition-all ease-out duration-300'
                         width='md:w-96 w-80'
                         height='h-12'
                         border='border border-b-2 border-r-2'

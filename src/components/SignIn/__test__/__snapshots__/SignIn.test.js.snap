@@ -153,7 +153,7 @@ exports[`renders correctly 1`] = `
           </a>
         </p>
         <button
-          className="bg-orange-400 text-white md:w-24 undefined font-Rubik   rounded-md undefined mb-4 py-1 "
+          className="bg-orange-400 text-white md:w-24 undefined font-Rubik   rounded-md undefined mb-4 py-1  relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300"
           onClick={[Function]}
         >
           signin.signIn

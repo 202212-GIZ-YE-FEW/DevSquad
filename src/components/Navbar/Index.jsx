@@ -123,7 +123,7 @@ const UnauthNav = () => {
                                 {/* signup button */}
                                 <Link
                                     href='/signup'
-                                    className='w-20 h-7 border py-2.5 px-4 border-black border-b-4 border-r-4 rounded-lg text-black bg-white text-xl'
+                                    className='w-20 h-7 border py-2.5 px-4 border-black border-b-4 border-r-4 rounded-lg overflow-hidden group text-black bg-white relative hover:bg-gradient-to-r text-xl hover:ring-2 hover:ring-offset-2 hover:ring-black transition-all ease-out duration-300'
                                 >
                                     {t("Navbar.SignUp")}
                                 </Link>
@@ -132,9 +132,11 @@ const UnauthNav = () => {
                                 {/* signup button */}
                                 <Link
                                     href='/signin'
-                                    className='w-20 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl  '
+                                    className='w-20 h-7 py-2.5 px-4 rounded-lg overflow-hidden group bg-primary-blue relative hover:bg-gradient-to-r hover:from-primary-blue hover:to-blue-200 text-white text-xl hover:ring-2 hover:ring-offset-2 hover:ring-primary-blue transition-all ease-out duration-300  '
                                 >
-                                    {t("Navbar.SignIn")}
+                                    <span class='relative'>
+                                        {t("Navbar.SignIn")}
+                                    </span>
                                 </Link>
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
@@ -398,13 +400,17 @@ const AuthNav = ({ logout }) => {
                     >
                         {/* the signed menu */}
                         <ul className='items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10 border border-1 border-black md:border-none'>
-                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange hover:text-white text-lg md:text-white text-black '>
+                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange hover:text-white text-lg md:text-white text-black relative group '>
                                 <Link href='/events'>{t("Navbar.Events")}</Link>
+                                <span className='absolute -bottom-1 left-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all'></span>
+                                <span className='absolute -bottom-1 right-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all'></span>
                             </li>
-                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white  '>
+                            <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white relative group '>
                                 <Link href='/aboutpage'>
                                     {t("Navbar.About")}
                                 </Link>
+                                <span className='absolute -bottom-1 left-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all'></span>
+                                <span className='absolute -bottom-1 right-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all'></span>
                             </li>
                             <li className='md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white'>
                                 {/* for language in signin */}
