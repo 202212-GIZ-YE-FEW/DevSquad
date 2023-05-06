@@ -154,8 +154,8 @@
         "attendance": "الحاضرين",
         "join": "انضمام"
     },
-      "404":{
-          "Clickheretogoback": "اضغط للعودة للخلف",
-          "pagenotfound": "الصفحة غير موجودة"
-      }
+    "404": {
+        "Clickheretogoback": "اضغط للعودة للخلف",
+        "pagenotfound": "الصفحة غير موجودة"
+    }
 }
