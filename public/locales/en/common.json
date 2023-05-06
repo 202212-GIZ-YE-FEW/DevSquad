@@ -150,5 +150,9 @@
     "eventcard": {
         "attendance": "Attendance",
         "join": "Join"
+    },
+    "404":{
+"Clickheretogoback":"Click here to go back",
+"pagenotfound":"Oops.. page not found"
     }
 }

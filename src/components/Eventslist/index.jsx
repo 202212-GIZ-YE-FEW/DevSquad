@@ -329,7 +329,7 @@ const Eventslist = (props) => {
         setOverlay(!overlay);
     }
     return (
-        <div className='md:m-8 m-2 font-Rubik'>
+        <div className='container mx-auto md:m-8 m-2 font-Rubik'>
             <div className='font-Rubik flex flex-col items-center py-10 '>
                 {/* <p className='text-5xl md:font-extrabold font:medium '>
                     Welcome, John!

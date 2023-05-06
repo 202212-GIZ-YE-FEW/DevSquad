@@ -11,7 +11,7 @@ const Hirosection = () => {
         AOS.init();
     }, []);
     return (
-        <div className='container mx-auto px-6 pt-12	pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
+        <div className='container mx-auto px-6 pt-12 pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
             <div
                 className='relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start'
                 data-aos='fade-right'
