@@ -1,5 +1,12 @@
+import AOS from "aos";
 import Image from "next/image";
-const volunterCard = ({ volunteerImage, name, voldescribtion }) => {
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
+const VolunterCard = ({ volunteerImage, name, voldescribtion }) => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <div>
             <div className='flex flex-col items-center font-Rubik	'>
@@ -22,4 +29,4 @@ const volunterCard = ({ volunteerImage, name, voldescribtion }) => {
     );
 };
 
-export default volunterCard;
+export default VolunterCard;

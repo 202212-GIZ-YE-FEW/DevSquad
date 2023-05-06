@@ -90,7 +90,7 @@ const Eventcard = ({
                     </p>
                     <div className='flex justify-end py-5'>
                         <button
-                            className='bg-primary-orange text-white rounded px-8 py-1 '
+                            className='bg-primary-orange text-white rounded px-8 py-1 relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                             onClick={onClick}
                         >
                             {t("eventcard.join")}

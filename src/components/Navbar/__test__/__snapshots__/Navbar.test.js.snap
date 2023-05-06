@@ -139,7 +139,7 @@ exports[`renders correctly 1`] = `
             className="items-center justify-center  md:flex md:space-x-6 md:space-y-0 sm:z-10 border border-1 border-black md:border-none"
           >
             <li
-              className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange hover:text-white text-lg md:text-white text-black "
+              className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange hover:text-white text-lg md:text-white text-black relative group "
             >
               <a
                 href="/events"
@@ -149,9 +149,15 @@ exports[`renders correctly 1`] = `
               >
                 Navbar.Events
               </a>
+              <span
+                className="absolute -bottom-1 left-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all"
+              />
+              <span
+                className="absolute -bottom-1 right-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all"
+              />
             </li>
             <li
-              className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white  "
+              className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white relative group "
             >
               <a
                 href="/aboutpage"
@@ -161,6 +167,12 @@ exports[`renders correctly 1`] = `
               >
                 Navbar.About
               </a>
+              <span
+                className="absolute -bottom-1 left-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all"
+              />
+              <span
+                className="absolute -bottom-1 right-1/2 w-0 h-1 bg-white group-hover:w-1/2 group-hover:transition-all"
+              />
             </li>
             <li
               className="md:border-none px-4 py-2 border border-b-1 border-black hover:bg-primary-orange  text-lg md:text-white text-black hover:text-white"

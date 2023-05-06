@@ -1,19 +1,37 @@
-// import { useTranslation } from "next-i18next";
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
+import { useState, useEffect } from "react";
+
+import BounceLoader from "react-spinners/BounceLoader";
 
 import Homepage from "@/components/Homepage";
 
 import Layout from "@/layout/Layout";
 
 export default function HomePage() {
-    const { t } = useTranslation("common");
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            // After 3 seconds set the show value to false
+            setLoading(false);
+        }, 2000);
 
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, []);
     return (
-        <Layout>
-            <Homepage />
-        </Layout>
+        <>
+            {loading ? (
+                <div className='flex justify-center items-center h-screen'>
+                    <BounceLoader color='#FDA855' loading={loading} />
+                </div>
+            ) : (
+                <Layout>
+                    <Homepage />
+                </Layout>
+            )}
+        </>
     );
 }
 
