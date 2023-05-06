@@ -16,19 +16,7 @@ const Eventcard = ({
 
     const [attendcount, setAttendcount] = useState();
     const [userAttend, setUserAttend] = useState([]);
-    // const attendEvent = async (id) => {
-    //     try {
-    //         // to get the number of attendance
-    //         const attendEventRef = collection(db, `events/${id}/attendEvent`);
-    //         const dataAttend = await getDocs(attendEventRef);
-    //         const data = dataAttend.docs.map((entry) => entry.data());
 
-    //         //1
-    //         setAttendcount(data.length);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // };
     const attendEvent = async (id) => {
         try {
             const userList = [];
@@ -64,7 +52,7 @@ const Eventcard = ({
     useEffect(() => {
         // send the id of the event to attendEvent funciton to get the number of the attendance
         attendEvent(eventAttendance);
-    }, [attendcount]);
+    }, [userAttend]);
     return (
         <div className='border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik w-full'>
             <div className='flex md:justify-between md:flex-row flex-col justify-center items-center'>
@@ -85,20 +73,19 @@ const Eventcard = ({
                                 <span class='text-white font-Rubik'>R</span>
                             </div>
                         </div> */}
-                        <div>
-                            {userAttend &&
-                                userAttend.map((name, index) => {
-                                    return (
-                                        <>
-                                            <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                                <span class='text-white font-Rubik'>
-                                                    {name[0]}
-                                                </span>
-                                            </div>
-                                        </>
-                                    );
-                                })}
-                        </div>
+                        {userAttend &&
+                            userAttend.map((name, index) => {
+                                return (
+                                    <>
+                                        <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                            <span class='text-white font-Rubik overflow-hidden'>
+                                                {name[0]}
+                                            </span>
+                                        </div>
+                                    </>
+                                );
+                            })}
+
                         <p className='font-Rubik p-2'>
                             +{attendcount} {t("eventcard.attendance")}
                         </p>
