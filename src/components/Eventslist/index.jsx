@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import { types } from "@/utils/types";
 
-import Alertcomponent from "../Alertcomponent";
+import Alertcomponent from "../Alertcomponent"; //custom alert messages
 import Calendar from "../Calendar";
 import DialogBox from "../DialogBox/Index";
 import Eventcard from "../Eventcard";
