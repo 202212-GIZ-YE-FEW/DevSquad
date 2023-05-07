@@ -1,28 +1,11 @@
 import { useTranslation } from "next-i18next";
 
+import { types } from "@/utils/types";
+
 import Checkboxcomponent from "../Checkboxcomponent";
 
-const Eventinerestcomponent = (props) => {
+const Eventinerestcomponent = ({ checkedState, handleFilterChange }) => {
     const { t } = useTranslation("common");
-    const titles = [
-        "All",
-        "No Poverty",
-        "Zero Hunger",
-        "Good Health And Well-Being",
-        "Quality Education",
-        "Gender Equality",
-        "Clean Water And Sanitation",
-        "Affordable And Clean Energy",
-        "Decent Work And Economic Growth",
-        "Industry Innovation And Infrastructure",
-        "Reduced Inequalities",
-        "Sustainable Cities And Communities",
-        "Responsible Consumption And Production",
-        "Climate Action",
-        "Life Below Water",
-        "Life On Land",
-        "Peace And Justice And Strong Institutions",
-    ];
 
     return (
         <>
@@ -35,19 +18,17 @@ const Eventinerestcomponent = (props) => {
                     <p className='font-medium font-Rubik text-center block sm:hidden text-lg my-2'>
                         {t("eventinterest.changeInterset")}
                     </p>
-                    {titles &&
-                        titles.map((value, index) => {
+                    {types &&
+                        types.map((value, index) => {
                             return (
                                 <Checkboxcomponent
                                     key={index}
                                     title={value}
                                     name='types'
                                     value={value}
-                                    onChange={() => props.onChange}
+                                    onChange={handleFilterChange}
                                     id={index}
-                                    checked={
-                                        props.checked && props.checked[index]
-                                    }
+                                    checked={checkedState[index]}
                                     afterChecked='flex items-center justify-center text-center sm:border-2 sm:border-black border-0 sm:bg-secondry-orange bg-white md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     beforeChecked='checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs'
                                     view='sm:hidden'
