@@ -1029,7 +1029,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1060,7 +1060,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1093,7 +1093,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1124,7 +1124,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"

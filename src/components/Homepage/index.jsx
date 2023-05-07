@@ -107,7 +107,7 @@ const Homepage = () => {
                             src='/images/home4.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -116,7 +116,7 @@ const Homepage = () => {
                             src='/images/home1.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -127,7 +127,7 @@ const Homepage = () => {
                             src='/images/home2.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -136,7 +136,7 @@ const Homepage = () => {
                             src='/images/home3.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
