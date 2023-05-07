@@ -19,8 +19,17 @@ import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
 import EventImage from "../../components/EventImage/index";
 import { auth, db, storage } from "../../../config/firebase";
-
+import { useRouter } from "next/router"; // Importing useRouter hook from next
 export default function ProfilePage() {
+    const router = useRouter();
+    // Listening to authentication state changes
+    // onAuthStateChanged(auth, (user) => {
+    //     if (!user) {
+    //         // If no user
+    //         router.push("/"); // Redirect to homepage
+    //     }
+    // });
+
     const { t } = useTranslation("common");
 
     const titles = [

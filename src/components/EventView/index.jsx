@@ -95,16 +95,6 @@ export default function EventView(props) {
             console.error(error);
         }
     };
-    useEffect(() => {
-        const timeId = setTimeout(() => {
-            // After 3 seconds set the show value to false
-            setShowAlert(false);
-        }, 4000);
-
-        return () => {
-            clearTimeout(timeId);
-        };
-    }, [showAlert]);
 
     useEffect(() => {
         const timeId = setTimeout(() => {
@@ -124,7 +114,7 @@ export default function EventView(props) {
         // onAuthStateChanged(auth, (user) => {
         //     user ? attendEvent(props.id) : "";
         // });
-    }, [attendcount]);
+    }, [userAttend]);
 
     const joinEvent = async (id) => {
         try {

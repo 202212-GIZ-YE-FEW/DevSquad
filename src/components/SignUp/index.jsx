@@ -89,11 +89,11 @@ export default function SignUp() {
                 .then(async (result) => {
                     // The signed-in user info.
                     const user = result.user;
-
                     await addDoc(collection(db, "users"), {
                         uid: user.uid,
-                        name: user.displayName,
-                        surname: user.email,
+                        name: user?.displayName,
+                        surname: user.displayName,
+                        image: user.photoURL,
                     });
                 })
                 .catch((error) => {
