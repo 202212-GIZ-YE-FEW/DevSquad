@@ -53,8 +53,6 @@ const Eventslist = (props) => {
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
 
-
-
     const [showModal, setShowModal] = useState(false);
 
     const myAlert = (message, type) => {
@@ -262,9 +260,7 @@ const Eventslist = (props) => {
         // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
-
                 myAlert("Sign in to your account to join this event.", "error");
-
 
                 return;
             }

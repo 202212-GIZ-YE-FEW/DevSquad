@@ -12,7 +12,6 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
     />
     <p
-
       className="text-5xl md:font-extrabold font:medium "
     >
       eventlist.welcome
@@ -21,7 +20,6 @@ exports[`renders correctly 1`] = `
       !
     </p>
     <p
-
       className="font-normal text-start"
     >
       eventlist.explore
