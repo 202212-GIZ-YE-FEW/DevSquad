@@ -611,6 +611,7 @@ exports[`renders correctly 1`] = `
             </p>
           </div>
         </div>
+        <div />
       </div>
       <div
         className="sm:block hidden"
