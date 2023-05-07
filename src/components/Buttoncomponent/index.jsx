@@ -14,6 +14,7 @@ export default function Buttoncomponent({
     border,
     margin = "m-2",
     padding = "p-2",
+    hoverEffect,
     onClick,
     type,
 }) {
@@ -21,7 +22,7 @@ export default function Buttoncomponent({
         <button
             type={type}
             onClick={onClick}
-            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding} ${fontWeight}`}
+            className={`${bgColor} ${textColor} ${width} ${height} ${font} ${fontSize} ${borderColor} ${borderRaduis} ${border} ${margin} ${padding} ${fontWeight} ${hoverEffect}`}
         >
             {`${label}`}
         </button>

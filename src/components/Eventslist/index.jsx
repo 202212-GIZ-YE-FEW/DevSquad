@@ -53,6 +53,8 @@ const Eventslist = (props) => {
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
 
+
+
     const [showModal, setShowModal] = useState(false);
 
     const myAlert = (message, type) => {
@@ -260,7 +262,9 @@ const Eventslist = (props) => {
         // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
+
                 myAlert("Sign in to your account to join this event.", "error");
+
 
                 return;
             }
@@ -330,7 +334,7 @@ const Eventslist = (props) => {
         setOverlay(!overlay);
     }
     return (
-        <div className='md:m-8 m-2 font-Rubik'>
+        <div className='container mx-auto md:m-8 m-2 font-Rubik'>
             <div className='font-Rubik flex flex-col items-center py-10 '>
                 <div
                     onClick={closeModels}
@@ -338,9 +342,13 @@ const Eventslist = (props) => {
                         overlay ? "block" : "hidden"
                     }`}
                 ></div>
-                <p className='text-5xl md:font-extrabold font:medium '>
-                    {t("eventlist.welcome")}, {userName}!
-                </p>
+                {userName ? (
+                    <p className='text-5xl md:font-extrabold font:medium '>
+                        {t("eventlist.welcome")}, {userName}!
+                    </p>
+                ) : (
+                    ""
+                )}
                 <p className='font-normal text-start'>
                     {t("eventlist.explore")}
                 </p>

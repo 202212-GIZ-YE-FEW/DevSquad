@@ -58,25 +58,34 @@ function Footer() {
                 </div>
                 <div className='flex basis-1/2 flex-col justify-center space-y-6 font-Rubik'>
                     <ul className='flex justify-center space-x-4 mx-2'>
-                        <li className='cursor-pointer p-2 '>
+                        <li className='cursor-pointer p-2 relative group '>
                             <Link href='/events'>
                                 <b>{t("Navbar.Events")}</b>
                             </Link>
+                            <span className='absolute -bottom-1 left-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
+                            <span className='absolute -bottom-1 right-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
                         </li>
-                        <li className='cursor-pointer p-2 '>
+                        <li className='cursor-pointer p-2 relative group'>
                             <Link href='/aboutpage'>
                                 <b>{t("Navbar.About")}</b>
                             </Link>
+                            <span className='absolute -bottom-1 left-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
+                            <span className='absolute -bottom-1 right-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
                         </li>
-                        <li className='cursor-pointer p-2 '>
-                            <Link href='/how to work'>
+                        <li className='cursor-pointer p-2 relative group'>
+                            <Link href='/'>
                                 <b>{t("home.Howitwork")}</b>
                             </Link>
+                            <span className='absolute -bottom-1 left-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
+                            <span className='absolute -bottom-1 right-1/2 w-0 h-1 bg-black group-hover:w-1/2 group-hover:transition-all'></span>
                         </li>
                     </ul>
                 </div>
                 <div className='flex basis-1/4 justify-center gap-8'>
-                    <Link href='#'>
+                    <Link
+                        href='#'
+                        className='transform translate-y-0 hover:translate-y-2 duration-500 ease-in-out'
+                    >
                         <svg
                             width='24'
                             height='24'
@@ -90,7 +99,10 @@ function Footer() {
                             />
                         </svg>
                     </Link>
-                    <Link href='#'>
+                    <Link
+                        href='#'
+                        className='transform translate-y-0 hover:translate-y-2 duration-500 ease-in-out'
+                    >
                         <svg
                             width='24'
                             height='24'
@@ -104,7 +116,10 @@ function Footer() {
                             />
                         </svg>
                     </Link>
-                    <Link href='#'>
+                    <Link
+                        href='#'
+                        className='transform translate-y-0 hover:translate-y-2 duration-500 ease-in-out'
+                    >
                         <svg
                             width='24'
                             height='24'

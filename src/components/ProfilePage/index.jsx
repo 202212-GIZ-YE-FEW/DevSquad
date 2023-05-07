@@ -19,8 +19,17 @@ import Checkboxcomponent from "../Checkboxcomponent";
 import Inputcomponent from "../Inputcomponent";
 import EventImage from "../../components/EventImage/index";
 import { auth, db, storage } from "../../../config/firebase";
-
+import { useRouter } from "next/router"; // Importing useRouter hook from next
 export default function ProfilePage() {
+    const router = useRouter();
+    // Listening to authentication state changes
+    // onAuthStateChanged(auth, (user) => {
+    //     if (!user) {
+    //         // If no user
+    //         router.push("/"); // Redirect to homepage
+    //     }
+    // });
+
     const { t } = useTranslation("common");
 
     const titles = [
@@ -310,8 +319,8 @@ export default function ProfilePage() {
                         {t("profilepage.editProfile")}
                     </h1>
                 </div>
-                <div className='mt-2 mb-2 sm:space-x-3 space-y-3'>
-                    <div class=' inline-flex items-center justify-center w-32 h-32 bg-black rounded-full'>
+                <div className='mt-2 mb-2 sm: space-y-3'>
+                    <div class=' inline-flex items-center justify-center w-36 h-36 bg-black rounded-full'>
                         {img ? (
                             <EventImage
                                 pic={img}
@@ -327,8 +336,10 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
+                        margin='ml-2 m-2'
                         textColor='text-white'
                         label={t("profilepage.uploadNew")}
                         fontSize='text-xl'
@@ -404,6 +415,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
@@ -452,6 +464,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-orange-400'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         textColor='text-white'
@@ -464,6 +477,7 @@ export default function ProfilePage() {
                     <Buttoncomponent
                         bgColor='bg-white'
                         borderRaduis='rounded'
+                        hoverEffect='relative hover:bg-gradient-to-r  hover:ring-2 hover:ring-offset-2 hover:ring-black transition-all ease-out duration-300'
                         width='w-40'
                         height='h-14'
                         label={t("profilepage.cancel")}

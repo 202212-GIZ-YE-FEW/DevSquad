@@ -1,13 +1,16 @@
+import AOS from "aos";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
 
 import Goalimage from "./Goalimage";
 import Hirosection from "./Hirosection";
 import HowitworkCard from "./HowitworkCard";
 import VolunteerCard from "./VolunteerCard";
 import Getstartedbtn from "../Getstartedbtn";
-
 const Homepage = () => {
     const { t } = useTranslation("common");
     const { i18n } = useTranslation();
@@ -31,12 +34,15 @@ const Homepage = () => {
         "/images/17.png",
         "/images/18.png",
     ];
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <>
             {/* hiro section */}
             <Hirosection />
             {/* how it work section */}
-            <p className='text-4xl text-center py-16 font-Rubik font-medium'>
+            <p className='text-4xl text-center py-16 font-Rubik font-medium '>
                 {t("home.Howitwork")}
             </p>
             <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
@@ -45,18 +51,21 @@ const Homepage = () => {
                     imageSrc='/images/ManTop.png'
                     describtion={t("home.RegisterDesc")}
                     linkWord={t("Navbar.SignUp")}
+                    hreflink='/signup'
                 />
                 <HowitworkCard
                     title={t("home.Attendevevts")}
                     imageSrc='/images/attend.png'
                     describtion={t("home.AttendeDesc")}
                     linkWord={t("home.Viewevents")}
+                    hreflink='/events'
                 />
                 <HowitworkCard
                     title={t("home.Organizeyourown")}
                     imageSrc='/images/Girl.png'
                     describtion={t("home.OrganizeyourownDesc")}
                     linkWord={t("home.GetStarted")}
+                    hreflink='/signup'
                 />
             </div>
             {/* goals dection */}
@@ -99,6 +108,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                     <div className='relative h-80 overflow-hidden '>
@@ -107,6 +117,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                 </div>
@@ -117,6 +128,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                     <div className='relative h-60 overflow-hidden'>
@@ -125,6 +137,7 @@ const Homepage = () => {
                             alt='profile'
                             fill
                             className='object-cover rounded-3xl p-3'
+                            data-aos='zoom-in-up'
                         />
                     </div>
                 </div>

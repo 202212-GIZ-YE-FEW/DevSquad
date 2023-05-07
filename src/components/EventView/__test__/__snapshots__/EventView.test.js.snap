@@ -122,7 +122,7 @@ exports[`renders correctly 1`] = `
         className="col-span-2 grid justify-items-center md:flex md:px-3"
       >
         <button
-          className="bg-orange-400 text-white w-44 sm:w-52 h-7 font-Rubik text-sm  rounded-md undefined mt-5 p-2 "
+          className="bg-orange-400 text-white w-44 sm:w-52 h-7 font-Rubik text-sm  rounded-md undefined mt-5 p-2  undefined"
           onClick={[Function]}
         >
           JOIN
