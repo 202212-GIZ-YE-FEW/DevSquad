@@ -2,6 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Eventslist from "@/components/Eventslist";
+import ScrollerTopcomponent from "@/components/ScrollerTopcomponent";
 
 import Layout from "@/layout/Layout";
 
@@ -12,6 +13,7 @@ const events = (props) => {
         <div>
             <Layout>
                 <Eventslist items={props} />
+                <ScrollerTopcomponent />
             </Layout>
         </div>
     );

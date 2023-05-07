@@ -1,6 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Aboutpage from "@/components/Aboutpage/Aboutpage";
+import ScrollerTopcomponent from "@/components/ScrollerTopcomponent";
 
 import Layout from "@/layout/Layout";
 
@@ -9,6 +10,7 @@ const aboutpage = () => {
         <div>
             <Layout>
                 <Aboutpage />
+                <ScrollerTopcomponent />
             </Layout>
         </div>
     );

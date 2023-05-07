@@ -1,6 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Eventcreation from "@/components/Eventcreation";
+import ScrollerTopcomponent from "@/components/ScrollerTopcomponent";
 
 import Layout from "@/layout/Layout";
 
@@ -9,6 +10,7 @@ const eventcreation = () => {
         <div>
             <Layout>
                 <Eventcreation />
+                <ScrollerTopcomponent />
             </Layout>
         </div>
     );
