@@ -12,6 +12,14 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
     />
     <p
+      className="text-5xl md:font-extrabold font:medium "
+    >
+      eventlist.welcome
+      , 
+      User
+      !
+    </p>
+    <p
       className="font-normal text-start"
     >
       eventlist.explore
@@ -589,6 +597,7 @@ exports[`renders correctly 1`] = `
           >
             <button
               className="underline p-4"
+              onClick={[Function]}
             >
                
               location.changeLocation
@@ -596,7 +605,9 @@ exports[`renders correctly 1`] = `
             <p
               className="border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full"
             >
-              İzmir, TR
+              City
+               
+               / Country
             </p>
           </div>
         </div>
@@ -626,27 +637,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
                     id={0}
-                    name="types"
-                    onChange={[Function]}
-                    type="checkbox"
-                    value="All"
-                  />
-                  <span
-                    className="checked flex items-center justify-center text-center  sm:border-2 sm:border-black border-0 md:p-3 rounded h-16  font-Rubik font-medium sm:text-base text-xs ml-2"
-                  >
-                    All
-                  </span>
-                </label>
-              </div>
-              <div>
-                <label
-                  className="flex sm:block"
-                >
-                  <input
-                    className="sm:hidden sm:m-0 m-6"
-                    id={1}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -664,8 +657,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={2}
+                    id={1}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -683,8 +677,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={3}
+                    id={2}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -702,8 +697,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={4}
+                    id={3}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -721,8 +717,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={5}
+                    id={4}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -740,8 +737,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={6}
+                    id={5}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -759,8 +757,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={7}
+                    id={6}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -778,8 +777,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={8}
+                    id={7}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -797,8 +797,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={9}
+                    id={8}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -816,8 +817,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={10}
+                    id={9}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -835,8 +837,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={11}
+                    id={10}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -854,8 +857,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={12}
+                    id={11}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -873,8 +877,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={13}
+                    id={12}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -892,8 +897,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={14}
+                    id={13}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -911,8 +917,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={15}
+                    id={14}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -930,8 +937,9 @@ exports[`renders correctly 1`] = `
                   className="flex sm:block"
                 >
                   <input
+                    checked={false}
                     className="sm:hidden sm:m-0 m-6"
-                    id={16}
+                    id={15}
                     name="types"
                     onChange={[Function]}
                     type="checkbox"
@@ -955,59 +963,42 @@ exports[`renders correctly 1`] = `
       <div
         className="md:order-2 order-1 text-center md:text-start"
       >
-        <p
-          className="py-3 font-Rubik  font-bold"
+        <div
+          class="flex flex-col items-center  h-screen"
         >
-           
-          pagination.page
-        </p>
-        <ul
-          className="sm:mx-32 inline-flex max-w-xs justify-center items-center border border-black h-8"
-        >
-          <li
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
-            onClick={[Function]}
-          >
-            <svg
-              fill="none"
-              height="34"
-              viewBox="0 0 34 34"
-              width="34"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM13.3833 8C13.6175 8 13.8422 8.0879 14.0078 8.24435L24.2413 16.4101C24.5862 16.7359 24.5862 17.2641 24.2413 17.5899L14.0078 25.7556C13.6629 26.0815 13.1036 26.0815 12.7587 25.7556C12.5931 25.5992 12.5 25.387 12.5 25.1657V8.83427C12.5 8.37352 12.8955 8 13.3833 8Z"
-                fill="#1A1A1A"
-                fill-opacity="0.7"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </li>
           <div
-            className="overflow-hidden sm:w-full flex flex-row"
-          />
-          <li
-            className="bg-gray-200 opacity-50 cursor-not-allowed m-1 h-8 pointer-events-none"
-            onClick={[Function]}
+            class="grid grid-cols-1 gap-4"
           >
-            <svg
-              fill="none"
-              height="34"
-              viewBox="0 0 34 34"
-              width="34"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="flex items-center justify-center"
             >
-              <path
-                clip-rule="evenodd"
-                d="M0.5 17C0.5 26.1127 7.8873 33.5 17 33.5C26.1127 33.5 33.5 26.1127 33.5 17C33.5 7.8873 26.1127 0.5 17 0.5C7.8873 0.5 0.5 7.8873 0.5 17ZM9.75871 16.4101L19.9922 8.24435C20.1578 8.0879 20.3825 8 20.6167 8C21.1045 8 21.5 8.37352 21.5 8.83427V25.1657C21.5 25.387 21.4069 25.5992 21.2413 25.7556C20.8964 26.0815 20.3371 26.0815 19.9922 25.7556L9.75871 17.5899C9.41376 17.2641 9.41376 16.7359 9.75871 16.4101Z"
-                fill="#1A1A1A"
-                fill-opacity="0.7"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </li>
-        </ul>
+              <svg
+                aria-hidden="true"
+                class="w-20 h-20 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center justify-center"
+            >
+              <p
+                class="text-red-500"
+              >
+                There are no matching events for the filters you have selected.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -13,8 +13,24 @@ export default function Calendar({ myDate }) {
     // to get the current month
     let month = d.getMonth();
     // to send the selected date to Eventslist
+
+    let [dateArray, setDateArray] = useState([]);
+
+    function addOrRemoveFromArray(arr, element) {
+        const index = arr.indexOf(element);
+
+        if (index === -1) {
+            arr.push(element);
+        } else {
+            arr.splice(index, 1);
+        }
+        setDateArray(arr);
+        return dateArray;
+    }
+
     const hundelDate = (date) => {
-        myDate(date);
+        let myDateList = addOrRemoveFromArray(dateArray, date);
+        myDate(myDateList);
     };
     // set date to the current month
     const [date, setDate] = useState(month);
