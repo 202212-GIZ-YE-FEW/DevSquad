@@ -122,7 +122,7 @@ const Eventslist = (props) => {
     // the sigle page can have only to events
     const pageSize = 2;
 
-    // set the currentPage with page selected
+    // set the current Page with  selected page
     const onPageChange = (page) => {
         setCurrentPage(page);
     };
