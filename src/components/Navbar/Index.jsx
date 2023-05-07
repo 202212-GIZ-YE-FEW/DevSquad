@@ -564,6 +564,7 @@ const Navbar = () => {
     const logout = async () => {
         try {
             await signOut(auth);
+            // router.push("/");
         } catch (err) {
             // console.error(err);
         }

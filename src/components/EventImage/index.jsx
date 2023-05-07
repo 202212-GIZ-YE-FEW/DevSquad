@@ -7,13 +7,17 @@ export default function EventImage({ pic, width, height, className, onClick }) {
     const [image, setImage] = useState("");
 
     const img = async () => {
-        // get the evne image from the firebase storage
-        // pic contains the name of the image
-        const storageRef = ref(storage, "eventsFolder/" + pic);
-        // get the image as an url
-        const url = await getDownloadURL(storageRef);
+        if (pic.startsWith("https")) {
+            setImage(pic);
+        } else {
+            // get the evne image from the firebase storage
+            // pic contains the name of the image
+            const storageRef = ref(storage, "eventsFolder/" + pic);
+            // get the image as an url
+            const url = await getDownloadURL(storageRef);
 
-        setImage(url);
+            setImage(url);
+        }
     };
 
     useEffect(() => {

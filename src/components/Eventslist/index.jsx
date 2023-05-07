@@ -49,7 +49,7 @@ const Eventslist = (props) => {
     const [isOpencalender, setIsOpencalender] = useState(false);
     const [isOpeninterest, setIsOpeninterset] = useState(false);
     const [isOpenlocation, setIsOpenlocation] = useState(false);
-    const [userName, setuserName] = useState("asd");
+    const [userName, setuserName] = useState("");
     const titles = [
         "All",
         "No Poverty",
@@ -230,7 +230,23 @@ const Eventslist = (props) => {
         // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
-                alert("Sign in to your account to join this event.");
+                // alert("Sign in to your account to join this event.");
+                setShowAlert(true);
+                setAlertMessage("Sign in to your account to join this event.");
+                setAlertType("info");
+                setAlertIcon(
+                    <svg
+                        fill='none'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        class='w-5 h-5 mr-2 text-white'
+                    >
+                        <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                    </svg>
+                );
                 return;
             }
             // got to the event attendance and using the event id
@@ -340,9 +356,13 @@ const Eventslist = (props) => {
                         overlay ? "block" : "hidden"
                     }`}
                 ></div>
-                <p className='text-5xl md:font-extrabold font:medium '>
-                    {t("eventlist.welcome")}, {userName}!
-                </p>
+                {userName ? (
+                    <p className='text-5xl md:font-extrabold font:medium '>
+                        {t("eventlist.welcome")}, {userName}!
+                    </p>
+                ) : (
+                    ""
+                )}
                 <p className='font-normal text-start'>
                     {t("eventlist.explore")}
                 </p>
