@@ -86,7 +86,7 @@ export default function ProfilePage() {
     //rest password
     const restPassword = async () => {
         if (!passwordOne || !passwordTwo) {
-            setMessage("Enter correct password");
+            setMessage(t("alert.profilepage.correctPass"));
         } else {
             if (passwordOne === passwordTwo) {
                 // get the currentUser and change its passowrd using updatePassword from firebase/auth
@@ -96,7 +96,7 @@ export default function ProfilePage() {
                         // alert("update password successfully");
                         setMessage(null);
                         setShowAlert(true);
-                        setAlertMessage("update password successfully");
+                        setAlertMessage(t("alert.profilepage.updatePass"));
                         setAlertType("success");
                         setAlertIcon(
                             <svg
@@ -118,7 +118,7 @@ export default function ProfilePage() {
                     }
                 );
             } else {
-                setMessage("Password is not match");
+                setMessage(t("alert.profilepage.matchPass"));
             }
         }
     };
@@ -130,7 +130,7 @@ export default function ProfilePage() {
             setPasswordOne(null);
             setPasswordTwo(null);
             setShowAlert(true);
-            setAlertMessage("Cancel update password");
+            setAlertMessage(t("alert.profilepage.cancelPass"));
             setAlertType("success");
             setAlertIcon(
                 <svg
@@ -154,7 +154,7 @@ export default function ProfilePage() {
     const updateUserInfo = async (id) => {
         // check if the user entered the name which is required
         if (!newName) {
-            setCheckName("Name is required");
+            setCheckName(t("alert.profilepage.nameReq"));
         } else {
             // go the user collection and use the doc id go the spesific doc and update the data
             const userDoc = doc(db, "users", id);
@@ -169,7 +169,7 @@ export default function ProfilePage() {
             });
             setCheckName(null);
             setShowAlert(true);
-            setAlertMessage("Update profile successsfully");
+            setAlertMessage(t("alert.profilepage.uploadPro"));
             setAlertType("success");
             setAlertIcon(
                 <svg
@@ -249,7 +249,7 @@ export default function ProfilePage() {
         // if there is no file return null
         if (!fileUpload) return;
         if (!fileUpload.type.startsWith("image/")) {
-            setCheckFileUpload("Please upload only image.");
+            setCheckFileUpload(t("alert.profilepage.uploadOnlyImage"));
         }
         const filesFolderRef = ref(storage, `eventsFolder/${fileUpload.name}`);
         try {
@@ -258,7 +258,7 @@ export default function ProfilePage() {
             // alert("file uploaded!");
             setCheckFileUpload(null);
             setShowAlert(true);
-            setAlertMessage("image uploaded successguly");
+            setAlertMessage(t("alert.profilepage.uplodeImageSuccesses"));
             setAlertType("success");
             setAlertIcon(
                 <svg

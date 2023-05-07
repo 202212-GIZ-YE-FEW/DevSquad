@@ -230,7 +230,7 @@ const Eventslist = (props) => {
         // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
-                alert("Sign in to your account to join this event.");
+                alert(t("alert.eventList.signIn"));
                 return;
             }
             // got to the event attendance and using the event id
@@ -247,7 +247,7 @@ const Eventslist = (props) => {
             if (!querySnapshot.empty) {
                 // alert("You have already attended this event.");
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.eventList.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
@@ -272,7 +272,8 @@ const Eventslist = (props) => {
 
             // alert("You have joined the event!");
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.eventList.joinedEvent"));
+
             setAlertType("success");
             setAlertIcon(
                 <svg

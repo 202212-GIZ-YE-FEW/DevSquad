@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { collection, getDocs, addDoc } from "firebase/firestore";
-import { db, auth } from "../../../config/firebase";
-import { useRouter } from "next/router";
-import Eventcard from "../Eventcard";
-import Link from "next/link";
-import Alertcomponent from "../Alertcomponent";
 import { onAuthStateChanged } from "firebase/auth";
+import { addDoc, collection, getDocs } from "firebase/firestore";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import React, { useEffect, useState } from "react";
+
+import Alertcomponent from "../Alertcomponent";
+import Eventcard from "../Eventcard";
+import { auth, db } from "../../../config/firebase";
 // this number of recoded
 // PageSize = 2;
 
 const PaginationComponent = () => {
+    const { t } = useTranslation("common");
+
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -128,7 +132,7 @@ const PaginationComponent = () => {
 
             // alert("You have joined the event!");
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.pagination.joinedEvent"));
             setAlertType("success");
             setAlertIcon(
                 <svg
