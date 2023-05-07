@@ -6,12 +6,13 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start"
+    data-aos="fade-right"
   >
     <div
       className="md:absolute top-14 left-0 right-0 bottom-0 static"
     >
       <div
-        className="flex flex-col pt-10"
+        className="flex flex-col md:pt-20 pt-5"
       >
         <p
           className="text-4xl font-medium p-2"
@@ -29,13 +30,20 @@ exports[`renders correctly 1`] = `
       >
         <div>
           <a
-            className="w-80 h-7 py-2.5 px-4 rounded-lg bg-primary-blue text-white text-xl font-medium"
+            className="w-80 h-7 py-2.5 px-4 rounded-lg overflow-hidden group bg-primary-blue relative hover:bg-gradient-to-r hover:from-primary-blue hover:to-blue-200 text-white text-xl font-medium hover:ring-2 hover:ring-offset-2 hover:ring-primary-blue transition-all ease-out duration-300"
             href="/signup"
             onClick={[Function]}
             onMouseEnter={[Function]}
             onTouchStart={[Function]}
           >
-            home.GetStarted
+            <span
+              class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"
+            />
+            <span
+              class="relative"
+            >
+              home.GetStarted
+            </span>
           </a>
         </div>
       </div>
@@ -43,6 +51,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="overflow-hidden"
+    data-aos="fade-left"
   >
     <img
       alt="hiro"

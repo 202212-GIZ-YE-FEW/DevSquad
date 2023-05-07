@@ -89,11 +89,11 @@ export default function SignUp() {
                 .then(async (result) => {
                     // The signed-in user info.
                     const user = result.user;
-
                     await addDoc(collection(db, "users"), {
                         uid: user.uid,
-                        name: user.displayName,
-                        surname: user.email,
+                        name: user?.displayName,
+                        surname: user.displayName,
+                        image: user.photoURL,
                     });
                 })
                 .catch((error) => {
@@ -245,6 +245,7 @@ export default function SignUp() {
                             borderRaduis='rounded-md'
                             bgColor='bg-orange-400'
                             textColor='text-white'
+                            hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                             width='md:w-24'
                             padding='py-1'
                             margin='mb-4'

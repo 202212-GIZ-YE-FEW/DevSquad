@@ -1,8 +1,20 @@
+import AOS from "aos";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
-const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
+const HowitworkCard = ({
+    title,
+    imageSrc,
+    describtion,
+    linkWord,
+    hreflink,
+}) => {
     const { i18n } = useTranslation();
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <>
             <div className='flex flex-col items-center font-Rubik'>
@@ -12,14 +24,27 @@ const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
                         alt='profile'
                         fill
                         className='object-contain rounded-xl'
+                        data-aos='zoom-in'
                     />
                 </div>
-                <div className='flex flex-col gap-2 '>
-                    <p className='text-3xl text-center font-medium'>{title}</p>
-                    <p className='text-lg text-primary-gray text-center font-normal  '>
+                <div className='flex flex-col gap-2'>
+                    <p
+                        className='text-3xl text-center font-medium '
+                        data-aos='fade-up'
+                    >
+                        {title}
+                    </p>
+                    <p
+                        className='text-lg text-primary-gray text-center font-normal'
+                        data-aos='fade-up'
+                    >
                         {describtion}
                     </p>
-                    <Link href='#' className='flex justify-center items-center'>
+                    <a
+                        herf={hreflink}
+                        className='flex justify-center items-center'
+                        data-aos='fade-up'
+                    >
                         <p className=' text-xl p-2 font-medium'>{linkWord} </p>
                         {i18n.language === "en" ? (
                             <svg
@@ -46,7 +71,7 @@ const HowitworkCard = ({ title, imageSrc, describtion, linkWord }) => {
                                 />
                             </svg>
                         )}
-                    </Link>
+                    </a>
                 </div>
             </div>
         </>

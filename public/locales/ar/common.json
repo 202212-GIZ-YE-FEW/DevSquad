@@ -13,7 +13,7 @@
     },
     "home": {
         "Howitwork": "آلية العمل",
-        "GetStarted": "ابدأ",
+        "GetStarted": "ابدا الان",
         "Register": "سجل",
         "RegisterDesc": "أنشئ حسابك لتصبح جزءًا من شبكة المتطوعين في Pebble.",
         "Attendevevts": "احضر الفعاليات",
@@ -78,7 +78,7 @@
     },
     "profilepage": {
         "editProfile": "تعديل الملف الشخصي",
-        "uploadNew": "تحميل صورة جديدة",
+        "uploadNew": "تحميل صورة ",
         "saveChanges": "حفظ التغييرات",
         "nameRequired": "الاسم (مطلوب)",
         "yourLocation": "موقعك",
@@ -153,5 +153,9 @@
     "eventcard": {
         "attendance": "الحاضرين",
         "join": "انضمام"
+    },
+    "404": {
+        "Clickheretogoback": "اضغط للعودة للخلف",
+        "pagenotfound": "الصفحة غير موجودة"
     }
 }

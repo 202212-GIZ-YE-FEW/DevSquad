@@ -58,7 +58,7 @@ exports[`renders correctly 1`] = `
     >
       <div>
         <div
-          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80 transition duration-500 hover:scale-105"
         >
           <div
             className="mt-2 flex justify-center md:mt-3 lg:mt-3"
@@ -185,7 +185,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80 transition duration-500 hover:scale-105"
         >
           <div
             className="mt-2 flex justify-center md:mt-3 lg:mt-3"
@@ -312,7 +312,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80 transition duration-500 hover:scale-105"
         >
           <div
             className="mt-2 flex justify-center md:mt-3 lg:mt-3"
@@ -439,7 +439,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80 transition duration-500 hover:scale-105"
         >
           <div
             className="mt-2 flex justify-center md:mt-3 lg:mt-3"
@@ -566,7 +566,7 @@ exports[`renders correctly 1`] = `
       </div>
       <div>
         <div
-          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80"
+          className="m-4 h-28 w-28 overflow-hidden rounded-2xl bg-primary-lightblue md:m-8 md:h-60 md:w-60 lg:m-12 lg:h-80 lg:w-80 transition duration-500 hover:scale-105"
         >
           <div
             className="mt-2 flex justify-center md:mt-3 lg:mt-3"

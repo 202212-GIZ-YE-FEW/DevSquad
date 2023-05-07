@@ -1,8 +1,7 @@
-import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
-
+import { collection, getDocs, query, where } from "firebase/firestore";
 import EventImage from "../../components/EventImage/index";
 import { db } from "../../../config/firebase";
 const Eventcard = ({
@@ -16,14 +15,35 @@ const Eventcard = ({
     const { t } = useTranslation("common");
 
     const [attendcount, setAttendcount] = useState();
+    const [userAttend, setUserAttend] = useState([]);
+
     const attendEvent = async (id) => {
         try {
-            // to get the number of attendance
+            const userList = [];
+            const usersCollectionRef = collection(db, "users");
+            // go to the event attend and get all the attendance
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
             const dataAttend = await getDocs(attendEventRef);
-            const data = dataAttend.docs.map((entry) => entry.data());
 
-            //1
+            const data = dataAttend.docs.map(async (entry) => {
+                const user = entry.data(); //get userId as object
+                // get the user attend from the attendEvent doc usitn the user id
+                const users = await getDocs(
+                    query(usersCollectionRef, where("uid", "==", user.userId))
+                );
+
+                users.docs.map((doc) => {
+                    // get the name of the users they attend
+                    const userData = doc.data();
+                    userList.push(userData.name);
+                });
+
+                // add the users that attend the event to userAttend array
+                setUserAttend(userList);
+            });
+
+            // set all attendance of the event to attendcount using the length of the data
+            // that get all user attendance
             setAttendcount(data.length);
         } catch (error) {
             console.error(error);
@@ -32,7 +52,7 @@ const Eventcard = ({
     useEffect(() => {
         // send the id of the event to attendEvent funciton to get the number of the attendance
         attendEvent(eventAttendance);
-    }, [attendcount]);
+    }, [userAttend]);
     return (
         <div className='border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik w-full'>
             <div className='flex md:justify-between md:flex-row flex-col justify-center items-center'>
@@ -44,7 +64,7 @@ const Eventcard = ({
                     <div className='flex flex-row items-center'>
                         {/* <div>
                             <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
+                                <span class='text-white font-Rubik'></span>
                             </div>
                             <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
                                 <span class='text-white font-Rubik'>R</span>
@@ -53,6 +73,19 @@ const Eventcard = ({
                                 <span class='text-white font-Rubik'>R</span>
                             </div>
                         </div> */}
+                        {userAttend &&
+                            userAttend.map((name, index) => {
+                                return (
+                                    <>
+                                        <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                            <span class='text-white font-Rubik overflow-hidden'>
+                                                {name[0]}
+                                            </span>
+                                        </div>
+                                    </>
+                                );
+                            })}
+
                         <p className='font-Rubik p-2'>
                             +{attendcount} {t("eventcard.attendance")}
                         </p>
@@ -90,7 +123,7 @@ const Eventcard = ({
                     </p>
                     <div className='flex justify-end py-5'>
                         <button
-                            className='bg-primary-orange text-white rounded px-8 py-1 '
+                            className='bg-primary-orange text-white rounded px-8 py-1 relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                             onClick={onClick}
                         >
                             {t("eventcard.join")}

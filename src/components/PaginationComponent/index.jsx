@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db, auth } from "../../../config/firebase";
 import { useRouter } from "next/router";
 import Eventcard from "../Eventcard";
 import Link from "next/link";
 import Alertcomponent from "../Alertcomponent";
 import { onAuthStateChanged } from "firebase/auth";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 // this number of recoded
 // PageSize = 2;
 
@@ -118,13 +118,64 @@ const PaginationComponent = () => {
     //     }
     // };
     const joinEvent = async (id) => {
+        // if the user is not auth send user to sign in
         try {
+            if (!isAuth) {
+                // alert("Sign in to your account to join this event.");
+                setShowAlert(true);
+                setAlertMessage("Sign in to your account to join this event.");
+                setAlertType("info");
+                setAlertIcon(
+                    <svg
+                        fill='none'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        class='w-5 h-5 mr-2 text-white'
+                    >
+                        <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                    </svg>
+                );
+                return;
+            }
+            // got to the event attendance and using the event id
             const attendEventRef = collection(db, `events/${id}/attendEvent`);
-            isAuth
-                ? await addDoc(attendEventRef, {
-                      userId: auth.currentUser.uid,
-                  })
-                : router.push("/signin");
+
+            // Check if the user has already attended the event
+            const querySnapshot = await getDocs(
+                query(
+                    attendEventRef,
+                    where("userId", "==", auth.currentUser.uid)
+                )
+            );
+            // if the user aready join
+            if (!querySnapshot.empty) {
+                // alert("You have already attended this event.");
+                setShowAlert(true);
+                setAlertMessage("You have already attended this event.");
+                setAlertType("info");
+                setAlertIcon(
+                    <svg
+                        fill='none'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        class='w-5 h-5 mr-2 text-white'
+                    >
+                        <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                    </svg>
+                );
+                return;
+            }
+
+            // If the user has not already attended the event, add their attendance
+            await addDoc(attendEventRef, {
+                userId: auth.currentUser.uid,
+            });
 
             // alert("You have joined the event!");
             setShowAlert(true);
