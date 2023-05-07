@@ -7,7 +7,7 @@ import { types } from "@/utils/types";
 
 import Alertcomponent from "../Alertcomponent"; //custom alert messages
 import Calendar from "../Calendar";
-import DialogBox from "../DialogBox/Index";
+import DialogBox from "../DialogBox";
 import Eventcard from "../Eventcard";
 import Eventinerestcomponent from "../Eventinerestcomponent";
 import LocationComponent from "../LocationComponent";
