@@ -1,16 +1,19 @@
-import { db } from "../../../config/firebase";
 import {
     collection,
+    documentId,
     getDocs,
     query,
     where,
-    documentId,
 } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
-import Layout from "@/layout/Layout";
+
 import EventView from "@/components/EventView";
-import { useRouter } from "next/navigation";
+
+import Layout from "@/layout/Layout";
+
+import { db } from "../../../config/firebase";
 
 const eventsCollectionRef = collection(db, "events");
 export default function EventPage(props) {
