@@ -22,13 +22,6 @@ import { auth, db, storage } from "../../../config/firebase";
 import { useRouter } from "next/router"; // Importing useRouter hook from next
 export default function ProfilePage() {
     const router = useRouter();
-    // Listening to authentication state changes
-    // onAuthStateChanged(auth, (user) => {
-    //     if (!user) {
-    //         // If no user
-    //         router.push("/"); // Redirect to homepage
-    //     }
-    // });
 
     const { t } = useTranslation("common");
 
@@ -410,7 +403,6 @@ export default function ProfilePage() {
                             );
                         })}
                 </div>
-                {/* <div>{intersetList}</div> */}
                 <div className='flex flex-row sm:justify-end justify-center sm:m-6 m-2'>
                     <Buttoncomponent
                         bgColor='bg-orange-400'

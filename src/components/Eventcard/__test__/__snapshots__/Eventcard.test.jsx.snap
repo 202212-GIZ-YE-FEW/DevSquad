@@ -18,6 +18,29 @@ exports[`renders correctly 1`] = `
       <div
         className="flex flex-row items-center"
       >
+        <div>
+          <div
+            class="relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+          >
+            <span
+              class="text-white font-Rubik"
+            />
+          </div>
+          <div
+            class="sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+          >
+            <span
+              class="text-white font-Rubik"
+            />
+          </div>
+          <div
+            class="sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full"
+          >
+            <span
+              class="text-white font-Rubik"
+            />
+          </div>
+        </div>
         <p
           className="font-Rubik p-2"
         >

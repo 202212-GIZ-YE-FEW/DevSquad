@@ -599,7 +599,6 @@ exports[`renders correctly 1`] = `
               className="underline p-4"
               onClick={[Function]}
             >
-               
               location.changeLocation
             </button>
             <p
