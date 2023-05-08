@@ -158,7 +158,7 @@ const PaginationComponent = () => {
             if (!querySnapshot.empty) {
                 // alert("You have already attended this event.");
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.pagination.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
