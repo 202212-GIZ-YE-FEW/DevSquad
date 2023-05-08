@@ -57,23 +57,7 @@ export default function SignIn() {
     const signInWithGoogle = async () => {
         try {
             setError(null);
-            await signInWithPopup(auth, googleProvider)
-                //--------------------------------------------##
-                .then(async (result) => {
-                    // The signed-in user info.
-                    const user = result.user;
-                    await addDoc(collection(db, "users"), {
-                        uid: user.uid,
-                        name: user?.displayName,
-                        surname: user.displayName,
-                        image: user.photoURL,
-                    });
-                })
-                .catch((error) => {
-                    // If an error occurred
-                    setError(error.message); // Set the error state with the error message
-                });
-            //---------------------------------------
+            await signInWithPopup(auth, googleProvider);
             router.push("/");
         } catch (err) {
             setError(err.message);
@@ -202,7 +186,7 @@ export default function SignIn() {
                         />
                         {error && (
                             <div className='text-red-500 text-center'>
-                                {error
+                                {validationMessage
                                     ? erroreMessage(validationMessage)
                                     : erroreMessage(error)}
                             </div>
