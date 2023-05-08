@@ -189,5 +189,11 @@
         },"signup":{
             "matchPass":"كلمة السر غير متطابقة"  
         }
+    },"dialogbox":{
+        "chooseyourLocation": "اختر موقعك",
+        "saveChange": "حفظ التغييرات",
+        "close": "إِغلاق",
+        "country":"الدولة",
+        "city":"المدينة"
     }
 }

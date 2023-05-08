@@ -173,7 +173,9 @@
             "alreadyAttended":"You have already attended this event.",
             "joinedEvent":"You have joined the event!"
         },"pagination":{
-            "joinedEvent":"You have joined the event!"
+            "joinedEvent":"You have joined the event!",
+            "alreadyAttended":"You have already attended this event."
+
         },"profilepage":{
             "correctPass":"Enter correct password",
             "updatePass":"update password successfully",
@@ -186,5 +188,12 @@
         },"signup":{
             "matchPass":"Password is not match"  
         }
+    },"dialogbox":{
+        "chooseyourLocation": "Choose your Location",
+        "saveChange": "Save Change",
+        "close": "Close",
+        "country":"Country",
+        "city":"City"
     }
+
 }
