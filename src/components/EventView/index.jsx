@@ -182,6 +182,8 @@ export default function EventView(props) {
             console.error(err);
         }
     };
+
+    // to show only the required attendance
     if (userAttend.length === 0) {
         for (let i = 0; i < 3; i++) {
             threeUserForAttendance.push(null);
