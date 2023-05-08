@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="container mx-auto px-6 pt-12 pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik"
+    className="container mx-auto lg:px-16 md:px-6  px-6 pt-12 pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik"
   >
     <div
       className="relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start"
@@ -13,7 +13,7 @@ Array [
         className="md:absolute top-14 left-0 right-0 bottom-0 static"
       >
         <div
-          className="flex flex-col md:pt-20 pt-5"
+          className="flex flex-col "
         >
           <p
             className="text-4xl font-medium p-2"
@@ -21,7 +21,7 @@ Array [
             home.hiro.title
           </p>
           <p
-            className="text-2xl text-primary-gray px-2 font-normal"
+            className="text-2xl text-primary-gray px-2 font-normal whitespace-normal overflow-hidden"
           >
             home.hiro.describtion
           </p>
@@ -80,7 +80,7 @@ Array [
     home.Howitwork
   </p>,
   <div
-    className="container mx-auto md:px-32 px-10 pt-12 pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
+    className="container mx-auto lg:px-16 md:px-6 px-6 pt-12 pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
   >
     <div
       className="flex flex-col items-center font-Rubik"
@@ -316,7 +316,7 @@ Array [
     home.goals
   </p>,
   <div
-    className="container mx-auto md:px-32 px-20 pt-12 pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik"
+    className="container mx-auto lg:px-16 md:px-6 px-6 pt-12 pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik"
   >
     <div
       className="relative w-32 h-32"
@@ -865,7 +865,7 @@ Array [
     home.Hearitfromvolunteers
   </p>,
   <div
-    className="container mx-auto  md:px-32 px-10 pt-12 pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
+    className="container mx-auto lg:px-16 md:px-6 px-6 pt-12 pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik"
   >
     <div>
       <div
@@ -1019,7 +1019,7 @@ Array [
     </div>
   </div>,
   <div
-    className="container mx-auto md:px-32 px-10 pt-28 pb-10 grid grid-cols-2 text-center  "
+    className="container mx-auto lg:px-16 md:px-6 px-6 pt-28 pb-10 grid grid-cols-2 text-center  "
   >
     <div
       className=""
@@ -1029,7 +1029,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1060,7 +1060,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1093,7 +1093,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"
@@ -1124,7 +1124,7 @@ Array [
       >
         <img
           alt="profile"
-          className="object-cover rounded-3xl p-3"
+          className="object-cover rounded-3xl p-2"
           data-aos="zoom-in-up"
           data-nimg="fill"
           decoding="async"

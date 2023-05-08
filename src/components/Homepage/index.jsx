@@ -45,7 +45,7 @@ const Homepage = () => {
             <p className='text-4xl text-center py-16 font-Rubik font-medium '>
                 {t("home.Howitwork")}
             </p>
-            <div className='container mx-auto md:px-32 px-10 pt-12	pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
+            <div className='container mx-auto lg:px-16 md:px-6 px-6 pt-12	pb-4 grid lg:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
                 <HowitworkCard
                     title={t("home.Register")}
                     imageSrc='/images/ManTop.png'
@@ -75,14 +75,14 @@ const Homepage = () => {
             <p className='md:px-40 px-10  text-xl text-primary-gray text-center font-Rubik font-normal'>
                 {t("home.goals")}
             </p>
-            <div className='container mx-auto md:px-32 px-20 pt-12	pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik'>
+            <div className='container mx-auto lg:px-16 md:px-6 px-6 pt-12	pb-4 grid lg:grid-cols-6 gap-5 md:grid-cols-4 grid-cols-2 items-center font-Rubik'>
                 <Goalimage arrImage={arrImage} />
             </div>
             {/* volunteer section */}
             <p className='text-4xl text-center pt-20 font-Rubik font-medium'>
                 {t("home.Hearitfromvolunteers")}
             </p>
-            <div className='container mx-auto  md:px-32 px-10 pt-12	pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
+            <div className='container mx-auto lg:px-16 md:px-6 px-6 pt-12	pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
                 <VolunteerCard
                     volunteerImage='/images/volunteer 1.png'
                     name={t("home.volunteersName1")}
@@ -100,14 +100,14 @@ const Homepage = () => {
                 />
             </div>
             {/* images section in home page */}
-            <div className='container mx-auto md:px-32 px-10 pt-28 pb-10 grid grid-cols-2 text-center  '>
+            <div className='container mx-auto lg:px-16 md:px-6 px-6 pt-28 pb-10 grid grid-cols-2 text-center  '>
                 <div className=''>
                     <div className='relative h-60 overflow-hidden '>
                         <Image
                             src='/images/home4.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -116,7 +116,7 @@ const Homepage = () => {
                             src='/images/home1.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -127,7 +127,7 @@ const Homepage = () => {
                             src='/images/home2.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>
@@ -136,7 +136,7 @@ const Homepage = () => {
                             src='/images/home3.png'
                             alt='profile'
                             fill
-                            className='object-cover rounded-3xl p-3'
+                            className='object-cover rounded-3xl p-2'
                             data-aos='zoom-in-up'
                         />
                     </div>

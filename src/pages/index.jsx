@@ -1,13 +1,12 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import * as React from "react";
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 
 import Homepage from "@/components/Homepage";
+import ScrollerTopcomponent from "@/components/ScrollerTopcomponent";
 
 import Layout from "@/layout/Layout";
-
 export default function HomePage() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -20,6 +19,7 @@ export default function HomePage() {
             clearTimeout(timeId);
         };
     }, []);
+
     return (
         <>
             {loading ? (
@@ -29,6 +29,7 @@ export default function HomePage() {
             ) : (
                 <Layout>
                     <Homepage />
+                    <ScrollerTopcomponent />
                 </Layout>
             )}
         </>
