@@ -35,7 +35,7 @@ export default function SignUp() {
     const [error, setError] = useState(null);
     // fot the language direction
     const { i18n } = useTranslation();
-
+    const [validationMessage, setValidationMessage] = useState(null);
     // Listening to authentication state changes
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -47,7 +47,25 @@ export default function SignUp() {
     // Handling sign up form submission
     const signUp = async (event) => {
         setError(null); // Resetting the error state
-        if (passwordOne === passwordTwo)
+        setValidationMessage(null); // Resetting the error state
+
+        if (!name) {
+            setValidationMessage("name is required");
+        }
+
+        if (!surname) {
+            setValidationMessage("surname is required");
+        }
+
+        if (!email && !passwordTwo) {
+            setValidationMessage("Enter correct email and password");
+        }
+
+        if (!email || !passwordOne || !passwordTwo) {
+            setValidationMessage("Invalid email & password.");
+        }
+
+        if (passwordOne === passwordTwo) {
             // If both password fields are the same
             // Create a new user with the email and password  and Add user data to users collection in Firestore
             createUserWithEmailAndPassword(auth, email, passwordOne)
@@ -65,10 +83,22 @@ export default function SignUp() {
                     // If an error occurred
                     setError(error.message); // Set the error state with the error message
                 });
-        else setError("Password is not match"); // If passwords don't match, set the error state with a message
+        } else {
+            setError("Password is not match");
+        } // If passwords don't match, set the error state with a message
         event.preventDefault();
     };
-
+    //the error message
+    const erroreMessage = (message) => {
+        return (
+            <div className='flex items-center'>
+                <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                    <span className='text-white font-bold text-xs'>!</span>
+                </div>
+                <span className='text-red-500'>{message}</span>
+            </div>
+        );
+    };
     // Handling sign in with Twitter
     const signInWithTwitter = async () => {
         try {
@@ -229,7 +259,9 @@ export default function SignUp() {
                         />
                         {error && (
                             <div className='text-red-500 text-center'>
-                                {error}
+                                {validationMessage
+                                    ? erroreMessage(validationMessage)
+                                    : erroreMessage(error)}
                             </div>
                         )}
                         <p className='text-sm hidden sm:block'>

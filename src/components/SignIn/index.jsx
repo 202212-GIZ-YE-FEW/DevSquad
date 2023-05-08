@@ -10,13 +10,14 @@ import Link from "next/link";
 import { useRouter } from "next/router"; // Importing useRouter hook from next
 import { useTranslation } from "next-i18next";
 import React, { useState } from "react"; // Importing React and useState
-
+import { addDoc, collection } from "firebase/firestore"; // Importing necessary functions from firebase/firestore
 import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
 import {
     auth,
     googleProvider,
     twitterProvider,
+    db,
 } from "../../../config/firebase"; // Importing Firebase configurations and providers
 import google from "../../../public/images/google.png";
 import sitting from "../../../public/images/Sitting.png";
@@ -38,6 +39,7 @@ export default function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
+    const [validationMessage, setValidationMessage] = useState(null);
     const { i18n } = useTranslation();
 
     // Handling sign in with Twitter
@@ -55,7 +57,23 @@ export default function SignIn() {
     const signInWithGoogle = async () => {
         try {
             setError(null);
-            await signInWithPopup(auth, googleProvider);
+            await signInWithPopup(auth, googleProvider)
+                //--------------------------------------------##
+                .then(async (result) => {
+                    // The signed-in user info.
+                    const user = result.user;
+                    await addDoc(collection(db, "users"), {
+                        uid: user.uid,
+                        name: user?.displayName,
+                        surname: user.displayName,
+                        image: user.photoURL,
+                    });
+                })
+                .catch((error) => {
+                    // If an error occurred
+                    setError(error.message); // Set the error state with the error message
+                });
+            //---------------------------------------
             router.push("/");
         } catch (err) {
             setError(err.message);
@@ -65,6 +83,15 @@ export default function SignIn() {
     // Handling sign in form submission
     const signIn = async (event) => {
         setError(null); // Resetting the error state
+        setValidationMessage(null); // Resetting the error state
+
+        if (!email && !password) {
+            setValidationMessage("Enter correct email and password");
+        }
+
+        if (!email || !password) {
+            setValidationMessage("Invalid login or password. Please try again");
+        }
         // user sign in with the email and password
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
@@ -76,7 +103,17 @@ export default function SignIn() {
             });
         event.preventDefault();
     };
-
+    //the error message
+    const erroreMessage = (message) => {
+        return (
+            <div className='flex items-center'>
+                <div className='bg-red-500 rounded-full flex items-center justify-center h-2 w-2 p-2 mr-2'>
+                    <span className='text-white font-bold text-xs'>!</span>
+                </div>
+                <span className='text-red-500'>{message}</span>
+            </div>
+        );
+    };
     return (
         // using grid layout to divide the page
         <div className='grid grid-cols-1 place-items-center md:grid-cols-2'>
@@ -165,7 +202,9 @@ export default function SignIn() {
                         />
                         {error && (
                             <div className='text-red-500 text-center'>
-                                {error}
+                                {error
+                                    ? erroreMessage(validationMessage)
+                                    : erroreMessage(error)}
                             </div>
                         )}
 

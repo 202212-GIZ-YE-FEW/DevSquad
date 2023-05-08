@@ -74,11 +74,11 @@ const Eventcard = ({
                             </div>
                         </div> */}
                         {userAttend &&
-                            userAttend.map((name, index) => {
+                            userAttend.slice(0, 3).map((name, index) => {
                                 return (
                                     <>
                                         <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                            <span class='text-white font-Rubik overflow-hidden'>
+                                            <span class='text-white font-Rubik'>
                                                 {name[0]}
                                             </span>
                                         </div>
