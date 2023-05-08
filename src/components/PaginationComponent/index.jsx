@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { db, auth } from "../../../config/firebase";
-import { useRouter } from "next/router";
-import Eventcard from "../Eventcard";
-import Link from "next/link";
-import Alertcomponent from "../Alertcomponent";
 import { onAuthStateChanged } from "firebase/auth";
-import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import React, { useEffect, useState } from "react";
+
+import Alertcomponent from "../Alertcomponent";
+import Eventcard from "../Eventcard";
+import { auth, db } from "../../../config/firebase";
 // this number of recoded
 // PageSize = 2;
 
 const PaginationComponent = () => {
+    const { t } = useTranslation("common");
+
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -38,47 +42,9 @@ const PaginationComponent = () => {
             clearTimeout(timeId);
         };
     }, [showAlert]);
-    // const data = [
-    //     {
-    //         id: 999,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event1",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    //     {
-    //         id: 1000,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event2",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    //     {
-    //         id: 1000,
-    //         eventImage: "/images/Rectangle2.png",
-    //         eventDate: "FRI, JUL -7:00 PM GMT+3",
-    //         eventTitle: "Title of the Event2",
-    //         eventDetails:
-    //             "Details about the event. Lorem ipsum dolor sit ametz consectetur adipiscing elit, sed do eiusmod tempor incididuntuyuuyii iyooyi Lorem ipsum dolor sit ame consectetur, adipisicing elit. Deleniti quos pariat nemo veritatis repudiandae error suscipit. Quas saepe vel cupiditate, ipsa adipisci excepturi animi magnam facere culpa aliquam asperiores!",
-    //         eventAttendance: [],
-    //     },
-    // ];
 
-    // const onPageChange = (page) => {
-    //     setCurrentPage(page);
-    // };
     const eventCollectionRef = collection(db, "events");
     const [eventList, setEventList] = useState([]);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const currentTableData = useMemo(() => {
-    //     const firstPageIndex = (currentPage - 1) * PageSize;
-    //     const lastPageIndex = firstPageIndex + PageSize;
-    //     return data.slice(firstPageIndex, lastPageIndex);
-    // }, [currentPage]);
     const router = useRouter();
 
     const getEventList = async () => {
@@ -101,22 +67,6 @@ const PaginationComponent = () => {
         // if the user is auth set isAuth to the current user email if not set isAuth to null
         user ? setIsAuth(auth?.currentUser?.email) : setIsAuth(null);
     });
-    // const joinEvent = async (id) => {
-    //     try {
-    //         const attendEventRef = collection(db, `events/${id}/attendEvent`);
-    //         isAuth
-    //             ? await addDoc(attendEventRef, {
-    //                   userId: auth.currentUser.uid,
-    //               })
-    //             : router.push("/signin");
-
-    //         isAuth
-    //             ? alert("you are joined to the event")
-    //             : alert("signIn to your account for join to this event");
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    // };
     const joinEvent = async (id) => {
         // if the user is not auth send user to sign in
         try {
@@ -152,9 +102,8 @@ const PaginationComponent = () => {
             );
             // if the user aready join
             if (!querySnapshot.empty) {
-                // alert("You have already attended this event.");
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.pagination.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
@@ -177,9 +126,8 @@ const PaginationComponent = () => {
                 userId: auth.currentUser.uid,
             });
 
-            // alert("You have joined the event!");
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.pagination.joinedEvent"));
             setAlertType("success");
             setAlertIcon(
                 <svg
@@ -249,14 +197,6 @@ const PaginationComponent = () => {
                     );
                 })}
 
-                {/* <div className='md:order-2 order-1 text-center md:text-start'>
-                    <Pagination
-                        currentPage={currentPage}
-                        // totalCount={data.length}
-                        pageSize={PageSize}
-                        onPageChange={onPageChange}
-                    />
-                </div> */}
                 {showAlert && (
                     <Alertcomponent
                         type={alertType}

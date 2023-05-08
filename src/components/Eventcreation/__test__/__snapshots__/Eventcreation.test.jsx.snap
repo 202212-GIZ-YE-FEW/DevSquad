@@ -11,7 +11,6 @@ exports[`renders correctly 1`] = `
       <p
         className="font-medium py-5"
       >
-         
         eventcreation.chooseLocation
       </p>
       <p
@@ -35,7 +34,7 @@ exports[`renders correctly 1`] = `
       <p
         className="text-7xl font-medium"
       >
-        Izmer
+        City
       </p>
       <button
         className="cursor-pointer text-blue-600"
@@ -43,7 +42,6 @@ exports[`renders correctly 1`] = `
         type="button"
       >
         eventcreation.changeLocation
-         
       </button>
     </div>
   </div>
@@ -416,13 +414,11 @@ exports[`renders correctly 1`] = `
     <p
       className="font-medium py-5 text-3xl"
     >
-       
       eventcreation.CreateEventInfo.eventTime
     </p>
     <p
       className="text-primary-gray pb-7"
     >
-       
       eventcreation.CreateEventInfo.ChooseEventTime
     </p>
     <input

@@ -1,6 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import ProfilePage from "@/components/ProfilePage";
+import ScrollerTopcomponent from "@/components/ScrollerTopcomponent";
 
 import Layout from "@/layout/Layout";
 
@@ -9,6 +10,7 @@ const profilepage = () => {
         <div>
             <Layout>
                 <ProfilePage />
+                <ScrollerTopcomponent />
             </Layout>
         </div>
     );

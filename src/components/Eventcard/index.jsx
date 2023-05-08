@@ -1,7 +1,8 @@
+import { collection, getDocs, query, where } from "firebase/firestore";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, where } from "firebase/firestore";
+
 import EventImage from "../../components/EventImage/index";
 import { db } from "../../../config/firebase";
 const Eventcard = ({
@@ -16,6 +17,7 @@ const Eventcard = ({
 
     const [attendcount, setAttendcount] = useState();
     const [userAttend, setUserAttend] = useState([]);
+    const threeUserForAttendance = [];
 
     const attendEvent = async (id) => {
         try {
@@ -39,9 +41,9 @@ const Eventcard = ({
                 });
 
                 // add the users that attend the event to userAttend array
+                userAttend.length;
                 setUserAttend(userList);
             });
-
             // set all attendance of the event to attendcount using the length of the data
             // that get all user attendance
             setAttendcount(data.length);
@@ -49,6 +51,26 @@ const Eventcard = ({
             console.error(error);
         }
     };
+
+    // to show only the required attendance
+    if (userAttend.length === 0) {
+        for (let i = 0; i < 3; i++) {
+            threeUserForAttendance.push(null);
+        }
+    } else if (userAttend.length === 1) {
+        threeUserForAttendance.push(userAttend[0].charAt(0));
+        threeUserForAttendance.push("-");
+        threeUserForAttendance.push("-");
+    } else if (userAttend.length === 2) {
+        threeUserForAttendance.push(userAttend[0].charAt(0));
+        threeUserForAttendance.push(userAttend[1].charAt(0));
+        threeUserForAttendance.push("-");
+    } else {
+        for (let i = 0; i < 3; i++) {
+            threeUserForAttendance.push(userAttend[i].charAt(0));
+        }
+    }
+
     useEffect(() => {
         // send the id of the event to attendEvent funciton to get the number of the attendance
         attendEvent(eventAttendance);
@@ -62,29 +84,27 @@ const Eventcard = ({
                 <div className=' pt-2'>
                     {/* attendance */}
                     <div className='flex flex-row items-center'>
-                        {/* <div>
-                            <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'></span>
-                            </div>
-                            <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
-                            </div>
-                            <div class='sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                <span class='text-white font-Rubik'>R</span>
-                            </div>
-                        </div> */}
-                        {userAttend &&
-                            userAttend.slice(0, 3).map((name, index) => {
-                                return (
-                                    <>
-                                        <div class='sm:-left-4 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
-                                            <span class='text-white font-Rubik'>
-                                                {name[0]}
-                                            </span>
-                                        </div>
-                                    </>
-                                );
-                            })}
+                        {userAttend && (
+                            <>
+                                <div>
+                                    <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                        <span class='text-white font-Rubik'>
+                                            {threeUserForAttendance[0]}
+                                        </span>
+                                    </div>
+                                    <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                        <span class='text-white font-Rubik'>
+                                            {threeUserForAttendance[1]}
+                                        </span>
+                                    </div>
+                                    <div class='sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                        <span class='text-white font-Rubik'>
+                                            {threeUserForAttendance[2]}
+                                        </span>
+                                    </div>
+                                </div>
+                            </>
+                        )}
 
                         <p className='font-Rubik p-2'>
                             +{attendcount} {t("eventcard.attendance")}
@@ -94,14 +114,6 @@ const Eventcard = ({
             </div>
             <div className='grid sm:grid-cols-3 align-items-center gap-4 p-4'>
                 <div>
-                    {/* <Image
-                        src={eventImage}
-                        alt='eventCardImage'
-                        width={650}
-                        height={380}
-                        responsive
-                        className='rounded border-2 border-black w-64 md:h-36 h-24'
-                    /> */}
                     <EventImage
                         pic={eventImage}
                         alt='eventCardImage'

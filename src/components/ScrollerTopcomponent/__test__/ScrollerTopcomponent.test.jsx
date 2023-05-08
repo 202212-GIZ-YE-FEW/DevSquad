@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 
-import HowitworkCard from "../index";
+import ScrollerTopcomponent from "../index";
 
 it("renders correctly", () => {
-    const tree = renderer.create(<HowitworkCard />).toJSON();
+    const tree = renderer.create(<ScrollerTopcomponent />).toJSON();
     expect(tree).toMatchSnapshot();
 });

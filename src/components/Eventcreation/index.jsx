@@ -36,7 +36,7 @@ export default function Eventcreation() {
 
     const myAlert = () => {
         setShowAlert(true);
-        setAlertMessage("The event was created successfully");
+        setAlertMessage(t("alert.eventCreation.eventSuccess"));
         setAlertType("success");
         setAlertIcon(
             <svg
@@ -70,7 +70,7 @@ export default function Eventcreation() {
     // Initialize form state
     const [formData, setFormData] = useState({
         location: "",
-        city: "Izmer", // Default city value
+        city: "City", // Default city value
         country: "",
         title: "",
         description: "",
@@ -267,7 +267,6 @@ export default function Eventcreation() {
             <div className=' grid md:grid-cols-2 gap-14  grid-cols-1 mb-4 '>
                 <div>
                     <p className='font-medium py-5'>
-                        {" "}
                         {t("eventcreation.chooseLocation")}
                     </p>
                     <p className=' text-primary-gray pb-7'>
@@ -289,20 +288,17 @@ export default function Eventcreation() {
                         placeholder={t("eventcreation.locationPlaceholder")}
                     />
                     {showError.location &&
-                        erroreMessage("Please enter the event location.")}
+                        erroreMessage(t("alert.eventCreation.enterEvent"))}
                 </div>
                 <div className='pt-11	'>
                     <p className='text-7xl font-medium'>{formData.city}</p>
-                    {/* <Link href='#' className='cursor-pointer text-blue-600'>
-                        choose location
-                    </Link> */}
                     <>
                         <button
                             className='cursor-pointer text-blue-600'
                             type='button'
                             onClick={() => setShowModal(true)}
                         >
-                            {t("eventcreation.changeLocation")}{" "}
+                            {t("eventcreation.changeLocation")}
                         </button>
                         {showModal ? (
                             <>
@@ -315,7 +311,7 @@ export default function Eventcreation() {
                                                 <h3 className='text-3xl font-semibold'>
                                                     {t(
                                                         "eventcreation.chooseyourLocation"
-                                                    )}{" "}
+                                                    )}
                                                 </h3>
                                                 <button
                                                     className='p-1 ml-auto bg-transparent border-0 text-black opacity-9 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
@@ -350,7 +346,7 @@ export default function Eventcreation() {
                                                     {t("eventcreation.close")}
                                                 </button>
                                                 <button
-                                                    className='bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                                                    className='bg-orange-400 text-white active:bg-orange-400 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                                                     type='button'
                                                     onClick={() =>
                                                         setShowModal(false)
@@ -399,9 +395,7 @@ export default function Eventcreation() {
                         })}
                 </div>
                 {showError.typeList &&
-                    erroreMessage(
-                        "Please select at least one type for this event."
-                    )}
+                    erroreMessage(t("alert.eventCreation.SelectEvent"))}
             </div>
             {/* Event Title section */}
             <div>
@@ -424,7 +418,7 @@ export default function Eventcreation() {
                     placeholder=''
                 />
                 {showError.title &&
-                    erroreMessage("Please enter the event title.")}
+                    erroreMessage(t("alert.eventCreation.enterEventTitle"))}
             </div>
             {/* Event date section */}
             <div>
@@ -449,16 +443,14 @@ export default function Eventcreation() {
                     }
                 />
                 {showError.date &&
-                    erroreMessage("Please enter the event date.")}
+                    erroreMessage(t("alert.eventCreation.enterEventDate"))}
             </div>
             {/* Event time section */}
             <div>
                 <p className='font-medium py-5 text-3xl'>
-                    {" "}
                     {t("eventcreation.CreateEventInfo.eventTime")}
                 </p>
                 <p className='text-primary-gray pb-7'>
-                    {" "}
                     {t("eventcreation.CreateEventInfo.ChooseEventTime")}
                 </p>
                 <Inputcomponent
@@ -473,7 +465,7 @@ export default function Eventcreation() {
                     }
                 />
                 {showError.time &&
-                    erroreMessage("Please enter the event time.")}
+                    erroreMessage(t("alert.eventCreation.enterEventTime"))}
             </div>
             {/* Event describtion section */}
             <div>
@@ -498,7 +490,7 @@ export default function Eventcreation() {
                     className='w-full	 h-44 border border-black rounded  placeholder:text-primary-gray p-2'
                 />
                 {showError.description &&
-                    erroreMessage("Please enter the event description.")}
+                    erroreMessage(t("alert.eventCreation.enterEventdesc"))}
             </div>
             {/* Event image section */}
             <div>
@@ -523,7 +515,7 @@ export default function Eventcreation() {
                     // onChange={(e) => console.log(e.target.files[0])}
                 />
                 {showError.fileUpload &&
-                    erroreMessage("Please upload the event image.")}
+                    erroreMessage(t("alert.eventCreation.uploadImage"))}
             </div>
             {/* done section */}
             <div>

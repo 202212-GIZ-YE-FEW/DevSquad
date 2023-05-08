@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import React from "react";
 
 export default function DialogBox({
@@ -6,6 +7,8 @@ export default function DialogBox({
     handleFilterChange,
     entries,
 }) {
+    const { t } = useTranslation("common");
+
     return (
         <>
             {showModal ? (
@@ -17,7 +20,7 @@ export default function DialogBox({
                                 {/*header*/}
                                 <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
                                     <h3 className='text-3xl font-semibold'>
-                                        choose your Location
+                                        {t("dialogbox.chooseyourLocation")}{" "}
                                     </h3>
                                     <button
                                         className='p-1 ml-auto bg-transparent border-0 text-black opacity-9 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
@@ -37,7 +40,10 @@ export default function DialogBox({
                                             id='country'
                                             onChange={handleFilterChange}
                                         >
-                                            <option>country</option>
+                                            <option>
+                                                {" "}
+                                                {t("dialogbox.country")}{" "}
+                                            </option>
                                             {Array.from(
                                                 new Set(
                                                     entries.map(
@@ -63,7 +69,9 @@ export default function DialogBox({
                                             id='city'
                                             onChange={handleFilterChange}
                                         >
-                                            <option>city</option>
+                                            <option>
+                                                {t("dialogbox.city")}
+                                            </option>
 
                                             {Array.from(
                                                 new Set(
@@ -91,14 +99,15 @@ export default function DialogBox({
                                         type='button'
                                         onClick={() => setShowModal(false)}
                                     >
-                                        Close
+                                        {" "}
+                                        {t("dialogbox.saveChange")}
                                     </button>
                                     <button
-                                        className='bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
+                                        className='bg-orange-400 text-white active:bg-orange-300 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                                         type='button'
                                         onClick={() => setShowModal(false)}
                                     >
-                                        Save Changes
+                                        {t("dialogbox.close")}
                                     </button>
                                 </div>
                             </div>

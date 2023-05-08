@@ -11,7 +11,6 @@ export default function LocationComponent({ setShowModal, city, country }) {
                     className='underline p-4'
                     onClick={() => setShowModal(true)}
                 >
-                    {" "}
                     {t("location.changeLocation")}
                 </button>
                 <p className='border-black border border-b-4 border-r-4 rounded-lg text-base sm:text-lg font-medium font-Rubik sm:p-2 p-1 w-full'>

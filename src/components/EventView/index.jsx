@@ -6,6 +6,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { AiFillClockCircle } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
+
 import Alertcomponent from "../Alertcomponent";
 import Buttoncomponent from "../Buttoncomponent";
 import EventImage from "../../components/EventImage/index";
@@ -38,6 +39,7 @@ export default function EventView(props) {
     const [attendcount, setAttendcount] = useState();
     //2
     const [userAttend, setUserAttend] = useState([]);
+    const threeUserForAttendance = [];
     const router = useRouter();
     // if the user is auth set isAuth to the user email if it's not set isAuth to null
     onAuthStateChanged(auth, (user) => {
@@ -118,7 +120,7 @@ export default function EventView(props) {
     const joinEvent = async (id) => {
         try {
             if (!isAuth) {
-                alert("Sign in to your account to join this event.");
+                alert(t("alert.eventview.signIn"));
                 return;
             }
 
@@ -135,7 +137,7 @@ export default function EventView(props) {
             if (!querySnapshot.empty) {
                 // alert("You have already attended this event.");
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.eventview.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
@@ -160,7 +162,7 @@ export default function EventView(props) {
 
             // alert("You have joined the event!");
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.eventview.joinedEvent"));
             setAlertType("success");
             setAlertIcon(
                 <svg
@@ -180,6 +182,25 @@ export default function EventView(props) {
             console.error(err);
         }
     };
+
+    // to show only the required attendance
+    if (userAttend.length === 0) {
+        for (let i = 0; i < 3; i++) {
+            threeUserForAttendance.push(null);
+        }
+    } else if (userAttend.length === 1) {
+        threeUserForAttendance.push(userAttend[0].charAt(0));
+        threeUserForAttendance.push("-");
+        threeUserForAttendance.push("-");
+    } else if (userAttend.length === 2) {
+        threeUserForAttendance.push(userAttend[0].charAt(0));
+        threeUserForAttendance.push(userAttend[1].charAt(0));
+        threeUserForAttendance.push("-");
+    } else {
+        for (let i = 0; i < 3; i++) {
+            threeUserForAttendance.push(userAttend[i].charAt(0));
+        }
+    }
 
     return (
         <div className='md:grid grid-rows-2 gap-2 justify-center mt-8 md:gap-14 flex flex-col'>
@@ -226,15 +247,27 @@ export default function EventView(props) {
                         {/* attendance */}
                         <div className='flex flex-row items-center'>
                             <div>
-                                {/* <div class='relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                    <span class='text-white font-Rubik'>R</span>
-                                </div>
-                                <div class='-left-4 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                    <span class='text-white font-Rubik'>R</span>
-                                </div>
-                                <div class='-left-8 relative inline-flex items-center justify-center w-8 h-8 bg-black rounded-full'>
-                                    <span class='text-white font-Rubik'>R</span>
-                                </div> */}
+                                {userAttend && (
+                                    <>
+                                        <div>
+                                            <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {threeUserForAttendance[0]}
+                                                </span>
+                                            </div>
+                                            <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {threeUserForAttendance[1]}
+                                                </span>
+                                            </div>
+                                            <div class='sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                                <span class='text-white font-Rubik'>
+                                                    {threeUserForAttendance[2]}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
                             </div>
                             <p className='font-Rubik'>
                                 +{attendcount} {t("eventview.attendance")}

@@ -154,5 +154,51 @@
     "404": {
         "Clickheretogoback": "Click here to go back",
         "pagenotfound": "Oops.. page not found"
+    },
+    "alert": {
+        "eventCreation": {
+            "eventSuccess": "The event was created successfully",
+            "enterEvent": "Please enter the event location.",
+            "SelectEvent": "Please select at least one type for this event.",
+            "enterEventTitle": "Please enter the event title.",
+            "enterEventDate": "Please enter the event date.",
+            "enterEventTime": "Please enter the event time.",
+            "enterEventdesc": "Please enter the event description.",
+            "uploadImage": "Please upload the event image."
+        },
+        "eventList": {
+            "signIn": "Sign in to your account to join this event.",
+            "alreadyAttended": "You have already attended this event.",
+            "joinedEvent": "You have joined the event!"
+        },
+        "eventview": {
+            "signIn": "Sign in to your account to join this event.",
+            "alreadyAttended": "You have already attended this event.",
+            "joinedEvent": "You have joined the event!"
+        },
+        "pagination": {
+            "joinedEvent": "You have joined the event!",
+            "alreadyAttended": "You have already attended this event."
+        },
+        "profilepage": {
+            "correctPass": "Enter correct password",
+            "updatePass": "update password successfully",
+            "matchPass": "Password is not match",
+            "cancelPass": "Cancel update password",
+            "nameReq": "Name is required",
+            "uploadPro": "Update profile successsfully",
+            "uploadOnlyImage": "Please upload only image.",
+            "uplodeImageSuccesses": "image uploaded successfully."
+        },
+        "signup": {
+            "matchPass": "Password is not match"
+        }
+    },
+    "dialogbox": {
+        "chooseyourLocation": "Choose your Location",
+        "saveChange": "Save Change",
+        "close": "Close",
+        "country": "Country",
+        "city": "City"
     }
 }
