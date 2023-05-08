@@ -27,6 +27,19 @@ module.exports = {
             scale: {
                 "-100": "-1",
             },
+            keyframes: {
+                slideLeft: {
+                    "0%": {
+                        transform: "translateX(-100px)",
+                    },
+                    "100%": {
+                        transform: "translateX(-150px)",
+                    },
+                },
+            },
+            animation: {
+                slideLeft: "slideLeft 1s",
+            },
         },
     },
     plugins: [require("@tailwindcss/line-clamp")],
