@@ -260,7 +260,7 @@ const Eventslist = (props) => {
         // if the user is not auth send user to sign in
         try {
             if (!isAuth) {
-                myAlert("Sign in to your account to join this event.", "error");
+                myAlert(t("alert.eventList.signIn"), "error");
 
                 return;
             }
@@ -276,7 +276,7 @@ const Eventslist = (props) => {
             );
             // if the user aready join
             if (!querySnapshot.empty) {
-                myAlert("You have already attended this event.", "warning");
+                myAlert(t("alert.eventList.alreadyAttended"), "warning");
 
                 return;
             }
@@ -285,7 +285,7 @@ const Eventslist = (props) => {
             await addDoc(attendEventRef, {
                 userId: auth.currentUser.uid,
             });
-            myAlert("You have joined the event!", "success");
+            myAlert(t("alert.eventList.joinedEvent"), "success");
         } catch (err) {
             console.error(err);
         }

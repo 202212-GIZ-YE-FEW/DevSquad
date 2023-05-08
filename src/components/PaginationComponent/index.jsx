@@ -2,6 +2,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import React, { useEffect, useState } from "react";
 
 import Alertcomponent from "../Alertcomponent";
@@ -11,6 +12,8 @@ import { auth, db } from "../../../config/firebase";
 // PageSize = 2;
 
 const PaginationComponent = () => {
+    const { t } = useTranslation("common");
+
     // alert
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
@@ -100,7 +103,7 @@ const PaginationComponent = () => {
             // if the user aready join
             if (!querySnapshot.empty) {
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.pagination.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
@@ -124,7 +127,7 @@ const PaginationComponent = () => {
             });
 
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.pagination.joinedEvent"));
             setAlertType("success");
             setAlertIcon(
                 <svg

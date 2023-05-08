@@ -120,7 +120,7 @@ export default function EventView(props) {
     const joinEvent = async (id) => {
         try {
             if (!isAuth) {
-                alert("Sign in to your account to join this event.");
+                alert(t("alert.eventview.signIn"));
                 return;
             }
 
@@ -137,7 +137,7 @@ export default function EventView(props) {
             if (!querySnapshot.empty) {
                 // alert("You have already attended this event.");
                 setShowAlert(true);
-                setAlertMessage("You have already attended this event.");
+                setAlertMessage(t("alert.eventview.alreadyAttended"));
                 setAlertType("info");
                 setAlertIcon(
                     <svg
@@ -162,7 +162,7 @@ export default function EventView(props) {
 
             // alert("You have joined the event!");
             setShowAlert(true);
-            setAlertMessage("You have joined the event!");
+            setAlertMessage(t("alert.eventview.joinedEvent"));
             setAlertType("success");
             setAlertIcon(
                 <svg

@@ -65,7 +65,7 @@ export default function SignUp() {
                     // If an error occurred
                     setError(error.message); // Set the error state with the error message
                 });
-        else setError("Password is not match"); // If passwords don't match, set the error state with a message
+        else setError(t("alert.signup.matchPass")); // If passwords don't match, set the error state with a message
         event.preventDefault();
     };
 

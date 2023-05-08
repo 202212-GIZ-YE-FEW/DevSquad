@@ -36,7 +36,7 @@ export default function Eventcreation() {
 
     const myAlert = () => {
         setShowAlert(true);
-        setAlertMessage("The event was created successfully");
+        setAlertMessage(t("alert.eventCreation.eventSuccess"));
         setAlertType("success");
         setAlertIcon(
             <svg
@@ -288,7 +288,7 @@ export default function Eventcreation() {
                         placeholder={t("eventcreation.locationPlaceholder")}
                     />
                     {showError.location &&
-                        erroreMessage("Please enter the event location.")}
+                        erroreMessage(t("alert.eventCreation.enterEvent"))}
                 </div>
                 <div className='pt-11	'>
                     <p className='text-7xl font-medium'>{formData.city}</p>
@@ -395,9 +395,7 @@ export default function Eventcreation() {
                         })}
                 </div>
                 {showError.typeList &&
-                    erroreMessage(
-                        "Please select at least one type for this event."
-                    )}
+                    erroreMessage(t("alert.eventCreation.SelectEvent"))}
             </div>
             {/* Event Title section */}
             <div>
@@ -420,7 +418,7 @@ export default function Eventcreation() {
                     placeholder=''
                 />
                 {showError.title &&
-                    erroreMessage("Please enter the event title.")}
+                    erroreMessage(t("alert.eventCreation.enterEventTitle"))}
             </div>
             {/* Event date section */}
             <div>
@@ -445,7 +443,7 @@ export default function Eventcreation() {
                     }
                 />
                 {showError.date &&
-                    erroreMessage("Please enter the event date.")}
+                    erroreMessage(t("alert.eventCreation.enterEventDate"))}
             </div>
             {/* Event time section */}
             <div>
@@ -467,7 +465,7 @@ export default function Eventcreation() {
                     }
                 />
                 {showError.time &&
-                    erroreMessage("Please enter the event time.")}
+                    erroreMessage(t("alert.eventCreation.enterEventTime"))}
             </div>
             {/* Event describtion section */}
             <div>
@@ -492,7 +490,7 @@ export default function Eventcreation() {
                     className='w-full	 h-44 border border-black rounded  placeholder:text-primary-gray p-2'
                 />
                 {showError.description &&
-                    erroreMessage("Please enter the event description.")}
+                    erroreMessage(t("alert.eventCreation.enterEventdesc"))}
             </div>
             {/* Event image section */}
             <div>
@@ -517,7 +515,7 @@ export default function Eventcreation() {
                     // onChange={(e) => console.log(e.target.files[0])}
                 />
                 {showError.fileUpload &&
-                    erroreMessage("Please upload the event image.")}
+                    erroreMessage(t("alert.eventCreation.uploadImage"))}
             </div>
             {/* done section */}
             <div>
