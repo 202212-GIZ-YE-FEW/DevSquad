@@ -157,43 +157,50 @@
     "404": {
         "Clickheretogoback": "اضغط للعودة للخلف",
         "pagenotfound": "الصفحة غير موجودة"
-    },"alert":{
-        "eventCreation":{
-            "eventSuccess":"تم انشاء الحدث بنجاح",
-            "enterEvent":"الرجاء ادخال موقع الحدث",
-            "SelectEvent":" الرجاءاختيار نوع واحد من الأحداث",
-            "enterEventTitle":"الرجاءادخال عنوان للحدث",
-            "enterEventDate":"الرجاء ادخال تاريخ للحدث",
-            "enterEventTime":"الرجاءادخال وقت للحدث",
-            "enterEventdesc":"الرجاء ادخال وصف للحدث",
-            "uploadImage":"الرجاء اختيار صورة للحدث"
-        },"eventlist":{
-            "signIn":"الرجاء تسجيل الدخول للانضمام لهذا الحدث",
-            "alreadyAttended":"انت بالفعل مسجل بهذا الحدث",
-            "joinedEvent":"لقد تم تسجيلك بنجاح بهذا الحدث"
-        },"eventview":{
-            "signIn":"الرجاء تسجيل الدخول للانضمام لهذا الحدث",
-            "alreadyAttended":"انت بالفعل مسجل بهذا الحدث",
-            "joinedEvent":"لقد تم تسجيلك بنجاح بهذا الحدث"  
-        },"pagination":{
-            "joinedEvent":"لقد انضممت الى هذا الحدث"
-        },"profilepage":{
-            "correctPass":"ادخل كلمة مرور صحيحة",
-            "updatePass":"تم تحديث كلمة السر بنجاح",
-            "matchPass":"كلمة السر غير متطابقة",
-            "cancelPass":"الغاء تحديث كلمة السر",
-            "nameReq":"الاسم مطلوب ",
-            "uploadPro":"تم تحديث صورتك بنجاح",
-            "uploadOnlyImage":"الرجاء ادخال صورة فقط",
-            "uplodeImageSuccesses":"تم تحديث الصورة بنجاح"
-        },"signup":{
-            "matchPass":"كلمة السر غير متطابقة"  
+    },
+    "alert": {
+        "eventCreation": {
+            "eventSuccess": "تم انشاء الحدث بنجاح",
+            "enterEvent": "الرجاء ادخال موقع الحدث",
+            "SelectEvent": " الرجاءاختيار نوع واحد من الأحداث",
+            "enterEventTitle": "الرجاءادخال عنوان للحدث",
+            "enterEventDate": "الرجاء ادخال تاريخ للحدث",
+            "enterEventTime": "الرجاءادخال وقت للحدث",
+            "enterEventdesc": "الرجاء ادخال وصف للحدث",
+            "uploadImage": "الرجاء اختيار صورة للحدث"
+        },
+        "eventlist": {
+            "signIn": "الرجاء تسجيل الدخول للانضمام لهذا الحدث",
+            "alreadyAttended": "انت بالفعل مسجل بهذا الحدث",
+            "joinedEvent": "لقد تم تسجيلك بنجاح بهذا الحدث"
+        },
+        "eventview": {
+            "signIn": "الرجاء تسجيل الدخول للانضمام لهذا الحدث",
+            "alreadyAttended": "انت بالفعل مسجل بهذا الحدث",
+            "joinedEvent": "لقد تم تسجيلك بنجاح بهذا الحدث"
+        },
+        "pagination": {
+            "joinedEvent": "لقد انضممت الى هذا الحدث"
+        },
+        "profilepage": {
+            "correctPass": "ادخل كلمة مرور صحيحة",
+            "updatePass": "تم تحديث كلمة السر بنجاح",
+            "matchPass": "كلمة السر غير متطابقة",
+            "cancelPass": "الغاء تحديث كلمة السر",
+            "nameReq": "الاسم مطلوب ",
+            "uploadPro": "تم تحديث صورتك بنجاح",
+            "uploadOnlyImage": "الرجاء ادخال صورة فقط",
+            "uplodeImageSuccesses": "تم تحديث الصورة بنجاح"
+        },
+        "signup": {
+            "matchPass": "كلمة السر غير متطابقة"
         }
-    },"dialogbox":{
+    },
+    "dialogbox": {
         "chooseyourLocation": "اختر موقعك",
         "saveChange": "حفظ التغييرات",
         "close": "إِغلاق",
-        "country":"الدولة",
-        "city":"المدينة"
+        "country": "الدولة",
+        "city": "المدينة"
     }
 }
