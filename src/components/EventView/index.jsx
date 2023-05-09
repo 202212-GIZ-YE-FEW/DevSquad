@@ -283,7 +283,7 @@ export default function EventView(props) {
                             </div>
                             <p className='font-Rubik ml-2'>
                                 {t("eventview.organizedBy")}
-                                {userName}
+                                <span className='p-1'>{userName}</span>
                             </p>
                         </div>
                     </div>
@@ -295,6 +295,7 @@ export default function EventView(props) {
                             fontSize='text-sm'
                             height='h-7'
                             width='w-44 sm:w-52'
+                            hoverEffect='relative hover:bg-gradient-to-r hover:from-primary-orange hover:to-orange-200 hover:ring-2 hover:ring-offset-2 hover:ring-primary-orange transition-all ease-out duration-300'
                             borderRaduis='rounded-md'
                             textColor='text-white'
                             margin='mt-5'

@@ -84,17 +84,17 @@ const Homepage = () => {
             </p>
             <div className='container mx-auto lg:px-16 md:px-6 px-6 pt-12	pb-4 grid md:grid-cols-3 gap-10 grid-cols-1 font-Rubik'>
                 <VolunteerCard
-                    volunteerImage='/images/volunteer 1.png'
+                    volunteerImage='/images/volunteer1.png'
                     name={t("home.volunteersName1")}
                     voldescribtion={t("home.volunteersQu1")}
                 />
                 <VolunteerCard
-                    volunteerImage='/images/volunteer 2.png'
+                    volunteerImage='/images/volunteer2.png'
                     name={t("home.volunteersName2")}
                     voldescribtion={t("home.volunteersQu2")}
                 />
                 <VolunteerCard
-                    volunteerImage='/images/volunteer 3.png'
+                    volunteerImage='/images/volunteer3.png'
                     name={t("home.volunteersName3")}
                     voldescribtion={t("home.volunteersQu3")}
                 />
