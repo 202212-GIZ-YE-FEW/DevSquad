@@ -58,11 +58,11 @@ function Aboutpage() {
 
                 <div className='absolute top-0 left-0 right-0 bottom-0'>
                     <div className='flex h-full w-full flex-col font-Rubik items-center justify-center'>
-                        <h3 className='m-1 text-center text-3xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold'>
+                        <h3 className='m-1 text-center text-xl font-bold md:m-4 md:text-5xl md:font-bold lg:text-5xl lg:font-bold'>
                             {t("aboutPage.title")}
                         </h3>
 
-                        <p className='text-md mr-12 ml-12 text-center md:ml-24 md:mr-24 md:text-2xl lg:ml-32 lg:mr-32 lg:text-2xl'>
+                        <p className='text-md mr-12 ml-12 text-center md:ml-24 md:mr-24 md:text-xl lg:ml-32 lg:mr-32 lg:text-2xl'>
                             {t("aboutPage.describtion")}
                         </p>
                     </div>
