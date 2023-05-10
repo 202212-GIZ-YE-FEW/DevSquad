@@ -6,7 +6,6 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start"
-    data-aos="fade-right"
   >
     <div
       className="md:absolute top-14 left-0 right-0 bottom-0 static"
@@ -51,7 +50,6 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="overflow-hidden"
-    data-aos="fade-left"
   >
     <img
       alt="hiro"

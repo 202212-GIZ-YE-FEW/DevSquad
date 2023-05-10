@@ -1,5 +1,6 @@
 import AOS from "aos";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 
@@ -40,9 +41,9 @@ const HowitworkCard = ({
                     >
                         {describtion}
                     </p>
-                    <a
-                        herf={hreflink}
-                        className='flex justify-center items-center'
+                    <Link
+                        href={`${hreflink}`}
+                        className='flex justify-center items-center cursor-pointer'
                         data-aos='fade-up'
                     >
                         <p className=' text-xl p-2 font-medium'>{linkWord} </p>
@@ -71,7 +72,7 @@ const HowitworkCard = ({
                                 />
                             </svg>
                         )}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

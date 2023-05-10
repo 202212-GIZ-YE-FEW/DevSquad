@@ -107,7 +107,7 @@ export default function EventView(props) {
             clearTimeout(timeId);
         };
     }, [showAlert]);
-
+    const { i18n } = useTranslation();
     useEffect(() => {
         // once the page is open get the user name and the attendance of the event
         getUserInfo(props.entry.userId);
@@ -250,7 +250,13 @@ export default function EventView(props) {
                                 {userAttend && (
                                     <>
                                         <div>
-                                            <div class='relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                            <div
+                                                class={` ${
+                                                    i18n.language === "en"
+                                                        ? "sm:-left-4 -left-3"
+                                                        : "sm:-right-4 -right-3"
+                                                }relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full`}
+                                            >
                                                 <span class='text-white font-Rubik'>
                                                     {threeUserForAttendance[0]}
                                                 </span>
@@ -260,7 +266,13 @@ export default function EventView(props) {
                                                     {threeUserForAttendance[1]}
                                                 </span>
                                             </div>
-                                            <div class='sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                            <div
+                                                class={` ${
+                                                    i18n.language === "en"
+                                                        ? "sm:-left-8 -left-6"
+                                                        : "sm:-right-8 -right-6"
+                                                } relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full`}
+                                            >
                                                 <span class='text-white font-Rubik'>
                                                     {threeUserForAttendance[2]}
                                                 </span>

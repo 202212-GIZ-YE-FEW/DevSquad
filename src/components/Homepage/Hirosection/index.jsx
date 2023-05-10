@@ -14,10 +14,7 @@ const Hirosection = () => {
     }, []);
     return (
         <div className='container mx-auto lg:px-16 md:px-6  px-6 pt-12 pb-4 grid lg:grid-cols-2 gap-10  grid-cols-1 font-Rubik'>
-            <div
-                className='relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start'
-                data-aos='fade-right'
-            >
+            <div className='relative flex flex-col align-content-center justify-center align-items-start text-center lg:text-start'>
                 <div className='md:absolute top-14 left-0 right-0 bottom-0 static'>
                     <div className='flex flex-col '>
                         <p className='text-4xl font-medium p-2'>
@@ -32,7 +29,7 @@ const Hirosection = () => {
                     </div>
                 </div>
             </div>
-            <div className='overflow-hidden' data-aos='fade-left'>
+            <div className='overflow-hidden'>
                 <Image
                     src='/images/Image.png'
                     alt='hiro'

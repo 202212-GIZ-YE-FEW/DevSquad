@@ -53,6 +53,7 @@ const Homepage = () => {
                     linkWord={t("Navbar.SignUp")}
                     hreflink='/signup'
                 />
+
                 <HowitworkCard
                     title={t("home.Attendevevts")}
                     imageSrc='/images/attend.png'
