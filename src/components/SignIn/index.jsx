@@ -5,19 +5,19 @@ import {
     signInWithEmailAndPassword,
     signInWithPopup,
 } from "firebase/auth"; // Importing necessary functions from firebase/auth
+// Importing necessary functions from firebase/firestore
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router"; // Importing useRouter hook from next
 import { useTranslation } from "next-i18next";
 import React, { useState } from "react"; // Importing React and useState
-import { addDoc, collection } from "firebase/firestore"; // Importing necessary functions from firebase/firestore
+
 import Buttoncomponent from "../Buttoncomponent";
 import Inputcomponent from "../Inputcomponent";
 import {
     auth,
     googleProvider,
     twitterProvider,
-    db,
 } from "../../../config/firebase"; // Importing Firebase configurations and providers
 import google from "../../../public/images/google.png";
 import sitting from "../../../public/images/Sitting.png";

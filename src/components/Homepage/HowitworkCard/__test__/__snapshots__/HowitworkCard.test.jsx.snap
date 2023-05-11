@@ -45,8 +45,12 @@ exports[`renders correctly 1`] = `
       data-aos="fade-up"
     />
     <a
-      className="flex justify-center items-center"
+      className="flex justify-center items-center cursor-pointer"
       data-aos="fade-up"
+      href="undefined"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
     >
       <p
         className=" text-xl p-2 font-medium"

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import EventImage from "../../components/EventImage/index";
 import { db } from "../../../config/firebase";
+
 const Eventcard = ({
     eventImage,
     eventDate,
@@ -75,6 +76,7 @@ const Eventcard = ({
         // send the id of the event to attendEvent funciton to get the number of the attendance
         attendEvent(eventAttendance);
     }, [userAttend]);
+    const { i18n } = useTranslation();
     return (
         <div className='border-2 border-black rounded-lg md:px-4 mb-6 mt-3 font-Rubik w-full'>
             <div className='flex md:justify-between md:flex-row flex-col justify-center items-center'>
@@ -92,12 +94,24 @@ const Eventcard = ({
                                             {threeUserForAttendance[0]}
                                         </span>
                                     </div>
-                                    <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                    <div
+                                        class={` ${
+                                            i18n.language === "en"
+                                                ? "sm:-left-4 -left-3"
+                                                : "sm:-right-4 -right-3"
+                                        }relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full`}
+                                    >
                                         <span class='text-white font-Rubik'>
                                             {threeUserForAttendance[1]}
                                         </span>
                                     </div>
-                                    <div class='sm:-left-8 -left-6 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                    <div
+                                        class={` ${
+                                            i18n.language === "en"
+                                                ? "sm:-left-8 -left-6"
+                                                : "sm:-right-8 -right-6"
+                                        } relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full`}
+                                    >
                                         <span class='text-white font-Rubik'>
                                             {threeUserForAttendance[2]}
                                         </span>

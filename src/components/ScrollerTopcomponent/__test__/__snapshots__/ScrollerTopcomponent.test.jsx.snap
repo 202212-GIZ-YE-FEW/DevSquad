@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <svg
-    className="fixed right-[-100px] bg-orange-300 text-white rounded-full p-3 cursor-pointer bottom-5 transform translate-x-[-150px]  animate-[slideLeft_1s] w-14 h-14 "
+    className="none"
     fill="currentColor"
     height="1em"
     onClick={[Function]}
