@@ -261,7 +261,13 @@ export default function EventView(props) {
                                                     {threeUserForAttendance[0]}
                                                 </span>
                                             </div>
-                                            <div class='sm:-left-4 -left-3 relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full'>
+                                            <div
+                                                class={` ${
+                                                    i18n.language === "en"
+                                                        ? "sm:-left-4 -left-3"
+                                                        : "sm:-right-4 -right-3"
+                                                } relative inline-flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 bg-black rounded-full`}
+                                            >
                                                 <span class='text-white font-Rubik'>
                                                     {threeUserForAttendance[1]}
                                                 </span>
