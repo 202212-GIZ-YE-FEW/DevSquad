@@ -1,4 +1,4 @@
-# Capstone project information
+![pebblework 2](https://github.com/user-attachments/assets/f72b24c3-1b5c-4023-a39f-98a5472eb974)# Capstone project information
 
 ## Project information
 
@@ -24,4 +24,6 @@ npm install               // Installs the node modules
 -   When writing commits, commitlinter library is used to make sure that your commits are consistent with the conventional commits. To learn more about it refer to the guidelines in Canvas or the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) site.
 -   The `layout` folder contains the components that will be used in the layout of pages, so components like the header and footer will be placed there.
 
-Good luck and happy coding :D
+## Website Photo:
+
+![pebblework 2](https://github.com/user-attachments/assets/3a8f46c6-e22e-4689-9ae1-1ae5a85b0af7)
